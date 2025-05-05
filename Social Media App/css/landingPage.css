@@ -1,0 +1,325 @@
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  font-family: 'Fredoka', 'Poppins', Arial, sans-serif;
+  background: radial-gradient(ellipse at 70% 20%, #b8eaff 0%, #f8e0ff 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Confetti / Enhanced Background Effect */
+.confetti {
+  pointer-events: none;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: 1000;
+  background-image:
+    radial-gradient(circle at 5% 10%, #1bb7ff 6px, transparent 8px),
+    radial-gradient(circle at 90% 20%, #f76781 10px, transparent 12px),
+    radial-gradient(circle at 70% 80%, #fff176 8px, transparent 10px),
+    radial-gradient(circle at 15% 90%, #72d572 7px, transparent 9px),
+    radial-gradient(circle at 50% 30%, #b8eaff 12px, transparent 14px),
+    radial-gradient(circle at 80% 60%, #e07df1 9px, transparent 11px),
+    radial-gradient(circle at 40% 75%, #ff8a65 6px, transparent 8px),
+    radial-gradient(circle at 95% 95%, #8e44ad 11px, transparent 13px),
+    radial-gradient(circle at 30% 40%, #3498db 7px, transparent 9px),
+    radial-gradient(circle at 5% 10%, #1bb7ff 6px, transparent 8px),
+    radial-gradient(circle at 90% 20%, #f76781 10px, transparent 12px),
+    radial-gradient(circle at 70% 80%, #fff176 8px, transparent 10px),
+    radial-gradient(circle at 15% 90%, #72d572 7px, transparent 9px),
+    radial-gradient(circle at 50% 30%, #b8eaff 12px, transparent 14px),
+    radial-gradient(circle at 80% 60%, #e07df1 9px, transparent 11px),
+    radial-gradient(circle at 40% 75%, #ff8a65 6px, transparent 8px),
+    radial-gradient(circle at 95% 95%, #8e44ad 11px, transparent 13px),
+    radial-gradient(circle at 30% 40%, #3498db 7px, transparent 9px),
+    radial-gradient(circle at 60% 10%, #2ecc71 8px, transparent 10px);
+  
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: confettiDance 15s ease-in-out infinite;
+  opacity: 0.9;
+}
+
+@keyframes confettiDance {
+  0% {
+    background-position: 0px 0px, 20px 50px, -40px 30px, 50px 70px, 10px 100px, 40px 10px, -10px 80px, 70px 120px, 10px -30px, 60px -50px;
+  }
+  25% {
+    background-position: 50px 20px, -30px 90px, 20px 70px, -50px 40px, 80px 10px, 120px 50px, 10px 60px, -10px 110px, -40px 0px, 30px 120px;
+  }
+  50% {
+    background-position: 100px 60px, -40px 10px, 40px 90px, 60px -30px, -10px 70px, 80px 100px, 50px 30px, 20px -20px, -30px 120px, 90px 10px;
+  }
+  75% {
+    background-position: -20px -10px, 80px 30px, 90px 10px, 30px -50px, 70px 100px, 10px -30px, 50px 120px, -60px 70px, 100px 90px, 20px 40px;
+  }
+  100% {
+    background-position: 0px 0px, -60px 50px, 10px -20px, 70px 80px, -50px 30px, 120px 90px, 60px 40px, 30px -10px, -70px 110px, 80px 60px;
+  }
+}
+
+
+.landing-fun {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 2rem 0 3rem 0;
+}
+
+/* Subscription Card */
+.fun-card {
+  position: relative;
+  background: linear-gradient(135deg, #fffbe7 80%, #e0f7fa 100%);
+  border-radius: 2.3rem;
+  box-shadow: 0 8px 40px #76c1f933;
+  max-width: 400px;
+  width: 100%;
+  padding: 2.7rem 2rem 2.3rem 2rem;
+  text-align: center;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.emoji-bubble {
+  font-size: 2.4rem;
+  background: #fff176;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 0.7rem auto;
+  box-shadow: 0 2px 16px #ffe08280;
+  animation: bounce 1.2s infinite alternate;
+}
+@keyframes bounce {
+  from { transform: translateY(0);}
+  to { transform: translateY(-12px);}
+}
+
+.fun-card h1 {
+  font-size: 2rem;
+  margin-bottom: 0.4rem;
+  color: #232163;
+  font-weight: 700;
+}
+.fun-card h1 span {
+  color: #1bb7ff;
+  font-weight: 700;
+}
+
+.subtitle {
+  color: #232163;
+  font-size: 1.08rem;
+  margin-bottom: 1.6rem;
+  line-height: 1.5;
+}
+.colorful-text {
+  color: #f76781;
+  font-weight: 600;
+  font-size: 1.07rem;
+}
+
+.subscribe-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.subscribe-form input[type="text"],
+.subscribe-form input[type="email"] {
+  padding: 1rem;
+  border-radius: 1.2rem;
+  border: 2px solid #aeeaf7;
+  font-size: 1rem;
+  outline: none;
+  background: #f3fdff;
+  transition: border 0.18s;
+}
+.subscribe-form input:focus {
+  border-color: #1bb7ff;
+  background: #fff;
+}
+
+.subscribe-form button {
+  background: linear-gradient(90deg, #1bb7ff 60%, #f76781 100%);
+  color: #fff;
+  font-size: 1.13rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 1.2rem;
+  padding: 1rem;
+  cursor: pointer;
+  box-shadow: 0 2px 16px #80deea50;
+  transition: background 0.18s, transform 0.11s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+}
+.subscribe-form button:hover {
+  background: linear-gradient(90deg, #f76781 60%, #1bb7ff 100%);
+  transform: scale(1.04);
+}
+
+.privacy-note {
+  font-size: 0.93rem;
+  color: #999;
+  margin-top: 0.6rem;
+}
+
+.bubbles {
+  position: absolute;
+  left: 0; top: 0; right: 0; bottom: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+.bubble {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.29;
+  z-index: 0;
+}
+.b1 { width: 7rem; height: 7rem; background: #1bb7ff; top: -2rem; left: -3rem; }
+.b2 { width: 4.6rem; height: 4.6rem; background: #f76781; bottom: -2.5rem; left: 1rem; }
+.b3 { width: 4.1rem; height: 4.1rem; background: #fff176; top: 1rem; right: -1.2rem; }
+
+/* Strong Points Section */
+.strong-points {
+  margin: 2.5rem auto 0 auto;
+  max-width: 900px;
+  background: #f8fafd;
+  border-radius: 2rem;
+  box-shadow: 0 2px 16px #c4ecf966;
+  padding: 1rem 1rem 1rem 1rem;
+  text-align: center;
+}
+
+.strong-points h2 {
+  font-size: 1.3rem;
+  color: #1bb7ff;
+  font-weight: 800;  
+  letter-spacing: 0.02em;
+  margin-bottom: 0;
+}
+
+.strong-points img {
+width: 8rem;
+}
+.points-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.1rem;
+  justify-content: center;
+}
+
+.point {
+  background: #fff;
+  border-radius: 1.1rem;
+  box-shadow: 0 2px 8px #eaf6ff55;
+  flex: 1 1 180px;
+  min-width: 150px;
+  max-width: 200px;
+  padding: 1.2rem 0.7rem 1rem 0.7rem;
+  margin: 0.3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.13s, box-shadow 0.13s;
+}
+
+.point:hover {
+  transform: translateY(-7px) scale(1.04) rotate(-2deg);
+  box-shadow: 0 8px 26px #6be3ff33;
+}
+
+.icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.point h4 {
+  margin: 0.2rem 0 0.45rem 0;
+  font-size: 1.08rem;
+  color: #232163;
+}
+
+.point p {
+  font-size: 0.97rem;
+  color: #444;
+  margin: 0;
+}
+
+.testimonials-section {
+  margin: 2.5rem auto 0 auto;
+  max-width: 720px;
+  text-align: center;
+}
+.testimonials-section h2 {
+  color: #31a3e1;
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.02em;
+}
+.testimonials {
+  display: flex;
+  flex-direction: row;  
+  gap: 2rem;      
+  justify-content: center;
+  align-items: stretch; 
+  flex-wrap: nowrap;
+}
+.testimonials blockquote {
+  background: #f7fcff;
+  border-radius: 1.1rem;
+  box-shadow: 0 4px 18px #6ac5ff0e;
+  padding: 1.4rem 1.3rem 1.1rem 1.3rem;
+  margin: 0;
+  max-width: 270px;
+  min-width: 180px;
+  font-size: 1.08rem;
+  color: #453b5e;
+  border-left: 5px solid #1bb7ff44;
+}
+.testimonials blockquote span {
+  display: block;
+  color: #8884ba;
+  font-size: 0.93rem;
+  margin-top: 0.7rem;
+  font-style: italic;
+}
+
+@media (max-width: 700px) {
+  .landing-fun {
+    padding: 1rem 0 2rem 0;
+  }
+  .points-list, .testimonials {
+    flex-direction: column;
+    gap: 0.9rem;
+  }
+  .strong-points {
+    padding: 1.5rem 0.7rem;
+  }
+  .fun-card {
+    padding: 1.8rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .fun-card {
+    padding: 1.4rem 0.8rem;
+  }
+  .emoji-bubble {
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.6rem;
+  }
+}

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Connectly | Profile</title>
+  <link rel="stylesheet" href="./css/profile.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  
+  <div class="profile-bg"></div>
+
+  <main class="profile-main">
+    <!-- PROFILE CARD -->
+    <section class="profile-card">
+      <div class="banner-wrapper">
+        <img src="./assets/banner.jpg" alt="Profile Banner" class="profile-banner"/>
+        <div class="banner-gradient"></div>
+        <button class="privacy-settings" title="Privacy Settings">
+          <i class="fa-solid fa-gear"></i>
+        </button>
+      </div>
+      <div class="profile-avatar-box online">
+        <img src="./assets/profile.jpg" alt="Profile" class="profile-avatar"/>
+        <span class="status-dot"></span>
+      </div>
+      <div class="profile-info">
+        <h1 class="profile-name">Alexandra Predoiu
+          <button class="edit-profile-btn"><i class="fa-solid fa-pen"></i> Edit Profile</button>
+        </h1>
+        
+        <div class="profile-actions">
+          <button class="main-btn"><i class="fa-solid fa-user-plus"></i> Add Friend</button>
+          <div class="message-dropdown">
+            <button class="main-btn outline"><i class="fa-regular fa-message"></i> Message <i class="fa fa-caret-down"></i></button>
+            <ul class="dropdown-menu">
+              <li><i class="fa-regular fa-message"></i> Send Message</li>
+              <li><i class="fa-solid fa-video"></i> Video Call</li>
+            </ul>
+          </div>
+        </div>
+        <span class="online-status"><i class="fa-solid fa-circle"></i> Online now</span>
+      </div>
+    </section>
+
+    <section class="profile-content">
+
+      <!-- ABOUT SIDEBAR -->
+      <aside class="profile-side profile-about card-shadow">
+        <div class="card-header"></div>
+        <h2>About</h2>
+        <ul class="about-list">
+          <li>💡 Building cool things at Connectly.</li>
+          <li>🌱 Loves traveling, skincare, and my cat.</li>
+          <li>✨ Always learning!</li>
+        </ul>
+        <hr>
+        <h2>Photos</h2>
+        <div class="photos-grid">
+          <img src="./assets/city.jpeg" alt="City" />
+          <img src="./assets/8 ball pool game.jpg" alt="Game" />
+          <img src="./assets/angry birds gaem.jpg" alt="Game" />
+          <img src="./assets/backgammon game.jpg" alt="Game" />
+        </div>
+        <hr>
+        <h2>Links</h2>
+        <ul class="profile-links social-icons">
+          <li><a href="https://www.instagram.com/alexandra.alina/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+          <li><a href="https://www.linkedin.com/in/alexandra-predoiu/" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
+          <li><a href="https://github.com/AlexandraTKO" target="_blank"><i class="fa-brands fa-github"></i></a></li>
+        </ul>
+      </aside>
+
+      <!-- FEED SECTION -->
+      <section class="profile-feed">
+        <div class="profile-feed-card card-glass">
+          <div class="feed-header">
+            <img src="./assets/profile.jpg" alt="Alexandra" class="feed-avatar"/>
+            <div>
+              <span class="feed-user">Alexandra Predoiu <span class="mutual">(You and 3 friends like this)</span></span>
+              <span class="feed-time">2 hours ago</span><br>
+              <span class="feed-time">16 Apr 2025</span>
+            </div>
+            <a href="#" class="feed-options" title="More"><i class="fa fa-ellipsis-h"></i></a>
+          </div>
+          <div class="feed-content">
+            <p>Had a great day working on our social media app! 🌟</p>
+           <a href="landingPage.html"><img src="./assets/add.png" alt="Project progress" class="feed-img"/></a> 
+          </div>
+          <div class="feed-actions">
+            <button><i class="fa-regular fa-thumbs-up"></i> Like</button>
+            <button><i class="fa-regular fa-comment"></i> Comment</button>
+            <button><i class="fa-solid fa-share"></i> Share</button>
+          </div>
+          <div class="reaction-bar">
+            <img src="./assets/profile.jpg" alt="A" class="like-avatar"/>
+            <img src="./assets/profile picture Andrei.jpg" alt="Andrei" class="like-avatar"/>
+            <span class="reaction-icons">😍 👍</span>
+            <span class="likes-count">12 likes • 3 comments</span>
+          </div>
+          <div class="feed-comment-preview">
+            <strong>Andrei:</strong> Love this, looks amazing! <span class="emoji">🔥</span>
+            <a href="#" class="view-all">View all comments</a>
+          </div>
+        </div>
+
+        <div class="profile-feed-card card-glass">
+          <div class="feed-header">
+            <img src="./assets/profile.jpg" alt="Alexandra" class="feed-avatar"/>
+            <div>
+              <span class="feed-user">Alexandra Predoiu <span class="mutual">(You and 3 friends like this)</span></span>
+              <span class="feed-time">2 hours ago</span><br>
+              <span class="feed-time">16 Apr 2025</span>
+            </div>
+            <a href="#" class="feed-options" title="More"><i class="fa fa-ellipsis-h"></i></a>
+          </div>
+          <div class="feed-content">
+            <p>Had a great day working on our social media app! 🌟</p>
+            <img src="./assets/city.jpeg" alt="Project progress" class="feed-img"/>
+          </div>
+          <div class="feed-actions">
+            <button><i class="fa-regular fa-thumbs-up"></i> Like</button>
+            <button><i class="fa-regular fa-comment"></i> Comment</button>
+            <button><i class="fa-solid fa-share"></i> Share</button>
+          </div>
+          <div class="reaction-bar">
+            <img src="./assets/profile.jpg" alt="A" class="like-avatar"/>
+            <img src="./assets/profile picture Andrei.jpg" alt="Andrei" class="like-avatar"/>
+            <span class="reaction-icons">😍 👍</span>
+            <span class="likes-count">12 likes • 3 comments</span>
+          </div>
+          <div class="feed-comment-preview">
+            <strong>Andrei:</strong> Love this, looks amazing! <span class="emoji">🔥</span>
+          </div>
+          <div class="feed-comment-preview">
+            <strong>Andrei:</strong> Love this, looks amazing! <span class="emoji">🔥</span>
+            <a href="#" class="view-all">View all comments</a>
+          </div>
+        </div>
+
+        <div class="profile-feed-card card-glass">
+          <div class="feed-header">
+            <img src="./assets/profile.jpg" alt="Alexandra" class="feed-avatar"/>
+            <div>
+              <span class="feed-user">Alexandra Predoiu <span class="mutual">(You and 3 friends like this)</span></span>
+              <span class="feed-time">2 hours ago</span><br>
+              <span class="feed-time">16 Apr 2025</span>
+            </div>
+            <a href="#" class="feed-options" title="More"><i class="fa fa-ellipsis-h"></i></a>
+          </div>
+          <div class="feed-content">
+            <p>Had a great day working on our social media app! 🌟</p>
+            <img src="./assets/city.jpeg" alt="Project progress" class="feed-img"/>
+          </div>
+          <div class="feed-actions">
+            <button><i class="fa-regular fa-thumbs-up"></i> Like</button>
+            <button><i class="fa-regular fa-comment"></i> Comment</button>
+            <button><i class="fa-solid fa-share"></i> Share</button>
+          </div>
+          <div class="reaction-bar">
+            <img src="./assets/profile.jpg" alt="A" class="like-avatar"/>
+            <img src="./assets/profile picture Andrei.jpg" alt="Andrei" class="like-avatar"/>
+            <span class="reaction-icons">😍 👍</span>
+            <span class="likes-count">12 likes • 3 comments</span>
+          </div>
+          <div class="feed-comment-preview">
+            <strong>Andrei:</strong> Love this, looks amazing! <span class="emoji">🔥</span>
+            <a href="#" class="view-all">View all comments</a>
+          </div>
+        </div>
+        <!-- RECENT ACTIVITY -->
+        <div class="profile-feed-card timeline-card card-glass">
+          <h3 class="timeline-title"><i class="fa-solid fa-clock-rotate-left"></i> Recent Activity</h3>
+          <ul class="timeline">
+            <li><span class="dot"></span><strong>Alexandra</strong> updated her cover photo <span class="timeline-time">4 min ago</span></li>
+            <li><span class="dot"></span><strong>Alexandra</strong> made a new friend <span class="timeline-time">2 hours ago</span></li>
+            <li><span class="dot"></span><strong>Alexandra</strong> started a new project <span class="timeline-time">Yesterday</span></li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- FRIENDS SIDEBAR -->
+      <aside class="profile-side profile-friends card-shadow">
+        <div class="card-header pink"></div>
+        <h2>Friends</h2>
+        <div class="friends-grid">
+          <div class="friend-item">
+            <img src="./assets/profile picture Andrei.jpg" alt="Andrei"/>
+            <span>Andrei Dumitru</span>
+            <span class="status-dot online"></span>
+          </div>
+          <div class="friend-item">
+            <img src="./assets/profile picture Catalina.jpg" alt="Catalina"/>
+            <span>Catalina Angel</span>
+            <span class="status-dot"></span>
+          </div>
+        </div>
+        <a href="#" class="see-all-friends">See all friends</a>
+    <hr>
+  
+        <div class="sidebar-card quick-actions-card ">
+          <h2>Quick Actions</h2>
+          <ul class="shortcut-list">
+            <li><a href="#"><i class="fa-regular fa-image"></i> My Photos</a></li>
+            <li><a href="#"><i class="fa-solid fa-pencil"></i> Create Post</a></li>
+            <li><a href="#"><i class="fa-solid fa-user-gear"></i> Settings</a></li>
+            <li><a href="#"><i class="fa-solid fa-shield-halved"></i> Privacy Center</a></li>
+          </ul></div>  
+        </aside>
+    </span>
+    </section>
+  </main>
+</body>
+</html>
