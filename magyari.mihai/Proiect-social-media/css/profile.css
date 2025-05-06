@@ -1,0 +1,835 @@
+* {
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 4rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+
+    background-color: #5FA8D3;
+}
+
+/* TOP BAR (header) */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+header .navigation {
+    display: flex;
+}
+
+header .navigation>li>a {
+    border-radius: 50%;
+    background-color: #CAE9FF;
+    margin: 0 0.5rem;
+    margin-left: 1rem;
+    display: flex;
+    height: 3rem;
+    padding: 0.3rem;
+}
+
+header .navigation>li>a:hover {
+    background-color: #FFE74C;
+}
+
+
+header .mainSearch {
+    display: flex;
+    align-items: center;
+}
+
+header .mainSearch .logo {
+    width: 3.5rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    margin-right: 2rem;
+}
+
+header .mainSearch span {
+    color: black;
+    position: absolute;
+    left: 39rem;
+}
+
+
+
+header .mainSearch .searchInput {
+    height: 2.5rem;
+    width: 18rem;
+    border-radius: 0.5rem;
+    padding: 0 1rem;
+    text-align: center;
+    background-color: #CAE9FF;
+    border-color: black;
+    color: black;
+
+}
+
+header .mainSearch .searchInput::placeholder {
+    color: black;
+}
+
+
+header .mainSearch .searchInput:focus {
+    border: 0.2rem solid #CAE9FF
+}
+
+header .mainSearch .smallScreenSearch {
+    display: none;
+}
+
+header .links {
+    display: flex;
+}
+
+
+header .links>li>a {
+    border-radius: 50%;
+    background-color: #CAE9FF;
+    margin: 0 0.5rem;
+    margin-right: 2rem;
+    display: flex;
+    height: 3rem;
+    padding: 0.3rem;
+}
+
+header .links>li>a:hover {
+    background-color: #FFE74C;
+}
+
+.bellIcon {
+    position: relative;
+    display: block;
+}
+
+.bellIcon span {
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    left: 2rem;
+    border-radius: 50%;
+    color: white;
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+
+
+
+.wrapper {
+    background-color: #CAE9FF;
+    width: 100%;
+}
+
+
+.profileCover {
+    position: relative;
+    width: 65vw;
+    height: 53vh;
+    justify-self: center;
+
+
+}
+
+.profileCover .coverPic img {
+    object-fit: cover;
+    width: 65vw;
+    height: 53vh;
+    border-radius: 0.5rem;
+    cursor: pointer;
+
+}
+
+
+.profileCover a.profilePic {
+    position: absolute;
+    bottom: -6rem;
+    left: 1.5rem;
+}
+
+
+.profileCover a.profilePic img {
+    width: 11rem;
+    border-radius: 50%;
+    border: 0.2rem solid white;
+}
+
+.profileCover a.profilePic img:hover{
+    border: 0.2rem solid #FFE74C;
+}
+
+.profileCover .editCover {
+    position: absolute;
+    bottom: 0.5rem;
+    right: 2rem;
+    background-color: #5FA8D3;
+    padding: 0.3rem;
+    border-radius: 1rem;
+}
+
+.profileCover .editCover:hover{
+    background-color: #FFE74C;
+}
+
+
+.profileInfo {
+    margin: 0.1rem 1rem 1rem 34rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.profileInfo .profileName {
+    display: flex;
+    flex-direction: column;
+}
+
+.profileInfo .profileName span.name {
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+.profileInfo .profileOptions {
+    display: flex;
+    gap: 1rem;
+    margin-right: 21rem;
+}
+
+
+.profileInfo .profileOptions .addContent {
+    border: 1px solid transparent;
+    padding: 0.3rem;
+    border-radius: 1rem;
+    background-color: #62B6CB;
+}
+
+.profileInfo .profileOptions .addContent:hover{
+    background-color: #FFE74C;
+}
+
+.profileInfo .profileOptions .editProfile {
+    border: 1px solid transparent;
+    padding: 0.3rem;
+    border-radius: 1rem;
+    background-color: #5FA8D3;
+}
+
+.profileInfo .profileOptions .editProfile:hover {
+    background-color: #FFE74C;
+}
+
+.divider {
+    margin: 1.8rem 0 0 0;
+    width: 65vw;
+    justify-self: center;
+    border: none;
+    border-top: 1px solid black;
+}
+
+
+.chooseContent {
+    display: flex;
+    align-items: center;
+    margin: 0.1rem 1rem 1rem 20.5rem;
+}
+
+.chooseContent .category {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+    
+}
+
+.chooseContent .category .categoryBtn{
+    border: 1px solid transparent;
+    padding: 0.7rem 0.5rem;
+    position: relative;
+
+}
+
+
+.chooseContent .category .categoryBtn:hover{
+    background-color: #5FA8D3;
+    border-radius: 1rem;
+    
+}
+
+.chooseContent .menuDots{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid transparent;
+    border-radius: 1rem;
+    background-color: #5FA8D3;
+    padding: 0.2rem 0.7rem;
+    position: absolute;
+    right: 22rem;
+   
+}
+
+.chooseContent .menuDots:hover{
+    background-color: #FFE74C;
+}
+
+
+.profileContent {
+    display: flex;
+    align-items: flex-start;
+    max-width: 75rem;
+    margin: 0 auto;
+  }
+
+.leftContent {
+    position: sticky;
+    top: 0px;
+    align-self: flex-start;
+    overflow-y: auto;
+    margin-right: 24px;
+    z-index: 9;
+  }
+
+.profileContent .leftContent .info {
+    border: 1px solid black;
+    border-radius: 0.5rem;
+    background-color: #CAE9FF;
+    padding: 1rem 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 1rem 0 1rem 0;
+}
+
+.profileContent .leftContent .info span strong{
+    cursor: pointer;
+}
+
+.profileContent .leftContent .info span strong:hover{
+    text-decoration: underline;
+}
+
+
+.profileContent .leftContent .info span.introTitle{
+    font-weight: bold;
+    font-size: large;
+}
+
+.profileContent .leftContent .info a.insta{
+    display: flex;
+    margin-top: 1rem;
+    color: #1B4965;
+}
+
+.profileContent .leftContent .info a.editInfo {
+    display: flex;
+    margin-top: 1rem;
+    padding: 0.3rem;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid transparent;
+    border-radius: 0.5rem;
+    background-color: #5FA8D3;
+    color: black;
+}
+
+.profileContent .leftContent .info a.editInfo:hover{
+    background-color: #FFE74C;
+}
+
+.profileContent .leftContent .photos {
+    border: 1px solid black;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin: 1rem 0 1rem 0;
+    background-color: #CAE9FF;
+    
+}
+
+
+.profileContent .leftContent .photos .photosTitle {
+    display: flex;
+    justify-content: space-between;
+    font-size: large;
+}
+
+
+.profileContent .leftContent .photos .photosTitle a.title {
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.profileContent .leftContent .photos .photosTitle .title:hover{
+    text-decoration: underline;
+}
+
+.profileContent .leftContent .photos .photosTitle a.allPhotos {
+    color: #1B4965;
+}
+
+.profileContent .leftContent .photos .photosPreview {
+    display: flex;
+    gap: 0.5rem;
+
+}
+
+.profileContent .leftContent .photos .photosPreview img {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+.profileContent .leftContent .photos .photosPreview img:hover{
+    opacity: 0.8;
+}
+
+.profileContent .leftContent .friends {
+    border: 1px solid black;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin: 1rem 0 1rem 0;
+    background-color: #CAE9FF;
+}
+
+
+.profileContent .leftContent .friends .friendsTitle {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.profileContent .leftContent .friends .friendsTitle .count {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+
+.profileContent .leftContent .friends .friendsTitle .count .title {
+    font-weight: 600;
+    cursor: pointer;
+    font-size: large;
+}
+
+.profileContent .leftContent .friends .friendsTitle .count .title:hover{
+    text-decoration: underline;
+}
+
+.profileContent .leftContent .friends .friendsTitle .seeAll span{
+    color: #1B4965;
+    cursor: pointer;
+}
+
+
+.profileContent .leftContent .friends .friendsPreview {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+}
+
+.profileContent .leftContent .friends .friendsPreview .friendDisplay {
+    display: flex;
+    flex-direction: column;
+}
+
+.profileContent .leftContent .friends .friendsPreview .friendDisplay img {
+    width: 10rem;
+    height: 10rem;
+    cursor: pointer;
+    border-radius: 0.5rem;
+}
+
+
+.profileContent .leftContent .friends .friendsPreview .friendDisplay img:hover{
+    opacity: 0.8;
+}
+
+.profileContent .leftContent .friends .friendsPreview .friendDisplay .friendName {
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.profileContent .leftContent footer {
+    padding-bottom: 0.5rem;
+    color: gray;
+}
+
+.profileContent .leftContent footer span:hover{
+    text-decoration: underline;
+}
+
+
+/* RIGHT CONTENT */
+
+.rightContent {
+    flex: 1 1 0;
+    min-width: 0;
+  }
+
+.rightContent .status {
+    border: 1px solid black;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin: 1rem 0 1rem 0;
+    background-color: #CAE9FF;
+}
+
+
+.rightContent .status .writeStatus {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.rightContent .status .writeStatus .smallProfilePic {
+    width: 3rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.rightContent .status .writeStatus input {
+    width: 35rem;
+    border: 1px solid transparent;
+    border-radius: 1rem;
+}
+
+
+.rightContent .status .writeStatus input::placeholder {
+    padding-left: 0.5rem;
+    font-size: larger;
+}
+
+
+.rightContent .status .addContent {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.rightContent .status .addContent a{
+    padding: 0.7rem;
+    border: 1px solid transparent;
+    border-radius: 0.5rem;
+}
+
+.rightContent .status .addContent a:hover {
+    background-color: #FFE74C;
+}
+
+.rightContent .postsStart {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #CAE9FF;
+    border: 1px solid black;
+    border-radius: 0.5rem;
+    padding: 0.7rem;
+}
+
+.rightContent .postsStart .managePosts {
+    cursor: pointer;
+    border: 1px solid transparent;
+    padding: 0.3rem;
+    border-radius: 1rem;
+    background-color: #5FA8D3;
+}
+
+.rightContent .postsStart .managePosts:hover {
+    background-color: #FFE74C;
+}
+
+
+.rightContent .post {
+    margin: 1rem 0;
+    padding: 1rem;
+    border: 1px solid black;
+    border-radius: 1rem;
+}
+
+
+.rightContent .post .postHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.rightContent .post .postHeader .profileUserInfo {
+    display: flex;
+    align-items: center;
+}
+
+
+
+.rightContent .post .postHeader .profileUserInfo .profileName {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 0.5rem;
+}
+
+.rightContent .post .postHeader .profileOptions {
+    display: flex;
+    gap: 1rem;
+    margin-top: -2rem;
+}
+
+.rightContent .post .postHeader .profileOptions img {
+    height: 1.5rem;
+    padding: 0.2rem;
+    border: 1px solid black;
+    border-radius: 50%;
+    background-color: #CAE9FF;
+}
+
+
+.rightContent .post .postHeader .profileOptions img:hover {
+    background-color: #FFE74C;
+}
+
+
+.rightContent .post .content {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.rightContent .post .content .imgContent {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+
+.rightContent .post .content .postDescription {
+    margin-bottom: 0.5rem;
+}
+
+
+.rightContent .post .reacts .likesInfo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rightContent .post .reacts .likesInfo img {
+    height: 2rem;
+    margin-right: -0.7rem;
+}
+
+.rightContent .post .reacts .likesInfo span {
+    margin-left: 1rem;
+}
+
+.rightContent .post .reacts .commentsInfo {
+    display: flex;
+    gap: 0.7rem;
+}
+
+.rightContent .post .reacts {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+.rightContent .post .reactsActions .actions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.rightContent .post .reactsActions .actions .reaction {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+}
+
+.rightContent .post .reactsActions .actions .reaction img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+    border-radius: 50%;
+    background-color: #CAE9FF;
+}
+
+.rightContent .post .reactsActions .actions .reaction img:hover {
+    background-color: #FFE74C;
+}
+
+
+.rightContent .post .reactsActions .actions .reaction span {
+    margin-left: 0.5rem;
+}
+
+
+.rightContent .post .reactsActions .actions .reaction:hover {
+    color: #5FA8D3;
+}
+
+
+.rightContent .post .commentSection {
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 1rem;
+    align-items: center;
+    gap: 1rem;
+}
+
+
+
+
+.rightContent .post .commentSection .newCommentField {
+    width: 80%;
+    height: 5.5rem;
+    border-radius: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #CAE9FF;
+    cursor: pointer;
+    border: none;
+
+}
+
+.rightContent .post .commentSection .newCommentField::placeholder {
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.rightContent .post .commentSection .newCommentField:hover {
+    background-color: #5FA8D3;
+}
+
+.rightContent .post .commentSection .newCommentField:focus {
+    outline-color: black;
+}
+
+.rightContent .post .commentSection .insertCommentButton {
+    width: 2rem;
+    border-radius: 50%;
+    border: 1px solid transparent;
+    background-color: #CAE9FF;
+}
+
+
+.rightContent .post .commentSection .insertCommentButton:hover {
+    background-color: #FFE74C;
+    padding: 0.2rem;
+}
+
+
+
+.profileImage {
+    width: 3rem;
+    border-radius: 50%;
+}
+
+.rightContent .post .userComments {
+    margin-bottom: 0.5rem;
+}
+
+
+.rightContent .post .userComments .userCommentsContent {
+    display: flex;
+    margin-left: 1rem;
+}
+
+.rightContent .post .userComments .userCommentText {
+    margin: 0 1rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: #CAE9FF;
+    position: relative;
+    width: 35rem;
+}
+
+.rightContent .post .userComments .userCommentText span.commentUserName {
+    font-weight: bold;
+}
+
+
+.rightContent .post .userComments .userCommentText p {
+    margin: 0 0 0.8rem 0;
+}
+
+.rightContent .post .userComments .userCommentText .emojiReaction {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.rightContent .post .userComments .userCommentText .emojiReaction span {
+    margin-right: 0.5rem;
+}
+
+.rightContent .post .userComments .userCommentText .emojiReaction img {
+    width: 2rem;
+    margin-left: -0.6rem;
+}
+
+.rightContent .post .userComments .userCommentText .emojiReaction img.laughEmoji {
+    width: 1.7rem;
+
+}
+
+
+.rightContent .post .userComments .commentReaction {
+    position: relative;
+    width: 35rem;
+    margin-left: 5rem;
+    display: flex;
+    gap: 0.5rem;
+    color: #1B4965;
+    padding-left: 0.3rem;
+}
+
+
+
+.rightContent .post .userComments .commentReaction:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+
+
+
+  
+  
+  
+
+
+  
+  

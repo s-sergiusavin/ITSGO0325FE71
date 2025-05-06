@@ -1,0 +1,1065 @@
+* {
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 4rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    /* background-color: #1B4965; */
+    /* background-color: #4E9CD0; */
+    background-color: #5FA8D3;
+}
+
+/* TOP BAR (header) */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+header .navigation {
+    display: flex;
+}
+
+header .navigation>li>a {
+    border-radius: 50%;
+    background-color: #CAE9FF;
+    margin: 0 0.5rem;
+    margin-left: 1rem;
+    display: flex;
+    height: 3rem;
+    padding: 0.3rem;
+}
+
+header .navigation>li>a:hover {
+    background-color: #FFE74C;
+}
+
+
+header .mainSearch {
+    display: flex;
+    align-items: center;
+}
+
+header .mainSearch .logo {
+    width: 3.5rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    margin-right: 2rem;
+}
+
+header .mainSearch span {
+    color: black;
+    position: absolute;
+    left: 39rem;
+}
+
+
+
+header .mainSearch .searchInput {
+    height: 2.5rem;
+    width: 18rem;
+    border-radius: 0.5rem;
+    padding: 0 1rem;
+    text-align: center;
+    /* background-color: #FFE74C; */
+    background-color: #CAE9FF;
+    border-color: black;
+    color: black;
+
+}
+
+header .mainSearch .searchInput::placeholder {
+    color: black;
+}
+
+
+header .mainSearch .searchInput:focus {
+    border: 0.2rem solid #CAE9FF
+}
+
+header .mainSearch .smallScreenSearch {
+    display: none;
+}
+
+header .links {
+    display: flex;
+}
+
+
+header .links>li>a {
+    border-radius: 50%;
+    background-color: #CAE9FF;
+    margin: 0 0.5rem;
+    margin-right: 2rem;
+    display: flex;
+    height: 3rem;
+    padding: 0.3rem;
+}
+
+header .links>li>a:hover {
+    background-color: #FFE74C;
+}
+
+.bellIcon {
+    position: relative;
+    display: block;
+}
+
+.bellIcon span {
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    left: 2rem;
+    border-radius: 50%;
+    color: white;
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+
+
+
+
+
+/* News Feed (main) */
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+
+.mainContent {
+    /* width: 40%; */
+    width: 40vw;
+
+}
+
+
+
+/* postare de la curs */
+
+.mainContent .post {
+    margin: 3rem 0;
+    padding: 1rem;
+    border: 1px solid black;
+    border-radius: 1rem;
+}
+
+.mainContent .post .postHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.mainContent .post .postHeader .profileUserInfo {
+    display: flex;
+    align-items: center;
+}
+
+
+/* .mainContent .post .postHeader .profileUserInfo .profileImage {
+    width: 3rem;
+    border-radius: 50%;
+} */
+
+.mainContent .post .postHeader .profileUserInfo .profileName {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 0.5rem;
+}
+
+.mainContent .post .postHeader .profileOptions {
+    display: flex;
+    gap: 1rem;
+    margin-top: -2rem;
+}
+
+.mainContent .post .postHeader .profileOptions img {
+    height: 1.5rem;
+    padding: 0.2rem;
+    border: 1px solid black;
+    border-radius: 50%;
+    background-color: #CAE9FF;
+}
+
+
+.mainContent .post .postHeader .profileOptions img:hover {
+    background-color: #FFE74C;
+}
+
+
+.mainContent .post .content {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.mainContent .post .content .imgContent {
+    max-width: 100%;
+
+
+}
+
+/* .mainContent .post .content .infoIcon {
+    width: 2rem;
+    height: 2rem;
+    font-size: 2rem;
+    position: absolute;
+    bottom: -1rem;
+    right: 1rem;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    cursor: pointer;
+} */
+
+/* .mainContent .post .content .postTitle {
+    padding: 1rem;
+} */
+
+.mainContent .post .content .postDescription {
+    margin-bottom: 0.5rem;
+}
+
+
+.mainContent .post .reacts .likesInfo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mainContent .post .reacts .likesInfo img {
+    height: 2rem;
+    margin-right: -0.7rem;
+}
+
+.mainContent .post .reacts .likesInfo span {
+    margin-left: 1rem;
+}
+
+.mainContent .post .reacts .commentsInfo {
+    display: flex;
+    gap: 0.7rem;
+}
+
+.mainContent .post .reacts {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* .mainContent .post .reacts .reactIcons {
+    color: royalblue;
+} */
+
+.mainContent .post .reactsActions .actions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.mainContent .post .reactsActions .actions .reaction {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    /* padding: 0.5rem 1rem; */
+}
+
+.mainContent .post .reactsActions .actions .reaction img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+    border-radius: 50%;
+    background-color: #CAE9FF;
+}
+
+.mainContent .post .reactsActions .actions .reaction img:hover {
+    background-color: #FFE74C;
+}
+
+
+.mainContent .post .reactsActions .actions .reaction span {
+    margin-left: 0.5rem;
+}
+
+
+.mainContent .post .reactsActions .actions .reaction:hover {
+    color: #5FA8D3;
+}
+
+
+.mainContent .post .commentSection {
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 1rem;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* .mainContent .post .commentSection .profileImage {
+    width: 3rem;
+    border-radius: 50%;
+} */
+
+
+.mainContent .post .commentSection .newCommentField {
+    width: 80%;
+    height: 5.5rem;
+    border-radius: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #CAE9FF;
+    cursor: pointer;
+    border: none;
+
+}
+
+.mainContent .post .commentSection .newCommentField::placeholder {
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.mainContent .post .commentSection .newCommentField:hover {
+    background-color: #5FA8D3;
+}
+
+.mainContent .post .commentSection .newCommentField:focus {
+    outline-color: black;
+}
+
+.mainContent .post .commentSection .insertCommentButton {
+    width: 2rem;
+    border-radius: 50%;
+    border: 1px solid transparent;
+    background-color: #CAE9FF;
+}
+
+
+.mainContent .post .commentSection .insertCommentButton:hover {
+    background-color: #FFE74C;
+    padding: 0.2rem;
+}
+
+
+/* .mainContent .post .userComments .profileImage {
+    width: 3rem;
+    border-radius: 50%;
+} */
+
+/* for all profile images - de preferat sa fie pusa la inceput*/
+
+.profileImage {
+    width: 3rem;
+    border-radius: 50%;
+}
+
+.mainContent .post .userComments {
+    margin-bottom: 0.5rem;
+}
+
+
+.mainContent .post .userComments .userCommentsContent {
+    display: flex;
+    margin-left: 1rem;
+}
+
+.mainContent .post .userComments .userCommentText {
+    margin: 0 1rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: #CAE9FF;
+    position: relative;
+    width: 35rem;
+}
+
+.mainContent .post .userComments .userCommentText span.commentUserName {
+    font-weight: bold;
+}
+
+
+.mainContent .post .userComments .userCommentText p {
+    margin: 0 0 0.8rem 0;
+}
+
+.mainContent .post .userComments .userCommentText .emojiReaction {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.mainContent .post .userComments .userCommentText .emojiReaction span {
+    margin-right: 0.5rem;
+}
+
+.mainContent .post .userComments .userCommentText .emojiReaction img {
+    width: 2rem;
+    margin-left: -0.6rem;
+}
+
+.mainContent .post .userComments .userCommentText .emojiReaction img.laughEmoji {
+    width: 1.7rem;
+
+}
+
+
+.mainContent .post .userComments .commentReaction {
+    position: relative;
+    width: 35rem;
+    margin-left: 5rem;
+    display: flex;
+    gap: 0.5rem;
+    color: #1B4965;
+    padding-left: 0.3rem;
+}
+
+
+
+
+/* .mainContent .post .userComments .userCommentText:hover .emojiReaction {
+    display: block;
+} */
+
+
+/* .mainContent .post .userComments .userCommentText:hover {
+    animation-name: comment-animation;
+    animation-duration: 1s;
+} */
+
+
+.mainContent .post .userComments .commentReaction:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+/* .insertCommentButton {
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .center {
+    width: 5rem;
+    height: 2rem;
+  }
+  
+  .btn {
+    width: 5rem;
+    height: 1.5rem;
+    cursor: pointer;
+    background: transparent;
+    border: 1px solid #91C9FF;
+    outline: none;
+    transition: 1s ease-in-out;
+  }
+  
+  svg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    fill: none;
+    stroke: orange;
+    stroke-dasharray: 150 480;
+    stroke-dashoffset: 150;
+    transition: 1s ease-in-out;
+  }
+  
+  .btn:hover {
+    transition: 1s ease-in-out;
+    background: #4F95DA;
+  }
+  
+  .btn:hover svg {
+    stroke-dashoffset: -480;
+  }
+  
+  .btn i {
+    color: orange;
+    font-size: 18px;
+    font-weight: 100;
+  }
+   */
+
+
+
+
+/* basic setting for both left and right content */
+
+.leftContent,
+.rightContent {
+    top: 3rem;
+    /* width: 15%; */
+    width: 15vw;
+    /* border: 1px solid black; */
+    height: 100vh;
+    position: fixed;
+}
+
+/* LEFT CONTENT */
+
+/* top */
+
+.leftContent {
+    display: flex;
+    flex-direction: column;
+    left: 0;
+}
+
+.leftContent .myProfile {
+    display: flex;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-left: 1rem;
+}
+
+.leftContent .myProfile .myPic img {
+    height: 3rem;
+    border-radius: 50%;
+}
+
+.leftContent .myProfile span {
+    display: flex;
+    align-items: center;
+    margin-left: 0.5rem;
+    font-weight: bold;
+}
+
+
+.leftContent .myProfile .profileButtons {
+    display: flex;
+    margin-left: 1.5rem;
+    gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.leftContent .myProfile .profileButtons a {
+    border-radius: 50%;
+    /* background-color: #5FA8D3; */
+    /* border: 1px solid black; */
+}
+
+.leftContent .myProfile .profileButtons a:hover {
+    background-color: #FFE74C;
+}
+
+
+.leftContent .myProfile .buttonImg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+    height: 2rem;
+    padding: 0.2rem;
+}
+
+
+
+.leftContent .quickAccess .quickAccessLinks {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+
+}
+
+.leftContent .quickAccess .chooseMode {
+    display: flex;
+    margin-top: 0.5rem;
+    align-items: center;
+    margin-left: 1rem;
+    margin-bottom: 2rem;
+    margin-right: 1rem;
+}
+
+.leftContent .quickAccess .quickAccessLinks img {
+    height: 2.5rem;
+}
+
+
+.leftContent .quickAccess,
+.help {
+    /* border: 1px solid black; */
+    background-color: #CAE9FF;
+}
+
+.leftContent .quickAccess {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+}
+
+.leftContent .quickAccess .quickAccessLinks {
+    margin-left: 1rem;
+    margin-bottom: 2rem;
+}
+
+/* bottom */
+
+
+footer {
+    flex: 1;
+    display: flex;
+    border-top: 1px solid black;
+    background-color: #CAE9FF;
+    padding: 5.5rem 0.4rem 0 0.4rem;
+}
+
+
+/* 
+.leftContent .help {
+    flex: 1;
+    padding: 5.5rem 0.4rem 0 0.4rem;
+    border-top: 1px solid black;
+}
+
+
+.leftContent .help span {
+    margin-left: 0.5rem;
+} */
+
+
+/* RIGHT CONTENT */
+
+.rightContent {
+    display: flex;
+    flex-direction: column;
+    right: 0;
+}
+
+.rightContent .friendsList {
+    display: flex;
+    gap: 1rem;
+    height: 3rem;
+    margin-top: 1rem;
+    justify-content: center;
+    align-items: center;
+    background-color: #CAE9FF;
+}
+
+.rightContent .groupsList {
+    display: flex;
+    gap: 1rem;
+    height: 3rem;
+    justify-content: center;
+    align-items: center;
+    background-color: #CAE9FF;
+}
+
+.rightContent .suggestionsList {
+    display: flex;
+    gap: 1rem;
+    height: 3rem;
+    justify-content: center;
+    align-items: center;
+    background-color: #CAE9FF;
+}
+
+.rightContent .friendsList img,
+.groupsList img,
+.suggestionsList img {
+    height: 2.5rem;
+    padding: 0.2rem;
+    border-radius: 50%;
+    border: 1px solid #1B4965;
+    background-color: #5FA8D3;
+}
+
+
+.rightContent .friendsList img:hover,
+.groupsList img:hover,
+.suggestionsList img:hover {
+    background-color: #FFE74C;
+}
+
+.rightContent .friendsList a,
+.groupsList a,
+.suggestionsList a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.rightContent .friends {
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+    overflow-y: scroll;
+    scrollbar-color: transparent;
+    scrollbar-width: none;
+    border-bottom: 1px solid black;
+}
+
+
+.rightContent .friends img {
+    height: 3rem;
+}
+
+
+.rightContent .friends .friendName {
+    margin-left: 1rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.rightContent .groups {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    overflow-y: scroll;
+    scrollbar-color: transparent;
+    scrollbar-width: none;
+    border-bottom: 1px solid black;
+}
+
+.rightContent .groups .groupName {
+    margin-left: 1rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.rightContent .groups img {
+    height: 3rem;
+}
+
+.rightContent .friendSuggestion {
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+    overflow-y: scroll;
+    scrollbar-color: transparent;
+    scrollbar-width: none;
+}
+
+.rightContent .friendSuggestion .suggestion {
+    margin-left: 1rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.rightContent .friendSuggestion img {
+    height: 3rem;
+}
+
+.rightContent .friends,
+.groups,
+.friendSuggestion {
+    border-top: 1px solid black;
+    background-color: #CAE9FF;
+    display: flex;
+    padding-top: 0.5rem;
+}
+
+.rightContent span {
+    font-weight: bold;
+}
+
+/*Different screens settings */
+
+@media screen and (max-width:1536px) {
+    
+    header {
+        width: 100vw;
+    }
+
+
+    .leftContent .quickAccess .myProfile .profileButtons {
+        display: flex;
+        flex-direction: column;
+        margin-right: 0.5rem;
+    }
+
+    footer {
+        display: none;
+    }
+}
+
+
+
+@media screen and (max-width:1280px) {
+
+    header {
+        width: 100vw;
+    }
+
+
+    .leftContent .quickAccess .myProfile .profileButtons {
+        display: flex;
+        flex-direction: column;
+        margin-right: 1rem;
+    }
+
+}
+
+
+@media screen and (max-width:1150px) {
+
+    header {
+        width: 100vw;
+    }
+
+    .leftContent {
+        display: none;
+    }
+
+    .mainContent {
+        width: 60vw;
+        margin-right: 20vw;
+    }
+
+    .rightContent {
+        width: 20vw;
+    }
+
+}
+
+
+@media screen and (max-width:1000px) {
+   
+    header {
+        width: 100vw;
+    }
+
+    header .mainSearch .searchInput {
+        display: none;
+    }
+
+    header .mainSearch .smallScreenSearch {
+        display: flex;
+    }
+
+    header .mainSearch a.smallScreenSearch img {
+        width: 2.5rem;
+    }
+
+    header .mainSearch a.smallScreenSearch img:hover {
+        width: 2rem;
+        margin-left: 0.5rem;
+    }
+
+
+    .rightContent .friendsList span,
+    .groupsList span,
+    .suggestionsList span {
+        display: none;
+    }
+
+}
+
+
+
+@media screen and (max-width:820px) {
+
+   header {
+        width: 100vw;
+    }
+
+    header .navigation>li>a {
+        height: 2.5rem;
+    }
+
+    header .mainSearch .logo {
+        width: 3rem;
+    }
+
+    header .mainSearch a.smallScreenSearch img {
+        width: 2rem;
+    }
+
+    header .mainSearch a.smallScreenSearch img:hover {
+        width: 1.5rem;
+    }
+
+    header .links>li>a {
+        height: 2.5rem;
+    }
+
+
+    .rightContent .friends img {
+        height: 2.5rem;
+    }
+
+    .rightContent .groups img {
+        height: 2.5rem;
+    }
+
+    .rightContent .friendSuggestion img {
+        height: 2.5rem;
+    }
+
+}
+
+@media screen and (max-width:750px) {
+
+    header {
+        width: 100vw;
+    }
+  
+
+    .rightContent {
+        display: none;
+    }
+
+    .mainContent {
+        margin: 0;
+        width: 80vw;
+    }
+
+
+    .mainContent .post .userComments .userCommentText .emojiReaction {
+
+        display: flex;
+        position: relative;
+        justify-content: flex-start;
+
+
+    }
+
+}
+
+
+@media screen and (max-width:650px) {
+
+   
+    header {
+        width: 100vw;
+    }
+
+    header .navigation>li>a {
+        height: 2.25rem;
+    }
+
+    header .mainSearch .logo {
+        width: 2.75rem;
+    }
+
+    header .mainSearch a.smallScreenSearch img {
+        width: 1.75rem;
+    }
+
+    header .mainSearch a.smallScreenSearch img:hover {
+        width: 1.25rem;
+    }
+
+    header .links>li>a {
+        height: 2.25rem;
+    }
+
+
+}
+
+
+@media screen and (max-width:570px) {
+
+    header {
+        width: 100vw;
+    }
+
+    header .navigation>li>a {
+        height: 2rem;
+    }
+
+    header .mainSearch .logo {
+        width: 2.5rem;
+    }
+
+    header .mainSearch a.smallScreenSearch img {
+        width: 1.5rem;
+    }
+
+    header .mainSearch a.smallScreenSearch img:hover {
+        width: 1rem;
+    }
+
+    header .links>li>a {
+        height: 2rem;
+    }
+
+    .mainContent {
+        width: 95vw;
+        margin: 0;
+    }
+
+    .mainContent .post {
+        border-radius: 1rem;
+    }
+}
+
+
+@media screen and (max-width:520px) {
+
+    header {
+        width: 100vw;
+    }
+
+    header .mainNavigation .navigation{
+        display: none;
+    }
+
+    header .navigation>li>a {
+        height: 2rem;
+    }
+
+    header .mainSearch .logo {
+        width: 2.5rem;
+    }
+
+    header .mainSearch a.smallScreenSearch img {
+        width: 1.5rem;
+    }
+
+    header .mainSearch a.smallScreenSearch img:hover {
+        width: 1rem;
+    }
+
+    header .links>li>a {
+        height: 2rem;
+    }
+
+    .mainContent {
+        width: 100vw;
+        margin: 0;
+    }
+
+    .mainContent .post {
+        border-radius: 1rem;
+        width: 100vw;
+    }
+
+
+}
