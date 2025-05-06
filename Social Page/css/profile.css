@@ -1,0 +1,582 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #edf2f6;
+    height: 150rem;
+
+}
+
+.mainProfile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.principalHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 34rem;
+    background-color: white;
+    width: 75%;
+    border-radius: 1rem;
+    margin-top: 1rem;
+}
+
+.image {
+    width: 100%;
+}
+
+.imgHeader {
+    height: 25rem;
+    width: 100%;
+    border-radius: 0.5rem;
+}
+
+.headerOptions {
+    display: flex;
+    justify-content: space-around;
+    height: 10rem;
+    gap: 5rem;
+}
+
+.profilePic {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profilePicName {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    bottom: 3.2rem;
+}
+
+.profilePicResize {
+    position: relative;
+    bottom: 4rem;
+    z-index: 1;
+    height: 7rem;
+    border-radius: 5rem;
+    border: 3px solid white;
+}
+
+.headerOptionsRight,
+.headerOptionsLeft {
+    display: flex;
+    gap: 5rem;
+    padding-top: 4rem;
+    font-weight: bold;
+    color: #888;
+}
+
+.headerOptionsLeft span:hover {
+    color: black;
+    cursor: pointer;
+}
+
+.headerOptionsRight span:hover {
+    color: black;
+    cursor: pointer;
+}
+
+.imageSettings {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ff5e3a;
+    color: white;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    position: absolute;
+    top: 25rem;
+    right: 32rem;
+}
+
+.imageSettings:hover {
+    cursor: pointer;
+}
+
+/* Main */
+
+main {
+    /* border: 1px solid black; */
+    height: 1000px;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+
+}
+
+.leftContentProfile,
+.rightContentProfile {
+    width: 15%;
+    height: 50rem;
+    margin-top: 3rem;
+}
+
+.mainContentProfile {
+    height: 50px;
+    width: 40%;
+    height: 50rem;
+    margin-top: 3rem;
+}
+
+/* LEFT */
+/* Profile Intro */
+.profileIntro {
+    background-color: white;
+    border-radius: 0.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.profileIntroTitle {
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding-top: 1rem;
+    padding-left: 1rem;
+}
+
+.aboutMe,
+.favouriteTvShows,
+.FavouriteMusic,
+.otherSocials {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    color: #515365;
+}
+
+.otherSocialsIcons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.facebook,
+.linkedIn,
+.twitter {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    height: 2rem;
+    width: 90%;
+    padding-left: 4.5rem;
+    color: white;
+    border-radius: 0.35rem;
+}
+
+.facebook {
+    background-color: #2f5b9d;
+}
+
+.twitter {
+    background-color: #38bff1;
+}
+
+.linkedIn {
+    background-color: #0077B5;
+}
+
+.facebook:hover {
+    color: black;
+    cursor: pointer;
+}
+
+.twitter:hover {
+    color: black;
+    cursor: pointer;
+}
+
+.linkedIn:hover {
+    color: black;
+    cursor: pointer;
+}
+
+/* My Playlist */
+
+.myPlaylist {
+    background-color: white;
+    border-radius: 0.5rem;
+    padding-bottom: 1.5rem;
+    margin-top: 2rem;
+}
+
+.myPlaylistTitle {
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding-top: 1rem;
+    padding-left: 1rem;
+}
+
+
+.thePastStarts,
+.thePretender,
+.bloodBrothers,
+.sevenNationsArmy,
+.killerQueen {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    /* flex-direction: column; */
+    gap: 1rem;
+    color: #888;
+    padding-left: 1rem;
+}
+
+.artistAndSong {
+    display: flex;
+    flex-direction: column;
+    color: black;
+    font-size: 0.8rem;
+}
+
+.imageSong {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.imageResized {
+    height: 1.5rem;
+    width: 2.5rem;
+}
+
+/* Last posts */
+
+.lastPhotos {
+    background-color: white;
+    border-radius: 0.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.lastPhotosTitle {
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding-top: 1rem;
+    padding-left: 1rem;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.3rem;
+}
+
+.galleryImage {
+    height: 5rem;
+    width: 5rem;
+    border-radius: 0.3rem;
+}
+
+/* Friends */
+
+.friends {
+    background-color: white;
+    border-radius: 0.5rem;
+    padding-bottom: 1.5rem;
+    margin-top: 2rem;
+}
+
+.friendsTitle {
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding-top: 1rem;
+    padding-left: 1rem;
+}
+
+.galleryFriends {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 0.3rem;
+}
+
+.galleryImageFriends {
+    height: 2.7rem;
+    width: 2.7rem;
+    border-radius: 50%;
+}
+
+.moreFriends {
+    background-color: orange;
+    height: 2.7rem;
+    width: 2.7rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bolder;
+}
+
+.moreFriends:hover {
+    background-color: black;
+    color: orange;
+}
+
+/* Blog */
+
+.blogPosts {
+    background-color: white;
+    border-radius: 0.5rem;
+    padding-bottom: 1.5rem;
+    margin-top: 2rem;
+}
+
+.blogTitleProfile {
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding-top: 1rem;
+    padding-left: 1rem;
+}
+
+.firstBlog,
+.secondBlog {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    color: #515365;
+}
+
+/* Favourites Pages */
+
+.FavouritePages {
+    background-color: white;
+    border-radius: 0.5rem;
+    padding-bottom: 1.5rem;
+    margin-top: 2rem;
+}
+
+.FavouritePagesTitle {
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding-top: 1rem;
+    padding-left: 1rem;
+}
+
+.theMarinaBar,
+.tapronusRock,
+.pixelDigitalDesign,
+.thompson,
+.crimsonAgency {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: #888;
+}
+
+.nameAndTypeAndImage {
+    display: flex;
+    gap: 1rem;
+    padding-left: 1rem;
+}
+
+.nameAndType {
+    display: flex;
+    flex-direction: column;
+    color: black;
+    font-size: 0.8rem;
+}
+
+.favouritePagesImages {
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 50%;
+}
+
+.iconsFavouritePages:hover {
+    color: blue;
+    background-color: orange;
+    display: flex;
+    border-radius: 2rem;
+}
+
+/* main Content */
+
+.postProfile,
+.postProfileSecond,
+.postProfileThird {
+    background-color: white;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    color: #888;
+}
+
+.postProfileSecond,
+.postProfileThird {
+    margin-top: 2rem;
+}
+
+.profileUser {
+    display: flex;
+    gap: 1rem;
+}
+
+.miniProfilePic {
+    height: 2.5rem;
+    border-radius: 50%;
+}
+
+.nameAndHour {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.reactionImagesPeople1,
+.reactionImagesPeople2,
+.reactionImagesPeople3,
+.reactionImagesPeople4,
+.reactionImagesPeople5 {
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 50%;
+}
+
+.reactionImagesPeople2,
+.reactionImagesPeople3,
+.reactionImagesPeople4,
+.reactionImagesPeople5 {
+    margin-left: -1rem;
+}
+
+.reactions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.reactionNames {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1rem;
+}
+
+.reactionsLove,
+.reactionsCommnetAndShare {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.reactionsLove:hover {
+    color: orange;
+    cursor: pointer;
+}
+
+.reactionsCommnetAndShare:hover {
+    color: orange;
+    cursor: pointer;
+}
+
+.reactionsLove {
+    margin-right: 1rem;
+}
+
+.reactionsImagesAndNames {
+    display: flex;
+    justify-content: space-around;
+}
+
+.reactionNames:hover {
+    color: orange;
+}
+
+.youtube {
+    border: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 0.5rem;
+}
+
+.videoYoutube {
+    display: flex;
+    border-radius: 0.5rem;
+    padding-right: 1.5rem;
+}
+
+.sharedPhoto {
+    width: 100%;
+    border-radius: 0.5rem;
+}
+
+#verticleLine {
+    background-color: #ccc;
+    width: 1px;
+    height: 10rem;
+}
+
+/* sharedPhoto */
+
+.profileUserShared {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.miniProfilePicShared {
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 50%;
+}
+
+/* Top Button */
+.upArrow {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    font-size: 2rem;
+    color: #ff5e3a;
+}
+
+.upArrow:hover {
+    color: black;
+}
+
+/* Breakpoints */
+@media only screen and (max-width:1600px) {
+    .facebook, .twitter, .linkedIn {
+        padding-left: 2.5rem;
+    }
+
+    .thePastStarts, .thePretender, .bloodBrothers, .sevenNationsArmy, .killerQueen {
+        padding: 0.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border: 0.1px dotted black;
+    }
+
+    .artistAndSong {
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+    }
+
+    .galleryImage {
+        height: 4rem;
+        width: 4rem;
+    }
+
+    .gallery {
+        gap: 0.1rem;
+    }
+
+    .iconsFavouritePages {
+        padding-right: 1rem;
+    }
+
+}
