@@ -153,3 +153,8 @@ const actor = {
 };
 
 console.log(actor);
+
+// Assignement to constant variable errors
+
+// person = actor;
+// person = 5;
