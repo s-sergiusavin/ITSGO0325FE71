@@ -68,7 +68,7 @@ personalInfo = `Salut
 ${fullName}, cu varsta de ${age} de ani.
 Cum ti s-a parut cursul pana acum?`;
 
-const anotherInfo = 'Salut, \n' + fullName + ' cu varsta de ' + age + '\nBine ai venit la curs';
+const anotherInfo = 'Salut, \n' + fullName + ' cu varsta de ' + age + '\nde ani' + '\nBine ai venit la curs!';
 
 console.log(personalInfo);
 console.log(anotherInfo);
@@ -147,7 +147,7 @@ person.fullName = 'Brad Pitt';
 
 console.log(person.fullName);
 
-person = {}; //!! Error, assignment to constant variable
+// person = {}; //!! Error, assignment to constant variable
 
 const actor = {
     name: 'Brad Pitt',
@@ -160,3 +160,109 @@ console.log(actor);
 
 // person=actor
 
+
+/**
+ * Teste
+ */
+
+
+console.log('Salut, bine ai venit!');
+
+const visitor = ' prietene!';
+const welcome = 'Bine ai venit,';
+const site = 'Acesta este site-ul VW.';
+
+console.log(visitor);
+console.log(welcome + visitor+site);
+
+const cars = ['Volkswagen', 'Audi', 'Skoda', 'Seat'];
+console.log(cars);
+    
+console.log(cars.length);
+console.log(cars[0]);
+console.log(cars[1]);
+console.log(cars[2]);
+console.log(cars[3]);
+console.log(cars[cars.length-1]);
+console.log(cars[cars.length-3]);
+
+cars[3] = ['Seat' , 'Cupra'];
+
+console.log(cars);
+console.log(cars.length);
+console.log(cars[3]);
+console.log(cars[3][1]);
+console.log(cars[cars.length-1][0]);
+
+
+const passat = {
+    modelName : 'Volkswagen Passat',
+    year : '2025',
+    bodyType : ['Saloon', 'Estate'],
+    engine: {
+        diesel: {
+            fuel: 'diesel',
+            power: '150 hp',
+            torque:'360 Nm',
+        },
+        gasoline : { 
+            fuel: 'gasoline',
+            power: '150 hp',
+            torque:'250 Nm',
+        },
+        
+    },
+    euro6 : true,
+    pollutionNorm: 'Euro6',
+    
+};
+
+console.log(passat);
+console.log(passat.modelName);
+console.log(passat.pollutionNorm);
+console.log(passat.euro6);
+console.log(passat.bodyType[0]);
+console.log(passat.engine.diesel.power);
+console.log(passat.engine.diesel.torque);
+console.log(passat.engine.diesel.fuel);
+
+console.log(passat);
+console.log(passat.modelName);
+console.log(passat.pollutionNorm);
+console.log(passat.euro6);
+console.log(passat.bodyType[1]);
+console.log(passat.engine.gasoline.power);
+console.log(passat.engine.gasoline.torque);
+console.log(passat.engine.gasoline.fuel);
+
+passat.engine.diesel.fuel = 'diesel+adBlue';
+
+
+console.log(passat);
+console.log(passat.modelName);
+console.log(passat.pollutionNorm);
+console.log(passat.euro6);
+console.log(passat.bodyType[0]);
+console.log(passat.engine.diesel.power);
+console.log(passat.engine.diesel.torque);
+console.log(passat.engine.diesel.fuel);
+
+passat.bodyType = ['Shooting brake', 'Limousine']
+
+console.log(passat);
+console.log(passat.modelName);
+console.log(passat.pollutionNorm);
+console.log(passat.euro6);
+console.log(passat.bodyType[0]);
+console.log(passat.engine.diesel.power);
+console.log(passat.engine.diesel.torque);
+console.log(passat.engine.diesel.fuel);
+
+console.log(passat);
+console.log(passat.modelName);
+console.log(passat.pollutionNorm);
+console.log(passat.euro6);
+console.log(passat.bodyType[1]);
+console.log(passat.engine.gasoline.power);
+console.log(passat.engine.gasoline.torque);
+console.log(passat.engine.gasoline.fuel);
