@@ -177,7 +177,7 @@ header .links>li>a:hover {
     border: 0.2rem solid white;
 }
 
-.profileCover a.profilePic img:hover{
+.profileCover a.profilePic img:hover {
     border: 0.2rem solid #FFE74C;
 }
 
@@ -190,7 +190,7 @@ header .links>li>a:hover {
     border-radius: 1rem;
 }
 
-.profileCover .editCover:hover{
+.profileCover .editCover:hover {
     background-color: #FFE74C;
 }
 
@@ -228,7 +228,7 @@ header .links>li>a:hover {
     background-color: #62B6CB;
 }
 
-.profileInfo .profileOptions .addContent:hover{
+.profileInfo .profileOptions .addContent:hover {
     background-color: #FFE74C;
 }
 
@@ -263,10 +263,10 @@ header .links>li>a:hover {
     align-items: center;
     flex-wrap: wrap;
     position: relative;
-    
+
 }
 
-.chooseContent .category .categoryBtn{
+.chooseContent .category .categoryBtn {
     border: 1px solid transparent;
     padding: 0.7rem 0.5rem;
     position: relative;
@@ -274,13 +274,13 @@ header .links>li>a:hover {
 }
 
 
-.chooseContent .category .categoryBtn:hover{
+.chooseContent .category .categoryBtn:hover {
     background-color: #5FA8D3;
     border-radius: 1rem;
-    
+
 }
 
-.chooseContent .menuDots{
+.chooseContent .menuDots {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -290,10 +290,10 @@ header .links>li>a:hover {
     padding: 0.2rem 0.7rem;
     position: absolute;
     right: 22rem;
-   
+
 }
 
-.chooseContent .menuDots:hover{
+.chooseContent .menuDots:hover {
     background-color: #FFE74C;
 }
 
@@ -303,7 +303,7 @@ header .links>li>a:hover {
     align-items: flex-start;
     max-width: 75rem;
     margin: 0 auto;
-  }
+}
 
 .leftContent {
     position: sticky;
@@ -312,7 +312,7 @@ header .links>li>a:hover {
     overflow-y: auto;
     margin-right: 24px;
     z-index: 9;
-  }
+}
 
 .profileContent .leftContent .info {
     border: 1px solid black;
@@ -325,21 +325,21 @@ header .links>li>a:hover {
     margin: 1rem 0 1rem 0;
 }
 
-.profileContent .leftContent .info span strong{
+.profileContent .leftContent .info span strong {
     cursor: pointer;
 }
 
-.profileContent .leftContent .info span strong:hover{
+.profileContent .leftContent .info span strong:hover {
     text-decoration: underline;
 }
 
 
-.profileContent .leftContent .info span.introTitle{
+.profileContent .leftContent .info span.introTitle {
     font-weight: bold;
     font-size: large;
 }
 
-.profileContent .leftContent .info a.insta{
+.profileContent .leftContent .info a.insta {
     display: flex;
     margin-top: 1rem;
     color: #1B4965;
@@ -357,7 +357,7 @@ header .links>li>a:hover {
     color: black;
 }
 
-.profileContent .leftContent .info a.editInfo:hover{
+.profileContent .leftContent .info a.editInfo:hover {
     background-color: #FFE74C;
 }
 
@@ -367,7 +367,7 @@ header .links>li>a:hover {
     padding: 1rem;
     margin: 1rem 0 1rem 0;
     background-color: #CAE9FF;
-    
+
 }
 
 
@@ -383,7 +383,7 @@ header .links>li>a:hover {
     margin-bottom: 1rem;
 }
 
-.profileContent .leftContent .photos .photosTitle .title:hover{
+.profileContent .leftContent .photos .photosTitle .title:hover {
     text-decoration: underline;
 }
 
@@ -404,7 +404,7 @@ header .links>li>a:hover {
     cursor: pointer;
 }
 
-.profileContent .leftContent .photos .photosPreview img:hover{
+.profileContent .leftContent .photos .photosPreview img:hover {
     opacity: 0.8;
 }
 
@@ -427,7 +427,7 @@ header .links>li>a:hover {
 .profileContent .leftContent .friends .friendsTitle .count {
     display: flex;
     flex-direction: column;
-    
+
 }
 
 
@@ -437,11 +437,11 @@ header .links>li>a:hover {
     font-size: large;
 }
 
-.profileContent .leftContent .friends .friendsTitle .count .title:hover{
+.profileContent .leftContent .friends .friendsTitle .count .title:hover {
     text-decoration: underline;
 }
 
-.profileContent .leftContent .friends .friendsTitle .seeAll span{
+.profileContent .leftContent .friends .friendsTitle .seeAll span {
     color: #1B4965;
     cursor: pointer;
 }
@@ -466,7 +466,7 @@ header .links>li>a:hover {
 }
 
 
-.profileContent .leftContent .friends .friendsPreview .friendDisplay img:hover{
+.profileContent .leftContent .friends .friendsPreview .friendDisplay img:hover {
     opacity: 0.8;
 }
 
@@ -480,7 +480,7 @@ header .links>li>a:hover {
     color: gray;
 }
 
-.profileContent .leftContent footer span:hover{
+.profileContent .leftContent footer span:hover {
     text-decoration: underline;
 }
 
@@ -490,7 +490,7 @@ header .links>li>a:hover {
 .rightContent {
     flex: 1 1 0;
     min-width: 0;
-  }
+}
 
 .rightContent .status {
     border: 1px solid black;
@@ -530,7 +530,7 @@ header .links>li>a:hover {
     justify-content: space-evenly;
 }
 
-.rightContent .status .addContent a{
+.rightContent .status .addContent a {
     padding: 0.7rem;
     border: 1px solid transparent;
     border-radius: 0.5rem;
@@ -824,12 +824,156 @@ header .links>li>a:hover {
 }
 
 
+@media screen and (max-width:1536px) {
+    .profileCover{
+        width: auto;
+    }
+
+    .profileCover .coverPic img{
+        width: 75vw;
+    }
+}
 
 
-  
-  
-  
+@media screen and (max-width:1366px) {
+   
+    .profileCover .coverPic img{
+        width: 85vw;
+    }
+}
 
 
-  
-  
+
+@media screen and (max-width:1210px) {
+
+    .profileInfo {
+        margin: 0.1rem 1rem 1rem 26rem;
+    }
+
+    .chooseContent {
+        margin: 0.1rem 1rem 1rem 13.5rem;
+    }
+
+    .chooseContent .menuDots {
+        right: 14rem;
+    }
+
+}
+
+@media screen and (max-width:1050px) {
+
+    .profileInfo {
+        margin: 0.1rem 1rem 1rem 24rem;
+    }
+
+}
+
+@media screen and (max-width:1024px) {
+
+    .profileInfo .profileOptions .addContent, .profileInfo .profileOptions .editProfile{
+
+        text-align: center;
+    }
+
+    .wrapper {
+        width: 119vw;
+    }
+}
+
+@media screen and (max-width:970px) {
+
+    body {
+        background-color: lightgray;
+    }
+
+    header .mainSearch .searchInput {
+        display: none;
+    }
+
+    header .mainSearch .logo {
+        margin-right: 0;
+    }
+
+    .profileCover .coverPic img {
+        width: 100vw;
+        /* margin: 0 1rem 0 1rem; */
+        border-radius: 1rem;
+    }
+
+    .profileCover .editCover {
+        display: none;
+    }
+
+
+
+    .profileCover a.profilePic {
+        left: 25.5rem;
+    }
+
+
+
+    .profileInfo {
+        margin-top: 6rem;
+    }
+
+    .profileName span{
+        text-align: center;
+    }
+
+    .chooseContent .menuDots {
+        display: none;
+    }
+
+
+    .divider {
+        width: 100vw;
+    }
+
+    .profileContent {
+        flex-direction: column;
+    }
+
+    .leftContent {
+        position: relative;
+        align-self: center;
+        width: 80vw;
+
+    }
+    
+    .leftContent .photos .photosPreview {
+        justify-content: space-between;
+
+    }
+
+    .leftContent .friends .friendsPreview {
+        margin-left: 4rem;
+    }
+
+    .rightContent {
+        align-self: center;
+        width: 80vw;
+    }
+
+    
+}
+
+
+@media screen and (max-width:770px) {
+
+    .profileCover a.profilePic {
+        left: 20.5rem;
+    }
+
+    .profileInfo {
+        margin: 6rem 1rem 1rem 19rem;
+    }
+
+    .chooseContent {
+        justify-content: center;
+        margin: 0;
+    }
+
+    .profileContent .leftContent .friends .friendsPreview {
+        margin-left: 1.5rem;
+    }
+}
