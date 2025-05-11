@@ -17,6 +17,11 @@ header {
     top: 0;
     left: 0;
     z-index: 10;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    /* border: 1px solid red; */
 
     background-color: #5FA8D3;
 }
@@ -142,6 +147,11 @@ header .links>li>a:hover {
 .wrapper {
     background-color: #CAE9FF;
     width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    /* border: 1px solid red; */
 }
 
 
@@ -300,18 +310,27 @@ header .links>li>a:hover {
 
 .profileContent {
     display: flex;
-    align-items: flex-start;
+    justify-content: space-evenly;
+    /* align-items: flex-start; */
+    width: 100%;
     max-width: 75rem;
-    margin: 0 auto;
+    /* margin: 0 auto; */
+    /* margin-left: auto;
+    margin-right: auto; */
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    /* border: 1px solid red; */
+    justify-self: center;
 }
 
 .leftContent {
     position: sticky;
     top: 0px;
     align-self: flex-start;
-    overflow-y: auto;
-    margin-right: 24px;
+    /* overflow-y: auto; */
+    /* margin-right: 24px; */
     z-index: 9;
+    width: 35rem;
 }
 
 .profileContent .leftContent .info {
@@ -488,7 +507,8 @@ header .links>li>a:hover {
 /* RIGHT CONTENT */
 
 .rightContent {
-    flex: 1 1 0;
+    /* flex: 1; */
+    width: 35rem;
     min-width: 0;
 }
 
@@ -825,155 +845,400 @@ header .links>li>a:hover {
 
 
 @media screen and (max-width:1536px) {
-    .profileCover{
-        width: auto;
-    }
-
-    .profileCover .coverPic img{
-        width: 75vw;
-    }
-}
-
-
-@media screen and (max-width:1366px) {
-   
-    .profileCover .coverPic img{
-        width: 85vw;
-    }
-}
-
-
-
-@media screen and (max-width:1210px) {
-
-    .profileInfo {
-        margin: 0.1rem 1rem 1rem 26rem;
-    }
-
-    .chooseContent {
-        margin: 0.1rem 1rem 1rem 13.5rem;
-    }
-
-    .chooseContent .menuDots {
-        right: 14rem;
-    }
-
-}
-
-@media screen and (max-width:1050px) {
-
-    .profileInfo {
-        margin: 0.1rem 1rem 1rem 24rem;
-    }
-
-}
-
-@media screen and (max-width:1024px) {
-
-    .profileInfo .profileOptions .addContent, .profileInfo .profileOptions .editProfile{
-
-        text-align: center;
+    header {
+        max-width: 1536px;
     }
 
     .wrapper {
-        width: 119vw;
+        width: 1536px;
+    }
+
+
+    .profileInfo {
+        margin: 0.1rem 1rem 1rem 30rem;
+    }
+
+}
+
+@media screen and (max-width:1366px) {
+
+    header {
+        max-width: 1536px;
+    }
+
+
+    .wrapper {
+        width: 1536px;
+    }
+
+    .profileContent {
+        margin-left: 10.5rem;
+    }
+
+    .profileInfo {
+        margin: 0.1rem 1rem 1rem 33rem;
+    }
+
+}
+
+
+
+@media screen and (max-width:1280px) {
+
+    header {
+        max-width: 1366px;
+    }
+
+
+    .wrapper {
+        width: 1366px;
+    }
+
+    .profileContent {
+        margin-left: 6rem;
+    }
+
+
+    .profileInfo {
+        margin: 0.1rem 1rem 1rem 29rem;
     }
 }
 
-@media screen and (max-width:970px) {
 
-    body {
-        background-color: lightgray;
+@media screen and (max-width:1024px) {
+
+    header {
+        max-width: 1366px;
+    }
+
+
+    .wrapper {
+        max-width: 1366px;
+    }
+
+
+    .profileContent {
+        margin-left: 21rem;
+    }
+
+    .profileInfo {
+        margin: 0.1rem 1rem 1rem 35rem;
+    }
+
+    .chooseContent {
+        margin: 0.1rem 1rem 1rem 26.5rem;
+    }
+
+    .chooseContent .menuDots {
+        display: none;
+    }
+}
+
+
+@media screen and (max-width:768px) {
+
+    header {
+        width: 100%;
     }
 
     header .mainSearch .searchInput {
         display: none;
     }
 
-    header .mainSearch .logo {
-        margin-right: 0;
+    .wrapper {}
+
+    .profileCover {
+        width: 150vw;
     }
 
     .profileCover .coverPic img {
-        width: 100vw;
-        /* margin: 0 1rem 0 1rem; */
-        border-radius: 1rem;
+        width: 150vw;
     }
-
-    .profileCover .editCover {
-        display: none;
-    }
-
-
-
-    .profileCover a.profilePic {
-        left: 25.5rem;
-    }
-
-
 
     .profileInfo {
-        margin-top: 6rem;
+        margin: 0.1rem 1rem 1rem 20rem;
     }
 
-    .profileName span{
-        text-align: center;
+    .divider {
+        width: 150vw;
+    }
+
+    .profileContent {
+        margin-left: 35rem;
+        flex-direction: column;
+        gap: 2rem;
+
+    }
+
+
+    .profileContent .leftContent {
+        position: relative;
+        align-self: center;
+
+    }
+
+    .profileContent .rightContent {
+        align-self: center;
+
+    }
+
+
+    footer {
+        display: none;
     }
 
     .chooseContent .menuDots {
         display: none;
     }
 
-
-    .divider {
-        width: 100vw;
+    body {
+        font-size: large;
     }
 
-    .profileContent {
-        flex-direction: column;
-    }
 
-    .leftContent {
-        position: relative;
-        align-self: center;
-        width: 80vw;
-
-    }
-    
-    .leftContent .photos .photosPreview {
-        justify-content: space-between;
-
-    }
-
-    .leftContent .friends .friendsPreview {
-        margin-left: 4rem;
-    }
-
-    .rightContent {
-        align-self: center;
-        width: 80vw;
-    }
-
-    
 }
 
 
-@media screen and (max-width:770px) {
+@media screen and (max-width:640px) {
 
-    .profileCover a.profilePic {
-        left: 20.5rem;
+    header {
+        width: 100%;
     }
 
+    header .mainSearch .searchInput {
+        display: none;
+    }
+
+    .wrapper {}
+
+    .profileCover {
+        width: 220vw;
+    }
+
+    .profileCover .coverPic img {
+        width: 220vw;
+    }
+
+
     .profileInfo {
-        margin: 6rem 1rem 1rem 19rem;
+        margin: 0.1rem 1rem 1rem 12rem;
+    }
+
+    .divider {
+        width: 220vw;
+    }
+
+    .profileContent {
+        margin-left: 46rem;
+        flex-direction: column;
+        gap: 2rem;
+
+    }
+
+
+    .profileContent .leftContent {
+        position: relative;
+        align-self: center;
+
+    }
+
+    .profileContent .rightContent {
+        align-self: center;
+
+    }
+
+
+    footer {
+        display: none;
+    }
+
+    .chooseContent .menuDots {
+        display: none;
+    }
+
+    body {
+        font-size: larger;
+    }
+
+
+}
+
+
+@media screen and (max-width:475px) {
+
+    header {
+        width: 100%;
+    }
+
+    header .mainSearch .searchInput {
+        display: none;
+    }
+
+    .wrapper {}
+
+    .profileCover {
+        width: 290vw;
+    }
+
+    .profileCover .coverPic img {
+        width: 290vw;
+    }
+
+
+    .profileInfo {
+        margin: 0.1rem 1rem 1rem 12rem;
+    }
+
+    .divider {
+        width: 220vw;
+    }
+
+    .profileContent {
+        width: 100vw;
+        margin-left: 54.5rem;
+
+    }
+
+
+    .profileContent .leftContent {
+        width: 280vw;
+
+    }
+
+    .profileContent .rightContent {
+        width: 280vw;
+
+    }
+
+
+
+    .profileContent .leftContent .info span.introTitle {
+
+        font-size: xx-large;
+    }
+
+    .profileContent .leftContent .photos .photosTitle {
+
+        font-size: xx-large;
+    }
+
+    .profileContent .leftContent .photos .photosPreview {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .profileContent .leftContent .photos .photosPreview img {
+        width: 15rem;
+        height: 15rem;
+    }
+
+
+    .profileContent .leftContent .friends .friendsTitle .count {
+        font-size: xx-large;
+    }
+
+    .profileContent .leftContent .friends .friendsTitle .seeAll {
+        font-size: xx-large;
+    }
+
+    .profileContent .leftContent .friends .friendsTitle .count .title {
+        font-size: xx-large;
+    }
+
+
+
+    .profileContent .leftContent .friends .friendsPreview {
+        padding-left: 9rem;
+    }
+
+    .profileContent .leftContent .friends .friendsPreview .friendDisplay img {
+        width: 15rem;
+        height: 15rem;
+
+    }
+
+
+
+    .rightContent .status {
+        font-size: xx-large;
+    }
+
+    .rightContent .status .writeStatus .smallProfilePic {
+        width: 5rem;
+    }
+
+    .rightContent .status .writeStatus input {
+        width: 76rem;
+    }
+
+    .rightContent .status .writeStatus input::placeholder {
+        font-size: xx-large;
+    }
+
+
+    .rightContent .postsStart {
+        font-size: xx-large;
+    }
+
+    .rightContent .post {
+        font-size: xx-large;
+    }
+
+    .rightContent .post .profileImage {
+        width: 5rem;
+    }
+
+
+    .rightContent .post .postHeader .profileOptions img {
+        height: 2.5rem;
+    }
+
+
+
+    .rightContent .post .reacts .likesInfo img {
+        height: 4rem;
+    }
+
+    .rightContent .post .reactsActions .actions .reaction img {
+        width: 4rem;
+    }
+
+    .rightContent .post .commentSection .newCommentField::placeholder {
+        font-size: xx-large;
+    }
+
+    .rightContent .post .commentSection .insertCommentButton {
+        width: 4rem;
+    }
+
+
+
+    .rightContent .post .userComments .userCommentText {
+        width: 72rem;
+    }
+
+
+    .rightContent .post .userComments .userCommentText .emojiReaction img {
+        width: 4rem;
+    }
+
+    .rightContent .post .userComments .userCommentText .emojiReaction img.laughEmoji {
+        width: 3.7rem;
+    }
+
+    footer {
+        display: none;
+    }
+
+    .chooseContent .menuDots {
+        display: none;
     }
 
     .chooseContent {
-        justify-content: center;
-        margin: 0;
+        margin: 0.1rem 1rem 1rem 22.5rem;
     }
 
-    .profileContent .leftContent .friends .friendsPreview {
-        margin-left: 1.5rem;
+    body {
+        font-size: x-large;
     }
 }
