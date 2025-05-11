@@ -945,7 +945,7 @@ header .links>li>a:hover {
         display: none;
     }
 
-    .wrapper {}
+    /* .wrapper {} */
 
     .profileCover {
         width: 150vw;
@@ -1009,7 +1009,7 @@ header .links>li>a:hover {
         display: none;
     }
 
-    .wrapper {}
+    /* .wrapper {} */
 
     .profileCover {
         width: 220vw;
@@ -1074,7 +1074,7 @@ header .links>li>a:hover {
         display: none;
     }
 
-    .wrapper {}
+    /* .wrapper {} */
 
     .profileCover {
         width: 290vw;
@@ -1242,3 +1242,4 @@ header .links>li>a:hover {
         font-size: x-large;
     }
 }
+
