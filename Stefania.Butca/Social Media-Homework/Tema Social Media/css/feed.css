@@ -1,0 +1,254 @@
+/* Reset general */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fafafa;
+}
+
+header {
+    background-color: white;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav.mainNavigation {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 2rem;
+    gap: 2rem;
+}
+
+nav.mainNavigation a {
+    color: #262626;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+nav.mainNavigation a:hover {
+    color: #0095f6;
+}
+
+/* Layout principal */
+main {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 2rem;
+    margin-top: 100px;
+    /* To prevent overlap with fixed leftContent and rightContent */
+}
+
+/* Left Section (Navigation) */
+.leftContent {
+    width: 15rem;
+    padding: 1rem;
+    background-color: #fff;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    /* Ensures it takes full height */
+    z-index: 100;
+}
+
+.leftNav a {
+    display: block;
+    padding: 15px;
+    color: #262626;
+    font-size: 14px;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+.leftNav i {
+    margin-right: 10px;
+}
+
+.leftNav a:hover {
+    background-color: #f0f0f0;
+    border-radius: 5px;
+}
+
+.mainSearch {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+/* Main Content (Posts Feed) */
+.mainContent {
+    flex: 1;
+    padding: 0 6rem;
+    max-width: 700px;
+    margin-left: 16rem;
+    /* Adding space to the left to not overlap the leftContent */
+    margin-right: 20rem;
+    /* Adding space to the right to not overlap the rightContent */
+    margin-top: -5rem;
+    /* Adjusting for the header */
+}
+
+.post {
+    background-color: #fff;
+    margin-bottom: 5rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.postHeader {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    align-items: center;
+}
+
+.profileUserInfo {
+    display: flex;
+    align-items: center;
+}
+
+.profileImage {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.profileName span {
+    display: block;
+    font-size: 12px;
+    color: #262626;
+}
+
+.imgWrapper {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    /* Pătrat, sau 4/5 pentru portret Instagram */
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+    margin: 10px 0;
+}
+
+.imgContent {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Acoperă complet păstrând proporția */
+    display: block;
+}
+
+.content .imgWrapper {
+    width: 100%;
+    text-align: center;
+
+}
+
+.imgContent {
+    width: 100%;
+    height: auto;
+}
+
+.reactsActions ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 10px;
+}
+
+.reactsActions .reaction {
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.postDescription {
+    padding: 10px;
+    color: #262626;
+    font-size: 16px;
+    line-height: 1.5;
+    font-style: bold;
+
+}
+
+.commentSection p {
+    padding: 10px;
+    font-size: 14px;
+}
+
+/* Right Section (Profile & Messages) */
+
+.rightContent {
+    width: 20rem;
+    padding: 2rem;
+    background-color: #fff;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    /* Ensures it takes full height */
+    z-index: 100;
+}
+
+.userInfo {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.profileImage {
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.username {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.switchLink {
+    margin-left: auto;
+    font-size: 12px;
+    color: #0095f6;
+    text-decoration: none;
+}
+
+.suggestedSection {
+    width: 100%;
+    margin: 15px 0;
+}
+
+.suggestedHeader {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-weight: bold;
+}
+
+.footerLinks {
+    margin-top: 20px;
+    line-height: 1.5;
+}
+
+.footerLinks a {
+    color: #aaa;
+    text-decoration: none;
+    margin-right: 5px;
+    font-size: 11px;
+}
+
+.footerLinks a:hover {
+    text-decoration: underline;
+}
+
+.copyright {
+    margin-top: 10px;
+    font-size: 11px;
+    color: #888;
+}

@@ -1,0 +1,381 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+    box-sizing: border-box;
+    padding-bottom: 3rem; /* Adăugăm padding pentru a evita suprapunerea cu footer-ul */
+}
+
+header {
+    background-color: #f7f7f7;
+    color: #333;
+    padding: 0;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.logo {
+    flex: 1;
+}
+
+.nav-bar {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.middle-list {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.middle-list li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+}
+
+.searchBar {
+    margin-top: 10px;
+    display: flex;
+    gap: 5px;
+    width: 100%;
+    justify-content: center;
+}
+
+.searchBar input {
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.searchBar button {
+    padding: 5px;
+}
+
+.nav-links {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 7px;
+    list-style: none;
+}
+
+.nav-links li {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.nav-links li i {
+    font-size: 16px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+nav a {
+    color: #ff5a5f;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+nav li {
+    display: inline-block;
+    margin: 0 1rem;
+}
+
+.bar {
+    width: 700px;
+    background: #f7f7f7;
+    box-shadow: 0 0 5px hsl(0 0% 78%);
+    height: 55px;
+    border-radius: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.6rem;
+    padding: 0.2rem;
+}
+
+.bar div {
+    border-radius: inherit;
+    padding: 5px;
+    transition: 250ms ease;
+}
+
+.bar div:hover {
+    background: hsl(0 0% 94%);
+    cursor: pointer;
+}
+
+.location {
+    width: 34%;
+}
+
+.check-in,
+.check-out,
+.guests {
+    width: 22%;
+}
+
+input[type="text"] {
+    background: none;
+    border: none;
+    padding: 0.2rem 0 0 0;
+}
+
+input[type="text"]:focus {
+    outline: none;
+}
+
+::placeholder {
+    font-size: 0.75rem;
+}
+
+.guests {
+    position: relative;
+}
+
+.guests span {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    background: #FF385C;
+    color: white;
+    font-size: 0.8rem;
+    padding: 0.7rem;
+    border-radius: 50%;
+}
+
+.bar>div {
+    position: relative;
+}
+
+
+.bar>div::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 55%;
+    background: hsl(0 0% 90%);
+}
+
+.bar>div:nth-of-type(1)::before {
+    background: transparent;
+}
+
+
+.bar>div:hover::before {
+    background: transparent;
+}
+
+.hero {
+    background-color: #f7f7f7;
+    color: #333;
+    text-align: center;
+    padding: 1rem 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+    align-items: center;
+    border-top: #c7c7c7 solid 1px;
+}
+
+.labels {
+    display: flex;
+    margin: 0 1rem;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 4rem;
+    font-size: 0.9rem;
+}
+
+.labels > div a {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* centrează imaginea și textul */
+    text-decoration: none; 
+    color: inherit; /* păstrează culoarea textului */
+}
+
+.labels > div a:hover {
+    text-decoration: underline;
+}
+
+.labels img {
+    width: 2rem; /* lățimea dorită pentru imagine */
+    height: auto;
+    margin-bottom: 5px;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.hero-buttons .next {
+    background-color: #f7f7f7;
+    border: #000000 solid 1px;
+    border-radius: 100%;
+    cursor: pointer;
+    font-size: 0.5rem;
+}
+
+.hero-buttons .filters {
+    background-color: #f7f7f7;
+    color: black;
+    padding: 0.5rem 1rem;
+    border: #000000 solid 1px;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: semibold;
+}
+
+.hero-buttons button:hover {
+    box-shadow: #807f7f 0px 0px 5px;
+}
+
+.experiences {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding: 2rem;
+    justify-content: center;
+  }
+  
+  .experience-card {
+    width: 300px;
+    border-radius: 16px;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease;
+    cursor: pointer;
+  }
+  
+  .experience-card:hover {
+    transform: scale(1.02);
+  }
+  
+  .experience-card img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .experience-card .info {
+    padding: 1rem;
+    font-family: 'Helvetica Neue', sans-serif;
+  }
+  
+  .experience-card .info h5 {
+    font-size: 1rem;
+    margin: 0 0 0.3rem 0;
+  }
+  
+  .experience-card .info p {
+    margin: 0.2rem 0;
+    color: #555;
+    font-size: 0.9rem;
+  }
+  
+
+  footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+  
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1rem 0.1rem;
+    background-color: #f7f7f7;
+    color: #222;
+    font-size: 0.9rem;
+    border-top: 1px solid #ddd;
+  }
+  
+  
+  footer ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    list-style: none;
+    padding: 0 1rem;
+    margin: 0.5rem 0 0 0;
+  }
+  
+  footer a {
+    color: #222;
+    text-decoration: none;
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-left {
+    display: flex;
+    align-items: center; 
+    gap: 1rem;
+  }
+  
+  .footer-left p {
+    margin: 0;
+  }  
+
+  
+  
+  .footer-left,
+  .footer-right {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+  
