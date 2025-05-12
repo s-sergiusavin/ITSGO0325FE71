@@ -1,0 +1,140 @@
+ * {
+     box-sizing: border-box;
+     font-size: 1rem;
+ }
+
+ .allNav {
+     background-color: black;
+     display: flex;
+     justify-content: start;
+     align-items: center;
+ }
+
+ .imgDaily {
+     height: 7rem;
+     width: 16rem;
+ }
+
+ ul {
+     list-style: none;
+     font-size: 0.8rem;
+     color: white;
+     display: flex;
+     justify-content: space-between;
+     flex-direction: row;
+     gap: 2rem;
+     align-items: center;
+ }
+
+ nav a {
+     color: white;
+     text-decoration: none;
+ }
+
+ footer a {
+     color: white;
+     text-decoration: none;
+ }
+
+ .loggingIn {
+     position: absolute;
+     right: 2rem;
+ }
+
+ .logIn {
+     width: 6rem;
+ }
+
+ .signUp.second {
+     background-color: rgb(190, 55, 55);
+     color: white;
+     border-radius: 10%;
+     padding: 0.3rem 0.2rem;
+
+ }
+
+ .footerDisplay {
+     background-color: black;
+     display: flex;
+     justify-content: space-between;
+ }
+
+ .footer.first {
+     display: flex;
+     flex-direction: column;
+     align-items: flex-start;
+     padding: 0rem 0rem 0rem 6rem;
+ }
+
+ .footer.second {
+     display: flex;
+     flex-direction: column;
+     align-items: flex-start;
+ }
+
+ .footer.third {
+     display: flex;
+     flex-direction: row;
+     gap: 2rem;
+     padding: 2rem 5rem 0rem 0rem;
+ }
+
+ .imgFacebook {
+     width: 3rem;
+     height: 3rem;
+     border-radius: 10%;
+ }
+
+ .imgInstagram {
+     width: 3rem;
+     height: 3rem;
+     border-radius: 21%;
+ }
+
+ .imgYoutube {
+     width: 3rem;
+     height: 3rem;
+ }
+
+ .copyright {
+     background-color: black;
+     color: white;
+     margin: 0px;
+     font-size: 0.8rem;
+ }
+
+ .imgKnowles {
+     height: 37rem;
+     width: 50rem;
+     padding: 1rem 0rem 1rem 2rem;
+ }
+
+ .mainContainer {
+     display: flex;
+     justify-content: center;
+ }
+
+ .listContainer {
+     display: flex;
+     flex-direction: column;
+ }
+
+ .secondSection {
+     background-color: black;
+     border: 1rem solid black;
+ }
+
+ section .episodes {
+     color: white;
+     font-style: italic;
+ }
+
+ .talent {
+     height: 15rem;
+     max-width: 40rem;
+ }
+
+ .section2 {
+     display: flex;
+     justify-content: space-around;
+ }
