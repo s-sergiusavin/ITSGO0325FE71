@@ -12,6 +12,8 @@ result = myNumber * secondNumber;
 result = myNumber / secondNumber;
 result = myNumber % secondNumber;
 
+
+
 /**
  * Stringuri
  * (Siruri de caractere)
@@ -65,6 +67,7 @@ const myObj = {
 console.log(myObj.juice);
 console.log(myObj['french-fries']);
 
+//-----------------------------------------------------------------------------
 /**
  * Loops
  * (Bucle)
@@ -94,7 +97,19 @@ while (marksOf10Lei < total) {
     marksOf10Lei += 1;
 }
 
-console.log(`Avem ${marksOf10Lei} bancnote de 10 lei`)
+console.log(`Avem ${marksOf10Lei} bancnote de 10 lei`);
+
+
+marksOf1Lei = 10;
+total1Lei = 4;
+
+while (marksOf1Lei > total1Lei) {
+    marksOf1Lei -= 1;
+}
+
+console.log(`Avem ${marksOf1Lei} bancnote de 1 leu`)
+
+
 
 let roomTemperature = 21;
 let desiredTemperature = 23;
@@ -121,7 +136,7 @@ isAcOn = false
 //For Loop
 
 let marksOf5Lei = 0;
-let total5Lei = 5;
+let total5Lei = 7;
 
 // for (initializare ; conditie ; operatiune la finalul procesului)
 // codul din interiorul parantezelor acolade se numeste bloc de executie
@@ -161,8 +176,8 @@ if (val1 === val2) {
     console.log('variabilele nu sunt egale')
 }
 
-// Truthy sau Falsy values
-// Falsy: 0, '', false, undefined, null
+// Truthy sau Falsey values
+// Falsey: 0, '', false, undefined, null
 
 if ('') {
     console.log('Conditia este adevarata')
@@ -202,8 +217,8 @@ if (temperature >= optimalTemperature && temperature < maxTemperature) {
     console.log('afara este urat')
 }
 
-let pizzaPrice = 35;
-let hasGorgonzola = true;
+let pizzaPrice = 34;
+let hasGorgonzola = false;
 
 if (pizzaPrice <= 35 || (hasGorgonzola && pizzaPrice <=40)) {
     console.log('Pizza isi merita banii')
@@ -221,6 +236,18 @@ val1 = 5;
 val2 = '5';
 
 val1===val2 ? console.log('Egale') : console.log('Diferite')
+
+
+value1 = 3;
+value2 ='3';
+
+value1 === value2 ? console.log('Declaratiile sunt egale') : console.log('Declaratiile nu sunt egale')
+
+if (value1 !== value2){
+    console.log('egale, frate');
+} else {
+    console.log('nu-s egale frate'); //folosind !== js a verificat daca value1 si value2 sunt diferite si a fost adevarat, deci a returnat prima varianta
+}
 
 //Expresie identica cu cea din operatorul ternar
 
@@ -243,6 +270,12 @@ function logSomething () {
 logSomething();
 logSomething();
 
+function doThis () {
+    console.log('I dit that thing')
+}
+
+doThis();
+
 //Function expression : const denumirea functiei = function keyword, paranteze rotunde, acolade
 
 const doSomething = function () {
@@ -251,6 +284,11 @@ const doSomething = function () {
 
 doSomething();
 
+const playMusic = function () {
+    console.log('Music is playing')
+}
+
+playMusic();
 
 // Arrow function (cel mai folosit)
 
@@ -259,6 +297,13 @@ const doSomethingArrowFunction = () => {
 }
 
 doSomethingArrowFunction();
+
+const throwArrow = () => {
+    console.log('I threw an arrow')
+}
+
+throwArrow();
+
 
 //Functions with parameters
 let number = 800; //variabila number nu se va confunda cu parametrul functiei de mai jos
@@ -273,7 +318,6 @@ addToFive(10);
 
 const substractFrom100 = (number) => {
     console.log(`Rezultatul este ${100-number}`)
-
 }
 
 substractFrom100(20);
@@ -286,3 +330,49 @@ console.log(100 + 'marcel');
 console.log(100 + '5');
 console.log(100 + '' + 3);
 
+//------ exercitiil mele
+
+const addOne = (number) => {
+    console.log(`I added one and the result is ${number+1}`)
+}
+
+addOne(1);
+addOne(50);
+addOne('1');
+addOne();
+
+//--
+
+const addCity = (string) => {
+    console.log(string+'\ City')
+}
+
+addCity('Mexico');
+addCity('NewYork');
+addCity('Medias');
+
+//--
+
+reqRam = 32;
+reqCpu = 3.2;
+reqGpu = 'Nvidia';
+rtxOn = true;
+
+yourRam = 32;
+yourCpu = 3.2;
+yourGpu = 'Nvidia';
+
+yourRam === reqRam ? console.log('Your RAM is sufficient to run the game') : console.log(`Your RAM is not sufficient to run the game, you need ${reqRam-yourRam} more RAM to run it `);
+
+if (yourRam === reqRam && yourCpu === reqCpu && yourGpu === reqGpu && rtxOn) {
+    console.log('You can play the game');
+}else {
+    console.log('You can`t play the game');
+}
+
+function toPower(number){
+    return number*number;
+}
+
+console.log(toPower(2));
+console.log(toPower(4));
