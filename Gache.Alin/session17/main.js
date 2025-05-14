@@ -244,6 +244,7 @@ const doSomethingArrowFunction = () => {
 doSomethingArrowFunction();
 
 //Functions with params
+//Trimitem argumente in momentul apelarii si primim parametrii
 
 let number = 800; // variabila number nu se confunda/amesteca cu parampetrul functiei de mai jos
 
