@@ -306,6 +306,9 @@ throwArrow();
 
 
 //Functions with parameters
+// trimitem argumente in momentul in care apelam functia
+// primim parametrii
+
 let number = 800; //variabila number nu se va confunda cu parametrul functiei de mai jos
 
 function addToFive(number) {
