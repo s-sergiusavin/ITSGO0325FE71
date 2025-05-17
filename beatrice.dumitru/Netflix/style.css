@@ -1,0 +1,443 @@
+/* Resetare stiluri implicite */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Stil general */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: black;
+    color: white;
+}
+
+/* Bara de navigare */
+s.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    padding: 15px 30px;
+}
+
+/* Logo-ul */
+.logo img {
+    width: 160px; /* Ajustează dimensiunea logo-ului */
+    margin-left: 200%;
+}
+
+.button {
+    background-color: red; /* Culoare roșie */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 18px;
+    margin-right: 15%;
+}
+
+/* Aliniere corectă în navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    padding: 15px 30px;
+}
+
+/* Pentru ca meniul și butonul să stea pe același rând */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+    transition: 0.3s;
+}
+
+/* Stil pentru containerul butonului */
+.language-selector {
+    position: relative;
+    display: inline-block;
+}
+
+.button {
+    margin-right: 200px;
+}
+
+/* Butonul principal */
+.language-select {
+    background-color: #000000;
+    color: white;
+    padding: 10px 15px;
+    border: 2px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.language-button .button {
+    width: 100px;
+    color: white;
+}
+/* Meniul dropdown */
+.dropdown {
+    display: none;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    min-width: 150px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+/* Link-urile din dropdown */
+.dropdown a {
+    display: block;
+    padding: 10px;
+    color: black;
+    text-decoration: none;
+}
+
+.dropdown a:hover {
+    background-color: #f1f1f1;
+}
+
+
+/*------------------------------------------------------------------------------------------------------------------*/
+/* Landing page */
+.landing-page {
+    background-color: transparent;
+    color: white;
+    padding: 20px 0;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    margin-top: 80px;
+}
+
+.landing-page .container {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.landing-page h1 {
+    font-size: 5rem;
+    color: white;
+}
+
+.landing-page h2 {
+    color: white;
+    text-align: center;
+    margin-right: 400px;
+}
+.form-section {
+    background-color:transparent;
+}
+
+.form-section .container {
+    width: 30%;
+    margin: 0 auto;
+}
+
+.form-section h4 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 1rem;
+    color: white;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-group input, .form-group textarea {
+    width: 20%;
+    padding: 10px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: transparent;
+    border: 2px solid rgb(149, 149, 149);
+    margin-left: 690px;
+}
+
+.form-group textarea {
+    height: 150px;
+}
+
+.form-group button {
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: 0.3s;
+    margin-bottom: 15%;
+}
+
+/*------------------------------------------------------------------------------------------------------------------*/
+/* Content */
+body {
+    background-color: #000;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  h2 {
+    font-size: 28px;
+    margin: 30px 20px 10px;
+    color: white;
+    margin-left: 400px;
+  }
+
+  .trending {
+    display: flex;
+    overflow-x: auto;
+    padding: 0 20px;
+    gap: 20px;
+    margin-left: 400px;
+  }
+
+  .trending-item {
+    flex: 0 0 auto;
+    position: relative;
+  }
+
+  .trending-item img {
+    width: 200px;
+    height: 300px;
+    border-radius: 8px;
+  }
+
+  .rank {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    font-size: 60px;
+    font-weight: bold;
+    color: white;
+    -webkit-text-stroke: 2px black;
+  }
+
+  .reasons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    align-content: center;
+    margin-left: 400px;
+  }
+
+  .reason-card {
+    background: linear-gradient(to bottom right, #1c1c3c, #1a0a2a);
+    flex: 1 1 200px;
+    padding: 20px;
+    border-radius: 12px;
+    color: white;
+    min-width: 200px;
+    max-width: 250px;
+    align-content: center;
+  }
+
+  .reason-card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: white;
+  }
+
+  .reason-card p {
+    font-size: 14px;
+    color: white;
+  }
+
+  .emoji {
+    font-size: 30px;
+    margin-top: 10px;
+    margin-left: 150px;
+  } 
+
+  /* Scrollbar hidden for aesthetics */
+  .trending::-webkit-scrollbar {
+    display: none;
+  }
+
+
+/*------------------------------------------------------------------------------------------------------------------*/
+/* Frequently */
+body {
+    background-color: #000;
+    color: white;
+    font-family: Arial, sans-serif;
+    max-width: 4000px;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    
+  }
+
+  .faq-container {
+    max-width: 1000px;
+    margin: 20px;
+    margin-left: 25%;
+    background-color: black;
+  }
+
+  .faq-title {
+    font-size: 24px;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 20px;
+    
+  }
+
+  .faq-item {
+    background-color: #5a5959;
+    color: white;
+    margin-bottom: 8px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: background 0.3s;
+  }
+
+  .faq-item:hover {
+    background-color: #5a5959;
+    color: white;
+  }
+
+  .faq-answer {
+    background-color: #3c3c3c;
+    color: white;
+    padding: 20px;
+    display: none;
+    animation: fadeIn 0.3s ease-in-out;
+    margin-bottom: 10px;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  .plus-icon {
+    font-size: 24px;
+  }
+
+  .faq {
+    width: auto;
+    background-color: black;
+  }
+/*------------------------------------------------------------------------------------------------------------------*/
+/* Footer */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #999;
+    font-family: Arial, sans-serif;
+  }
+
+  .footer {
+    padding: 40px 20px;
+    max-width: 2000px;
+    margin: auto;
+    background-color: black;
+  }
+
+  .footer-top {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .footer-top p {
+    margin-bottom: 20px;
+    color: white;
+    font-size: 18px;
+  }
+
+  .email-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .email-form input {
+    padding: 12px;
+    font-size: 16px;
+    width: 300px;
+    background-color: #222;
+    color: white;
+    border: 1px solid #555;
+    border-radius: 4px;
+  }
+
+  .email-form button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .footer-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+    margin: 40px 0;
+    text-align: center;
+  }
+
+  .footer-links a {
+    color: #999;
+    text-decoration: underline;
+    font-size: 14px;
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .footer-bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+
+  .language-select {
+    background-color: #111;
+    color: #fff;
+    border: 1px solid #555;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+
+  .footer-location {
+    font-size: 13px;
+    color: #999;
+  }

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body style="background-image: url('background.jpg'); background-size: cover; background-position: center;">
+    <!--Bara de navigare-->
+    <section>
+        <nav class="navbar">
+            <!--Logo-->
+            <div class="logo">
+                <img src="Netflix-Logo.png" alt="Logo">
+            </div>
+            <!--Traducere-->
+            <div class="language-button">
+                <select class="language-select">
+                    <option>🌐 English</option>
+                    <option>Deutsch</option>
+                    <option>Română</option>
+                  </select>
+                  <a href="#" class="button">Sign In</a> <!--Buton-->                           
+            </div>
+        </nav>
+    </section>
+    <!--Landing page-->
+    <section class="landing-page">
+        <div class="landing-page-container">
+            <div class="landing-page">
+                <h1>Unlimited movies, TV</h1>
+                <h1>shows, and more</h1>
+                
+            </div>
+            <h2>Starts at $4.99. Cancel anytime.</h2>
+            <p> </p>
+            
+        </div>
+    </section>
+    <section class="contact">
+        <div class="contact-container">
+            <div class="contact">
+                <section class="form-section">
+                    <div class="container">
+                        <h4>Ready to watch? Enter your email to create or restart your membership.</h4>
+                        <form id="contact-form">
+                        </form>
+                    </div>
+                    <div class="form-group">
+                        <label for=""></label>
+                        <input type="email" placeholder="Email adress">
+                        <button type="submit">Get Started ></button>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </section>
+</body>
+
+
+<body style="color: black;">
+    <!--Trending now-->
+    <!--More Reasons to Join-->
+    <h2>Trending Now</h2>
+  <div class="trending">
+    <div class="trending-item">
+      <span class="rank">1</span>
+      <img src="pulse.png" alt="Pulse">
+    </div>
+    <div class="trending-item">
+      <span class="rank">2</span>
+      <img src="adolescence.jpeg" alt="Adolescence">
+    </div>
+    <div class="trending-item">
+      <span class="rank">3</span>
+      <img src="squid-game.jpg" alt="Squid Game">
+    </div>
+    <div class="trending-item">
+      <span class="rank">4</span>
+      <img src="black.jpg" alt="Black Doves">
+    </div>
+    <div class="trending-item">
+      <span class="rank">5</span>
+      <img src="theelectricstate.jpeg" alt="The Electric State">
+    </div>
+  </div>
+
+  <h2>More Reasons to Join</h2>
+  <div class="reasons">
+    <div class="reason-card">
+      <h3>Enjoy on your TV</h3>
+      <p>Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray players, and more.</p>
+      <div class="emoji">📺</div>
+    </div>
+    <div class="reason-card">
+      <h3>Download your shows to watch offline</h3>
+      <p>Save your favorites easily and always have something to watch.</p>
+      <div class="emoji">⬇️</div>
+    </div>
+    <div class="reason-card">
+      <h3>Watch everywhere</h3>
+      <p>Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV.</p>
+      <div class="emoji">📱</div>
+    </div>
+    <div class="reason-card">
+      <h3>Create profiles for kids</h3>
+      <p>Send kids on adventures with their favorite characters in a space made just for them — free with your membership.</p>
+      <div class="emoji">🧒</div>
+    </div>
+  </div>
+    <!--Frequently-->
+    <section class="faq">
+    <div class="faq-container">
+        <div class="faq-title">Frequently Asked Questions</div>
+    
+        <div class="faq-item" onclick="toggleAnswer(this)">
+          <span>What can I watch on Netflix?</span>
+          <span class="plus-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          You can watch a wide variety of TV shows, movies, documentaries, and more.
+        </div>
+    
+        <div class="faq-item" onclick="toggleAnswer(this)">
+          <span>What is Netflix?</span>
+          <span class="plus-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          Netflix is a streaming service that offers entertainment content for a subscription fee.
+        </div>
+    
+        <div class="faq-item" onclick="toggleAnswer(this)">
+          <span>How much does Netflix cost?</span>
+          <span class="plus-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          Prices vary depending on your region and the selected plan.
+        </div>
+    
+        <div class="faq-item" onclick="toggleAnswer(this)">
+          <span>Where can I watch?</span>
+          <span class="plus-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          You can watch on your phone, tablet, smart TV, laptop, or streaming device.
+        </div>
+    
+        <div class="faq-item" onclick="toggleAnswer(this)">
+          <span>How do I cancel?</span>
+          <span class="plus-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          Cancel anytime through your account settings online.
+        </div>
+    
+        <div class="faq-item" onclick="toggleAnswer(this)">
+          <span>Is Netflix good for kids?</span>
+          <span class="plus-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          Netflix offers a kids' section with family-friendly content and parental controls.
+        </div>
+      </div>
+    
+      <script>
+        function toggleAnswer(element) {
+          const answer = element.nextElementSibling;
+          const icon = element.querySelector('.plus-icon');
+          const isVisible = answer.style.display === 'block';
+    
+          // Hide all answers
+          document.querySelectorAll('.faq-answer').forEach(el => el.style.display = 'none');
+          document.querySelectorAll('.plus-icon').forEach(icon => icon.textContent = '+');
+    
+          if (!isVisible) {
+            answer.style.display = 'block';
+            icon.textContent = '−';
+          }
+        }
+      </script>
+    </section>
+    <!--Footer-->
+    <footer class="footer">
+        <div class="footer-top">
+          <p>Ready to watch? Enter your email to create or restart your membership.</p>
+          <div class="email-form">
+            <input type="email" placeholder="Email address">
+            <button>Get Started ➜</button>
+          </div>
+        </div>
+    
+        <div class="footer-links">
+          <div>
+            <a href="#">FAQ</a>
+            <a href="#">Media Center</a>
+            <a href="#">Redeem Gift Cards</a>
+            <a href="#">Privacy</a>
+            <a href="#">Speed Test</a>
+            <a href="#">Ad Choices</a>
+          </div>
+          <div>
+            <a href="#">Cancel Membership</a>
+            <a href="#">Investor Relations</a>
+            <a href="#">Buy Gift Cards</a>
+            <a href="#">Cookie Preferences</a>
+            <a href="#">Legal Guarantee</a>
+          </div>
+          <div>
+            <a href="#">Help Center</a>
+            <a href="#">Jobs</a>
+            <a href="#">Ways to Watch</a>
+            <a href="#">Impressum</a>
+            <a href="#">Legal Notices</a>
+          </div>
+          <div>
+            <a href="#">Account</a>
+            <a href="#">Netflix Shop</a>
+            <a href="#">Terms of Use</a>
+            <a href="#">Contact Us</a>
+            <a href="#">Only on Netflix</a>
+          </div>
+        </div>
+    
+        <div class="footer-bottom">
+          <select class="language-select">
+            <option>🌐 English</option>
+            <option>Deutsch</option>
+            <option>Română</option>
+          </select>
+          <div class="footer-location">Netflix Germany</div>
+        </div>
+      </footer>
+</body>
