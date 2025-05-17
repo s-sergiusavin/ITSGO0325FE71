@@ -1,0 +1,252 @@
+* { box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
+    font-family: 'Segoe UI', sans-serif; 
+    background: transparent;
+  }
+
+.navbar {
+  background-color: #ffffff;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.1);
+  height: 70px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo img {
+  height: 90px;
+  object-fit: contain;
+  margin-top: 20px;
+}
+
+.search-box {
+  padding: 8px 15px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  outline: none;
+  width: 200px;
+  transition: 0.3s;
+}
+
+.search-box:focus {
+  border-color: #f26222;
+}
+
+.nav-left, .nav-center, .nav-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-center i {
+  font-size: 20px;
+  color: #555;
+  cursor: pointer;
+  padding: 0 30px;
+}
+
+.nav-right i {
+  font-size: 20px;
+  color: #555;
+  cursor: pointer;
+  
+}
+
+.profile-pic {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+body {
+  background: #f8f9fa;
+  color: #333;
+}
+
+header {
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 20px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header img {
+  height: 50px;
+}
+
+.nav-links a {
+  margin-left: 20px;
+  color: #ff5c1c;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 40px;
+  background-color: #f8f9fa;
+}
+
+.hero-text {
+  max-width: 50%;
+}
+
+.hero-text h1 {
+  font-size: 48px;
+  color: #ff5c1c;
+}
+
+.hero-text p {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #555;
+}
+
+.hero-text button {
+  margin-top: 30px;
+  padding: 12px 30px;
+  font-size: 16px;
+  background-color: #ff5c1c;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.hero-image img {
+  max-width: 750px;
+  margin-top: 30px;
+  border-radius: 10%;
+}
+
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 5rem;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background-color: rgb(5, 53, 69);
+}
+
+header .mainSearch {
+  display: flex;
+  align-items: center;
+}
+
+header .mainSearch .logo {
+  padding: 1rem;
+  font-size: 3rem;
+  color: rgb(75, 163, 195);
+}
+
+header .mainSearch .logo:hover {
+  color: white;
+}
+
+header .mainSearch .searchInput {
+  height: 3rem;
+  width: 13rem;
+  border-radius: 0.5rem;
+  padding: 0 1rem;
+  border-color: rgb(75, 163, 195);
+  background-color: rgb(164, 203, 218);
+}
+
+header .mainSearch .searchInput:focus {
+  border: 0.25rem solid rgb(75, 163, 195);
+  outline: none;
+}
+
+header .navigation,
+header .links {
+  display: flex;
+}
+
+header .navigation > li > a {
+  border-radius: 50%;
+  background-color: rgb(5, 53, 69);
+  margin: 0 0.35rem;
+  display: flex;
+}
+
+header .navigation > li > a:hover {
+  background-color: rgb(5, 53, 69);
+  border: 1px solid rgb(164, 203, 218);
+}
+
+.navIcons {
+  font-size: 2rem;
+  color: rgb(164, 203, 218);
+  margin: 0 0.2rem;
+  margin-right: 0.5rem;
+}
+
+.navIcons:hover {
+  color: rgb(75, 163, 195);;
+}
+
+.bellIcon {
+  position: relative;
+  display: block;
+}
+
+.bellIcon span {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: rgb(242, 84, 84);
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.leftContent,
+.rightContent {
+  width: 15%;
+  
+  height: calc(100% - 6rem);
+  position: fixed;
+  top: 5.5rem;
+}
+
+.leftContent {
+  left: 0;
+}
+
+
+.rightContent {
+  right: 0;
+}

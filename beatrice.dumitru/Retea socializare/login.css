@@ -1,0 +1,112 @@
+body {
+    background-image: url(assets/login-background.jpg);
+    background-size: cover;
+}
+
+a {
+    text-decoration: none;
+}
+
+.formContainer {
+    background-color: #f26222;
+    color: #1e2a38;
+    width: 300px;
+    max-width: 30rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 4px #888;
+    padding: 2rem 4rem;
+    text-align: center;
+    margin: 5rem auto;
+    margin-left: auto;
+    margin-right: 15rem;
+    
+    
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form .formField {
+    margin-bottom: 0.5rem;
+    color: #fff3e5;
+    margin-right: 35px;
+    text-align: center;
+}
+
+form .formField input {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    background-color: #fff3e5;
+    color: #1e2a38;
+    border-radius: 0.3rem;
+    border: 2px solid #fff3e5;
+}
+
+form .formField label {
+    font-weight: bold;
+    font-variant: small-caps;
+    font-size: 1.2rem;
+}
+
+form .formField.remeberUserField {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form .formField.remeberUserField input {
+    width: 10%;
+}
+
+form .formField.remeberUserField label {
+    font-size: 0.8rem;
+    font-variant: normal;
+    cursor: pointer;
+}
+
+form .loginButton {
+    background-color: #1e2a38;
+    border: 4px solid #fff3e5;
+    border-radius: 0.5rem;
+    color: #fff3e5;
+    padding: 0.75rem 2.5rem;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    margin-left: 2px;
+    font-weight: bold;
+}
+
+form .loginButton:hover {
+    background-color: #fff3e5;
+    border: #fff3e5;
+    color: #1e2a38;
+    border: 1px solid #fff3e5;
+    font-weight: bold;
+}
+
+a strong {
+    color: #1e2a38;
+}
+
+.registerButton {
+    background-color: #fff3e5;
+    border: 1px solid #fff3e5;
+    padding: 0.5rem 2rem;
+    display: block;
+    margin: 0 auto;
+    border-radius: 0.3rem;
+    width: 75%;
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+
+.registerButton:hover {
+    opacity: 0.8;
+}
+
+a {
+    color: #fff3e5;
+}
