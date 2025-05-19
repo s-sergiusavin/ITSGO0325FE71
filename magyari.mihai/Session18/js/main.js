@@ -15,6 +15,9 @@ var testVar = 'var-global';
 //     let testLet = 'if-let';
 //     const testConst = 'if-const';
 //     var testVar = 'if-var';
+// }
+
+
 
 // if (true){
 //     console.log(`Al doilea if--------`)
@@ -46,7 +49,7 @@ var testVar = 'var-global';
 //     console.log(testConst);
 //     console.log(testVar);
 
-// }
+
 
 // console.log('-----dupa if');
 // console.log(testLet);
@@ -71,6 +74,7 @@ function addTwo(number) {
 }
 
 console.log(globalVariable);
+
 
 // addTwo(5);
 // console.log(globalVariable);
@@ -264,7 +268,7 @@ rateMovie(`Avatar`); //Filmul e de nota 8
 rateMovie(`Avangers`); //Filmul e de nota 7
 rateMovie(`Justice League`); //Filmul e de nota 6
 rateMovie(`Jumanji`); //Filmul e de nota 5
-rateMovie( ) // Te rugam sa introduci numele filmului
+rateMovie() // Te rugam sa introduci numele filmului
 rateMovie(`Titanic`);
 
 
@@ -286,7 +290,7 @@ const complexObject = {
     sleep: () => {
         console.log(`Du-te la culcare`);
     },
-    work () {
+    work() {
         console.log(`Mergi la munca`);
     },
     age: 19
@@ -316,25 +320,26 @@ console.log(Math.random());
 console.log(Math.round(3.7));
 console.log(Math.round(Math.random()));
 
-if (valoriMoneda[Math.round(Math.random())] === `cap`){
+if (valoriMoneda[Math.round(Math.random())] === `cap`) {
     console.log(`A iesit cap`);
 
-}else{
+} else {
     console.log(`A iesit stema`);
 }
 
 //Palindrome game
 
 const palindrome = [1, 9, 7, 8, 7, 9, 1];
+
 const checkPalindrome = (array) => {
-    for (let i =0; i < array.length / 2; i++){
-        if (array[i] === array[array.length- 1 -i]){
-            return `Arrayul este palindrom`
+    for (let i = 0; i < array.length / 2; i++) {
+        if (array[i] !== array[array.length - 1 - i]) {
+            return `Arrayul nu este palindrom`
             // console.log(`Arrayul este palindrom`)
         }
     }
 
-    return `Arrayul nu este palindrom`
+    return `Arrayul  este palindrom`
     // console.log(`Arrayul nu este palindrom`)
 }
 
