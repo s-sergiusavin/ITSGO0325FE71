@@ -279,3 +279,55 @@ console.log(toggleAc());
 console.log(toggleAc());
 console.log(toggleAc());
 
+const toggleCurtains = () => {
+    curtainsValue = !curtainsValue;
+
+    if (curtainsValue) {
+        return 'Draperiile au fost deschise'
+    } else {
+        return 'Draperiile au fost inchise'
+    }
+}
+
+const toggleWindows = () => {
+    windowsValue = !windowsValue;
+
+    if (windowsValue) {
+        return 'Ferestrele au fost deschise'
+    } else {
+        return 'Ferestrele au fost inchise'
+    }
+}
+
+const smoke = () => {
+    if (!curtainsValue) {
+        toggleCurtains()
+    }
+
+    if (!windowsValue) {
+        toggleWindows()
+    }
+
+    if (acValue) {
+        toggleAc()
+    }
+
+    console.log('Smoking')
+
+    if ('Winter') {
+        toggleWindows()
+        toggleCurtains()
+        toggleAc()
+    }
+}
+
+console.log(toggleLights())
+console.log(toggleLights())
+console.log(toggleLights())
+smoke()
+
+
+// debugger; // opreste executia codului in developer tools
+// F8 revine la normal, iese din procesul de debug
+// F10 sare un pas
+// F11 intra intr-o functie
