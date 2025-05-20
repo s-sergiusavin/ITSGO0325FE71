@@ -360,27 +360,133 @@ main {
 .leftContent .profileUserInfo {
     display: flex;
     padding: 1rem;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
 }
 
 .leftContent .profileName {
     display: flex;
     align-items: center;
+    font-size: 1rem;
 }
 
 
 .leftContent .profileFriends {
-display: flex;
-justify-content:flex-start;
-align-items: center;
-padding-left: 1.2rem;
-gap: 1rem;
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    padding-left: 1.2rem;
+    gap: 1rem;
+    font-size: 1.5rem;
 }
 
 .leftContent .profileFriends .friends {
-border: 0 solid black;
-background-color: #abcdd8;
+/* border: 0 solid black; */
+/* background-color: #abcdd8; */
 border-radius: 60%;
 font-size: 2.5rem;
+color: black;
+}
+
+.leftContent .profileFriends .fri {
+    font-size: 1rem;
+}
+
+.leftContent .profileMemories {
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    padding-left: 1.2rem;
+    gap: 1rem;
+    font-size: 1.5rem;
+}
+
+.leftContent .profileMemories .Memories {
+    border-radius: 60%;
+font-size: 2.5rem;
+color: black;
+}
+
+.leftContent .profileMemories .memo {
+    font-size: 1rem;
+}
+
+.leftContent .profileSaved {
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    padding-left: 1.2rem;
+    gap: 1rem;
+    font-size: 1.5rem;
+}
+
+.leftContent .profileSaved .Savey {
+    border-radius: 60%;
+font-size: 2.5rem;
+color: black;
+}
+
+.leftContent .profileSaved .save {
+    font-size: 1rem;
+}
+
+
+.leftContent .profileGroups {
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    padding-left: 1.2rem;
+    gap: 1rem;
+    font-size: 1.5rem;
+}
+
+.leftContent .profileGroups .Group {
+    border-radius: 60%;
+font-size: 2.5rem;
+color: black;
+}
+
+.leftContent .profileGroups .grou {
+    font-size: 1rem;
+}
+
+.leftContent .profileVideo {
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    padding-left: 1.2rem;
+    gap: 1rem;
+    font-size: 1.5rem;
+}
+
+.leftContent .profileVideo .Videos {
+    border-radius: 60%;
+font-size: 2.5rem;
+color: black;
+}
+
+.leftContent .profileVideo .vide {
+    font-size: 1rem;
+}
+
+.leftContent .profileMarket {
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    padding-left: 1.2rem;
+    gap: 1rem;
+    font-size: 1.5rem;
+}
+
+.leftContent .profileMarket .Market {
+    border-radius: 60%;
+font-size: 2.5rem;
+color: black;
+}
+
+.leftContent .profileMarket .mark {
+    font-size: 1rem;
 }
 
 
