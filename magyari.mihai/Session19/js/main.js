@@ -5,17 +5,27 @@ function logStuff(stuff) {
 logStuff(10);
 
 let sum = 0;
+
 function addToSum(number) {
     return sum += number;
 }
 
 addToSum(3);
+console.log(sum);
 logStuff(addToSum(10));
+console.log(sum);
 
 //sum = 13;
 
 let totalSum = addToSum(10);
+
+console.log(totalSum);
+console.log(sum);
+
 addToSum(5);
+
+console.log(sum);
+
 logStuff(totalSum);
 logStuff(sum);
 
@@ -28,15 +38,24 @@ const sumNumbers = (number1, number2) => {
     return number1 + number2;
 }
 
+
+console.log(sumNumbers(2, 2));
+
 let sumTwoNumbersValue = sumNumbers(5, 10);
 console.log(sumTwoNumbersValue);
 
 let sumNumbersStoredGlobally;
+
+console.log(sumNumbersStoredGlobally);
+
 const sumTwoNumbersAlternative = (num1, num2) => {
     sumNumbersStoredGlobally = num1 + num2;
 }
 sumTwoNumbersAlternative(3, 4);
+console.log(sumNumbersStoredGlobally);
 logStuff(sumNumbersStoredGlobally);
+
+
 
 const verifyEquality = (num1, num2) => {
     if (num1 === num2) {
@@ -55,6 +74,43 @@ const verifyEqualitySimplified = (num1, num2) => {
 
 logStuff(verifyEquality(2, 2));
 logStuff(verifyEquality(2, 3));
+
+
+//Exercitiul meu
+
+const displayTheBiggerNumber = (number1, number2) => {
+    if (number1 > number2) {
+        console.log(`${number1} este mai mare decat ${number2}`)
+    } else {
+        console.log(`${number1} este mai mic decat ${number2}`)
+    }
+    if (number1 === number2) {
+        console.log(`${number1} este egal cu ${number2}`)
+    }
+}
+
+displayTheBiggerNumber(10, 20);
+displayTheBiggerNumber(10, 5);
+displayTheBiggerNumber(10, 10);
+
+const compareLenght = (array1, array2) => {
+    if (array1.length > array2.length) {
+        console.log(`${array1} are mai multe elemente decat ${array2}`)
+    } else if (array1.length === array2.length) {
+        console.log(`Cele doua array-uri au un numar egal de elemente`)
+    }else {
+        console.log(`${array1} are mai putine elemente decat ${array2}`)
+    }
+
+}
+
+compareLenght([1,2,3,4],[1,2,3,4,5]);
+compareLenght([1,2,3],[4,3,2]);
+compareLenght([1,2,3,4],[1,2]);
+
+//xx
+
+
 
 const doubleValue = (value) => {
     logStuff(`Sergiu`);
@@ -115,6 +171,7 @@ logStuff(verifyNumber(90));//nu
 logStuff(verifyNumber(10.001)); //da
 logStuff(verifyNumber(10)); //nu
 
+//--
 
 let testString = `Test string`;
 let testNumber = 3;
@@ -135,6 +192,8 @@ console.log(anotherNumber);
 console.log(testString);
 console.log(testNumber);
 
+
+//--
 const puppy = {
     name: `Rex`,
     age: 1,
@@ -170,7 +229,7 @@ const nameDogCopy = nameDog;
 console.log(nameDogCopy);
 console.log(nameDogCopy(`Azorel`));
 
-
+//--
 
 function addOne(value) {
     return value + 1;
@@ -184,6 +243,8 @@ function showValue(value, functieCallback) {
 const totalValueCallback = showValue(5, addOne);
 console.log(totalValueCallback);
 
+//--
+
 const menu = {
     burger: `Big Mac`,
     juice: `Cola`,
@@ -195,20 +256,28 @@ const menu = {
 console.log(menu.burger);
 console.log(menu['french-fries']);
 
+
+//concatenare
+
 const num3 = 3;
 const letA = `a`;
 let stringConcat = `x`;
 
 stringConcat = stringConcat + num3;
-stringConcat += letA;
-
 console.log(stringConcat);
+
+stringConcat += letA;
+console.log(stringConcat);
+
+
 
 const firstWord = `Primul`;
 const link = `si`;
 const secondWord = `al doilea`;
 const concatedString = firstWord + ` ` + link + ` ` + secondWord;
 console.log(concatedString.toUpperCase());
+
+//-
 
 const createString = (array) => {
     let string = ``;
@@ -222,6 +291,8 @@ const createString = (array) => {
 
 console.log(createString([3, `5`, 7, 2, 1])); //35721
 console.log(createString([2, `3245`, 17, 22, 1])); //2342517221
+
+//--
 
 const reverseArray = (array) => {
     let newArray = []
@@ -241,6 +312,8 @@ console.log(reverseArray([1, 2, 3, 4])); // => 4,3,2,1
 
 let lightsValue = false;
 let acValue = false;
+let curtainsValue = false;
+let windowsValue = false;
 
 const toggleLights = () => {
     // if (lightsValue === true) {
@@ -250,34 +323,25 @@ const toggleLights = () => {
     // }
 
     lightsValue = !lightsValue;
-    
-    if(lightsValue) {
+
+    if (lightsValue) {
         return 'Luminile au fost aprinse'
     } else {
         return 'Luminile au fost stinse'
     }
 }
 
-console.log(toggleLights());
-console.log(toggleLights());
-console.log(toggleLights());
-
-
 
 const toggleAc = () => {
-    
+
     acValue = !acValue;
-    
-    if(acValue) {
+
+    if (acValue) {
         return 'AC a fost pornit'
     } else {
         return 'AC a fost oprit'
     }
 }
-
-console.log(toggleAc());
-console.log(toggleAc());
-console.log(toggleAc());
 
 const toggleCurtains = () => {
     curtainsValue = !curtainsValue;
@@ -331,3 +395,42 @@ smoke()
 // F8 revine la normal, iese din procesul de debug
 // F10 sare un pas
 // F11 intra intr-o functie
+
+
+/**
+ * Win the football game app
+ */
+
+let weAreLeading = false;
+let theyAreAttacking = false;
+
+
+const checkScore =() => {
+    if (weAreLeading){
+        return `We are winning the game`
+    }else{
+        return `We are losing the game`
+    }
+}
+
+console.log(checkScore())
+
+const seeTheirReaction = () => {
+    if(theyAreAttacking){
+        return `They are attacking`
+    }else{
+        return`They are defending`
+    }
+}
+
+console.log(seeTheirReaction())
+
+const makeASub = () => {
+    if(weAreLeading && theyAreAttacking) {
+        return `We need to put on a defender`
+    }else{
+        return `We need to put on a striker`
+    }
+}
+
+console.log(makeASub());
