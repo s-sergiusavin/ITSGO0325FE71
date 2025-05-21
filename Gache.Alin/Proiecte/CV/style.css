@@ -120,8 +120,14 @@ a {
 form input {
   padding: 5px;
   margin: 10px;
-  border-radius: 1rem;
+  border-radius: 0.6rem;
 }
+form input:focus::placeholder{
+  font-size: 0.6rem;
+  position: absolute;
+  display: block;
+  margin-left: 0.3rem;
+} 
 
 form select {
   margin-bottom: 0.5rem;
