@@ -65,6 +65,11 @@ console.log(newArray);
  * .indexOf
  * de facut log la indexul tuturor elementelor dintr-un array
  */
+console.log("(======AICI(======");
+array.map((i) => {
+  console.log(array.indexOf(i));
+});
+console.log("(======AICI(======");
 
 console.log(`Indexul elementului 3 este: ${array.indexOf(3)}`);
 array[2] = 7;
