@@ -1,20 +1,10 @@
-<<<<<<< HEAD
-/** 
- * Array methods
- * 
-=======
 /**
  * Array methods
->>>>>>> main
  */
 
 const array = [1, 2, 3, '4', 5, 6, 7];
 
-<<<<<<< HEAD
-// array[0]= 100;
-=======
 // array[0] = 100;
->>>>>>> main
 // array[4] = 5;
 // array[10] = 11;
 
@@ -24,24 +14,6 @@ console.log(array)
  * Add or remove elements in array
  */
 
-<<<<<<< HEAD
-array.push(5) // adaugam un element la finalul array-ului
-console.log(array);
-array.pop() // scoatem ultimul element de la finalul arrayului
-console.log(array);
-array.unshift('zero');
-array.shift();
-console.log(array);
-
-
-// lifo - last in first out
-// filo - first in last out
-
-
-/**
- * Array iteration
- * ptr navigare se foloseste termenul de mapare
-=======
 array.push(5); // adaugam un element la finalul array-ului
 console.log(array);
 array.pop() // scoatem ultimul element de la finalul arrayului
@@ -56,25 +28,12 @@ console.log(array);
 /**
  * Array iteration
  * pt navigare se foloseste termenul de maparea
->>>>>>> main
  */
 
 // for (let i = 0; i < array.length; i++) {
 //     console.log(array[i]);
 // }
 
-<<<<<<< HEAD
-
-// array.forEach( () => {} )
-
-// array.forEach( element => console.log(element));
-
-array.forEach(function (element) {
-    console.log('E' + element);
-});
-
-// .map() method => iterates through an array and RETURNS this array
-=======
 // array.forEach( function() {})
 
 // array.forEach( () => {})
@@ -85,7 +44,6 @@ array.forEach(function (element) {
 });
 
 // .map() method => iterates trough an array and RETURNS this array
->>>>>>> main
 
 const newArray = array.map((element) => {
     return element + 1;
@@ -98,15 +56,6 @@ console.log(newArray);
  * .indexOf(0)
  */
 
-<<<<<<< HEAD
-console.log('Indexul elementului 3 este:' + array.indexOf(3));
-array[2] = 7;
-console.log(array);
-array[array.indexOf('4')] = 777;
-console.log(array);
-console.log(array.indexOf(-15)); // daca elementul nu exista va returna -1 intotdeauna
-console.log(array.indexOf('sadf')); // daca elementul nu exista va returna -1 intotdeauna
-=======
 console.log('Indexul elementului 3 este: ' + array.indexOf(3));
 array[2] = 7;
 console.log(array)
@@ -114,7 +63,6 @@ array[array.indexOf('4')] = 777;
 console.log(array)
 console.log(array.indexOf(-15)); // daca elementul nu exista, va returna -1 intotdeauna
 console.log(array.indexOf('sadf')); // daca elementul nu exista, va returna -1 intotdeauna
->>>>>>> main
 
 /**
  * Copy array elements
@@ -127,64 +75,17 @@ myNum = 5;
 console.log(myNum)
 console.log(anotherNum)
 
-<<<<<<< HEAD
-let arrayCoppy = array;
-console.log(array);
-console.log(arrayCoppy);
-
-=======
 let arrayCopy = array;
 array[0] = 'zero';
 
 console.log(array)
 console.log(arrayCopy)
->>>>>>> main
 
 /**
  * .slice()
  * Copy portions of an array
  */
 
-<<<<<<< HEAD
-arrayCoppy = array.slice(2); // copiaza toate elementele de la pozitia specificata
-array[0] = 111;
-console.log('Array dupa slice ' + array);
-console.log(0);
-arrayCoppy = array.slice(0, 5); // copiza de la indexul specificat pana la cel de-al doilea (nu este inclus)
-console.log(arrayCoppy);
-
-/**
- * .splice
- * cut portions of an array
- */
-
-console.log('----Splice------')
-console.log(array);
-
-// let changedArray = array.splice(2) // decupeaza toate elementele unui array incepand cu pozitia specificata
-// console.log(array);
-// console.log(changedArray);
-
-
-let changedArray = array.splice(2, 3)
-console.log(array)
-console.log(changedArray)
-
-
-/**
- * .filter()
- * filtering array elements
- * Returneaza UN NOU array cu elementele initiale care indeplinesc conditia
- * NU Modifica arrayul initials
- */
-
-console.log(array)
-const lessThree = array.filter((element) => {
-    return element < 3;
-})
-
-console.log(lessThree);
-=======
 arrayCopy = array.slice(); // copiaza toate elementele 
 arrayCopy = array.slice(2); // copiaza toate elementele de la pozitia specificata
 array[0] = 111;
@@ -222,45 +123,22 @@ const lessThanThree = array.filter((element) => {
 })
 
 console.log(lessThanThree);
->>>>>>> main
 
 /**
  * .reverse()
  * Reverse array
-<<<<<<< HEAD
- * MODIFICA Arrayul initial
-=======
  * MODIFICA arrayul initial
->>>>>>> main
  */
 
 array.reverse();
 console.log(array);
 
-<<<<<<< HEAD
-
-/**
- * concat()
-=======
 /**
  * .concat()
->>>>>>> main
  * Imbinarea array-urilor
  */
 
 const concatArray = ['add', 'me'];
-<<<<<<< HEAD
-// const newConcatenatedArray = array.concat(concatArray);
-// console.log(newConcatenatedArray)
-
-console.log(array.concat(concatArray))
-console.log(concatArray.concat(array))
-console.log([1, 2, 3].concat(concatArray))
-
-
-/**
- *  .join()
-=======
 //  const newConcatenatedArray = array.concat(concatArray);
 //  console.log(newConcatenatedArray)
 
@@ -270,24 +148,14 @@ console.log([1, 2, 3].concat(concatArray));
 
 /**
  * .join()
->>>>>>> main
  * Transform array into string
  */
 
 const redeclaredArray = [1, 2, 3, 4, 5];
-<<<<<<< HEAD
-let stringFromArray = redeclaredArray.join(' ');
-console.log(stringFromArray)
-
-
-/**
- * De interviu
-=======
 let stringFromArray = redeclaredArray.join(' 🥳 ');
 console.log(stringFromArray)
 
 /**
->>>>>>> main
  * .reduce()
  * Reduce array
  * Ia un array si il transforma intr-o valoare
@@ -295,30 +163,12 @@ console.log(stringFromArray)
 
 const reduceArray = [1, 2, 3, 4];
 const reducedValue = reduceArray.reduce((accumulator, currentValue) => {
-<<<<<<< HEAD
-    return accumulator + currentValue;
-=======
     return accumulator * currentValue;
->>>>>>> main
 })
 
 console.log(reduceArray)
 console.log(reducedValue)
 
-<<<<<<< HEAD
-
-/**
- * .sort()
- * Sortinf an array
- * MODIFICA Array-ul original
- */
-
-let arrayToSort = [1, 7, 200, 34, -8, 1024, 855, 11, 11.4];
-// console.log(arrayToSort.sort());
-
-arrayToSort.sort((a, b) => {
-    return a - b;
-=======
 /**
  * .sort()
  * Sorting an array
@@ -331,7 +181,6 @@ let arrayToSort = [1, 7, 200, 34, -8, 1024, 855, 11.4, 'asd', 'aac', 'sum'];
 arrayToSort.sort((a, b) => {
     // return a - b;
     return b - a;
->>>>>>> main
 });
 
 console.log(arrayToSort)
@@ -349,11 +198,6 @@ const value2 = arrayToFind.find(element => {
 
 console.log(value2);
 
-<<<<<<< HEAD
-arrayToFind = {
-    { }
-}
-=======
 arrayToFind = [
     { name: 'Sergiu', city: 'Hong Kong' },
     { name: 'Alex', city: 'Singapore' },
@@ -498,4 +342,3 @@ girl.sayHiGirl()
 
 
 
->>>>>>> main
