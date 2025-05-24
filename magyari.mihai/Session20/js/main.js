@@ -132,6 +132,12 @@ const lessThanTree = array.filter((elementus) => {
 })
 console.log(lessThanTree);
 
+console.log(array);
+const moreThanTwo = array.filter((ceva) => {
+    return ceva >2;
+})
+console.log(moreThanTwo);
+
 /**
  * .reverse()
  * Reverse array
@@ -178,6 +184,13 @@ console.log(reduceArray);
 console.log(reducedValue);
 
 
+const valoriPreturi = [2,5,10];
+const totalPreturi = valoriPreturi.reduce((aduna,astaDeAcum) => {
+    return aduna+astaDeAcum
+})
+
+console.log(totalPreturi);
+
 /**
  * .sort()
  * Sorting an array
@@ -223,8 +236,13 @@ const foundElem = arrayToFind.find((element) => {
 
 const foundElement = arrayToFind.findLast(element => element.name === `Sergiu`)
 
+const foundCipri = arrayToFind.find(element=>element.name===`Cipri`)
+const aloDubai = arrayToFind.find(element=>element.city===`Dubai`)
+
 console.log(foundElem);
 console.log(foundElement);
+console.log(foundCipri);
+console.log(aloDubai);
 
 //Pentru arrow functions
 //Daca avem un singur parametru, parantezele rotunde POT sa lipseasca 
@@ -258,6 +276,19 @@ const sergiu=createPerson(`Sergiu`, 14, `male`);
 const costel=createPerson(`Costel`,50, `female`);
 
 console.log(sergiu);
+console.log(costel);
+
+
+const createCar = (make,model,engine) => {
+    return {
+        make,
+        model,
+        engine
+    }
+}
+
+const golf=createCar(`VW`,`Golf`,`TSI`);
+console.log(golf);
 
 /**
  * Creating objects using OBJECT LITERAL method
