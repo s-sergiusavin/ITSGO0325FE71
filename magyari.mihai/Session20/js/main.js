@@ -4,11 +4,95 @@
 
 const array = [1, 2, 3, `4`, 5, 6, 7];
 
+const arrayM = [`unu`,`doi`,`trei`] //array definit de mine
+
 // array[0]=100;
 // array[4]=5;
 // array[10]=11;
 
 console.log(array);
+
+
+
+
+//--
+
+console.log(arrayM); //afisez array-ul in consola
+
+arrayM.push(`patru`); //adaug la finalul array-ului `patru`
+console.log(arrayM);
+arrayM.pop(`patru`); //scot de la finalul array-ului `patru`
+console.log(arrayM);
+arrayM.unshift(`minusUnu`,`zero`); //adaug la inceputul array-ului `minusUnu` si `zero`
+console.log(arrayM);
+arrayM.shift(`minusUnu`); //scot de la inceputul array-ului `minusUnu`
+console.log(arrayM);
+
+arrayM.forEach((element)=> {
+    console.log(`numarul `+element);
+})   //pentru fiecare element din arrayM adauga inaintea lui textul `numarul `
+
+const newArrayM = arrayM.map((element) => {
+    return element + ` -WOW!`
+}) //creeaza un array nou cu numele newArrayM, trece prin fiecare element din arrayM si adauga WOW! la final, 
+// apoi returneaza noul array newArrayM fara sa modifice arrayM
+
+console.log(newArrayM);
+
+
+console.log("index-ul lui `zero` este: " + arrayM.indexOf(`zero`)); //folosesc arrayM.indexOf(`zero`) pentru a afisa index-ul elementului `zero`
+
+
+
+
+console.log(`Metode slice`)
+const slicedArray1 = arrayM.slice(); //.slice copiaza array-ul original daca nu specificam nimic intre paranteze
+console.log(slicedArray1);
+const slicedArray2 = arrayM.slice(1); //copiaza array-ul incepand de la elementul cu index 1
+console.log(slicedArray2); 
+const slicedArray3 = arrayM.slice(0,2); //copiaza array-ul incepand de la elementul cu index 0 pana la elementul cu index2(neinclus)
+console.log(slicedArray3);
+
+
+console.log(`Metode splice`);
+console.log(newArrayM);
+const splicedArray1 = newArrayM.splice(1); //decupeaza array-ul incepand de la index 1;
+console.log(splicedArray1);
+console.log(newArrayM); //array-ul initial a fost decupat si mai are doar elementul de index 0;
+newArrayM.push(`unu`,`doi`,`trei`);
+console.log(newArrayM);
+const splicedArray2 = newArrayM.splice(0,2); //decupeaza 2 elementele incepand  de la index 0
+console.log(splicedArray2);
+console.log(newArrayM);
+
+console.log(`Filtre`);
+
+const arrayUnfiltered = [100, 200, 300, 400];
+console.log(arrayUnfiltered);
+
+const filteredArray1 = arrayUnfiltered.filter(element => element >100); //filtreaza array-ul si afiseaza elemente mai mari de 100
+console.log(filteredArray1)
+
+const arrayReversed = arrayUnfiltered.reverse(); //inverseaza array-ul; array-ul initial se modifica!!
+console.log(arrayReversed);
+
+const addBefore = [0,50]
+console.log(arrayUnfiltered.concat(addBefore))
+
+const lista = [`M`, `I`, `H`, `A`, `I`];
+console.log(lista);
+
+const legat = lista.join();
+console.log(legat);
+
+
+
+//--
+
+
+
+
+
 
 /**
  * Add or remove elements in array
