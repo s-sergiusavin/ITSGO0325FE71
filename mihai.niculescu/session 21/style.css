@@ -1,0 +1,14 @@
+.redSquare {
+    width: 10rem;
+    height: 10rem;
+    margin: 0.5rem;
+    background-color: red;
+}
+
+.blueSquare {
+     width: 10rem;
+    height: 10rem;
+    margin: 0.5rem;
+    background-color: blue;
+}
+
