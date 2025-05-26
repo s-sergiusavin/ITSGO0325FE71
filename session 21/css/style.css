@@ -1,0 +1,25 @@
+.redSquare, .blueSquare, .greenSquare {
+    width: 150px;
+    height: 10rem;
+    margin: 0.5rem;
+}
+
+.redSquare{
+     background-color: red;
+}
+
+.blueSquare {
+  background-color: blue;
+}
+
+.greenSquare {
+  background-color: green;
+}
+
+.flexContainer, .flexItems {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
