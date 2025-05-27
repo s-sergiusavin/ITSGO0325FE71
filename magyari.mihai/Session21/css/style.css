@@ -20,3 +20,24 @@
 .greenSquare {
     background-color: green;
 }
+
+.redCircle {
+    width: 20rem;
+    height: 20rem;
+    border-radius: 50%;
+    background-color: red;
+    border: 1px solid black;
+    margin-top: 3rem;
+    text-justify: center;
+    text-align: center;
+    color: white;
+    font-weight: 600;
+}
+
+
+.textBox {
+    background-color: lightgray;
+    color: brown;
+    height: 15rem;
+    width: 35rem;
+}

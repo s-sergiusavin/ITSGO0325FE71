@@ -133,6 +133,7 @@ const onKeyDown = () => {
 
 
 const demoKeyTextElem = document.getElementById(`demoKeyText`);
+
 const onKeyUp = () => {
     greenSquare.style.backgroundColor = `pink`;
     demoKeyTextElem.innerText=document.getElementById(`demoKey`).value;
@@ -145,12 +146,52 @@ const doSomething = () => {
 }
 
 const readInput = () => {
-    const readInputValueElem = document.getElementById(`readInputValue`);
-    document.getElementById(`textFromReadInput`).innerText= readInputValueElem.value;
+    const readInputValueElem = document.getElementById(`readInputValue`).value;
+    document.getElementById(`textFromReadInput`).innerText= readInputValueElem;
 }
 
 const innerHtmlMessageElem = document.getElementById("innerHtmlMessage");
 
 const styleThisText = () => {
-    innerHtmlMessageElem.innerHTML="This text was a <strong> styled </strong> by <u>JS</u>"
+    innerHtmlMessageElem.innerHTML="This text was a <strong> styled </strong> by <u>JS</u>"  //daca scriam .innerText nu ar fi functionat <strong>
+}
+
+
+const redCircle = document.querySelector(".redCircle");
+
+console.log(redCircle);
+console.dir(redCircle);
+
+redCircle.style.backgroundColor = "green";
+redCircle.style.marginLeft = "5rem";
+
+
+const changeCircleColor = () => {
+
+    redCircle.style.backgroundColor = "yellow";
+    redCircle.style.color = "black";
+
+}
+
+
+function changeTextStyle() {
+
+    redCircle.style.textAlign = "left";
+    redCircle.style.fontSize = "normal";
+    redCircle.style.color = "red";
+
+}
+
+
+const textBox = document.querySelector(".textBox");
+console.dir(textBox);
+
+
+
+const showTextInBox = () => {
+    const textBoxText = document.getElementById("textBoxText").value;
+
+    document.getElementById("modifiedText").innerText = textBoxText;
+
+
 }
