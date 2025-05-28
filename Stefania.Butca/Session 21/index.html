@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document Oject Model | DOM</title>
+</head>
+
+<body>
+    <h1>document object model</h1>
+
+    <div class="flexContainer">
+        <div class="flexItems">
+            <div class="redSquare">Red Square</div>
+            <div class="redSquare"></div>
+        </div>
+        <div class="flexItems">
+            <div class="blueSquare"></div>
+            <div class="blueSquare"></div>
+            <div class="blueSquare"></div>
+        </div>
+    </div>
+
+    <ul id="changedList">
+        <li class="changeThis">Unchanged</li>
+        <li class="changeThis">Unchanged</li>
+        <li class="changeThis">Unchanged</li>
+        <li class="changeThis">Unchanged</li>
+        <li class="changeThis">Unchanged</li>
+    </ul>
+
+    <div id="changedList">
+        <p>DO NOT USE the same id for multiple elements</p>
+    </div>
+
+    <p>This text will be changed later with js</p>
+    <p>hshdhbd sjshdbd jnddn</p>
+
+    <span class="styledMessages">This message was styled by js</span>
+    <p class="styledMessages">This message was styled by js</p>
+
+    <!-- ON MOUSE ENTER & LEAVE EVENTS -->
+    <div class="greenSquare" onmouseenter="mouseEnter()" onmouseleave="mouseLeave()"></div>
+
+    <!-- ON CLICK EVENT -->
+    <input type="button" value="Click Me" onclick="changedGreenSquare()">
+
+    <!-- ON FOCUS & ON BLUR -->
+    <label for="demoInput">Demo input events</label>
+    <input type="text" id="demoInput" onfocus="focusInput()" onblur="blurInput()">
+
+    <!-- ON KEY DOWN & ON KEY UP -->
+    <label for="demoKey">Demo key events</label>
+    <input type="text" id="demoKey" onkeydown="onKeyDown()" onkeyup="onKeyUp()" placeholder="Placeholder">
+    <p id="demoKeyText"> Demo key test</p>
+
+    <br>
+    <p id="textFromReadInput">Text introdus</p>
+    <label for="readInputValue">read input value</label>
+    <input type="text" id="readInputValue" placeholder="write your text here">
+    <button onclick="doSomething">click here for magic</button>
+
+    <p id="innerHtmlMessage" onmouseenter="styleThisText()">Acest text va fi stilizat de js</p>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
