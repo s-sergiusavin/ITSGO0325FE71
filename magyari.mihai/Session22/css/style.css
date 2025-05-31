@@ -5,3 +5,56 @@
 .blue {
     background-color: blue;
 }
+
+.loginArea {
+    background-color: #04a0d4;
+    width: 600px;
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    border: 1px solid black;
+    border-radius: 2rem;
+
+}
+
+.loginArea h2 {
+    color: #faf623f8;
+}
+
+.loginArea label {
+    font-weight: bold;
+    font-size: x-large;
+    color: rgb(6, 33, 106);
+}
+
+.loginArea input {
+    width: 400px;
+    height: 30px;
+    border: 2px solid white;
+    border-radius: 2rem;
+    margin: 0.5rem;
+    background-color: lightgrey;
+}
+
+.loginArea input::placeholder {
+    text-align: center;
+}
+
+.loginArea button {
+    width: 200px;
+    height: 30px;
+    margin-top: 1rem;
+    background-color: rgb(5, 171, 5);
+    color: white;
+    font-weight: bold;
+    border-radius: 2rem;
+}
+
+.loginArea button:hover {
+    cursor: pointer;
+}

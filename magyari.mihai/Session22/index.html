@@ -50,9 +50,22 @@
             <span>E-mail</span>
             <input type="email" placeholder="Enter your email" name="emailInput">
         </label>
-        <input type="submit">
+        <input type="submit" value="Check email">
     </form>
 
+    <!-- Exercitiu pagina login -->
+
+    <form class="loginArea" onmouseenter="changeStuff()" onmouseleave="backToNormal()" id="loginForm">
+        <h2>Welcome to AttentionSeeker</h2>
+        <label for="userName">Username:</label>
+        <input type="text" id="userName" placeholder="Enter you username here" onfocus="removeIdPlaceholder()"
+            onblur="defaultIdPlaceholder()">
+        <label for="pass">Password:</label>
+        <input type="password" id="pass" placeholder="Enter your password here" onfocus="removePassPlaceholder()"
+            onblur="defaultPassPlaceholder()">
+        <button id="loginBtn"  type="submit" form="loginForm"
+            value="Submit">Log In</button>
+    </form>
 
     <script src="js/main.js"></script>
 </body>
