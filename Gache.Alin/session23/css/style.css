@@ -1,0 +1,20 @@
+h1 {
+  text-align: center;
+}
+
+.form,
+form {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 80%;
+  align-items: center;
+  gap: 1rem;
+}
+
+.form {
+  margin-bottom: 3rem;
+}
+#error {
+  display: none;
+}
