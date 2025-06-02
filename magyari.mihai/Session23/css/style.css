@@ -1,0 +1,16 @@
+h1 {
+    text-align: center;
+}
+
+.form, form {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 1rem;
+
+}
+
+.form #error {
+    display: none;
+}
