@@ -315,7 +315,7 @@ const boy = {
         city: 'Brasov',
         zip: 500
     },
-    sayHi: function() {
+    sayHi: function () {
         console.log(`${this.lastName} says hi`)
     },
     sayHiArrow: () => {
