@@ -59,9 +59,9 @@ loginBtn.addEventListener('click', function (event) {
     const regexEmailPattern = /\D{4,}\@\D{4,}\.\D{2,}/g;
 
     if (emailValue === '' || passwordValue === '') {
-        showError(`All fields are required and must contain a value`)
+        showError(`All fields are required and must contain a value!`)
     } else {
-        if (errorMessage.style.display === 'block') {
+        if (errorMessage.style.display === 'inline') {
             errorMessage.style.display = 'none';
         }
 
@@ -99,12 +99,12 @@ toggleLoginBtn.addEventListener('click', function () {
         this.textContent = 'Switch to login';
         loginTitleElem.innerText = 'Register page';
         loginBtn.value = 'Sign up';
-        forgotPasswordBtn.visibility = 'hidden';
+        forgotPasswordBtn.style.visibility = 'hidden';
     } else {
         this.textContent = 'Switch to sign up page';
         loginTitleElem.innerText = 'Login page';
         loginBtn.value = 'Log in';
-        forgotPasswordBtn.visibility = 'visible';
+        forgotPasswordBtn.style.visibility = 'visible';
     }
 
     isLoginPage = !isLoginPage;
