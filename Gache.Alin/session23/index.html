@@ -3,30 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/style.css" />
     <title>Session 23 | Form Validations</title>
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <h1>Session 23 | From Validations</h1>
-
+    <h1>Form Validation</h1>
     <div class="form">
-      <!-- <span class="loginTitle">Ligin</span> -->
+      <!-- <span class="loginTitle">Test</span> -->
       <h2 class="loginTitle">Login page</h2>
-
       <form action="">
         <span id="error"></span>
         <input type="email" id="email" placeholder="Email address" required />
-        <input
-          type="password"
-          id="password"
-          placeholder="placeholder"
-          required
-        />
+        <input type="password" id="password" placeholder="Password" required />
         <input type="submit" id="login" value="Login" required />
       </form>
       <button class="forgotPassword">Forgot password?</button>
       <button class="toggleLogin">Create an account</button>
-      <script src="./js/main.js"></script>
     </div>
 
     <form action="">
@@ -40,8 +32,11 @@
 
       <label for="lastName">Last Name</label>
       <input type="text" id="lastName" placeholder="Enter your last name" />
+
       <label for="age">Age</label>
-      <input type="text" id="age" placeholder="Enter your age" />
+      <input type="text" id="age" />
     </form>
+
+    <script src="js/main.js"></script>
   </body>
 </html>

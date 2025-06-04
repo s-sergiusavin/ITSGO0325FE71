@@ -111,57 +111,70 @@ const age = 50;
 // ageElement.value = age;
 
 /**
- * Built in function
+ * Built in functions
  */
 
 /**
  * setTimeout
  * Executa o functie pe care o primeste ca argument, PENTRU O SINGURA DATA, dupa o anumita perioada de timp
- * dupa ce s-a executat tot codul sincro
- * Perioada de timp este exprimata in ms
- * Daca perioada de timp nu este mentionata, functia executa la 0 secunde DUPA CE S-A EXECUTAT TOT CODUL DIN PAGINA
+ * dupa ce s-a executat tot codul sincron din pagina.
+ * Perioda de timp este exprimata in milisecunde
+ * Daca perioada de timp nu este mentionata, functia se executa la 0 secunde DUPA CE S-A EXECUTAT TOT CODUL DIN PAGINA
  */
 
 // setTimeout(() => {
-//   firstNameElement.value = firstName;
-//   lastNameElement.value = lastName;
-//   ageElement.value = age;
+//     firstNameElement.value = firstName;
+//     lastNameElement.value = lastName;
+//     ageElement.value = age;
 // }, 5000);
 
-// function setFields() {
-//   firstNameElement.value = firstName;
-//   lastNameElement.value = lastName;
-//   ageElement.value = age;
-// }
+function setFields() {
+  firstNameElement.value = firstName;
+  lastNameElement.value = lastName;
+  ageElement.value = age;
+}
 
-// // setTimeout(setFields, 2000);
+// setTimeout(setFields, 2000)
 
-// setTimeout(() => {
-//   console.log(4);
-// }, 1000);
-// console.log(1);
-// function setTwo() {
-//   console.log(2);
-// }
-// console.log(3);
-// setTwo();
+setTimeout(() => {
+  console.log(4);
+}, 1000);
 
-// /**
-//  * setInterval()
-//  */
+console.log(1);
+
+function setTwo() {
+  console.log(2);
+}
+
+console.log(3);
+setTwo();
+
+/**
+ * setInterval()
+ * apeleaza o functie cu o frecventa mentionata in intervalul specificat
+ */
 // let counter = 0;
-// const intervalulMeu = setInterval(() => {
-//   console.log(counter);
-//   console.log("Interval", intervalulMeu);
+// const intervalulMeu = setInterval( () => {
+//     console.log(counter);
+//     console.log('Interval ', intervalulMeu)
+//     counter += 1;
 
-//   counter += 1;
+//     if (counter === 10) {
+//         clearInterval(intervalulMeu)
+//         setFields()
+//     }
+// }, 2000)
 
-//   if (counter === 3) {
-//     clearInterval(intervalulMeu);
-//     setFields();
-//   }
-// }, 2000);
+// const intervalulMeu2 = setInterval( () => {
+//     console.log(counter);
+//     console.log('Interval ', intervalulMeu2)
+//     counter += 1;
 
+//     if (counter === 10) {
+//         clearInterval(intervalulMeu2)
+//         setFields()
+//     }
+// }, 2000)
 /**
  * Obj recap
  */
@@ -234,9 +247,7 @@ console.log(second);
 console.log(third);
 console.log(restOperator);
 
-const newArr = [...myArr]
-newArr[0] = -14
+const newArr = [...myArr];
+newArr[0] = -14;
 console.log(myArr);
 console.log(newArr);
-
-
