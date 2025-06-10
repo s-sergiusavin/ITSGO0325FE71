@@ -11,7 +11,7 @@ a {
 }
 
 .formContainer {
-    background-color: teal;
+    background-color: #1B4965;
     color: white;
     width: 95%;
     max-width: 30rem;
@@ -34,15 +34,14 @@ form .formField {
 form .formField input {
     width: 100%;
     padding: 0.5rem 1rem;
-    background-color: lightblue;
-    color: blueviolet;
+    background-color: #CAE9FF;
+    color: black;
     border-radius: 0.3rem;
-    border: 2px solid white;
+    border: 2px solid #62B6CB;
 }
 
 form .formField label {
     font-weight: bold;
-    font-variant: small-caps;
     font-size: 1.2rem;
 }
 
@@ -64,7 +63,7 @@ form .formField.rememberUserField label{
 }
 
 form .loginButton {
-    background-color: cadetblue;
+    background-color: #62B6CB;
     border: 1px solid white;
     color: white;
     padding: 0.75rem 2.5rem;
@@ -76,19 +75,18 @@ form .loginButton {
 }
 
 form .loginButton:hover {
-    background-color: lightblue;
-    border: cadetblue;
+    background-color: #FFE74C;
     color: black;
     font-weight: bold;
     border: 1px solid;
 }
 
 a strong {
-    color: greenyellow;
+    color: #FFE74C;
 }
 
 .registerButton {
-    background-color: turquoise;
+    background-color: #5FA8D3;
     border: 1px solid white;
     padding: 0.5rem 2rem;
     display: block;
@@ -100,9 +98,17 @@ a strong {
 }
 
 .registerButton:hover {
-    opacity: 0.8;
+    /* opacity: 0.8; */
+    background-color: #FFE74C;
 }
 
 a {
     color: white;
+}
+
+.loginError {
+    color: red;
+    font-style: italic;
+    font-weight: 600;
+    display: none;
 }

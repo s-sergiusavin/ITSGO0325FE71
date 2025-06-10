@@ -11,40 +11,42 @@
 
 <body>
     <section class="formContainer">
-        <h1>Login</h1>
+        <h1>Login to AttentionSeeker</h1>
 
         <form action="">
             <div class="formField">
-                <label for="username">Username:</label>
-                <input type="text" id="username" placeholder="Enter your username">
+                <label for="username">E-mail:</label>
+                <input type="text" id="username" placeholder="Enter your e-mail" class="usernameField" onclick="clearIdPlaceholder()" onblur="defaultIdPlaceholder()">
             </div>
 
             <div class="formField">
                 <label for="password">Password:</label>
-                <input type="password" id="password" placeholder="Enter your password">
+                <input type="password" id="password" placeholder="Enter your password" class="passwordField" onclick="clearPassPlaceholder()" onblur="defaultPassPlaceholder()">
             </div>
 
             <div class="formField rememberUserField">
                 <input type="checkbox" id="rememberCheckbox">
-                <label for="rememberCheckbox">Click here to remember me</label>
+                <label for="rememberCheckbox">Remember Me</label>
             </div>
 
 
             <input type="submit" value="Log in" class="loginButton">
-            <a href="#"><strong>Forgot password?</strong></a>
+
+            <p class="loginError">Please fill in all fields!</p>
+
+            <a href="#" class="forgotPassword"><strong>Forgot password?</strong></a>
         </form>
 
         <hr>
         <button class="registerButton">Create an account</button>
 
-        <a href="feed.html">Catre contul meu</a>
 
     </section>
 
 
 
 
-
+<script src="js/main.js"></script>
 </body>
 
 
