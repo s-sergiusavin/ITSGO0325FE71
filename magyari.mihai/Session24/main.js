@@ -239,11 +239,110 @@ const deleteUserUrlConfig = {
     },
 }
 
-const deleteUser = new Promise( (resolve, reject) => {
+const deleteUser = new Promise((resolve, reject) => {
     fetch(deleteUserUrl, deleteUserUrlConfig)
-    .then( response => {
-        if (response.status !== 204) {
-            throw 'Ai o eroare la stergearea userului'
-        }
-    })
+        .then(response => {
+            if (response.status !== 204) {
+                throw 'Ai o eroare la stergearea userului'
+            }
+        })
 });
+
+
+
+
+//recap 
+
+//GET request
+
+const listUrl = 'https://reqres.in/api/unknown';
+const errorUrl = 'https://reqres.in/api/unknown/23';
+
+fetch(listUrl, apiConfig).then(response => {
+    console.log(response);
+    response.json().then(data => {
+        console.log(data);
+    })
+
+})
+
+
+//GET request with async/await function
+
+async function listUrlWithAsync() {
+    const response = await fetch(listUrl, apiConfig);
+    return response.json();
+}
+
+listUrlWithAsync().then(data => {
+    console.log('Aceasta este metoda async')
+    console.log(data);
+})
+
+
+
+
+//GET request unde rezolvam si cazul de eroare
+
+
+const listUrlWithError = new Promise((resolve, reject) => {
+    fetch(listUrl, apiConfig).then(
+        response => {
+            console.log(response)
+            if (response.status !== 200) {
+                throw 'Exista o eroare!';
+            }
+            return response.json()
+        }
+    ).then(data => {
+        resolve(data)
+    }).catch(error => {
+        reject(error)
+    })
+})
+
+listUrlWithError.then(
+    value => {
+        console.log(value); //daca avem raspuns ne afiseaza datele
+    },
+    error => {
+        console.log(error) //daca avem eroare ne afiseaza ce am stabilit mai sus
+    }
+);
+
+
+//POST request -adauga info pe server
+
+const addUserUrl = 'https://reqres.in/api/users'
+const userNew = {
+    "name": "morpheus",
+    "job": "leader"
+}
+
+const newUser = new Promise((resolve, reject) => {
+    fetch(addUserUrl, {
+        method: 'POST',
+        headers: {
+            'Content-Type': `application/json`,
+            'x-api-key': 'reqres-free-v1',
+        },
+        body: JSON.stringify(userNew)
+    })
+        .then(response => {
+            console.log(response);
+            if (response.status !== 201) {
+                throw 'Hopa,eroare'
+            }
+            return response.json();
+        }).then(data => resolve(data))
+        .catch(error => reject(error));
+});
+
+newUser.then(
+    value => console.log(value),
+    error => console.log(error)
+);
+
+
+
+
