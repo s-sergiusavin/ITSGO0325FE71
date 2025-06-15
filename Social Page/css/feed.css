@@ -465,7 +465,7 @@ svg {
 
 .leftMenuElement:hover {
   background-color: lightgray;
-  width: 16rem;
+  width: 90%;
   height: 2.5rem;
   border-radius: 0.5rem;
   cursor: pointer;
@@ -860,7 +860,7 @@ svg {
 
 @media only screen and (min-width:1600px) {
   .backgroundProficePic {
-    width: 16.2rem;
+    width: 15.1rem;
   }
 
   .leftContent {
@@ -910,7 +910,7 @@ svg {
   }
 
   .backgroundProficePic {
-    width: 14.6rem;
+    width: 15.5rem;
   }
 
   .rightContent {
