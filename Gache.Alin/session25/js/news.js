@@ -1,25 +1,31 @@
-import API from "./api.js";
+import API from './api.js';
+import { updateNewsList, createMarkup } from './markup.js';
 
-const form = document.getElementById("form");
+const form = document.getElementById('form');
 
-form.addEventListener("submit", onSubmit);
+form.addEventListener('submit', onSubmit);
 
 async function onSubmit(event) {
-  event.preventDefault();
+    event.preventDefault();
 
-  console.dir(form);
+    console.dir(form)
 
-  const formElement = event.currentTarget;
-  const inputValue = form.elements.news.value;
+    const formElement = event.currentTarget;
+    const inputValue = form.elements.news.value;
 
-  try{
-const articles = await API.getNews(inputValue)
+    try {
+        const articles = await API.getNews(inputValue);
 
-if(articles.length === 0){
-    
-}
-  }catch(error){
-    console.error(error);
-    
-  }
+        if (articles.length === 0) {
+            updateNewsList('<p>Nu am gasit rezultate </p>')
+        }
+
+        console.log(articles);
+
+        const markup = articles.reduce( (markup, article) => createMarkup(article) + markup, '');
+        updateNewsList(markup)
+    } catch (error) {
+        console.error(error)
+    }
+
 }
