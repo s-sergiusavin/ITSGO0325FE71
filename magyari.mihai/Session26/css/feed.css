@@ -1,0 +1,421 @@
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 5rem;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background-color: lightblue;
+}
+
+header .mainSearch {
+  display: flex;
+  align-items: center;
+}
+
+header .mainSearch .logo {
+  padding: 1rem;
+  font-size: 3rem;
+  color: royalblue;
+}
+
+header .mainSearch .logo:hover {
+  color: darkblue;
+}
+
+header .mainSearch .searchInput {
+  height: 3rem;
+  border-radius: 0.5rem;
+  padding: 0 1rem;
+  border-color: beige;
+}
+
+header .mainSearch .searchInput:focus {
+  border: 0.25rem solid royalblue;
+  outline: none;
+}
+
+header .navigation,
+header .links {
+  display: flex;
+}
+
+.accountSettings {
+  position: relative;
+  
+}
+
+.accountSettings button {
+  cursor: pointer;
+  border: none;
+  background-color: inherit;
+}
+
+.accountSettings .accountSettingsMenu {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 4rem;
+  right: 0;
+  width: 12rem;
+  background-color: lightgray;
+}
+
+.accountSettings .accountSettingsMenu button {
+  padding: 0.5rem 0;
+  border: 1px solid gray;
+}
+
+.accountSettings .accountSettingsMenu button:hover {
+  background-color: #74eded;
+}
+
+
+header .navigation > li > a {
+  border-radius: 50%;
+  background-color: aqua;
+  margin: 0 0.35rem;
+  display: flex;
+}
+
+header .navigation > li > a:hover {
+  background-color: teal;
+  border: 1px solid royalblue;
+}
+
+.navIcons {
+  font-size: 3rem;
+  color: royalblue;
+  margin: 0 0.5rem;
+}
+
+.navIcons:hover {
+  color: darkblue;
+}
+
+.bellIcon {
+  position: relative;
+  display: block;
+}
+
+.bellIcon span {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.leftContent,
+.rightContent {
+  width: 15%;
+  border: 5px solid black;
+  height: calc(100% - 6rem);
+  position: fixed;
+  top: 5.5rem;
+}
+
+.leftContent {
+  left: 0;
+}
+
+.rightContent {
+  right: 0;
+}
+
+.mainContent {
+  width: 40%;
+}
+
+.mainContent .post {
+  box-shadow: 5px 5px 5px 5px #888;
+  margin: 3rem 0;
+  padding: 1rem;
+}
+
+.mainContent .post .postHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mainContent .post .postHeader .profileUserInfo {
+  display: flex;
+  align-items: center;
+}
+
+/* .mainContent .post .postHeader .profileUserInfo .profileImage {
+  width: 3rem;
+  border-radius: 50%;
+} */
+
+.mainContent .post .postHeader .profileUserInfo .profileName {
+  display: flex;
+  flex-direction: column;
+}
+
+.mainContent .post .postHeader .profileOptions {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mainContent .post .postHeader .profileOptions:hover {
+  background-color: lightgray;
+}
+
+.mainContent .post .content {
+  display: flex;
+  flex-direction: column;
+}
+
+.mainContent .post .content .imgWrapper {
+  position: relative;
+}
+
+.mainContent .post .content .imgContent {
+  max-width: 100%;
+  border: 1px solid white;
+  box-shadow: 1px 1px 1px 1px #888;
+}
+
+.mainContent .post .content .infoIcon {
+  width: 2rem;
+  height: 2rem;
+  font-size: 2rem;
+  position: absolute;
+  right: 0;
+  bottom: -1rem;
+  right: 1rem;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  cursor: pointer;
+}
+
+.mainContent .post .content .postTitle {
+  padding: 1rem;
+}
+
+.mainContent .post .content .postDescription {
+  padding: 1rem;
+  margin: 0;
+}
+
+.mainContent .post .reacts {
+  display: flex;
+  justify-content: space-between;
+}
+
+.mainContent .post .reacts .reactsIcons {
+  color: royalblue;
+}
+
+.mainContent .post .reactsActions .actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.mainContent .post .reactsActions .actions .reaction {
+  color: royalblue;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+}
+
+.mainContent .post .reactsActions .actions .reaction:hover {
+  color: #1348e8;
+  background-color: #e0f0f6;
+  font-weight: 600;
+}
+
+.mainContent .post .commentSection {
+  display: flex;
+  justify-content: space-evenly;
+  padding-bottom: 1rem;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* .mainContent .post .commentSection .profileImage {
+  width: 3rem;
+  border-radius: 50%;
+} */
+
+.mainContent .post .commentSection .newCommentField {
+  width: 80%;
+  border-radius: 0.3rem;
+  padding: 0.5rem 1rem;
+  background-color: #dcf2f9;
+  border: 1px solid #888;
+  cursor: pointer;
+}
+
+.mainContent .post .commentSection .newCommentField::placeholder {
+  color: royalblue;
+}
+
+.mainContent .post .commentSection .newCommentField:hover {
+  background-color: #cbecf8;
+}
+
+.mainContent .post .commentSection .newCommentField:focus {
+  outline-color: royalblue;
+}
+
+.mainContent .post .commentSection .insertCommentButton {
+  border: none;
+  background-color: transparent;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: royalblue;
+  width: 5rem;
+}
+
+.mainContent .post .commentSection .insertCommentButton:hover {
+  color: #1348e8;
+  font-size: 1.3rem;
+  background-color: #ffd5ab;
+  border-radius: 0.5rem;
+}
+
+/* .mainContent .post .userComments .profileImage{
+  width: 3rem;
+  border-radius: 50%;
+} */
+
+/* Ideal stilizarea generala sa fie la inceput de fisier */
+.profileImage {
+  width: 3rem;
+  border-radius: 50%;
+}
+
+.mainContent .post .userComments .userCommentText {
+  margin: 0 1rem;
+  border: 1px solid #888;
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: lightgray;
+  position: relative;
+}
+
+.mainContent .post .userComments .userCommentText .emojiReaction {
+  position: absolute;
+  bottom: 0;
+  right: 1rem;
+  display: none;
+}
+
+.mainContent .post .userComments .userCommentText:hover .emojiReaction {
+  display: block;
+}
+
+.mainContent .post .userComments .userCommentText:hover {
+  animation-name: comment-animation;
+  animation-duration: 1s;
+}
+
+.mainContent .post .userComments .commentReaction {
+  margin-left: 3rem;
+  color: #888;
+  display: flex;
+  gap: 1rem;
+}
+
+.mainContent .post .userComments .commentReaction .commentReactionButton:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+@keyframes comment-animation {
+  from {
+    left: -1rem
+  }
+
+  to {
+    left: 0rem;
+  }
+}
+
+.insertCommentButton {
+  width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.center {
+  width: 5rem;
+  height: 2rem;
+}
+
+.btn {
+  width: 5rem;
+  height: 1.5rem;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid #91C9FF;
+  outline: none;
+  transition: 1s ease-in-out;
+}
+
+svg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  fill: none;
+  stroke: orange;
+  stroke-dasharray: 150 480;
+  stroke-dashoffset: 150;
+  transition: 1s ease-in-out;
+}
+
+.btn:hover {
+  transition: 1s ease-in-out;
+  background: #4F95DA;
+}
+
+.btn:hover svg {
+  stroke-dashoffset: -480;
+}
+
+.btn i {
+  color: orange;
+  font-size: 18px;
+  font-weight: 100;
+}
+
+@media only screen and (max-width: 600px) {
+  .rightContent {
+    display: none;
+  }
+}
