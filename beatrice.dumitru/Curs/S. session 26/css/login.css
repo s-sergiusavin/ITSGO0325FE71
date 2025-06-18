@@ -1,6 +1,5 @@
 body {
-    background-image: url(assets/login-background.jpg);
-    background-size: cover;
+    background-image: url(../assets/login-background.jpg);
 }
 
 a {
@@ -8,19 +7,15 @@ a {
 }
 
 .formContainer {
-    background-color: #f26222;
-    color: #1e2a38;
-    width: 300px;
+    background-color: teal;
+    color: white;
+    width: 95%;
     max-width: 30rem;
     border-radius: 0.5rem;
     box-shadow: 0 1px 4px #888;
     padding: 2rem 4rem;
     text-align: center;
     margin: 5rem auto;
-    margin-left: auto;
-    margin-right: 15rem;
-    
-    
 }
 
 form {
@@ -30,18 +25,15 @@ form {
 
 form .formField {
     margin-bottom: 0.5rem;
-    color: #fff3e5;
-    margin-right: 35px;
-    text-align: center;
 }
 
 form .formField input {
     width: 100%;
     padding: 0.5rem 1rem;
-    background-color: #fff3e5;
-    color: #1e2a38;
+    background-color: lightblue;
+    color: blueviolet;
     border-radius: 0.3rem;
-    border: 2px solid #fff3e5;
+    border: 2px solid white;
 }
 
 form .formField label {
@@ -67,33 +59,31 @@ form .formField.remeberUserField label {
 }
 
 form .loginButton {
-    background-color: #fff3e5;
-    border: 4px solid #1e2a38;
-    border-radius: 0.5rem;
-    color: #1e2a38;
+    background-color: cadetblue;
+    border: 1px solid white;
+    border-radius: 0.3rem;
+    color: white;
     padding: 0.75rem 2.5rem;
     cursor: pointer;
     margin-bottom: 1rem;
     font-size: 1.2rem;
-    margin-left: 2px;
-    font-weight: bold;
 }
 
 form .loginButton:hover {
-    background-color: #fff3e5;
-    border: #fff3e5;
-    color: #1e2a38;
-    border: 1px solid #fff3e5;
+    background-color: lightblue;
+    border: cadetblue;
+    color: black;
+    border: 1px solid cadetblue;
     font-weight: bold;
 }
 
 a strong {
-    color: #1e2a38;
+    color: greenyellow;
 }
 
 .registerButton {
-    background-color: #fff3e5;
-    border: 1px solid #fff3e5;
+    background-color: turquoise;
+    border: 1px solid white;
     padding: 0.5rem 2rem;
     display: block;
     margin: 0 auto;
@@ -108,5 +98,5 @@ a strong {
 }
 
 a {
-    color: #fff3e5;
+    color: white;
 }
