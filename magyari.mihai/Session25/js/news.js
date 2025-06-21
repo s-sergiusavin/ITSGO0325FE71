@@ -22,7 +22,9 @@ async function onSubmit(event) {
 
         console.log(articles);
 
-        const markup = articles.reduce((markup,article) => createMarkup(article) +markup, '')
+        const markup = articles.reduce((markup, article) => createMarkup(article) + markup, '') // folosind createMarkup(article) + markup, articolele sunt puse in ordine cronologica de la cele mai vechi la cele mai noi
+        // const markup = articles.reduce((markup, article) => markup + createMarkup(article), '') // in cazul asta cele mai noi apar primele (invers)
+
         updateNewsList(markup)
 
     } catch (error) {
