@@ -54,7 +54,6 @@ header .links {
 
 .accountSettings {
   position: relative;
-  
 }
 
 .accountSettings button {
@@ -75,13 +74,12 @@ header .links {
 
 .accountSettings .accountSettingsMenu button {
   padding: 0.5rem 0;
-  border: 1px solid gray;
+  border: 1px solid grey;
 }
 
 .accountSettings .accountSettingsMenu button:hover {
-  background-color: #74eded;
+  background-color: #85fdfd;
 }
-
 
 header .navigation > li > a {
   border-radius: 50%;
@@ -258,6 +256,16 @@ main {
   font-weight: 600;
 }
 
+.mainContent .post .reactsActions .actions .reaction.touched {
+  color: #d6e1ff;
+  background-color: teal;
+}
+
+.mainContent .post .reactsActions .actions .reaction.touched:hover {
+  color: #bbcbf9;
+  background-color: #005151;
+}
+
 .mainContent .post .commentSection {
   display: flex;
   justify-content: space-evenly;
@@ -358,7 +366,7 @@ main {
 
 @keyframes comment-animation {
   from {
-    left: -1rem
+    left: -1rem;
   }
 
   to {
@@ -383,7 +391,7 @@ main {
   height: 1.5rem;
   cursor: pointer;
   background: transparent;
-  border: 1px solid #91C9FF;
+  border: 1px solid #91c9ff;
   outline: none;
   transition: 1s ease-in-out;
 }
@@ -401,7 +409,7 @@ svg {
 
 .btn:hover {
   transition: 1s ease-in-out;
-  background: #4F95DA;
+  background: #4f95da;
 }
 
 .btn:hover svg {
