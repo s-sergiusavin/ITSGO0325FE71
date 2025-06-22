@@ -492,6 +492,7 @@ main {
 
 .reactionNames:hover {
     color: orange;
+    cursor: pointer;
 }
 
 .youtube {
@@ -547,11 +548,18 @@ main {
 
 /* Breakpoints */
 @media only screen and (max-width:1600px) {
-    .facebook, .twitter, .linkedIn {
+
+    .facebook,
+    .twitter,
+    .linkedIn {
         padding-left: 2.5rem;
     }
 
-    .thePastStarts, .thePretender, .bloodBrothers, .sevenNationsArmy, .killerQueen {
+    .thePastStarts,
+    .thePretender,
+    .bloodBrothers,
+    .sevenNationsArmy,
+    .killerQueen {
         padding: 0.5rem;
         display: flex;
         flex-direction: column;
