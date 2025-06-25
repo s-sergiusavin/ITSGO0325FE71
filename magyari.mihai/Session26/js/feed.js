@@ -65,3 +65,46 @@ shareButton.addEventListener('click', function() {
     
     this.classList.toggle('touched');
 });
+
+const commentButton = document.getElementById('commentButton');
+const commentInput = document.getElementById('commentInput');
+const commentInputButton = document.getElementById('commentInputButton');
+
+const commentMessage = document.getElementById('commentMessage');
+const removeCommentButton = document.getElementById('removeCommentButton');
+
+
+const initialComment = commentMessage.innerText;
+commentMessage.innerText = localStorage.getItem('comment') || commentMessage.innerText;
+
+commentButton.addEventListener('click', function() {
+    commentInput.focus();
+});
+
+function setComment() {
+    commentMessage.innerText = commentInput.value;
+    localStorage.setItem('comment', JSON.stringify(commentInput.value));
+    commentInput.value = '';
+}
+
+
+removeCommentButton.addEventListener('click', ()=> {
+    localStorage.clear();//sterge tot din local storage
+    localStorage.removeItem('comment'); //sterge din local storage numai elementul cu cheia mentionata
+    const initialComment = commentMessage.innerText;
+});
+
+commentInput.addEventListener('keydown',function (event) {
+    if (event.key === 'Enter'){
+        setComment();
+        this.blur();
+    }
+});
+
+commentInputButton.addEventListener('click', setComment);
+
+const commentText = document.getElementsByClassName('userCommentText')[0];
+
+commentText.addEventListener('mouseover', function(){
+    removeCommentButton.style.display='inline'
+})

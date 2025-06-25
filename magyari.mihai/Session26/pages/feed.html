@@ -148,7 +148,7 @@
                 <span>Like</span>
               </li>
               <li class="reaction">
-                <i class="bi bi-chat-text"></i>
+                <i class="bi bi-chat-text" id="commentButton"></i>
                 <span>Comments</span>
               </li>
               <li class="reaction" id="shareButton">
@@ -172,8 +172,9 @@
               type="text"
               placeholder="Adauga un comentariu"
               class="newCommentField"
+              id="commentInput"
             />
-            <button class="insertCommentButton">
+            <button class="insertCommentButton" id="commentInputButton">
               <i class="bi bi-send-plus"></i>
             </button>
           </div>
@@ -192,11 +193,13 @@
               </div>
 
               <div class="userCommentText">
+                <span id="commentMessage"></span>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro
                 consequatur nemo nisi quasi dignissimos quisquam explicabo
                 suscipit possimus modi similique mollitia voluptatem molestias
                 ipsam, excepturi illum? Adipisci aperiam qui voluptatem.
                 <div class="emojiReaction">&#128526;</div>
+                <span class="removeCommentButton">Remove this comment</span>
               </div>
 
               <div class="commentReaction">
