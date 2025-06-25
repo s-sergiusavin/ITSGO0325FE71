@@ -1,0 +1,48 @@
+.header {
+  border: 2px solid blue;
+  margin-top: 1rem;
+}
+.header .title {
+  color: brown;
+}
+.header .headerContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.mainSection {
+  border: 3px solid green;
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+}
+.mainSection .firstContainer {
+  border: 1px solid brown;
+  padding: 0.5rem;
+}
+.mainSection .firstContainer .title {
+  color: purple;
+}
+.mainSection .firstContainer .mainSectionContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.box {
+  width: 5rem;
+  height: 5rem;
+  background-color: brown;
+  margin: 0.5rem;
+}
+.box.yellowBox {
+  background-color: yellow;
+}
+.box.yellowBox:hover {
+  background-color: orange;
+}
+.box:hover {
+  background-color: lightcoral;
+}/*# sourceMappingURL=style.css.map */
