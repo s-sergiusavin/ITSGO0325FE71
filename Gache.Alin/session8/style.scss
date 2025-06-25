@@ -29,26 +29,39 @@ body {
 }
 
 /* Combinators */
+
 /* Spatiu intre selectori reprezinta oricare dintre parinti */
-.combinators .parrentSelector {
-  border: 3px solid black;
-}
-.combinators .parrentSelector > p {
-  background-color: rgb(232, 255, 127);
+.combinators {
+  .parrentSelector {
+    border: 3px solid black;
+     > p{
+          background-color: rgb(232, 255, 127);
+    }
+  }
 }
 
 /* > Direct child */
+// .parrentSelector > p {
+    
+//   background-color: aquamarine;
+// }
+
 /* + Imediat first element */
 .insideDiv + p {
+    // & + p{
+    //       background-color: blueviolet;
+    // }
   background-color: rgb(226, 43, 43);
 }
 
 /* All elements after the specified one*/
+
 .insideDiv ~ p {
   background-color: red;
 }
 
 /* Opacity */
+
 .opacityImage {
   margin-top: 40rem;
   width: 20rem;
@@ -81,6 +94,7 @@ body {
 }
 
 /* Attribute selectors */
+
 a[target] {
   background-color: yellow;
 }
@@ -98,14 +112,14 @@ form {
   flex-direction: column;
 }
 
-input[type=text] {
+input[type="text"] {
   width: 15rem;
   display: block;
   margin: 0.5rem;
   background-color: lightseagreen;
 }
 
-input[type=submit] {
+input[type="submit"] {
   width: 100%;
   background-color: blue;
   color: white;
@@ -116,11 +130,11 @@ input[type=submit] {
   cursor: pointer;
 }
 
-input[type=submit]:hover {
+input[type="submit"]:hover {
   background-color: blueviolet;
 }
 
-input[type=text],
+input[type="text"],
 select {
   width: 100%;
   /* width: calc(100% - 4rem); */
@@ -132,6 +146,7 @@ select {
 }
 
 /* Border box */
+
 .noPadding {
   width: 20rem;
   height: 10rem;
@@ -147,6 +162,7 @@ select {
 }
 
 /* Shaddow effects */
+
 .textShaddow {
   text-shadow: 2px 2px;
   text-shadow: 2px 2px red;
@@ -163,6 +179,7 @@ select {
 }
 
 /* Transform */
+
 .transformBox {
   width: 20rem;
   height: 10rem;
@@ -195,6 +212,7 @@ select {
 }
 
 /* Animantions */
+
 .animationBox {
   width: 20rem;
   height: 20rem;
@@ -218,6 +236,7 @@ select {
     to {
         background-color: red;
     } */
+
   /* 0% {
         background-color: red;
     }
@@ -233,33 +252,40 @@ select {
     100% {
         background-color: indigo;
     } */
+
   /* Change color + position */
+
   0% {
     background-color: royalblue;
     top: 0;
     left: 0;
   }
+
   25% {
     background-color: greenyellow;
     left: 20rem;
     top: 0;
   }
+
   50% {
     background-color: hotpink;
     left: 20rem;
     top: 20rem;
   }
+
   75% {
     background-color: indigo;
     left: 0;
     top: 20rem;
   }
+
   100% {
     background-color: yellow;
     left: 0;
     top: 0;
   }
 }
+
 .spinnerContainer {
   display: flex;
   align-items: center;
@@ -275,7 +301,9 @@ select {
   border: 4px solid teal;
   border-top: 4px solid white;
   border-radius: 50%;
+
   /* animation for spinner */
+
   transition-property: transform;
   animation-name: spinnerRotate;
   animation-duration: 1.2s;
@@ -287,10 +315,12 @@ select {
   from {
     transform: rotate(80deg);
   }
+
   to {
     transform: rotate(360deg);
   }
 }
+
 .scene {
   width: 150px;
   height: 300px;
@@ -339,4 +369,4 @@ select {
   background-color: #031d6c;
   border: #7d7df8;
   transform: scale(1.05);
-}/*# sourceMappingURL=style.css.map */
+}
