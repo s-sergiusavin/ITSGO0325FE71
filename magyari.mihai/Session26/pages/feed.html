@@ -97,9 +97,15 @@
               </div>
             </div>
 
-            <a href="#" class="profileOptions"
-              ><i class="bi bi-three-dots"></i
-            ></a>
+            <div class="profileOptionsWrapper">
+              <button class="profileOptions">
+                <i class="bi bi-three-dots"></i>
+              </button>
+              <div class="profileOptionsDropdown">
+                <button>Edit this post</button>
+                <button>Remove this post</button>
+              </div>
+            </div>
           </div>
 
           <div class="content">
@@ -110,9 +116,15 @@
                 class="imgContent"
               />
 
-              <a href="landingPage.html"
-                ><i class="bi bi-info-circle infoIcon"></i
-              ></a>
+              <div class="infoIconWrapper">
+                <i class="bi bi-info-circle infoIcon" tabindex="1"></i>
+                <p class="infoMessage">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi
+                  deleniti optio maiores ab libero, pariatur corporis sapiente
+                  provident est iste, excepturi quidem amet quibusdam impedit
+                  temporibus omnis voluptatem. Accusamus, sed! <a href="landingPage.html">Read more...</a>
+                </p>
+              </div>
             </div>
 
             <strong class="postTitle">Titlul postarii</strong>
@@ -147,8 +159,8 @@
                 <i class="bi bi-hand-thumbs-up"></i>
                 <span>Like</span>
               </li>
-              <li class="reaction">
-                <i class="bi bi-chat-text" id="commentButton"></i>
+              <li class="reaction" id="commentButton">
+                <i class="bi bi-chat-text"></i>
                 <span>Comments</span>
               </li>
               <li class="reaction" id="shareButton">
@@ -193,13 +205,15 @@
               </div>
 
               <div class="userCommentText">
-                <span id="commentMessage"></span>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro
-                consequatur nemo nisi quasi dignissimos quisquam explicabo
-                suscipit possimus modi similique mollitia voluptatem molestias
-                ipsam, excepturi illum? Adipisci aperiam qui voluptatem.
+                <div id="commentMessage">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Porro consequatur nemo nisi quasi dignissimos quisquam
+                  explicabo suscipit possimus modi similique mollitia voluptatem
+                  molestias ipsam, excepturi illum? Adipisci aperiam qui
+                  voluptatem.
+                </div>
                 <div class="emojiReaction">&#128526;</div>
-                <span class="removeCommentButton">Remove this comment</span>
+                <span id="removeCommentButton">Remove this comment</span>
               </div>
 
               <div class="commentReaction">
