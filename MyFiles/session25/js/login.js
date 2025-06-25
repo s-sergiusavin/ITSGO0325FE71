@@ -7,14 +7,14 @@ const emailField = document.getElementById('userInput');
 const passwordField = document.getElementById('passwordInput');
 const error = document.getElementById('error');
 
-toggleAuthButton.addEventListener('click', function() {
+toggleAuthButton.addEventListener('click', function () {
     const headerTitleElement = document.getElementsByClassName('headerTitle')[0];
     const forgotPasswordElement = document.getElementById('forgotPassword');
 
     if (isLoginPage) {
-        headerTitleElement.innerText = 'Create Your Account';
+        headerTitleElement.innerText = 'Create new account';
         forgotPasswordElement.style.display = 'none';
-        loginButton.value = 'Sign Up';
+        loginButton.value = 'Sign up';
         this.value = 'Switch to login page';
     } else {
         headerTitleElement.innerText = 'Login';
@@ -27,16 +27,16 @@ toggleAuthButton.addEventListener('click', function() {
 });
 
 const showError = (message) => {
-    error.innerText = message;
     error.style.display = 'block';
+    error.innerText = message;
     error.style.color = 'red';
-};
-
-const validateEmail = (emailValue, regex) => {
-    return !!emailValue.match(regex); // fixed typo: reg1ex -> regex
 }
 
-const validatePassword = (passwordValue) => { // fixed parameter name
+const validateEmail = (emailValue, regex) => {
+    return !!emailValue.match(regex) // !! converteste la o valoare booleana
+}
+
+const validatePassword = (passwordValue) => {
     return passwordValue.length > 3;
 }
 
@@ -45,38 +45,39 @@ const clearInputs = () => {
     passwordField.value = '';
 }
 
-loginButton.addEventListener('click', function(event) {
-    event.preventDefault(); // Prevent form submission
+loginButton.addEventListener('click', function (event) {
+    event.preventDefault();
+
     const emailValue = emailField.value;
     const passwordValue = passwordField.value;
     const regexEmailPattern = /\D{4,}\@\D{4,}\.\D{2,}/g;
 
-    error.style.display = 'none'; // Hide error message initially
-
+    error.style.display = 'none';
     if (emailValue === '' || passwordValue === '') {
-        showError('All fields are required and must contain a value.');
+        showError('All fields are required and must contain a value!')
     } else {
+        // email and password contain values
         if (validateEmail(emailValue, regexEmailPattern) && validatePassword(passwordValue)) {
             if (isLoginPage) {
-                // Handle login here
-                login(emailValue, passwordValue).then(data => {
+                // login request
+                login(emailValue, passwordValue).then( data => {
                     console.log(data);
-                    clearInputs();
-                    window.open('news.html', '_self'); // Open news.html in the same tab
+                    clearInputs()
+                    window.open('news.html', '_self');
                 });
             } else {
-                // Handle sign-up request here
-                createAccount(emailValue, passwordValue).then(data => {
+                // sign up request
+                createAccount(emailValue, passwordValue).then( data => {
                     console.log(data);
-                    clearInputs();
-                    window.open('news.html', '_self'); // Open news.html in the same tab
+                    clearInputs()
+                    window.open('news.html', '_self');
                 });
             }
         } else {
-            //email or password is invalid
-            alert('Try again');
-            showError('Invalid email or password format.');
-            clearInputs();
+            // email or password not valid
+            alert('Try again')
+            showError('Incorrect email or password')
+            clearInputs()
         }
     }
 });
@@ -86,12 +87,12 @@ async function login(emailValue, passwordValue) {
     let loginData = {
         email: emailValue,
         password: passwordValue
-    };
+    }
 
     loginData = {
         email: "eve.holt@reqres.in",
         password: "cityslicka"
-    };
+    }
 
     const loginConfig = {
         method: 'POST',
@@ -100,13 +101,15 @@ async function login(emailValue, passwordValue) {
             'x-api-key': 'reqres-free-v1'
         },
         body: JSON.stringify(loginData)
-    };
+    }
+
     const response = await fetch(loginUrl, loginConfig);
+
     return response.json();
 }
 
 async function createAccount(emailValue, passwordValue) {
-    const registerUrl = 'https://reqres.in/api/register';
+    const reqisterUrl = 'https://reqres.in/api/register';
 
     emailValue = 'eve.holt@reqres.in';
     passwordValue = 'pistol';
@@ -114,7 +117,7 @@ async function createAccount(emailValue, passwordValue) {
     const registerData = {
         email: emailValue,
         password: passwordValue
-    };
+    }
 
     const registerConfig = {
         method: 'POST',
@@ -123,6 +126,9 @@ async function createAccount(emailValue, passwordValue) {
             'x-api-key': 'reqres-free-v1'
         },
         body: JSON.stringify(registerData)
-    };
-    return fetch(registerUrl, registerConfig);
+    }
+
+    const response = await fetch(reqisterUrl, registerConfig);
+
+    return response.json();
 }

@@ -1,63 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Social Media App | Promo</title>
-    <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="../pages/landingPage.html" />
-  </head>
-  <body>
-    <header>
-      <a href="../pages/feed.html"
-        ><img src="../assets/back.png" alt="back icon" class="backImage"
-      /></a>
-
-      <section class="header">
-        <a href="../pages/feed.html" title="To Feed Section">Landing Page</a>
-      </section>
-
-      <h1><span>The best</span> Summer Party</h1>
-
-      <p class="headerDescription">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi
-        exercitationem doloribus aut dignissimos ad corporis officia neque, ab
-        doloremque consequatur non quis aliquam ipsam, amet quasi praesentium
-        quaerat veritatis vero debitis possimus repudiandae! Odit, quia.
-        Aspernatur deserunt eligendi ducimus. Temporibus nisi voluptates esse
-        doloribus reprehenderit. Illo at nulla laudantium quisquam!
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Join EyeSEE – Early Access</title>
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/landingPage.css">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <div class="confetti"></div>
+  <main class="landing-fun">
+    <div class="fun-card">
+      <div class="emoji-bubble">👁️‍🗨️</div>
+      <h1>Join our <span>VIP</span> List</h1>
+      <p class="subtitle">
+        For fresh stories and app news.<br>
+        <span class="colorful-text">📥 Straight to your inbox! 📥</span>
       </p>
-
-      <div class="formContainer">
-        <form action="">
-          <label for="name">Enter your name</label>
-          <input type="text" id="name" placeholder="Your name" />
-          <p>Example: Sergiu Savin</p>
-          <input type="button" value="Book now" id="callToAction" />
-        </form>
+      <form class="subscribe-form">
+        <input type="text" placeholder="Your cool name 😎" required>
+        <input type="email" placeholder="Email address" required>
+        <button type="submit"><i class="fa-solid fa-bolt"></i> Count me in!</button>
+      </form>
+      <p class="privacy-note">✨ No spam, only friendly updates!</p>
+      <div class="bubbles">
+        <div class="bubble b1"></div>
+        <div class="bubble b2"></div>
+        <div class="bubble b3"></div>
       </div>
-    </header>
+    </div>
 
-    <section class="callToAction">
-      <div class="callToActionMessage">
-        <h2>Enjoy the Party</h2>
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut
-          voluptatum nisi qui laudantium tempora consequuntur similique
-          pariatur, esse natus cupiditate molestias dignissimos necessitatibus,
-          a, doloremque incidunt perspiciatis. Iure, nihil? Dolorem quos
-          facilis, repellat labore quod vero dignissimos velit cupiditate
-          explicabo voluptatem, deleniti delectus beatae pariatur ad? Commodi
-          dicta, ab tempora id distinctio blanditiis, quidem consequatur officia
-          recusandae sapiente placeat voluptatum quibusdam saepe nemo, sint
-          dolore quas culpa ratione sit ea itaque? Dolores consectetur id quia
-          incidunt pariatur explicabo minima sequi nisi autem? Asperiores fugit
-          magni alias praesentium animi qui molestias minus. Officia temporibus,
-          minima deserunt explicabo illo sunt nisi architecto!
-        </p>
+    <!-- STRONG POINTS SECTION -->
+    <div class="strong-points">
+      <h2>Why You'll Love <img src="./assets/LOGO.png" alt="logo" class="logo"></h2>
+      <div class="points-list">
+        <div class="point">
+          <span class="icon">👫</span>
+          <h4>Make New Friends</h4>
+          <p>Connect with awesome people from around the world.</p>
+        </div>
+        <div class="point">
+          <span class="icon">📸</span>
+          <h4>Share Life’s Moments</h4>
+          <p>Post photos, stories, and updates in a snap.</p>
+        </div>
+        <div class="point">
+          <span class="icon">🎉</span>
+          <h4>Join Fun Groups</h4>
+          <p>Discover your tribe and enjoy shared interests together.</p>
+        </div>
+        <div class="point">
+          <span class="icon">🔒</span>
+          <h4>Privacy First</h4>
+          <p>Your data stays yours, always safe and secure.</p>
+        </div>
+      </div>
+    </div>
 
-        <img src="../assets/city.jpeg" alt="party summer 2025" />
+    <section class="testimonials-section">
+      <h2>What our users say</h2>
+      <div class="testimonials">
+        <blockquote>
+          <p>“Made a new best friend here. Love the vibe! 💛”</p>
+          <span>- Jane D.</span>
+        </blockquote>
+        <blockquote>
+          <p>“Super easy to use, and I love the groups!”</p>
+          <span>- Alex P.</span>
+        </blockquote>
+        <blockquote>
+          <p>“Finally found friends who get my memes 😂 ”</p>
+          <span>- David S.</span>
+        </blockquote>
       </div>
     </section>
-  </body>
+    
+  </main>
+</body>
 </html>

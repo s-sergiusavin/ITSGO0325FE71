@@ -1,34 +1,35 @@
 const accountSettingsButton = document.getElementById("accountSettingsButton");
-const accountSettingsMenu = document.getElementsByClassName("accountSettingsMenu")[0];
+const accountSettingsMenu = document.getElementsByClassName(
+  "accountSettingsMenu"
+)[0];
 const logoutButton = document.getElementById("logoutButton");
 
-accountSettingsButton.addEventListener("click", function() {
-    if(accountSettingsMenu.style.display === "flex") {
-        accountSettingsMenu.style.display = "none";
-    } else {
-        accountSettingsMenu.style.display = "flex"
-    }
+accountSettingsButton.addEventListener("click", function () {
+  if (accountSettingsMenu.style.display === "flex") {
+    accountSettingsMenu.style.display = "none";
+  } else {
+    accountSettingsMenu.style.display = "flex";
+  }
 });
 
-logoutButton.addEventListener("click", function() {
-    window.open("../login.html", "_self");
-})
+logoutButton.addEventListener("click", function () {
+  window.open("../login.html", "_self");
+});
 
-const noOfLikesElem = document.getElementById('likesNumber');
+const noOfLikesElem = document.getElementById("likesNumber");
 const noOfShares = document.getElementById("shareNumber");
 
 function getNumberOfLikes() {
-noOfLikesElem.innerText = noOfLikesElem.innerText ?? 21;
-
+  noOfLikesElem.innerText = noOfLikesElem.innerText || 21;
 }
 
 function getNumberShares() {
-noOfSharesElem.innerText = noOfSharesElem.innerText || 17;
+  noOfShares.innerText = noOfShares.innerText || 17;
 }
 
 function getData() {
-    getNumberOfLikes();
-    getNumberOfShares();
+  getNumberOfLikes();
+  getNumberOfShares();
 }
 
 getData();
@@ -40,21 +41,63 @@ const shareButton = document.getElementById("sharedButton");
 let isLiked = false;
 let isShared = false;
 
-likeButton.addEventListener("click", function() {
-isLiked = !isLiked;
+likeButton.addEventListener("click", function () {
+  isLiked = !isLiked;
 
-console.dir(noOfLikesElem)
+  console.dir(noOfLikesElem);
 
-// if (isLiked) {
-//     noOfLikesElem.innerText = Number(noOfLikesElem.innerText) + 1
-// } else {
-//  noOfLikesElem.innerText = Number(noOfLikesElem.innerText) - 1
-// }
-isShared = !isShared
-noOfLikesElem.innerText = isLiked
-? Number(noOfLikesElem.innerText) + 1
-: Number(noOfLikesElem.innerText) - 1 
+  // if (isLiked) {
+  //     noOfLikesElem.innerText = Number(noOfLikesElem.innerText) + 1
+  // } else {
+  //  noOfLikesElem.innerText = Number(noOfLikesElem.innerText) - 1
+  // }
+  isShared = !isShared;
+  noOfLikesElem.innerText = isLiked
+    ? Number(noOfLikesElem.innerText) + 1
+    : Number(noOfLikesElem.innerText) - 1;
+
+  this.classList.toggle("touched");
+});
+
+const commentButton = document.getElementById("commentButton");
+const commentInput = document.getElementById("commentInput");
+const commentInputButton = document.getElementById("commentInputButton");
+
+const commentMessage = document.getElementById("commentMessage");
+const removeCommentButton = document.getElementById("removeCommentButton");
+
+commentMessage.innerText =
+  localStorage.getItem("comment") || commentMessage.innerText;
+
+commentButton = document.addEventListener("click", function () {
+  commentInput.focus();
+  // commentInput.blur() // reversul functiei focus
+});
+
+function setComment() {
+  commentMessage.innerText = commentInput.value;
+  localStorage.setItem("comment", JSON.stringify(commentInput.value));
+  commentInput.value = "";
+}
+
+removeCommentButton.addEventListener("click", () => {
+  localStorage.removeItem("comment");
+});
+
+commentInput.addEventListener("keydown", function (event) {
+  if (event.key === "Enter") {
+    setComment();
+    this.blur;
+  }
+});
+
+commentInputButton.addEventListener("click", function () {
+    setComment();
+});
 
 
-this.classList.toggle("touched");
+const commentText = document.getElementsByClassName('userCommentText') [0]
+commentText.addEventListener('mouseover', function() {
+removeCommentButton.style.display = 'inline-block';
+
 });

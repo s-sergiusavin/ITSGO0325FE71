@@ -1,0 +1,17 @@
+{
+  "name": "session-28",
+  "version": "1.0.0",
+  "description": "my first nodejs package",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "mdn"
+  ],
+  "author": "Alexandra Predoiu",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.3.7"
+  }
+}
