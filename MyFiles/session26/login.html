@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/login.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
 </head>
 <body>
     <div>
@@ -17,12 +16,17 @@
      </div>
     <main class="landing-fun">
         <section class="formContainer fun-card">
+                <div class="glow-blobs">
+  <div class="blob glow b1"></div>
+  <div class="blob glow b2"></div>
+  <div class="blob glow b3"></div>
+</div>
           <div class="login-header">
             <img src="./assets/logo.png" alt="eyeSEE Logo" class="app-logo">
           </div>
-            <h1 class="loginText">Log in</h1>
+            <h1 id="headerTitle" class="loginText">Log in</h1>
             <div class="login-tagline">Welcome back! <br> Let's get you connected 🚀</div>
-            <form action="your-action-url-here" method="POST">
+            <form id="authForm">
                 <div class="formField">
                     <label for="username">Username</label>
                     <input type="text" id="username" name="username" placeholder="Enter your username" required />
@@ -32,25 +36,30 @@
                     <input type="password" id="password" name="password" placeholder="Enter your password" required />
                 </div>
                 <div class="formField rememberUserField">
-                    <input type="checkbox" id="rememberCheckbox" name="remember" />
-                    <label for="rememberCheckbox" class="remember-label">Remember me</label>
+                <label class="easyCheckbox">
+  <input type="checkbox" id="rememberCheckbox" />
+  <span>✔️</span>
+  Remember me
+</label>
+
                 </div>
-                <button type="submit" class="loginButton">
+                <div id="error" style="display: none;"></div>
+                <button type="button" id="loginButton" class="loginButton">
                     <i class="fa-solid fa-right-to-bracket"></i> Log in
                 </button>
-                <a href="#" class="forgot-link"><strong>Forget password?</strong></a>
+                <a href="#" id="forgotPassword" class="forgot-link"><strong>Forget password?</strong></a>
             </form>
             <hr />
-            <button class="registerButton">
+            <button type="button" id="switchButton" class="registerButton">
                 <i class="fa-solid fa-user-plus"></i> Create an account
             </button>
-            <a href="feed.html" class="to-account-link">To My Account</a>
         </section>
     </main>
     <footer class="login-footer">
       &copy; 2025 EyeSEE •
       <a href="#">Terms</a> •
       <a href="#">Privacy</a>
-    </footer>    
+    </footer>  
+    <script src="js/auth.js"></script>
 </body>
 </html>

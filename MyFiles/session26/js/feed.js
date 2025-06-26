@@ -1,7 +1,5 @@
 const accountSettingsButton = document.getElementById("accountSettingsButton");
-const accountSettingsMenu = document.getElementsByClassName(
-  "accountSettingsMenu"
-)[0];
+const accountSettingsMenu = document.getElementsByClassName("accountSettingsMenu")[0];
 const logoutButton = document.getElementById("logoutButton");
 
 accountSettingsButton.addEventListener("click", function () {
@@ -29,11 +27,10 @@ function getNumberShares() {
 
 function getData() {
   getNumberOfLikes();
-  getNumberOfShares();
+  getNumberShares();
 }
 
 getData();
-
 
 const likeButton = document.getElementById("likeButton");
 const shareButton = document.getElementById("sharedButton");
@@ -43,19 +40,9 @@ let isShared = false;
 
 likeButton.addEventListener("click", function () {
   isLiked = !isLiked;
-
-  console.dir(noOfLikesElem);
-
-  // if (isLiked) {
-  //     noOfLikesElem.innerText = Number(noOfLikesElem.innerText) + 1
-  // } else {
-  //  noOfLikesElem.innerText = Number(noOfLikesElem.innerText) - 1
-  // }
-  isShared = !isShared;
   noOfLikesElem.innerText = isLiked
     ? Number(noOfLikesElem.innerText) + 1
     : Number(noOfLikesElem.innerText) - 1;
-
   this.classList.toggle("touched");
 });
 
@@ -66,12 +53,10 @@ const commentInputButton = document.getElementById("commentInputButton");
 const commentMessage = document.getElementById("commentMessage");
 const removeCommentButton = document.getElementById("removeCommentButton");
 
-commentMessage.innerText =
-  localStorage.getItem("comment") || commentMessage.innerText;
+commentMessage.innerText = localStorage.getItem("comment") || commentMessage.innerText;
 
-commentButton = document.addEventListener("click", function () {
+commentButton.addEventListener("click", function () {
   commentInput.focus();
-  // commentInput.blur() // reversul functiei focus
 });
 
 function setComment() {
@@ -87,17 +72,15 @@ removeCommentButton.addEventListener("click", () => {
 commentInput.addEventListener("keydown", function (event) {
   if (event.key === "Enter") {
     setComment();
-    this.blur;
+    this.blur();
   }
 });
 
 commentInputButton.addEventListener("click", function () {
-    setComment();
+  setComment();
 });
 
-
-const commentText = document.getElementsByClassName('userCommentText') [0]
-commentText.addEventListener('mouseover', function() {
-removeCommentButton.style.display = 'inline-block';
-
+const commentText = document.getElementsByClassName("userCommentText")[0];
+commentText.addEventListener("mouseover", function () {
+  removeCommentButton.style.display = "inline-block";
 });
