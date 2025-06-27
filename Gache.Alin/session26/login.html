@@ -9,9 +9,10 @@
 </head>
 <body>
     <section class="formContainer">
-        <h1>Login</h1>
+        <h1 id="headerTitle">Login</h1>
 
         <form action="">
+            <span id="error"></span>
             <div class="formField">
                 <label for="username">Username</label>
                 <input type="text" id="username" placeholder="Enter your username">
@@ -27,15 +28,17 @@
                 <label for="rememberCheckbox">Click here to remember me</label>
             </div>
 
-            <input type="submit" value="Log in" class="loginButton">
-            <a href="#"><strong>Forget password?</strong></a>
+            <input type="submit" value="Log in" class="loginButton" id="loginButton">
+            <a href="#" id="forgotPassword"><strong>Forget password?</strong></a>
         </form>
 
         <hr>
-        <button class="registerButton">Create an account</button>
+        <button class="registerButton" id="switchButton">Create an account</button>
 
-        <a href="feed.html">Catre contul meu</a>
+        <a href="./pages/feed.html">Catre contul meu</a>
 
     </section>
+
+    <script src="js/auth.js"></script>
 </body>
 </html>

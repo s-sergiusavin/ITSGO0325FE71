@@ -89,23 +89,54 @@ header .mainSearch .searchInput:focus {
 header .navigation,
 header .links {
   display: flex;
+  margin-top: 1rem;
+}
+
+.accountSettings {
+  position: relative;
+}
+
+.accountSettings button {
+  cursor: pointer;
+  border: none;
+  background-color: inherit;
+}
+
+.accountSettings .accountSettingsMenu {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 4rem;
+  right: 0;
+  width: 12rem;
+  background-color: lightgray;
+}
+
+.accountSettings .accountSettingsMenu button {
+  padding: 0.5rem 0;
+  border: 1px solid gray;
+  border-collapse: collapse;
+}
+
+.accountSettings .accountSettingsMenu button:hover {
+  background-color: #b3d4fc;
 }
 
 header .navigation > li > a {
   border-radius: 50%;
-  background-color: aqua;
+  background-color: #00ffff;
   margin: 0 0.35rem;
   display: flex;
 }
 
 header .navigation > li > a:hover {
-  background-color: teal;
-  border: 1px solid royalblue;
+  background-color: #008080;
+  border: 1px solid #4169e1;
 }
 
 .navIcons {
   font-size: 3rem;
-  color: royalblue;
+  color: #4169e1;
   margin: 0 0.5rem;
 }
 
@@ -153,6 +184,11 @@ main {
 
 .leftContent {
   left: 0;
+  overflow: auto;
+}
+
+.leftContent::-webkit-scrollbar {
+  display: none;
 }
 
 .leftContent .content {
@@ -216,7 +252,7 @@ main {
 
 .leftContent .content .gamesPosition .games button img {
   height: 5rem;
-  width:  5rem;
+  width: 5rem;
   border-radius: 0.5rem;
 }
 
@@ -340,6 +376,17 @@ main {
   color: #1348e8;
   background-color: #e0f0f6;
   font-weight: 600;
+}
+
+.mainContent .post .reactsActions .actions .reaction.toutched {
+  color: #1348e8;
+  background-color: #e0f0f6;
+  font-weight: 600;
+}
+
+.mainContent .post .reactsActions .actions .reaction.toutched:hover {
+  color: #243b83;
+  background-color: #c9e5f0;
 }
 
 .mainContent .post .commentSection {
@@ -620,7 +667,7 @@ svg {
   height: 24rem;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 750px) {
   header {
     flex-direction: column;
     height: auto;

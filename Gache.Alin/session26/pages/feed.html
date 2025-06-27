@@ -22,8 +22,8 @@
       crossorigin="anonymous"
     />
 
-    <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./css/feed.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/feed.css" />
   </head>
   <body>
     <header>
@@ -73,9 +73,15 @@
           >
         </li>
         <li>
-          <a href="login.html" title="Settings"
-            ><i class="bi bi-gear navIcons"></i
-          ></a>
+          <div class="accountSettings">
+            <button id="accountSettingsButton" title="Settings">
+              <i class="bi bi-gear navIcons"></i>
+            </button>
+            <div class="accountSettingsMenu">
+              <button>Profile Settings</button
+              ><button id="logoutButton">Logout</button>
+            </div>
+          </div>
         </li>
       </ul>
     </header>
@@ -85,7 +91,7 @@
         <div class="content">
           <button class="contentBtn">
             <img
-              src="./assets/profile.jpg"
+              src="../assets/profile.jpg"
               alt="profile picture"
               class="profileImage"
             />
@@ -115,20 +121,22 @@
           <div class="shortcuts"><span>Scurtaturi</span></div>
           <div class="gamesPosition">
             <span>Jocuri</span>
-            <div class="games">
-              <button><img src="./assets/game3.webp" alt="" /></button>
-              <button><img src="./assets/game2.jfif" alt="" /></button>
-              <button><img src="./assets/game1.jpg" alt="" /></button>
-            </div>
-            <div class="games">
-              <button><img src="./assets/game2.jfif" alt="" /></button>
-              <button><img src="./assets/game1.jpg " alt="" /></button>
-              <button><img src="./assets/game3.webp" alt="" /></button>
-            </div>
-            <div class="games">
-              <button><img src="./assets/game1.jpg " alt="" /></button>
-              <button><img src="./assets/game3.webp" alt="" /></button>
-              <button><img src="./assets/game2.jfif" alt="" /></button>
+            <div class="test">
+              <div class="games">
+                <button><img src="../assets/game3.webp" alt="" /></button>
+                <button><img src="../assets/game2.jfif" alt="" /></button>
+                <button><img src="../assets/game1.jpg" alt="" /></button>
+              </div>
+              <div class="games">
+                <button><img src="../assets/game1.jpg " alt="" /></button>
+                <button><img src="../assets/game2.jfif" alt="" /></button>
+                <button><img src="../assets/game3.webp" alt="" /></button>
+              </div>
+              <div class="games">
+                <button><img src="../assets/game1.jpg " alt="" /></button>
+                <button><img src="../assets/game3.webp" alt="" /></button>
+                <button><img src="../assets/game2.jfif" alt="" /></button>
+              </div>
             </div>
           </div>
         </div>
@@ -140,7 +148,7 @@
             <div class="profileUserInfo">
               <a href="">
                 <img
-                  src="./assets/profile.jpg"
+                  src="../assets/profile.jpg"
                   alt="profile picture"
                   class="profileImage"
                 />
@@ -159,7 +167,133 @@
           <div class="content">
             <div class="imgWrapper">
               <img
-                src="./assets/city.jpeg"
+                src="../assets/city.jpeg"
+                alt="post content picture"
+                class="imgContent"
+              />
+
+              <a href="landingPage.html"
+                ><i class="bi bi-info-circle infoIcon"></i
+              ></a>
+            </div>
+
+            <strong class="postTitle">Titlul postarii</strong>
+
+            <p class="postDescription">
+              Aceasta este prima postare facuta pe reteaua de socializare create
+              de mine in timpul cursului de Front End Development
+            </p>
+
+            <a href="landingPage.html"><strong>Read more...</strong></a>
+          </div>
+
+          <div class="reacts">
+            <div class="likesInfo">
+              <!-- <span>😍</span>
+              <span>&#128525;</span> -->
+              <i class="bi bi-hand-thumbs-up reactsIcons"></i>
+              <span id="likesNumber"> </span> <span> likes</span>
+            </div>
+
+            <div class="commentsinfo">
+              <span id="shersNumber"></span> <span> shares</span>
+              <i class="bi bi-send reactsIcons"></i>
+            </div>
+          </div>
+
+          <hr />
+
+          <div class="reactsActions">
+            <ul class="actions">
+              <li class="reaction" id="likeButton">
+                <i class="bi bi-hand-thumbs-up"></i>
+                <span>Like</span>
+              </li>
+              <li class="reaction">
+                <i class="bi bi-chat-text"></i>
+                <span>Comments</span>
+              </li>
+              <li class="reaction" id="shareButton">
+                <i class="bi bi-send"></i>
+                <span>Share</span>
+              </li>
+            </ul>
+          </div>
+
+          <hr />
+
+          <div class="commentSection">
+            <a href="">
+              <img
+                src="../assets/profile.jpg"
+                alt="profile picture"
+                class="profileImage"
+              />
+            </a>
+            <input
+              type="text"
+              placeholder="Adauga un comentariu"
+              class="newCommentField"
+            />
+            <button class="insertCommentButton">
+              <i class="bi bi-send-plus"></i>
+            </button>
+          </div>
+
+          <div class="userComments">
+            <div class="userCommentsContent">
+              <div class="profileUserComment">
+                <a href="">
+                  <img
+                    src="../assets/profile.jpg"
+                    alt="profile picture"
+                    class="profileImage"
+                  />
+                </a>
+                <span>User Name</span>
+              </div>
+
+              <div class="userCommentText">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro
+                consequatur nemo nisi quasi dignissimos quisquam explicabo
+                suscipit possimus modi similique mollitia voluptatem molestias
+                ipsam, excepturi illum? Adipisci aperiam qui voluptatem.
+                <div class="emojiReaction">&#128526;</div>
+              </div>
+
+              <div class="commentReaction">
+                <strong class="commentReactionButton">Like</strong>
+                <strong class="commentReactionButton">Comment</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="post">
+          <div class="postHeader">
+            <div class="profileUserInfo">
+              <a href="">
+                <img
+                  src="../assets/profile.jpg"
+                  alt="profile picture"
+                  class="profileImage"
+                />
+              </a>
+              <div class="profileName">
+                <span>Alin Gabriel</span>
+                <span>16 Apr 2025</span>
+              </div>
+            </div>
+
+            <a href="#" class="profileOptions"
+              ><i class="bi bi-three-dots"></i
+            ></a>
+          </div>
+
+          <div class="content">
+            <div class="imgWrapper">
+              <img
+                src="../assets/city.jpeg"
                 alt="post content picture"
                 class="imgContent"
               />
@@ -217,7 +351,7 @@
           <div class="commentSection">
             <a href="">
               <img
-                src="./assets/profile.jpg"
+                src="../assets/profile.jpg"
                 alt="profile picture"
                 class="profileImage"
               />
@@ -237,7 +371,7 @@
               <div class="profileUserComment">
                 <a href="">
                   <img
-                    src="./assets/profile.jpg"
+                    src="../assets/profile.jpg"
                     alt="profile picture"
                     class="profileImage"
                   />
@@ -266,133 +400,7 @@
             <div class="profileUserInfo">
               <a href="">
                 <img
-                  src="./assets/profile.jpg"
-                  alt="profile picture"
-                  class="profileImage"
-                />
-              </a>
-              <div class="profileName">
-                <span>Alin Gabriel</span>
-                <span>16 Apr 2025</span>
-              </div>
-            </div>
-
-            <a href="#" class="profileOptions"
-              ><i class="bi bi-three-dots"></i
-            ></a>
-          </div>
-
-          <div class="content">
-            <div class="imgWrapper">
-              <img
-                src="./assets/city.jpeg"
-                alt="post content picture"
-                class="imgContent"
-              />
-
-              <a href="landingPage.html"
-                ><i class="bi bi-info-circle infoIcon"></i
-              ></a>
-            </div>
-
-            <strong class="postTitle">Titlul postarii</strong>
-
-            <p class="postDescription">
-              Aceasta este prima postare facuta pe reteaua de socializare create
-              de mine in timpul cursului de Front End Development
-            </p>
-
-            <a href="landingPage.html"><strong>Read more...</strong></a>
-          </div>
-
-          <div class="reacts">
-            <div class="likesInfo">
-              <span>😍</span>
-              <span>&#128525;</span>
-              <i class="bi bi-hand-thumbs-up reactsIcons"></i>
-              <span>10 likes</span>
-            </div>
-
-            <div class="commentsinfo">
-              <span>15 comments</span>
-              <i class="bi bi-chat-text reactsIcons"></i>
-            </div>
-          </div>
-
-          <hr />
-
-          <div class="reactsActions">
-            <ul class="actions">
-              <li class="reaction">
-                <i class="bi bi-hand-thumbs-up"></i>
-                <span>Like</span>
-              </li>
-              <li class="reaction">
-                <i class="bi bi-chat-text"></i>
-                <span>Comments</span>
-              </li>
-              <li class="reaction">
-                <i class="bi bi-send"></i>
-                <span>Share</span>
-              </li>
-            </ul>
-          </div>
-
-          <hr />
-
-          <div class="commentSection">
-            <a href="">
-              <img
-                src="./assets/profile.jpg"
-                alt="profile picture"
-                class="profileImage"
-              />
-            </a>
-            <input
-              type="text"
-              placeholder="Adauga un comentariu"
-              class="newCommentField"
-            />
-            <button class="insertCommentButton">
-              <i class="bi bi-send-plus"></i>
-            </button>
-          </div>
-
-          <div class="userComments">
-            <div class="userCommentsContent">
-              <div class="profileUserComment">
-                <a href="">
-                  <img
-                    src="./assets/profile.jpg"
-                    alt="profile picture"
-                    class="profileImage"
-                  />
-                </a>
-                <span>User Name</span>
-              </div>
-
-              <div class="userCommentText">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro
-                consequatur nemo nisi quasi dignissimos quisquam explicabo
-                suscipit possimus modi similique mollitia voluptatem molestias
-                ipsam, excepturi illum? Adipisci aperiam qui voluptatem.
-                <div class="emojiReaction">&#128526;</div>
-              </div>
-
-              <div class="commentReaction">
-                <strong class="commentReactionButton">Like</strong>
-                <strong class="commentReactionButton">Comment</strong>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="post">
-          <div class="postHeader">
-            <div class="profileUserInfo">
-              <a href="">
-                <img
-                  src="./assets/profile.jpg"
+                  src="../assets/profile.jpg"
                   alt="profile picture"
                   class="profileImage"
                 />
@@ -411,12 +419,12 @@
           <div class="content">
             <div class="imgWrapper">
               <div class="w3-content w3-display-container">
-                <img class="mySlides" src="./assets/paris1.webp" />
-                <img class="mySlides" src="./assets/paris3.jfif" />
-                <img class="mySlides" src="./assets/paris5.webp" />
-                <img class="mySlides" src="./assets/paris2.avif" />
-                <img class="mySlides" src="./assets/paris4.webp" />
-                <img class="mySlides" src="./assets/paris6.jpg" />
+                <img class="mySlides" src="../assets/paris1.webp" />
+                <img class="mySlides" src="../assets/paris3.jfif" />
+                <img class="mySlides" src="../assets/paris5.webp" />
+                <img class="mySlides" src="../assets/paris2.avif" />
+                <img class="mySlides" src="../assets/paris4.webp" />
+                <img class="mySlides" src="../assets/paris6.jpg" />
                 <div
                   class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle"
                   style="width: 100%"
@@ -509,7 +517,7 @@
           <div class="commentSection">
             <a href="">
               <img
-                src="./assets/profile.jpg"
+                src="../assets/profile.jpg"
                 alt="profile picture"
                 class="profileImage"
               />
@@ -529,7 +537,7 @@
               <div class="profileUserComment">
                 <a href="">
                   <img
-                    src="./assets/profile.jpg"
+                    src="../assets/profile.jpg"
                     alt="profile picture"
                     class="profileImage"
                   />
@@ -557,7 +565,7 @@
               <div class="profileUserComment">
                 <a href="">
                   <img
-                    src="./assets/profile.jpg"
+                    src="../assets/profile.jpg"
                     alt="profile picture"
                     class="profileImage"
                   />
@@ -590,7 +598,7 @@
           <div class="request">
             <a href="">
               <img
-                src="./assets/profile.jpg"
+                src="../assets/profile.jpg"
                 alt="profile picture"
                 class="profileImage"
               />
@@ -627,7 +635,7 @@
           <div class="request">
             <a href="">
               <img
-                src="./assets/profile.jpg"
+                src="../assets/profile.jpg"
                 alt="profile picture"
                 class="profileImage"
               />
@@ -667,7 +675,7 @@
         <div class="birthdaysContent">
           <h6>Birthdays</h6>
           <div class="birthday">
-            <a href="./profile.html">
+            <a href="../profile.html">
               <i class="bi bi-gift birthdaysImage"></i>
               <div class="birthdayPerson">
                 <span
@@ -678,7 +686,7 @@
             </a>
           </div>
           <div class="birthday">
-            <a href="./profile.html">
+            <a href="../profile.html">
               <i class="bi bi-gift birthdaysImage"></i>
               <div class="birthdayPerson">
                 <span
@@ -695,7 +703,7 @@
           <h6>Ads</h6>
           <div class="content">
             <a href="https://romautentic.ro/" target="_blank"
-              ><img src="./assets/reclama.gif" alt="romautentic.ro"
+              ><img src="../assets/reclama.gif" alt="romautentic.ro"
             /></a>
           </div>
         </div>
@@ -712,7 +720,7 @@
             <div class="friend">
               <a href="">
                 <img
-                  src="./assets/profile.jpg"
+                  src="../assets/profile.jpg"
                   alt="profile picture"
                   class="profileImage"
                 />
@@ -731,7 +739,7 @@
             <div class="friend">
               <a href="">
                 <img
-                  src="./assets/profile.jpg"
+                  src="../assets/profile.jpg"
                   alt="profile picture"
                   class="profileImage"
                 />
@@ -749,7 +757,7 @@
             <div class="friend">
               <a href="">
                 <img
-                  src="./assets/profile.jpg"
+                  src="../assets/profile.jpg"
                   alt="profile picture"
                   class="profileImage"
                 />
@@ -767,7 +775,7 @@
             <div class="friend">
               <a href="">
                 <img
-                  src="./assets/profile.jpg"
+                  src="../assets/profile.jpg"
                   alt="profile picture"
                   class="profileImage"
                 />
@@ -784,7 +792,7 @@
             <div class="friend">
               <a href="">
                 <img
-                  src="./assets/profile.jpg"
+                  src="../assets/profile.jpg"
                   alt="profile picture"
                   class="profileImage"
                 />
@@ -801,7 +809,7 @@
             <div class="friend">
               <a href="">
                 <img
-                  src="./assets/profile.jpg"
+                  src="../assets/profile.jpg"
                   alt="profile picture"
                   class="profileImage"
                 />
@@ -818,7 +826,7 @@
             <div class="friend">
               <a href="">
                 <img
-                  src="./assets/profile.jpg"
+                  src="../assets/profile.jpg"
                   alt="profile picture"
                   class="profileImage"
                 />
@@ -835,7 +843,7 @@
             <div class="friend">
               <a href="">
                 <img
-                  src="./assets/profile.jpg"
+                  src="../assets/profile.jpg"
                   alt="profile picture"
                   class="profileImage"
                 />
@@ -852,7 +860,7 @@
             <div class="friend">
               <a href="">
                 <img
-                  src="./assets/profile.jpg"
+                  src="../assets/profile.jpg"
                   alt="profile picture"
                   class="profileImage"
                 />
@@ -869,7 +877,7 @@
             <div class="friend">
               <a href="">
                 <img
-                  src="./assets/profile.jpg"
+                  src="../assets/profile.jpg"
                   alt="profile picture"
                   class="profileImage"
                 />
@@ -910,7 +918,7 @@
             <div class="conversation">
               <a href="">
                 <img
-                  src="./assets/profile.jpg"
+                  src="../assets/profile.jpg"
                   alt="profile picture"
                   class="profileImage"
                 />
@@ -923,7 +931,7 @@
             <div class="conversation">
               <a href="">
                 <img
-                  src="./assets/profile.jpg"
+                  src="../assets/profile.jpg"
                   alt="profile picture"
                   class="profileImage"
                 />
@@ -936,7 +944,7 @@
             <div class="conversation">
               <a href="">
                 <img
-                  src="./assets/profile.jpg"
+                  src="../assets/profile.jpg"
                   alt="profile picture"
                   class="profileImage"
                 />
@@ -950,7 +958,7 @@
           <div class="conversation">
             <a href="">
               <img
-                src="./assets/profile.jpg"
+                src="../assets/profile.jpg"
                 alt="profile picture"
                 class="profileImage"
               />
@@ -997,5 +1005,6 @@
         dots[slideIndex - 1].className += " w3-white";
       }
     </script>
+    <script src="../js/feed.js"></script>
   </body>
 </html>
