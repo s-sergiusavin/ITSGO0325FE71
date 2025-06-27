@@ -14,13 +14,16 @@
 
     <header>
         <nav class="mainNavigation">
-            <a href="#">For you</a>
+            <a href="#" class="active">For you</a>
             <a href="#">Following</a>
         </nav>
-        <hr>
     </header>
 
+
     <main>
+        <!-- Hamburger icon for small screens -->
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+
         <!-- Left section with navigation links and icons -->
         <aside class="leftContent">
             <div class="mainSearch">
@@ -43,7 +46,7 @@
         <!-- Post 1 -->
         <section class="mainContent">
             <div class="post">
-                <div class="postHeader">
+                <div class="postHeader" style="position: relative;">
                     <div class="profileUserInfo">
                         <a href="">
                             <img src="./assets/post2.jpg" alt="profile picture" class="profileImage">
@@ -54,7 +57,9 @@
                         </div>
                     </div>
 
-                    <a href="#" class="profileOptions"><i class="bi bi-three-dots"></i></a>
+                    <div class="postOptions" style="cursor: pointer; font-size: 24px; user-select: none;">
+                        <i class="bi bi-three-dots"></i>
+                    </div>
                 </div>
 
                 <div class="content">
@@ -108,7 +113,9 @@
                         </div>
                     </div>
 
-                    <a href="#" class="profileOptions"><i class="bi bi-three-dots"></i></a>
+                    <div class="postOptions" style="cursor: pointer; font-size: 24px; user-select: none;">
+                        <i class="bi bi-three-dots"></i>
+                    </div>
                 </div>
 
                 <div class="content">
@@ -162,7 +169,9 @@
                         </div>
                     </div>
 
-                    <a href="#" class="profileOptions"><i class="bi bi-three-dots"></i></a>
+                    <div class="postOptions" style="cursor: pointer; font-size: 24px; user-select: none;">
+                        <i class="bi bi-three-dots"></i>
+                    </div>
                 </div>
 
                 <div class="content">
@@ -237,19 +246,60 @@
             <div class="copyright">
                 © 2025 BLOOM FROM META
             </div>
-
-            <br>
-
-            <div class="messagesBox">
-                <span><i class="bi bi-chat-dots"> Messages </i></span>
-            </div>
-
         </aside>
 
+        <!-- Buton fix Messages -->
+        <div class="messagesBox" onclick="toggleChat()">
+            <span><i class="bi bi-chat-dots"></i> Messages</span>
+        </div>
+
+        <div class="chatPopup" id="chatPopup">
+            <div class="chatHeader">
+                <span>Messages</span>
+                <button onclick="toggleChat()">×</button>
+            </div>
+
+            <!-- Aici este zona lipsă pe care o adăugăm -->
+            <div class="chatBody" id="chatBody">
+                <div class="userList">
+                    <div class="userAvatar" onclick="startChatWith('Alex')">
+                        <img src="https://i.pravatar.cc/40?img=1" alt="Alex" />
+                        <span>Alex</span>
+                    </div>
+                    <div class="userAvatar" onclick="startChatWith('Mia')">
+                        <img src="https://i.pravatar.cc/40?img=5" alt="Mia" />
+                        <span>Mia</span>
+                    </div>
+                    <div class="userAvatar" onclick="startChatWith('Leo')">
+                        <img src="https://i.pravatar.cc/40?img=3" alt="Leo" />
+                        <span>Leo</span>
+                    </div>
+                    <div class="userAvatar" onclick="startChatWith('Sara')">
+                        <img src="https://i.pravatar.cc/40?img=7" alt="Sara" />
+                        <span>Sara</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="chatInput">
+                <input type="text" id="chatMessage" placeholder="Type a message..." />
+                <button onclick="sendMessage()">Send</button>
+            </div>
+        </div>
     </main>
 
     <footer></footer>
+<div id="switchPopup" class="popupOverlay hidden">
+  <div class="popupContent">
+    <p>You need to log out first. Do you want to log out?</p>
+    <div class="popupButtons">
+      <button id="cancelSwitch">Cancel</button>
+      <button id="confirmLogout">Log Out</button>
+    </div>
+  </div>
+</div>
 
+    <script src="./js/feed.js"></script>
 </body>
 
 
