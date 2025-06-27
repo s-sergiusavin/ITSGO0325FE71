@@ -91,8 +91,8 @@
                     <div class="profileOptions">
                         <a href="#" title="Options"><img src="https://cdn-icons-png.flaticon.com/128/2311/2311524.png"
                                 alt=""></a>
-                        <a href="#" title="Hide Post" id="hideBtn"><img src="https://cdn-icons-png.flaticon.com/128/1828/1828778.png"
-                                alt=""></a>
+                        <a href="#" title="Hide Post" id="hideBtn"><img
+                                src="https://cdn-icons-png.flaticon.com/128/1828/1828778.png" alt=""></a>
                     </div>
 
                 </div>
@@ -175,20 +175,28 @@
 
                 <hr>
 
-                <div class="commentSection">
+                <form action="" id="addNewComment">
 
-                    <a href="">
-                        <img src="https://i.pinimg.com/736x/24/84/70/248470199d7901dd9f5adbed7a6a3932.jpg"
-                            alt="profile picture" class="profileImage">
-                    </a>
+                    <div class="commentSection">
 
-                    <input type="text" placeholder="Type a comment" class="newCommentField">
+                        <a href="">
+                            <img src="https://i.pinimg.com/736x/24/84/70/248470199d7901dd9f5adbed7a6a3932.jpg"
+                                alt="profile picture" class="profileImage">
+                        </a>
 
-                    <img src="https://cdn-icons-png.flaticon.com/128/60/60539.png" alt="" class="insertCommentButton"
-                        title="Send Comment">
-                    <!-- <button class="insertCommentButton"><i class="bi bi-send-x"></i></button> -->
+                        <input type="text" placeholder="Type a comment" class="newCommentField" id="newCommentText">
+                        <button type="submit" id="insertComm"><img
+                                src="https://cdn-icons-png.flaticon.com/128/60/60539.png" alt=""
+                                class="insertCommentButton" title="Send Comment"></button>
 
-                </div>
+                        <!-- <button class="insertCommentButton"><i class="bi bi-send-x"></i></button> -->
+
+                    </div>
+
+                </form>
+
+
+                <div id="myComment"></div>
 
                 <div class="userComments">
 
@@ -536,13 +544,15 @@
                                 class="buttonImg"></a>
 
 
-                        <a href="#" class="logOutButton" title="Switch Accounts" id="switchBtn" onblur="hideSwitchMenu()"><img
-                                src="https://cdn-icons-png.flaticon.com/128/5247/5247351.png" alt=""
-                                class="buttonImg"></a>
-                        
+                        <a href="#" class="logOutButton" title="Switch Accounts" id="switchBtn"
+                            onblur="hideSwitchMenu()"><img src="https://cdn-icons-png.flaticon.com/128/5247/5247351.png"
+                                alt="" class="buttonImg"></a>
+
                         <div class="switchAcc">
-                            <button><img src="https://i.pinimg.com/736x/24/84/70/248470199d7901dd9f5adbed7a6a3932.jpg" alt=""><span style="color: white;">Tony Stark</span></button>
-                            <button><img src="https://cdn-icons-png.flaticon.com/128/8377/8377219.png" alt=""><span style="color: white;">Add account</span></button>
+                            <button><img src="https://i.pinimg.com/736x/24/84/70/248470199d7901dd9f5adbed7a6a3932.jpg"
+                                    alt=""><span style="color: white;">Tony Stark</span></button>
+                            <button><img src="https://cdn-icons-png.flaticon.com/128/8377/8377219.png" alt=""><span
+                                    style="color: white;">Add account</span></button>
                         </div>
                     </div>
 

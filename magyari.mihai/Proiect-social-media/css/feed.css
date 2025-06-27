@@ -404,6 +404,8 @@ main {
     outline-color: black;
 }
 
+
+
 .mainContent .post .commentSection .insertCommentButton {
     width: 2rem;
     border-radius: 50%;
@@ -411,6 +413,10 @@ main {
     background-color: #CAE9FF;
 }
 
+.mainContent .post .commentSection #insertComm {
+    background-color: transparent;
+    border: none;
+}
 
 .mainContent .post .commentSection .insertCommentButton:hover {
     background-color: #FFE74C;
