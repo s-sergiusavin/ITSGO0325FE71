@@ -34,7 +34,8 @@
             <a href=""><img src="./assets/logo-notext.png" alt="Page Logo" class="logo"></a>
             <!-- <span>AttentionSeeker</span> -->
             <input type="search" class="searchInput" placeholder="Search on AttentionSeeker">
-            <a href="#" class="smallScreenSearch"><img src="https://cdn-icons-png.flaticon.com/128/954/954591.png" alt=""></a>
+            <a href="#" class="smallScreenSearch"><img src="https://cdn-icons-png.flaticon.com/128/954/954591.png"
+                    alt=""></a>
         </div>
 
         <ul class="links">
@@ -43,8 +44,23 @@
             <li><a href="#" title="View notifications" class="bellIcon"><img
                         src="https://cdn-icons-png.flaticon.com/128/3239/3239958.png"></i>
                     <span>12</span></a></li>
-            <li><a href="#" title="Settings"><img
-                        src="https://cdn-icons-png.flaticon.com/128/2805/2805373.png"></a></li>
+            <li>
+                <div class="accountSettings">
+                    <button title="Settings" id="accountSettingsBtn" onblur="hideSettingsMenu()"><img
+                            src="https://cdn-icons-png.flaticon.com/128/2805/2805373.png"></button>
+                    <div class="accountSettingsMenu">
+                        <button>Settings & privacy</button>
+                        <button>Help & support</button>
+                        <button>Accesibility</button>
+                        <button>Give Feedback</button>
+                        <button>Become a developer</button>
+                    </div>
+                </div>
+
+            </li>
+            <!-- <a href="#" title="Settings"><img
+                        src="https://cdn-icons-png.flaticon.com/128/2805/2805373.png"></a> -->
+
         </ul>
 
     </header>
@@ -54,7 +70,7 @@
 
         <section class="mainContent">
 
-            <div class="post">
+            <div class="post" id="feedPost">
 
                 <div class="postHeader">
 
@@ -75,7 +91,7 @@
                     <div class="profileOptions">
                         <a href="#" title="Options"><img src="https://cdn-icons-png.flaticon.com/128/2311/2311524.png"
                                 alt=""></a>
-                        <a href="#" title="Hide Post"><img src="https://cdn-icons-png.flaticon.com/128/1828/1828778.png"
+                        <a href="#" title="Hide Post" id="hideBtn"><img src="https://cdn-icons-png.flaticon.com/128/1828/1828778.png"
                                 alt=""></a>
                     </div>
 
@@ -116,7 +132,7 @@
                             title="Steve Irvin and 7K other loved this">
                         <!-- <span>&#128525;</span>
                         <i class="bi bi-hand-thumbs-up-fill"></i> -->
-                        <span>24K</span>
+                        <span id="reactionsNumber"></span>
                     </div>
 
                     <div class="commentsInfo">
@@ -132,9 +148,10 @@
 
                     <ul class="actions">
 
-                        <li class="reaction">
-                            <img src="https://cdn-icons-png.flaticon.com/128/11820/11820106.png" alt="" class="likeImg">
-                            <span>Like</span>
+                        <li class="reaction" id="likeBtn">
+                            <img src="https://cdn-icons-png.flaticon.com/128/11820/11820106.png" alt="" class="likeImg"
+                                id="likeImg">
+                            <span id="likeText">Like</span>
                         </li>
 
                         <li class="reaction">
@@ -167,7 +184,8 @@
 
                     <input type="text" placeholder="Type a comment" class="newCommentField">
 
-                    <img src="https://cdn-icons-png.flaticon.com/128/60/60539.png" alt="" class="insertCommentButton" title="Send Comment">
+                    <img src="https://cdn-icons-png.flaticon.com/128/60/60539.png" alt="" class="insertCommentButton"
+                        title="Send Comment">
                     <!-- <button class="insertCommentButton"><i class="bi bi-send-x"></i></button> -->
 
                 </div>
@@ -179,7 +197,8 @@
                         <div class="profileUserComment">
 
                             <a href="">
-                                <img src="https://cdn-icons-png.flaticon.com/128/2102/2102633.png" alt="profile picture" class="profileImage">
+                                <img src="https://cdn-icons-png.flaticon.com/128/2102/2102633.png" alt="profile picture"
+                                    class="profileImage">
                             </a>
 
                         </div>
@@ -190,18 +209,22 @@
 
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat amet tempora, architecto
                                 quas
-                                accusamus est ab a suscipit obcaecati asperiores excepturi rem et! Veniam, incidunt? Culpa,
+                                accusamus est ab a suscipit obcaecati asperiores excepturi rem et! Veniam, incidunt?
+                                Culpa,
                                 facilis? Aliquid, amet doloremque?</p>
 
-                         
+
                             <div class="emojiReaction">
 
                                 <!-- &#128514; -->
-                                 <span title="352 reactions">352</span>
-                                <img src="https://cdn-icons-png.flaticon.com/128/11820/11820106.png" alt="" title="Reactions">
-                                <img src="https://cdn-icons-png.flaticon.com/128/3128/3128313.png" alt="" title="Reactions">
-                                <img src="https://cdn-icons-png.flaticon.com/128/6637/6637195.png" alt="" class="laughEmoji" title="Reactions">
-                                  
+                                <span title="352 reactions">352</span>
+                                <img src="https://cdn-icons-png.flaticon.com/128/11820/11820106.png" alt=""
+                                    title="Reactions">
+                                <img src="https://cdn-icons-png.flaticon.com/128/3128/3128313.png" alt=""
+                                    title="Reactions">
+                                <img src="https://cdn-icons-png.flaticon.com/128/6637/6637195.png" alt=""
+                                    class="laughEmoji" title="Reactions">
+
                             </div>
 
                         </div>
@@ -215,7 +238,7 @@
                         <strong class="commentReactionButton">Reply</strong>
 
 
-                     
+
 
                     </div>
 
@@ -229,7 +252,8 @@
                         <div class="profileUserComment">
 
                             <a href="">
-                                <img src="https://cdn-icons-png.flaticon.com/128/2102/2102633.png" alt="profile picture" class="profileImage">
+                                <img src="https://cdn-icons-png.flaticon.com/128/2102/2102633.png" alt="profile picture"
+                                    class="profileImage">
                             </a>
 
                         </div>
@@ -238,17 +262,20 @@
 
                             <span class="commentUserName">User Nathalie</span> <br>
 
-                           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure doloribus debitis molestias dolor soluta quia?
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure doloribus debitis molestias
+                            dolor soluta quia?
 
-                           <div class="emojiReaction">
+                            <div class="emojiReaction">
 
-                            <!-- &#128514; -->
-                             <span title="214 reactions">214</span>
-                            <img src="https://cdn-icons-png.flaticon.com/128/11820/11820106.png" alt="" title="Reactions">
-                            <img src="https://cdn-icons-png.flaticon.com/128/3128/3128313.png" alt="" title="Reactions">
-                
-                              
-                        </div>
+                                <!-- &#128514; -->
+                                <span title="214 reactions">214</span>
+                                <img src="https://cdn-icons-png.flaticon.com/128/11820/11820106.png" alt=""
+                                    title="Reactions">
+                                <img src="https://cdn-icons-png.flaticon.com/128/3128/3128313.png" alt=""
+                                    title="Reactions">
+
+
+                            </div>
 
                         </div>
 
@@ -379,7 +406,8 @@
 
                     <input type="text" placeholder="Type a comment" class="newCommentField">
 
-                    <img src="https://cdn-icons-png.flaticon.com/128/60/60539.png" alt="" class="insertCommentButton" title="Send Comment">
+                    <img src="https://cdn-icons-png.flaticon.com/128/60/60539.png" alt="" class="insertCommentButton"
+                        title="Send Comment">
                     <!-- <button class="insertCommentButton"><i class="bi bi-send-x"></i></button> -->
 
                 </div>
@@ -391,7 +419,8 @@
                         <div class="profileUserComment">
 
                             <a href="">
-                                <img src="https://cdn-icons-png.flaticon.com/128/2102/2102633.png" alt="profile picture" class="profileImage">
+                                <img src="https://cdn-icons-png.flaticon.com/128/2102/2102633.png" alt="profile picture"
+                                    class="profileImage">
                             </a>
 
                         </div>
@@ -402,18 +431,22 @@
 
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat amet tempora, architecto
                                 quas
-                                accusamus est ab a suscipit obcaecati asperiores excepturi rem et! Veniam, incidunt? Culpa,
+                                accusamus est ab a suscipit obcaecati asperiores excepturi rem et! Veniam, incidunt?
+                                Culpa,
                                 facilis? Aliquid, amet doloremque?</p>
 
-                         
+
                             <div class="emojiReaction">
 
                                 <!-- &#128514; -->
-                                 <span title="352 reactions">352</span>
-                                <img src="https://cdn-icons-png.flaticon.com/128/11820/11820106.png" alt="" title="Reactions">
-                                <img src="https://cdn-icons-png.flaticon.com/128/3128/3128313.png" alt="" title="Reactions">
-                                <img src="https://cdn-icons-png.flaticon.com/128/6637/6637195.png" alt="" class="laughEmoji" title="Reactions">
-                                  
+                                <span title="352 reactions">352</span>
+                                <img src="https://cdn-icons-png.flaticon.com/128/11820/11820106.png" alt=""
+                                    title="Reactions">
+                                <img src="https://cdn-icons-png.flaticon.com/128/3128/3128313.png" alt=""
+                                    title="Reactions">
+                                <img src="https://cdn-icons-png.flaticon.com/128/6637/6637195.png" alt=""
+                                    class="laughEmoji" title="Reactions">
+
                             </div>
 
                         </div>
@@ -427,7 +460,7 @@
                         <strong class="commentReactionButton">Reply</strong>
 
 
-                     
+
 
                     </div>
 
@@ -441,7 +474,8 @@
                         <div class="profileUserComment">
 
                             <a href="">
-                                <img src="https://cdn-icons-png.flaticon.com/128/2102/2102633.png" alt="profile picture" class="profileImage">
+                                <img src="https://cdn-icons-png.flaticon.com/128/2102/2102633.png" alt="profile picture"
+                                    class="profileImage">
                             </a>
 
                         </div>
@@ -450,17 +484,20 @@
 
                             <span class="commentUserName">User Nathalie</span> <br>
 
-                           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure doloribus debitis molestias dolor soluta quia?
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure doloribus debitis molestias
+                            dolor soluta quia?
 
-                           <div class="emojiReaction">
+                            <div class="emojiReaction">
 
-                            <!-- &#128514; -->
-                             <span title="214 reactions">214</span>
-                            <img src="https://cdn-icons-png.flaticon.com/128/11820/11820106.png" alt="" title="Reactions">
-                            <img src="https://cdn-icons-png.flaticon.com/128/3128/3128313.png" alt="" title="Reactions">
-                
-                              
-                        </div>
+                                <!-- &#128514; -->
+                                <span title="214 reactions">214</span>
+                                <img src="https://cdn-icons-png.flaticon.com/128/11820/11820106.png" alt=""
+                                    title="Reactions">
+                                <img src="https://cdn-icons-png.flaticon.com/128/3128/3128313.png" alt=""
+                                    title="Reactions">
+
+
+                            </div>
 
                         </div>
 
@@ -477,7 +514,7 @@
                 </div>
 
             </div>
-         
+
         </section>
 
         <aside class="leftContent">
@@ -499,9 +536,14 @@
                                 class="buttonImg"></a>
 
 
-                        <a href="#" class="logOutButton" title="Switch Accounts"><img
+                        <a href="#" class="logOutButton" title="Switch Accounts" id="switchBtn" onblur="hideSwitchMenu()"><img
                                 src="https://cdn-icons-png.flaticon.com/128/5247/5247351.png" alt=""
                                 class="buttonImg"></a>
+                        
+                        <div class="switchAcc">
+                            <button><img src="https://i.pinimg.com/736x/24/84/70/248470199d7901dd9f5adbed7a6a3932.jpg" alt=""><span style="color: white;">Tony Stark</span></button>
+                            <button><img src="https://cdn-icons-png.flaticon.com/128/8377/8377219.png" alt=""><span style="color: white;">Add account</span></button>
+                        </div>
                     </div>
 
                 </div>
@@ -525,8 +567,16 @@
 
 
                 <div class="chooseMode">
-                    <a href="dark_feed.html" class="quickAccessLinks">Toggle Dark Mode<img
-                            src="https://cdn-icons-png.flaticon.com/128/5136/5136914.png" alt=""></a>
+                    <!-- <a href="#" class="quickAccessLinks">Choose Color Mode<img
+                            src="https://cdn-icons-png.flaticon.com/128/5136/5136914.png" alt="" onblur="hideColorMenu()"></a> -->
+                    <button class="quickAccessLinks" id="colorBtn" onblur="hideColorMenu()">Choose Color Mode <img
+                            src="https://cdn-icons-png.flaticon.com/128/5136/5136914.png" alt=""></button>
+                    <div class="modeMenu">
+                        <button><img src="https://cdn-icons-png.flaticon.com/128/439/439842.png" alt=""><span
+                                style="color: white;">Light Mode</span></button>
+                        <button><img src="https://cdn-icons-png.flaticon.com/128/1812/1812650.png" alt=""><span
+                                style="color: white;">Dark Mode</span></button>
+                    </div>
                 </div>
 
 
@@ -550,7 +600,8 @@
 
 
             <div class="friendsList">
-                <a href="#" title="Friends list"><img src="https://cdn-icons-png.flaticon.com/128/3220/3220788.png" alt=""></a>
+                <a href="#" title="Friends list"><img src="https://cdn-icons-png.flaticon.com/128/3220/3220788.png"
+                        alt=""></a>
                 <span>Your Friends</span>
             </div>
 
@@ -591,7 +642,8 @@
             </div>
 
             <div class="groupsList">
-                <a href="#" title="Groups"><img src="https://cdn-icons-png.flaticon.com/128/16841/16841872.png" alt=""></a>
+                <a href="#" title="Groups"><img src="https://cdn-icons-png.flaticon.com/128/16841/16841872.png"
+                        alt=""></a>
                 <span>Your Groups</span>
             </div>
 
@@ -632,7 +684,8 @@
 
             <div class="suggestionsList">
 
-                <a href="#" title="Friend requests"><img src="https://cdn-icons-png.flaticon.com/128/16382/16382065.png" alt=""></a>
+                <a href="#" title="Friend requests"><img src="https://cdn-icons-png.flaticon.com/128/16382/16382065.png"
+                        alt=""></a>
                 <span>Future Friends</span>
 
             </div>
@@ -677,7 +730,7 @@
     <!-- <footer></footer> -->
 
 
-
+    <script src="js/feed.js"></script>
 </body>
 
 </html>

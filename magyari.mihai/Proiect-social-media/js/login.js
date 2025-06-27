@@ -105,7 +105,8 @@ loginBtn.addEventListener('click', (event) => {
 
     if (validateEmail(emailValue, regexEmailPattern) && validatePassword(passwordValue)) {
         alert('Login succesful! Welcome!')
-        location.replace('feed.html')
+        // location.replace('feed.html')
+        window.open('feed.html', '_self');
     } else {
         alert('Wrong e-mail or password!')
     }
