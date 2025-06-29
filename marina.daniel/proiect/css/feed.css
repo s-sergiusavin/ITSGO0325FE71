@@ -111,7 +111,7 @@ main {
 .leftContent,
 .rightContent {
     width: 15%;
-    border: 5px solid black;
+    /* border: 5px solid black; */
     height: 100%;
     position: fixed;
     top: 5.5rem;
@@ -355,6 +355,7 @@ main {
     display: flex;
     justify-content: center;
     text-decoration: none;
+    padding-top: 3rem;
 }
 
 .leftContent .profileUserInfo {
@@ -487,6 +488,12 @@ color: black;
 
 .leftContent .profileMarket .mark {
     font-size: 1rem;
+}
+
+.rightContent .fbStories .storyOne img {
+    width: 10rem;
+    height: 10rem;
+    
 }
 
 
