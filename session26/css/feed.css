@@ -178,6 +178,30 @@ main {
   flex-direction: column;
 }
 
+.profileOptionsWrapper {
+  position: relative;
+}
+
+.profileOptionsWrapper .profileOptionsDropdown {
+  position: absolute;
+  z-index: 1;
+  right: 0.5rem;
+  width: 10rem;
+  display: flex;
+  flex-direction: column;
+  display: none;
+}
+
+.profileOptionsWrapper .profileOptionsDropdown button {
+  padding: 0.2rem;
+  cursor: pointer;
+}
+
+.profileOptionsWrapper .profileOptionsDropdown button:hover {
+  border: 1px solid teal;
+  background-color: lightgray;
+}
+
 .mainContent .post .postHeader .profileOptions {
   width: 2rem;
   height: 2rem;
@@ -185,6 +209,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 
 .mainContent .post .postHeader .profileOptions:hover {
@@ -204,6 +229,20 @@ main {
   max-width: 100%;
   border: 1px solid white;
   box-shadow: 1px 1px 1px 1px #888;
+}
+
+.infoIconWrapper {
+  position: relative;
+}
+
+.infoMessage {
+  position: absolute;
+  display: none;
+  background-color: white;
+  border: 3px solid black;
+  top: -0.5rem;
+  left: 5rem;
+  padding: 0.5rem;
 }
 
 .mainContent .post .content .infoIcon {
@@ -334,6 +373,11 @@ main {
   border-radius: 1rem;
   background-color: lightgray;
   position: relative;
+}
+
+.mainContent .post .userComments .userCommentText #removeCommentButton {
+  display: none;
+  cursor: pointer;
 }
 
 .mainContent .post .userComments .userCommentText .emojiReaction {
