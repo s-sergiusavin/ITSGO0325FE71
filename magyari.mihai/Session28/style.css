@@ -3,7 +3,7 @@
   margin-top: 1rem;
 }
 .header .title {
-  color: brown;
+  color: red;
 }
 .header .headerContainer {
   display: flex;
@@ -18,7 +18,7 @@
   margin: 0.5rem 0;
 }
 .mainSection .firstContainer {
-  border: 1px solid brown;
+  border: 1px solid red;
   padding: 0.5rem;
 }
 .mainSection .firstContainer .title {
@@ -34,7 +34,7 @@
 .box {
   width: 5rem;
   height: 5rem;
-  background-color: brown;
+  background-color: red;
   margin: 0.5rem;
 }
 .box.yellowBox {

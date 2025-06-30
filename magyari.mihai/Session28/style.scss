@@ -2,51 +2,49 @@
 @import "scss/mixins";
 
 .header {
-    border: 2px solid blue;
-    margin-top: 1rem;
+  border: 2px solid $globalBlue;
+  margin-top: 1rem;
 
-    .title {
-        color: $globalRed;
-    }
+  .title {
+    color: $globalRed;
+  }
 
-    .headerContainer {
-        @include flexBox(row);
-    }
+  .headerContainer {
+    @include flexBox(row);
+  }
 }
 
 .mainSection {
-    border: 3px solid green;
+  border: 3px solid green;
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+
+  .firstContainer {
+    border: 1px solid $globalRed;
     padding: 0.5rem;
-    margin: 0.5rem 0;
 
-    .firstContainer {
-        border: 1px solid $globalRed;
-        padding: 0.5rem;
-
-        .title {
-            color: purple;
-        }
-
-        .mainSectionContainer {
-           @include flexBox(column);
-        }
+    .title {
+      color: purple;
     }
+
+    .mainSectionContainer {
+      @include flexBox(column)
+    }
+  }
 }
 
 .box {
-    @include box();
+  @include box();
 
-    &.yellowBox {
-        background-color: yellow;
-
-        &:hover {
-            background-color: orange;
-        }
-    }
+  &.yellowBox {
+    background-color: yellow;
 
     &:hover {
-        background-color: lightcoral;
+      background-color: orange;
     }
+  }
+
+  &:hover {
+    background-color: lightcoral;
+  }
 }
-
-
