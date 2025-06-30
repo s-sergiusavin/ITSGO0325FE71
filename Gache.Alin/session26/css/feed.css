@@ -300,6 +300,30 @@ main {
   flex-direction: column;
 }
 
+.profileOptionsWrapper {
+  position: relative;
+}
+
+.profileOptionsWrapper .profileOptionsDropdown {
+  position: absolute;
+  z-index: 1;
+  right: 0.5rem;
+  width: 10rem;
+  display: flex;
+  flex-direction: column;
+  display: none;
+}
+.profileOptionsWrapper .profileOptionsDropdown button {
+  background-color: powderblue;
+  border: 1px solid #4169e180;
+  border-collapse: collapse;
+}
+
+.profileOptionsWrapper .profileOptionsDropdown button:hover {
+  background-color: powderblue;
+  border: 2px solid royalblue;
+  border-collapse: collapse;
+}
 .mainContent .post .postHeader .profileOptions {
   width: 2rem;
   height: 2rem;
@@ -326,6 +350,21 @@ main {
   max-width: 100%;
   border: 1px solid white;
   box-shadow: 1px 1px 1px 1px #888;
+}
+
+.infoIconWrapper {
+  position: relative;
+}
+
+.infoMessage {
+  position: absolute;
+  display: none;
+  background-color: powderblue;
+  border: 3px solid #4169e180;
+  border-radius: 1rem;
+  top: -0.1rem;
+  left: 5rem;
+  padding: 0.5rem;
 }
 
 .mainContent .post .content .infoIcon {
@@ -462,6 +501,11 @@ main {
   border-radius: 1rem;
   background-color: lightgray;
   position: relative;
+}
+.mainContent .post .userComments .userCommentText #removeCommentButton {
+  display: none;
+  cursor: pointer;
+  color: #1348e8;
 }
 
 .mainContent .post .userComments .userCommentText .emojiReaction {

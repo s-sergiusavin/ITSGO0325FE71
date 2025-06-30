@@ -13,7 +13,7 @@ accountSettingsButton.addEventListener("click", function () {
 });
 
 logoutButton.addEventListener("click", function () {
-  window.open("../login.html", "_selft");
+  window.open("../login.html", "_self");
 });
 
 const noOfLikesElem = document.getElementById("likesNumber");
@@ -54,15 +54,169 @@ likeButton.addEventListener("click", function () {
 shareButton.addEventListener("click", function () {
   isShared = !isShared;
 
-//   if (isShared) {
-//     noOfShersElem.innerText = Number(noOfShersElem.innerText) + 1;
-//   } else {
-//     noOfShersElem.innerText = Number(noOfShersElem.innerText) - 1;
-//   }
-noOfShersElem.innerText = isShared
+  //   if (isShared) {
+  //     noOfShersElem.innerText = Number(noOfShersElem.innerText) + 1;
+  //   } else {
+  //     noOfShersElem.innerText = Number(noOfShersElem.innerText) - 1;
+  //   }
+  noOfShersElem.innerText = isShared
     ? Number(noOfShersElem.innerText) + 1
     : Number(noOfShersElem.innerText) - 1;
 
-
   this.classList.toggle("toutched");
 });
+
+const commentButton = document.getElementById("commentButton");
+const commentInputButton = document.getElementById("commentInputButton");
+const commentInput = document.getElementById("commentInput");
+
+const commentMessage = document.getElementById("commentMessage");
+const removeCommentButton = document.getElementById("removeCommentButton");
+
+const initialComment = commentMessage.innerText;
+commentMessage.innerText =
+  localStorage.getItem("comment") || commentMessage.innerText;
+
+commentButton.addEventListener("click", function () {
+  commentInput.focus();
+});
+
+function setComment() {
+  commentMessage.innerText = commentInput.value;
+  localStorage.setItem("comment", JSON.stringify(commentInput.value));
+  commentInput.value = "";
+}
+
+removeCommentButton.addEventListener("click", () => {
+  // localStorage.clear(); //Sterge tot local storage
+  localStorage.removeItem("comment"); //Sterge din local storage doar elementul cu cheia mentionata
+  commentMessage.innerText = initialComment;
+});
+
+commentInput.addEventListener("keydown", function (event) {
+  if (event.key === "Enter") {
+    setComment();
+    this.blur();
+  }
+});
+
+commentInputButton.addEventListener("click", setComment);
+
+const commentText = document.getElementsByClassName("userCommentText")[0];
+
+commentText.addEventListener("mouseover", function () {
+  removeCommentButton.style.display = "inline";
+});
+commentText.addEventListener("mouseout", function () {
+  removeCommentButton.style.display = "none";
+});
+
+const infoIcon = document.getElementsByClassName("infoIcon")[0];
+const infoMessage = document.getElementsByClassName("infoMessage")[0];
+
+// let timeoutID;
+
+// infoIcon.addEventListener("mouseover", function () {
+//  timeoutID = setTimeout(() => {
+//     infoMessage.style.display = "block";
+//   }, 500);
+// });
+
+// infoIcon.addEventListener("mouseout", function () {
+//   clearTimeout(timeoutID)
+//   infoMessage.style.display = "none";
+// });
+infoIcon.addEventListener("click", function () {
+  if (infoMessage.style.display === "block") {
+    infoMessage.style.display = "none";
+  } else {
+    infoMessage.style.display = "block";
+  }
+});
+
+infoIcon.addEventListener("blur", function () {
+  infoMessage.style.display = "none";
+});
+
+const profileOptionsButton =
+  document.getElementsByClassName("profileOptions")[0];
+const profileOptionsDropdown = document.getElementsByClassName(
+  "profileOptionsDropdown"
+)[0];
+
+profileOptionsButton.addEventListener("click", function () {
+  if (
+    profileOptionsDropdown.style.display === "none" ||
+    profileOptionsDropdown.style.display === ""
+  ) {
+    profileOptionsDropdown.style.display = "flex";
+  } else {
+    profileOptionsDropdown.style.display = "none";
+  }
+});
+profileOptionsButton.addEventListener("blur", function () {
+  profileOptionsDropdown.style.display = "none";
+});
+
+const searchInput = document.querySelector(".searchInput");
+
+searchInput.addEventListener("keydown", function (event) {
+  // Filtrare pe FE
+
+  const data = [
+    {
+      username: "Username 1",
+      likes: 21,
+      shares: 15,
+      comments: [],
+      title: "Ceva",
+      description: "Altceva",
+    },
+    {
+      username: "Username 2",
+      likes: 21,
+      shares: 14,
+      comments: [],
+      title: "Titlu 2",
+      description: "Description 2",
+    },
+    {
+      username: "Username 3",
+      likes: 14,
+      shares: 16,
+      comments: [],
+      title: "Titlu 3",
+      description: "Description ",
+    },
+  ];
+  // Returneaza numai rezultatele in care termenul cautat este 100% identic cu valoarea proprietatii
+  // const filtredResults = data.filter( post => post.username === event.target.value)
+  // console.log(filtredResults)
+
+  // Returneaza numai rezultatele in care termenul cautat este 100% identic cu valoarea proprietatii, exceptand case-ul
+  // const filtredResults = data.filter( post => post.username.toLowerCase() === event.target.value.toLowerCase())
+  // console.log(filtredResults)
+
+  // Returneaza orice rezultat care contine sirul de caractere folosit la cautare
+  const filtredResults = data.filter((post) =>
+    post.username.toLowerCase().includes(event.target.value)
+  );
+  console.log(filtredResults);
+
+  // Filtrarea pe BE
+  filterData(event.target.value).then((data) => {
+    // manipularea datelor si afisarea lor
+  });
+});
+
+async function filterData(searchTerm) {
+  const filteredPostUrl = "url";
+  const filteredDataBody = {
+    searchTerm: searchTerm,
+  };
+
+  
+  const response = await fetch(`${filteredPostUrl}?searchTerm=${serachterm}`);
+
+  return response.json();
+}
