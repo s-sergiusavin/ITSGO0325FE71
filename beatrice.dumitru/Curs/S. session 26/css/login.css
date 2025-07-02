@@ -23,6 +23,10 @@ form {
     flex-direction: column;
 }
 
+form #error {
+    display: none;
+}
+
 form .formField {
     margin-bottom: 0.5rem;
 }
