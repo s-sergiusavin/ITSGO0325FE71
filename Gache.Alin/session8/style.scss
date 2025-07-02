@@ -1,0 +1,372 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 4000px;
+  background-image: url(city.jpeg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: linear-gradient(red, yellow, green, blue);
+  background-image: radial-gradient(red, yellow, green, blue);
+  background-image: radial-gradient(red, yellow);
+  background-image: url(city.jpeg);
+  background-position: top;
+  background-size: auto;
+  /* opacity: 0.3; */
+}
+
+.overflowBox {
+  background-color: #aabbcc;
+  background-color: #abc;
+  width: 20rem;
+  height: 15rem;
+  border: 1px solid blue;
+  overflow: auto;
+  overflow-x: auto;
+  overflow-y: scroll;
+}
+
+/* Combinators */
+
+/* Spatiu intre selectori reprezinta oricare dintre parinti */
+.combinators {
+  .parrentSelector {
+    border: 3px solid black;
+     > p{
+          background-color: rgb(232, 255, 127);
+    }
+  }
+}
+
+/* > Direct child */
+// .parrentSelector > p {
+    
+//   background-color: aquamarine;
+// }
+
+/* + Imediat first element */
+.insideDiv + p {
+    // & + p{
+    //       background-color: blueviolet;
+    // }
+  background-color: rgb(226, 43, 43);
+}
+
+/* All elements after the specified one*/
+
+.insideDiv ~ p {
+  background-color: red;
+}
+
+/* Opacity */
+
+.opacityImage {
+  margin-top: 40rem;
+  width: 20rem;
+  opacity: 0.7;
+  opacity: 0.15;
+}
+
+.opacityBox.first {
+  opacity: 0.1;
+}
+
+.opacityBox.second {
+  opacity: 0.5;
+}
+
+.opacityBox.third {
+  opacity: 0.8;
+}
+
+.visibilityText {
+  visibility: hidden;
+}
+
+.displayText {
+  display: none;
+}
+
+.opacityText {
+  opacity: 0;
+}
+
+/* Attribute selectors */
+
+a[target] {
+  background-color: yellow;
+}
+
+a[rel] {
+  color: red;
+}
+
+form {
+  margin: 2rem;
+  border: 0.5rem;
+  background-color: lightblue;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+input[type="text"] {
+  width: 15rem;
+  display: block;
+  margin: 0.5rem;
+  background-color: lightseagreen;
+}
+
+input[type="submit"] {
+  width: 100%;
+  background-color: blue;
+  color: white;
+  padding: 1rem 2rem;
+  border: 1px solid teal;
+  border-radius: 0.5rem;
+  margin-top: 0.5rem;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: blueviolet;
+}
+
+input[type="text"],
+select {
+  width: 100%;
+  /* width: calc(100% - 4rem); */
+  padding: 1.5rem 2rem;
+  margin: 1rem 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+}
+
+/* Border box */
+
+.noPadding {
+  width: 20rem;
+  height: 10rem;
+  border: 3px solid black;
+}
+
+.withPadding {
+  width: 20rem;
+  height: 10rem;
+  border: 3px solid black;
+  margin: 1rem 0;
+  padding: 2rem 1rem;
+}
+
+/* Shaddow effects */
+
+.textShaddow {
+  text-shadow: 2px 2px;
+  text-shadow: 2px 2px red;
+  text-shadow: 2px 2px red, 3px 3px blue;
+}
+
+.shaddowBox {
+  background-color: lightblue;
+  border: 1px solid yellow;
+  box-shadow: 0.5rem 0.5rem;
+  box-shadow: 0.5rem 0.5rem red;
+  box-shadow: 0.5rem 0.5rem red inset;
+  box-shadow: 0.5rem 0.5rem red inset, 3px 3px blue, 5px 5px green;
+}
+
+/* Transform */
+
+.transformBox {
+  width: 20rem;
+  height: 10rem;
+  background-color: greenyellow;
+  border: 2px solid green;
+  margin: 1rem;
+}
+
+#rotate {
+  transform: rotate(20deg);
+  transform: rotate(-20deg);
+}
+
+/* Transitions */
+.transitionBox {
+  margin: 1rem;
+  background-color: red;
+  width: 10rem;
+  height: 10rem;
+  transition: width 2s;
+  transition: width 2s, height 4s;
+  transition: width 2s, height 4s, transform 6s;
+  transition-delay: 2s;
+}
+
+.transitionBox:hover {
+  width: 20rem;
+  height: 20rem;
+  transform: rotate(150deg);
+}
+
+/* Animantions */
+
+.animationBox {
+  width: 20rem;
+  height: 20rem;
+  background-color: royalblue;
+  position: relative;
+  animation-name: numelePeCareIlAlegEu;
+  animation-duration: 4s;
+  animation-iteration-count: 3;
+  animation-iteration-count: infinite;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-delay: 5s;
+  animation-delay: -2s;
+}
+
+@keyframes numelePeCareIlAlegEu {
+  /* from {
+        background-color: royalblue;
+    }
+
+    to {
+        background-color: red;
+    } */
+
+  /* 0% {
+        background-color: red;
+    }
+
+    26% {
+        background-color: greenyellow;
+    }
+
+    59% {
+        background-color: hotpink;
+    }
+
+    100% {
+        background-color: indigo;
+    } */
+
+  /* Change color + position */
+
+  0% {
+    background-color: royalblue;
+    top: 0;
+    left: 0;
+  }
+
+  25% {
+    background-color: greenyellow;
+    left: 20rem;
+    top: 0;
+  }
+
+  50% {
+    background-color: hotpink;
+    left: 20rem;
+    top: 20rem;
+  }
+
+  75% {
+    background-color: indigo;
+    left: 0;
+    top: 20rem;
+  }
+
+  100% {
+    background-color: yellow;
+    left: 0;
+    top: 0;
+  }
+}
+
+.spinnerContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.spinner {
+  display: inline-flex;
+  width: 40px;
+  height: 40px;
+  border: 4px solid teal;
+  border-top: 4px solid white;
+  border-radius: 50%;
+
+  /* animation for spinner */
+
+  transition-property: transform;
+  animation-name: spinnerRotate;
+  animation-duration: 1.2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes spinnerRotate {
+  from {
+    transform: rotate(80deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.scene {
+  width: 150px;
+  height: 300px;
+  margin-top: 25px;
+  perspective: 600px;
+  background-color: lightblue;
+  border: 1px solid blue;
+}
+
+.card .face {
+  width: 100%;
+  height: 100%;
+  color: white;
+  line-height: 300px;
+  text-align: center;
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.card .front {
+  background-color: royalblue;
+}
+
+.card .back {
+  background-color: grey;
+  transform: rotateY(180deg);
+}
+
+.scene:hover .card {
+  transform: rotateY(180deg);
+}
+
+.button {
+  margin-top: 25px;
+  background-color: royalblue;
+  border: 2px solid blue;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  font-size: 24px;
+  padding: 8px 16px;
+  transition: 0.5s transform ease-in-out;
+}
+
+.button:hover {
+  background-color: #031d6c;
+  border: #7d7df8;
+  transform: scale(1.05);
+}

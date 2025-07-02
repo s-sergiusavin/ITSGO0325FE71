@@ -1,0 +1,789 @@
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.mySlides {
+  display: none;
+  width: 100%;
+}
+.w3-left,
+.w3-right,
+.w3-badge {
+  cursor: pointer;
+}
+.w3-badge {
+  height: 13px;
+  width: 13px;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+hr {
+  border-top: 3px solid royalblue;
+}
+
+body {
+  background: url(../assets/background.gif);
+  background-repeat: repeat;
+  background-position: center;
+  margin: 0;
+}
+
+body::before {
+  content: "";
+  position: fixed; /* sau absolute */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: powderblue;
+  z-index: -1;
+  opacity: 15%;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 5rem;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background-color: powderblue;
+}
+
+header .mainSearch {
+  display: flex;
+  align-items: center;
+}
+
+header .mainSearch .logo {
+  padding: 1rem;
+  font-size: 3rem;
+  color: royalblue;
+}
+
+header .mainSearch .logo:hover {
+  color: darkblue;
+}
+
+header .mainSearch .searchInput {
+  height: 3rem;
+  border-radius: 0.5rem;
+  padding: 0 1rem;
+  border-color: beige;
+  width: 15rem;
+}
+
+header .mainSearch .searchInput:focus {
+  border: 0.25rem solid royalblue;
+  outline: none;
+}
+
+header .navigation,
+header .links {
+  display: flex;
+  margin-top: 1rem;
+}
+
+.accountSettings {
+  position: relative;
+}
+
+.accountSettings button {
+  cursor: pointer;
+  border: none;
+  background-color: inherit;
+}
+
+.accountSettings .accountSettingsMenu {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 4rem;
+  right: 0;
+  width: 12rem;
+  background-color: lightgray;
+}
+
+.accountSettings .accountSettingsMenu button {
+  padding: 0.5rem 0;
+  border: 1px solid gray;
+  border-collapse: collapse;
+}
+
+.accountSettings .accountSettingsMenu button:hover {
+  background-color: #b3d4fc;
+}
+
+header .navigation > li > a {
+  border-radius: 50%;
+  background-color: #00ffff;
+  margin: 0 0.35rem;
+  display: flex;
+}
+
+header .navigation > li > a:hover {
+  background-color: #008080;
+  border: 1px solid #4169e1;
+}
+
+.navIcons {
+  font-size: 3rem;
+  color: #4169e1;
+  margin: 0 0.5rem;
+}
+
+.navIcons:hover {
+  color: darkblue;
+}
+
+.bellIcon {
+  position: relative;
+  display: block;
+}
+
+.bellIcon span {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.leftContent,
+.rightContent {
+  width: 15%;
+  height: calc(100% - 6rem);
+  position: fixed;
+  top: 5.5rem;
+  background-color: powderblue;
+  padding: 0.3rem;
+  border-radius: 1rem;
+}
+
+.leftContent {
+  left: 0;
+  overflow: auto;
+}
+
+.leftContent::-webkit-scrollbar {
+  display: none;
+}
+
+.leftContent .content {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 1rem;
+}
+
+.leftContent .content .contentBtn {
+  margin-bottom: 0.5rem;
+  border-radius: 0.5rem;
+  background-color: transparent;
+  border: none;
+  padding: 0.7rem 1rem;
+
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+  color: #1b1b1b;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+.leftContent .content .contentBtn:hover {
+  color: #ffff;
+  background-color: #4169e180;
+}
+
+.leftContent .content .contentBtn span {
+  font-size: 1.1rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.leftContent .content .gamesPosition {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.leftContent .content .gamesPosition .games {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.leftContent .content .gamesPosition .games button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0.2rem;
+  height: 5rem;
+  width: 5rem;
+  border: none;
+  border-radius: 0.5rem;
+}
+
+.leftContent .content .gamesPosition .games button img {
+  height: 5rem;
+  width: 5rem;
+  border-radius: 0.5rem;
+}
+
+.rightContent {
+  right: 0;
+  overflow: auto;
+}
+
+.rightContent::-webkit-scrollbar {
+  display: none;
+}
+
+.mainContent {
+  width: 40%;
+}
+
+.mainContent .post {
+  box-shadow: 5px 5px 5px 5px #888;
+  margin: 1rem 0 3rem 0;
+  padding: 1rem;
+  background-color: powderblue;
+  /* padding: 0.2rem; */
+  border-radius: 1rem;
+}
+
+.mainContent .post .postHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.mainContent .post .postHeader .profileUserInfo {
+  display: flex;
+  align-items: center;
+}
+
+/* .mainContent .post .postHeader .profileUserInfo .profileImage {
+  width: 3rem;
+  border-radius: 50%;
+} */
+
+.mainContent .post .postHeader .profileUserInfo .profileName {
+  display: flex;
+  flex-direction: column;
+}
+
+.profileOptionsWrapper {
+  position: relative;
+}
+
+.profileOptionsWrapper .profileOptionsDropdown {
+  position: absolute;
+  z-index: 1;
+  right: 0.5rem;
+  width: 10rem;
+  display: flex;
+  flex-direction: column;
+  display: none;
+}
+.profileOptionsWrapper .profileOptionsDropdown button {
+  background-color: powderblue;
+  border: 1px solid #4169e180;
+  border-collapse: collapse;
+}
+
+.profileOptionsWrapper .profileOptionsDropdown button:hover {
+  background-color: powderblue;
+  border: 2px solid royalblue;
+  border-collapse: collapse;
+}
+.mainContent .post .postHeader .profileOptions {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mainContent .post .postHeader .profileOptions:hover {
+  background-color: lightgray;
+}
+
+.mainContent .post .content {
+  display: flex;
+  flex-direction: column;
+}
+
+.mainContent .post .content .imgWrapper {
+  position: relative;
+}
+
+.mainContent .post .content .imgContent {
+  max-width: 100%;
+  border: 1px solid white;
+  box-shadow: 1px 1px 1px 1px #888;
+}
+
+.infoIconWrapper {
+  position: relative;
+}
+
+.infoMessage {
+  position: absolute;
+  display: none;
+  background-color: powderblue;
+  border: 3px solid #4169e180;
+  border-radius: 1rem;
+  top: -0.1rem;
+  left: 5rem;
+  padding: 0.5rem;
+}
+
+.mainContent .post .content .infoIcon {
+  width: 2rem;
+  height: 2rem;
+  font-size: 2rem;
+  position: absolute;
+  right: 0;
+  bottom: -1rem;
+  right: 1rem;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  cursor: pointer;
+}
+
+.mainContent .post .content .postTitle {
+  padding: 1rem;
+}
+
+.mainContent .post .content .postDescription {
+  padding: 1rem;
+  margin: 0;
+}
+
+.mainContent .post .reacts {
+  display: flex;
+  justify-content: space-between;
+}
+
+.mainContent .post .reacts .reactsIcons {
+  color: royalblue;
+}
+
+.mainContent .post .reactsActions .actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.mainContent .post .reactsActions .actions .reaction {
+  color: royalblue;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+}
+
+.mainContent .post .reactsActions .actions .reaction:hover {
+  color: #1348e8;
+  background-color: #e0f0f6;
+  font-weight: 600;
+}
+
+.mainContent .post .reactsActions .actions .reaction.toutched {
+  color: #1348e8;
+  background-color: #e0f0f6;
+  font-weight: 600;
+}
+
+.mainContent .post .reactsActions .actions .reaction.toutched:hover {
+  color: #243b83;
+  background-color: #c9e5f0;
+}
+
+.mainContent .post .commentSection {
+  display: flex;
+  justify-content: space-evenly;
+  padding-bottom: 1rem;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* .mainContent .post .commentSection .profileImage {
+  width: 3rem;
+  border-radius: 50%;
+} */
+
+.mainContent .post .commentSection .newCommentField {
+  width: 80%;
+  border-radius: 0.3rem;
+  padding: 0.5rem 1rem;
+  background-color: #dcf2f9;
+  border: 1px solid #888;
+  cursor: pointer;
+}
+
+.mainContent .post .commentSection .newCommentField::placeholder {
+  color: royalblue;
+}
+
+.mainContent .post .commentSection .newCommentField:hover {
+  background-color: #cbecf8;
+}
+
+.mainContent .post .commentSection .newCommentField:focus {
+  outline-color: royalblue;
+}
+
+.mainContent .post .commentSection .insertCommentButton {
+  border: none;
+  background-color: transparent;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: royalblue;
+  width: 5rem;
+}
+
+.mainContent .post .commentSection .insertCommentButton:hover {
+  color: #1348e8;
+  font-size: 1.3rem;
+  background-color: #ffd5ab;
+  border-radius: 0.5rem;
+}
+
+/* .mainContent .post .userComments .profileImage{
+  width: 3rem;
+  border-radius: 50%;
+} */
+
+/* Ideal stilizarea generala sa fie la inceput de fisier */
+.profileImage {
+  width: 3rem;
+  border-radius: 50%;
+}
+.mainContent .post .userComments .userCommentsContent .profileUserComment {
+  margin-bottom: 0.5rem;
+  gap: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+.mainContent .post .userComments .userCommentText {
+  margin: 0 1rem;
+  border: 1px solid #888;
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: lightgray;
+  position: relative;
+}
+.mainContent .post .userComments .userCommentText #removeCommentButton {
+  display: none;
+  cursor: pointer;
+  color: #1348e8;
+}
+
+.mainContent .post .userComments .userCommentText .emojiReaction {
+  position: absolute;
+  bottom: 0;
+  right: 1rem;
+  display: none;
+}
+
+.mainContent .post .userComments .userCommentText:hover .emojiReaction {
+  display: block;
+}
+
+.mainContent .post .userComments .userCommentText:hover {
+  animation-name: comment-animation;
+  animation-duration: 1s;
+}
+
+.mainContent .post .userComments .commentReaction {
+  margin-left: 3rem;
+  color: #888;
+  display: flex;
+  gap: 1rem;
+}
+
+.mainContent .post .userComments .commentReaction .commentReactionButton:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+@keyframes comment-animation {
+  from {
+    left: -1rem;
+  }
+
+  to {
+    left: 0rem;
+  }
+}
+
+.insertCommentButton {
+  width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.center {
+  width: 5rem;
+  height: 2rem;
+}
+
+.btn {
+  width: 5rem;
+  height: 1.5rem;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid #91c9ff;
+  outline: none;
+  transition: 1s ease-in-out;
+}
+
+svg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  fill: none;
+  stroke: orange;
+  stroke-dasharray: 150 480;
+  stroke-dashoffset: 150;
+  transition: 1s ease-in-out;
+}
+
+.btn:hover {
+  transition: 1s ease-in-out;
+  background: #4f95da;
+}
+
+.btn:hover svg {
+  stroke-dashoffset: -480;
+}
+
+.btn i {
+  color: orange;
+  font-size: 18px;
+  font-weight: 100;
+}
+
+.rightContent .friendRequestsContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.rightContent .request {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0 0.5rem;
+  height: 4rem;
+}
+
+.rightContent .friendRequestsContent .requestContent {
+  display: flex;
+  justify-content: space-between;
+}
+
+.rightContent .birthdaysContent .birthday {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  margin: 0.5rem 0;
+}
+
+.rightContent .birthdaysContent .birthday a {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0.8rem 0.5rem;
+  height: 1rem;
+}
+
+.rightContent .birthdaysContent .birthday a .birthdayPerson .personName {
+  color: royalblue;
+  font-weight: lighter;
+}
+
+.rightContent .birthdaysContent .birthday a .birthdaysImage {
+  font-size: 1.5rem;
+  color: royalblue;
+}
+
+.rightContent .adsContent .content > a > img {
+  width: calc(100% - 1rem);
+  height: 10rem;
+  margin: 0 0.5rem;
+  border-radius: 0.4rem;
+}
+
+.rightContent .contactsContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.rightContent .contactsContent .contactNav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.rightContent .contactsContent .contactNav .contactSettings {
+  display: flex;
+  gap: 0.8rem;
+  margin-right: 1rem;
+}
+
+.rightContent .contactsContent .friend,
+.groupConversations .conversation {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 1rem;
+  margin: 0 0.5rem 0.5rem;
+  position: relative;
+}
+
+.rightContent .contactsContent .friend .statusIcon {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0;
+  left: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.rightContent .contactsContent .friend .statusIcon.online {
+  background-color: greenyellow;
+}
+
+.rightContent .contactsContent .friend .statusIcon.offline {
+  background-color: red;
+}
+
+.rightContent .contactsContent .contacts {
+  overflow: auto;
+  height: 24rem;
+}
+
+.rightContent .contactsContent .contacts::-webkit-scrollbar {
+  display: none;
+}
+
+.rightContent .groupConversations {
+  overflow: auto;
+  height: 24rem;
+}
+
+@media (max-width: 750px) {
+  header {
+    flex-direction: column;
+    height: auto;
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  header .mainSearch .searchInput {
+    width: 100%;
+  }
+
+  .leftContent,
+  .rightContent {
+    display: none;
+  }
+
+  .mainContent {
+    width: 95%;
+  }
+
+  .mainContent .post .commentSection {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .mainContent .post .commentSection .newCommentField {
+    width: 100%;
+  }
+
+  .insertCommentButton {
+    width: 100%;
+  }
+}
+
+@media (max-width: 900px) {
+  .leftContent,
+  .rightContent {
+    width: 20%;
+    padding: 0.2rem;
+  }
+
+  .leftContent .content .gamesPosition .games {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .mainContent {
+    width: 60%;
+  }
+
+  .mainContent .post {
+    margin: 1rem 0;
+    padding: 0.8rem;
+  }
+
+  header .mainSearch .searchInput {
+    width: 10rem;
+  }
+
+  .mainContent .post .commentSection {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 2561px) {
+  .leftContent,
+  .rightContent {
+    width: 20%;
+  }
+
+  .mainContent {
+    width: 50%;
+  }
+}

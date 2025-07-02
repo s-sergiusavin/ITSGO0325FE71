@@ -1,0 +1,781 @@
+* {
+  box-sizing: border-box;
+}
+
+
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.mySlides {
+  display: none;
+}
+.w3-left,
+.w3-right,
+.w3-badge {
+  cursor: pointer;
+}
+.w3-badge {
+  height: 13px;
+  width: 13px;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 3.5rem;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background-color: #4169e1;
+}
+
+header .mainSearch {
+  display: flex;
+  align-items: center;
+}
+
+header .mainSearch .logo {
+  padding: 1rem;
+  font-size: 2rem;
+  color: #419fe1;
+}
+
+header .mainSearch .logo:hover {
+  color: darkblue;
+}
+
+header .mainSearch .searchInput {
+  height: 1.5rem;
+  width: 15rem;
+  border-radius: 0.5rem;
+  padding: 0 1rem;
+  border-color: beige;
+}
+
+header .mainSearch .searchInput:focus {
+  border: 0.25rem solid royalblue;
+  outline: none;
+}
+
+header .navigation,
+header .links {
+  display: flex;
+  margin: 0 0.5rem;
+  gap: 0.5rem;
+}
+
+header .navigation > li > a {
+  border-radius: 50%;
+  height: 2rem;
+  width: 2rem;
+  margin: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header .navigation > li > a:hover {
+  background-color: #419fe1;
+  border: 1px solid royalblue;
+}
+
+.navIcons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: rgb(0, 0, 0);
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+}
+
+.navIcons:hover {
+  background-color: #419fe1;
+  color: white;
+}
+
+.bellIcon {
+  position: relative;
+  display: block;
+}
+
+.bellIcon span {
+  width: 1rem;
+  height: 1rem;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  font-size: 0.5rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.container .header {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 1px 1px 15px 1px #419fe1;
+  border-radius: 1rem;
+}
+
+.container .header .bgImage {
+  overflow: hidden;
+  max-height: 25rem;
+  border-radius: 0.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+
+.container .header .bgImage .userBg {
+  height: 100%;
+}
+
+.container .header .userInfo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0.5rem;
+}
+
+.container .header .userImage {
+  width: 25rem;
+  height: 5rem;
+  position: relative;
+  display: flex;
+}
+
+.container .header .userInfo .userImage .changeIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background-color: #4169e1;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  left: 7rem;
+  bottom: 1rem;
+  color: #ffffff;
+  font-size: xx-large;
+}
+
+.container .header .userInfo .userImage .changeIcon:hover {
+  background-color: #419fe1;
+}
+
+.container .header .userImage .profileName {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 8rem;
+  font-weight: lighter;
+  font-size: xx-large;
+}
+.container .header .userImage .profileImage {
+  position: absolute;
+  width: 10rem;
+  max-width: 100%;
+  bottom: 0.2rem;
+  left: 0.2rem;
+  border: 0.4rem solid #ffff;
+  border-radius: 50%;
+}
+
+.container .header .userImage .profileImage:hover {
+  position: absolute;
+  width: 10rem;
+  max-width: 100%;
+  bottom: 0.2rem;
+  border: 0.2rem solid #4169e1;
+  border-radius: 50%;
+}
+
+/* .container .header .userImage .profileImage::before {
+  content: "";
+  z-index: 1;
+  background-color: black;
+ 
+} */
+
+.container .header .userMenu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 0.5rem 1rem 0.5rem;
+}
+
+.container .header .userMenu .menu {
+  margin: 0 0.5rem;
+}
+.container .header .userMenu .menu ul {
+  display: flex;
+  flex-direction: row;
+  margin: 0 0.5rem;
+  gap: 1rem;
+}
+.container .header .userMenu .menu ul li {
+  border: 1px solid #4169e1;
+  color: #419fe1;
+  border-radius: 0.2rem;
+  padding: 0.3rem;
+}
+
+.container .header .userMenu .menu ul li a {
+  color: #4169e1;
+}
+
+.container .header .userMenu .menu ul li:hover {
+  background-color: #4169e1;
+  color: #ffffff;
+  border-radius: 0.3rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.container .header .userMenu .menu ul li:hover a {
+  color: white;
+}
+
+.container .header .userMenu .moreOptions {
+  border: 1px solid #4169e1;
+  margin: 0 0.5rem;
+  width: 5rem;
+  border-radius: 0.2rem;
+  background-color: #ffffff;
+}
+.container .header .userMenu .moreOptions:hover {
+  background-color: #4169e1;
+  color: #ffffff;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.container .content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 1rem 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.container .content .informations {
+  max-width: 50%;
+  border-radius: 0.5rem;
+  margin: 0.5rem;
+}
+
+.container .content .postsDimensions {
+  max-width: 50%;
+  background-color: royalblue;
+  box-shadow: 1px 1px 15px 1px #419fe1;
+  border-radius: 0.5rem;
+  margin: 0.5rem;
+}
+
+.container .content .postsDimensions .newPost .postContent {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  margin: 0.5rem;
+  align-items: center;
+}
+
+.container .content .postsDimensions .newPost .postContent input[type="text"] {
+  width: 100%;
+  border-radius: 0.5rem;
+  border: 1px solid gray;
+  padding: 0.5rem;
+}
+
+.container .content .postsDimensions .newPost .postContent .profileImage {
+  width: 3rem;
+  border-radius: 50%;
+  border: 2px solid #ffff;
+}
+
+.container .content .postsDimensions .newPost .postAttachments {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 0.3rem;
+  background-color: white;
+  border-radius: 0.3rem;
+  margin: 0 1rem;
+  padding: 0.5rem 0.5rem;
+}
+
+.container .content .postsDimensions .newPost .postAttachments .attachment {
+  border: 1px solid #4169e1;
+  color: royalblue;
+  border-radius: 0.4rem;
+  background-color: #ffffff;
+}
+.attachment.start {
+  margin-left: 0.5rem;
+}
+.attachment.end {
+  margin-right: 0.5rem;
+}
+
+.attachment .attachmentIcon {
+  font-size: 1rem;
+  margin-right: 0.5rem;
+}
+
+.container
+  .content
+  .postsDimensions
+  .newPost
+  .postAttachments
+  .attachment:hover {
+  background-color: #419fe1;
+  color: #ffffff;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.post {
+  box-shadow: 5px 5px 20px 5px #419fe1;
+  margin: 1rem 1rem;
+  padding: 1rem;
+  background-color: white;
+}
+
+.postHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.profileUserInfo {
+  display: flex;
+  align-items: center;
+}
+
+.profileImage {
+  margin-right: 0.5rem;
+  width: 3rem;
+  border-radius: 50%;
+}
+
+.profileName {
+  display: flex;
+  flex-direction: column;
+}
+
+.profileOptions {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profileOptions:hover {
+  background-color: lightgray;
+}
+
+.contentInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.imgWrapper {
+  position: relative;
+}
+
+.imgContent {
+  max-width: 100%;
+  border: 1px solid white;
+  box-shadow: 1px 1px 1px 1px #888;
+}
+
+.infoIcon {
+  width: 2rem;
+  height: 2rem;
+  font-size: 2rem;
+  position: absolute;
+  right: 1rem;
+  bottom: -1rem;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  cursor: pointer;
+}
+
+.postTitle {
+  padding: 1rem;
+}
+
+.postDescription {
+  padding: 1rem;
+  margin: 0;
+}
+
+.reacts {
+  display: flex;
+  justify-content: space-between;
+}
+
+.reactsIcons {
+  color: royalblue;
+}
+
+.reactsActions .actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.reaction {
+  color: royalblue;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+}
+
+.reaction:hover {
+  color: #1348e8;
+  background-color: #e0f0f6;
+  font-weight: 600;
+}
+
+.commentSection {
+  display: flex;
+  justify-content: space-evenly;
+  padding-bottom: 1rem;
+  align-items: center;
+  gap: 1rem;
+}
+
+.newCommentField {
+  width: 80%;
+  border-radius: 0.3rem;
+  padding: 0.5rem 1rem;
+  background-color: #dcf2f9;
+  border: 1px solid #888;
+  cursor: pointer;
+}
+
+.newCommentField::placeholder {
+  color: royalblue;
+}
+
+.newCommentField:hover {
+  background-color: #cbecf8;
+}
+
+.newCommentField:focus {
+  outline-color: royalblue;
+}
+
+.insertCommentButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: transparent;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: royalblue;
+  width: 5rem;
+}
+
+.insertCommentButton:hover {
+  font-size: 1.3rem;
+  background-color: #4169e1;
+  color: #ffffff;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  border-radius: 0.5rem;
+}
+
+.userCommentText {
+  margin: 0 1rem;
+  border: 1px solid #888;
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: lightgray;
+  position: relative;
+}
+
+.emojiReaction {
+  position: absolute;
+  bottom: 0;
+  right: 1rem;
+  display: none;
+}
+
+.userCommentText:hover .emojiReaction {
+  display: block;
+}
+
+.userCommentText:hover {
+  animation-name: comment-animation;
+  animation-duration: 1s;
+}
+
+.commentReaction {
+  margin-left: 3rem;
+  color: #888;
+  display: flex;
+  gap: 1rem;
+}
+
+.commentReactionButton:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+@keyframes comment-animation {
+  from {
+    left: -1rem;
+  }
+
+  to {
+    left: 0rem;
+  }
+}
+
+.container .content .informations .about,
+.container .content .informations .photos,
+.container .content .informations .friends {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  box-shadow: 1px 1px 15px 1px #419fe1;
+  border: 1px solid #4169e1;
+  background-color: #4169e1;
+  padding: 0.5rem;
+  color: white;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+}
+
+.container .content .informations .aboutBtn {
+  border: 1px solid #3250ac;
+  width: 100%;
+  border-radius: 0.5rem;
+  background-color: #ffffff;
+}
+.container .content .informations .aboutBtn:hover {
+  background-color: #419fe1;
+  color: #ffffff;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.container .content .informations .about .aboutContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.2rem;
+}
+
+.container .content .informations .about .aboutContent span {
+  display: block;
+  font-size: 1rem;
+  font-weight: bold;
+  align-content: center;
+}
+.container .content .informations .about .aboutContent span i {
+  font-size: 1.5rem;
+  margin: 0 0.5rem;
+}
+
+.container .content .informations .photos span,
+.container .content .informations .friends span {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.container .content .informations .aboutBtn.imagenes {
+  width: 50%;
+}
+
+.container .content .informations span > a {
+  color: #ffffff;
+  font-size: 1.5rem;
+}
+
+.container .content .informations span > a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.container .content .informations .photos .photosPos,
+.container .content .informations .firends .firendsPos {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5rem;
+}
+
+.container .content .informations .photos .photosPos,
+.container .content .informations .friends .friendsPos {
+  display: flex;
+  flex-direction: row;
+}
+
+.container .content .informations .photos .photosPos .photo,
+.container .content .informations .friends .friendsPos .friend {
+  margin: 0.3rem;
+  width: 10rem;
+  height: 10rem;
+}
+
+.container .content .informations .friends .friendsPos .friend {
+  margin: 0.5rem;
+  width: 10rem;
+  height: 10rem;
+  text-align: center;
+  color: #ffff;
+}
+.container .content .informations .photos .photosPos .photo > img,
+.container .content .informations .friends .friendsPos .friend > img {
+  width: 100%;
+  height: 100%;
+}
+
+.container .content .informations .friends .friendsPos .friend > img {
+  width: 90%;
+  height: 90%;
+  border-radius: 0.5rem;
+}
+.container .content .informations .photos .photosPos .photo .leftUp {
+  border-top-left-radius: 1rem;
+}
+.container .content .informations .photos .photosPos .photo .rightUp {
+  border-top-right-radius: 1rem;
+}
+.container .content .informations .photos .photosPos .photo .leftBottom {
+  border-bottom-left-radius: 1rem;
+}
+.container .content .informations .photos .photosPos .photo .rightBottom {
+  border-bottom-right-radius: 1rem;
+}
+
+.contentInfo .imgWrapper .mySlides {
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    height: auto;
+    padding: 1rem 0;
+  }
+
+  header .mainSearch .searchInput {
+    width: 100%;
+  }
+
+  .container .header .userInfo {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .container .header .userImage {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .container .content {
+    flex-direction: column;
+  }
+
+  .container .content .informations,
+  .container .content .postsDimensions {
+    max-width: 100%;
+  }
+
+  .container .header .userMenu {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .container .header .userMenu .menu ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .container .content .informations .photos .photosPos,
+  .container .content .informations .friends .friendsPos {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 900px) {
+  .container .header .userInfo {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .container .content {
+    flex-direction: column;
+  }
+
+  .container .content .informations,
+  .container .content .postsDimensions {
+    max-width: 100%;
+  }
+
+  .container .header .userMenu {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+  }
+
+  .container .header .userMenu .menu ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .container .content .informations .photos .photosPos,
+  .container .content .informations .friends .friendsPos {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container .content .informations,
+  .container .content .postsDimensions {
+    max-width: 45%;
+  }
+
+  .container .header .userImage {
+    width: 30rem;
+  }
+}

@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Social Media App | Feed</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/feed.css" />
+  </head>
+  <body>
+    <header>
+      <div class="mainSearch">
+        <a href=""><i class="bi bi-database-fill logo"></i></a>
+        <input
+          type="search"
+          class="searchInput"
+          placeholder="Search on social media"
+        />
+      </div>
+
+      <nav class="mainNavigation">
+        <ul class="navigation">
+          <li>
+            <a href="feed.html" title="Home">
+              <i class="bi bi-house navIcons"></i>
+            </a>
+          </li>
+          <li>
+            <a href="profile.html" title="My Profile"
+              ><i class="bi bi-person navIcons"></i
+            ></a>
+          </li>
+          <li>
+            <a href="#" title="Messenger chat"
+              ><i class="bi bi-chat-dots navIcons"></i
+            ></a>
+          </li>
+          <li>
+            <a href="#" title="Watch videos"
+              ><i class="bi bi-camera-reels navIcons"></i
+            ></a>
+          </li>
+        </ul>
+      </nav>
+
+      <ul class="links">
+        <li>
+          <a href="landingPage.html" title="To Landing page"
+            ><i class="bi bi-plus-circle navIcons"></i
+          ></a>
+        </li>
+        <li>
+          <a href="#" title="View notifications" class="bellIcon"
+            ><i class="bi bi-bell navIcons"></i> <span>12</span></a
+          >
+        </li>
+        <li>
+          <a href="login.html" title="Settings"
+            ><i class="bi bi-gear navIcons"></i
+          ></a>
+        </li>
+      </ul>
+    </header>
+
+    <main>
+      <aside class="leftContent">
+        <div class="content">
+          <button class="contentBtn">
+            <img
+              src="./assets/profile.jpg"
+              alt="profile picture"
+              class="profileImage"
+            />
+            <span>Alin Gabriel</span></button
+          ><button class="contentBtn">
+            <span> <i class="bi bi-person"></i> Prieteni</span></button
+          ><button class="contentBtn">
+            <span>
+              <i class="bi bi-person-heart"></i> Prieteni apropiati</span
+            ></button
+          ><button class="contentBtn">
+            <span> <i class="bi bi-calendar2-week"></i>Amintiri</span></button
+          ><button class="contentBtn">
+            <span>
+              <i class="bi bi-person-plus"></i>Cereri de prietenie</span
+            ></button
+          ><button class="contentBtn">
+            <span> <i class="bi bi-cake2"></i>Zile de nastere</span></button
+          ><button class="contentBtn">
+            <span> <i class="bi bi-people"></i>Grupuri</span></button
+          ><button class="contentBtn">
+            <span> <i class="bi bi-arrow-down-short"></i>Mai multe</span>
+          </button>
+        </div>
+        <hr />
+        <div class="content">
+          <div class="shortcuts"><span>Scurtaturi</span></div>
+          <div class="gamesPosition">
+            <span>Jocuri</span>
+            <div class="games">
+              <button><img src="./assets/game3.webp" alt="" /></button>
+              <button><img src="./assets/game2.jfif" alt="" /></button>
+              <button><img src="./assets/game1.jpg" alt="" /></button>
+            </div>
+            <div class="games">
+              <button><img src="./assets/game2.jfif" alt="" /></button>
+              <button><img src="./assets/game1.jpg " alt="" /></button>
+              <button><img src="./assets/game3.webp" alt="" /></button>
+            </div>
+            <div class="games">
+              <button><img src="./assets/game1.jpg " alt="" /></button>
+              <button><img src="./assets/game3.webp" alt="" /></button>
+              <button><img src="./assets/game2.jfif" alt="" /></button>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <section class="mainContent">
+        <div class="post">
+          <div class="postHeader">
+            <div class="profileUserInfo">
+              <a href="">
+                <img
+                  src="./assets/profile.jpg"
+                  alt="profile picture"
+                  class="profileImage"
+                />
+              </a>
+              <div class="profileName">
+                <span>Alin Gabriel</span>
+                <span>16 Apr 2025</span>
+              </div>
+            </div>
+
+            <a href="#" class="profileOptions"
+              ><i class="bi bi-three-dots"></i
+            ></a>
+          </div>
+
+          <div class="content">
+            <div class="imgWrapper">
+              <img
+                src="./assets/city.jpeg"
+                alt="post content picture"
+                class="imgContent"
+              />
+
+              <a href="landingPage.html"
+                ><i class="bi bi-info-circle infoIcon"></i
+              ></a>
+            </div>
+
+            <strong class="postTitle">Titlul postarii</strong>
+
+            <p class="postDescription">
+              Aceasta este prima postare facuta pe reteaua de socializare create
+              de mine in timpul cursului de Front End Development
+            </p>
+
+            <a href="landingPage.html"><strong>Read more...</strong></a>
+          </div>
+
+          <div class="reacts">
+            <div class="likesInfo">
+              <span>😍</span>
+              <span>&#128525;</span>
+              <i class="bi bi-hand-thumbs-up reactsIcons"></i>
+              <span>10 likes</span>
+            </div>
+
+            <div class="commentsinfo">
+              <span>15 comments</span>
+              <i class="bi bi-chat-text reactsIcons"></i>
+            </div>
+          </div>
+
+          <hr />
+
+          <div class="reactsActions">
+            <ul class="actions">
+              <li class="reaction">
+                <i class="bi bi-hand-thumbs-up"></i>
+                <span>Like</span>
+              </li>
+              <li class="reaction">
+                <i class="bi bi-chat-text"></i>
+                <span>Comments</span>
+              </li>
+              <li class="reaction">
+                <i class="bi bi-send"></i>
+                <span>Share</span>
+              </li>
+            </ul>
+          </div>
+
+          <hr />
+
+          <div class="commentSection">
+            <a href="">
+              <img
+                src="./assets/profile.jpg"
+                alt="profile picture"
+                class="profileImage"
+              />
+            </a>
+            <input
+              type="text"
+              placeholder="Adauga un comentariu"
+              class="newCommentField"
+            />
+            <button class="insertCommentButton">
+              <i class="bi bi-send-plus"></i>
+            </button>
+          </div>
+
+          <div class="userComments">
+            <div class="userCommentsContent">
+              <div class="profileUserComment">
+                <a href="">
+                  <img
+                    src="./assets/profile.jpg"
+                    alt="profile picture"
+                    class="profileImage"
+                  />
+                </a>
+                <span>User Name</span>
+              </div>
+
+              <div class="userCommentText">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro
+                consequatur nemo nisi quasi dignissimos quisquam explicabo
+                suscipit possimus modi similique mollitia voluptatem molestias
+                ipsam, excepturi illum? Adipisci aperiam qui voluptatem.
+                <div class="emojiReaction">&#128526;</div>
+              </div>
+
+              <div class="commentReaction">
+                <strong class="commentReactionButton">Like</strong>
+                <strong class="commentReactionButton">Comment</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="post">
+          <div class="postHeader">
+            <div class="profileUserInfo">
+              <a href="">
+                <img
+                  src="./assets/profile.jpg"
+                  alt="profile picture"
+                  class="profileImage"
+                />
+              </a>
+              <div class="profileName">
+                <span>Alin Gabriel</span>
+                <span>16 Apr 2025</span>
+              </div>
+            </div>
+
+            <a href="#" class="profileOptions"
+              ><i class="bi bi-three-dots"></i
+            ></a>
+          </div>
+
+          <div class="content">
+            <div class="imgWrapper">
+              <img
+                src="./assets/city.jpeg"
+                alt="post content picture"
+                class="imgContent"
+              />
+
+              <a href="landingPage.html"
+                ><i class="bi bi-info-circle infoIcon"></i
+              ></a>
+            </div>
+
+            <strong class="postTitle">Titlul postarii</strong>
+
+            <p class="postDescription">
+              Aceasta este prima postare facuta pe reteaua de socializare create
+              de mine in timpul cursului de Front End Development
+            </p>
+
+            <a href="landingPage.html"><strong>Read more...</strong></a>
+          </div>
+
+          <div class="reacts">
+            <div class="likesInfo">
+              <span>😍</span>
+              <span>&#128525;</span>
+              <i class="bi bi-hand-thumbs-up reactsIcons"></i>
+              <span>10 likes</span>
+            </div>
+
+            <div class="commentsinfo">
+              <span>15 comments</span>
+              <i class="bi bi-chat-text reactsIcons"></i>
+            </div>
+          </div>
+
+          <hr />
+
+          <div class="reactsActions">
+            <ul class="actions">
+              <li class="reaction">
+                <i class="bi bi-hand-thumbs-up"></i>
+                <span>Like</span>
+              </li>
+              <li class="reaction">
+                <i class="bi bi-chat-text"></i>
+                <span>Comments</span>
+              </li>
+              <li class="reaction">
+                <i class="bi bi-send"></i>
+                <span>Share</span>
+              </li>
+            </ul>
+          </div>
+
+          <hr />
+
+          <div class="commentSection">
+            <a href="">
+              <img
+                src="./assets/profile.jpg"
+                alt="profile picture"
+                class="profileImage"
+              />
+            </a>
+            <input
+              type="text"
+              placeholder="Adauga un comentariu"
+              class="newCommentField"
+            />
+            <button class="insertCommentButton">
+              <i class="bi bi-send-plus"></i>
+            </button>
+          </div>
+
+          <div class="userComments">
+            <div class="userCommentsContent">
+              <div class="profileUserComment">
+                <a href="">
+                  <img
+                    src="./assets/profile.jpg"
+                    alt="profile picture"
+                    class="profileImage"
+                  />
+                </a>
+                <span>User Name</span>
+              </div>
+
+              <div class="userCommentText">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro
+                consequatur nemo nisi quasi dignissimos quisquam explicabo
+                suscipit possimus modi similique mollitia voluptatem molestias
+                ipsam, excepturi illum? Adipisci aperiam qui voluptatem.
+                <div class="emojiReaction">&#128526;</div>
+              </div>
+
+              <div class="commentReaction">
+                <strong class="commentReactionButton">Like</strong>
+                <strong class="commentReactionButton">Comment</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="post">
+          <div class="postHeader">
+            <div class="profileUserInfo">
+              <a href="">
+                <img
+                  src="./assets/profile.jpg"
+                  alt="profile picture"
+                  class="profileImage"
+                />
+              </a>
+              <div class="profileName">
+                <span>Alin Gabriel</span>
+                <span>16 Apr 2025</span>
+              </div>
+            </div>
+
+            <a href="#" class="profileOptions"
+              ><i class="bi bi-three-dots"></i
+            ></a>
+          </div>
+
+          <div class="content">
+            <div class="imgWrapper">
+              <div class="w3-content w3-display-container">
+                <img class="mySlides" src="./assets/paris1.webp" />
+                <img class="mySlides" src="./assets/paris3.jfif" />
+                <img class="mySlides" src="./assets/paris5.webp" />
+                <img class="mySlides" src="./assets/paris2.avif" />
+                <img class="mySlides" src="./assets/paris4.webp" />
+                <img class="mySlides" src="./assets/paris6.jpg" />
+                <div
+                  class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle"
+                  style="width: 100%"
+                >
+                  <div
+                    class="w3-left w3-hover-text-khaki"
+                    onclick="plusDivs(-1)"
+                  >
+                    &#10094;
+                  </div>
+                  <div
+                    class="w3-right w3-hover-text-khaki"
+                    onclick="plusDivs(1)"
+                  >
+                    &#10095;
+                  </div>
+                  <span
+                    class="w3-badge demo w3-border w3-transparent w3-hover-white"
+                    onclick="currentDiv(1)"
+                  ></span>
+                  <span
+                    class="w3-badge demo w3-border w3-transparent w3-hover-white"
+                    onclick="currentDiv(2)"
+                  ></span>
+                  <span
+                    class="w3-badge demo w3-border w3-transparent w3-hover-white"
+                    onclick="currentDiv(3)"
+                  ></span>
+                  <span
+                    class="w3-badge demo w3-border w3-transparent w3-hover-white"
+                    onclick="currentDiv(4)"
+                  ></span>
+                  <span
+                    class="w3-badge demo w3-border w3-transparent w3-hover-white"
+                    onclick="currentDiv(5)"
+                  ></span>
+                  <span
+                    class="w3-badge demo w3-border w3-transparent w3-hover-white"
+                    onclick="currentDiv(6)"
+                  ></span>
+                </div>
+              </div>
+            </div>
+
+            <strong class="postTitle">Paris, Franta</strong>
+
+            <p class="postDescription">
+              Aceasta este prima postare facuta pe reteaua de socializare create
+              de mine in timpul cursului de Front End Development
+            </p>
+
+            <a href="landingPage.html"><strong>Read more...</strong></a>
+          </div>
+
+          <div class="reacts">
+            <div class="likesInfo">
+              <span>😍</span>
+              <span>&#128525;</span>
+              <i class="bi bi-hand-thumbs-up reactsIcons"></i>
+              <span>10 likes</span>
+            </div>
+
+            <div class="commentsinfo">
+              <span>15 comments</span>
+              <i class="bi bi-chat-text reactsIcons"></i>
+            </div>
+          </div>
+
+          <hr />
+
+          <div class="reactsActions">
+            <ul class="actions">
+              <li class="reaction">
+                <i class="bi bi-hand-thumbs-up"></i>
+                <span>Like</span>
+              </li>
+              <li class="reaction">
+                <i class="bi bi-chat-text"></i>
+                <span>Comments</span>
+              </li>
+              <li class="reaction">
+                <i class="bi bi-send"></i>
+                <span>Share</span>
+              </li>
+            </ul>
+          </div>
+
+          <hr />
+
+          <div class="commentSection">
+            <a href="">
+              <img
+                src="./assets/profile.jpg"
+                alt="profile picture"
+                class="profileImage"
+              />
+            </a>
+            <input
+              type="text"
+              placeholder="Adauga un comentariu"
+              class="newCommentField"
+            />
+            <button class="insertCommentButton">
+              <i class="bi bi-send-plus"></i>
+            </button>
+          </div>
+
+          <div class="userComments">
+            <div class="userCommentsContent">
+              <div class="profileUserComment">
+                <a href="">
+                  <img
+                    src="./assets/profile.jpg"
+                    alt="profile picture"
+                    class="profileImage"
+                  />
+                </a>
+                <span>User Name</span>
+              </div>
+
+              <div class="userCommentText">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro
+                consequatur nemo nisi quasi dignissimos quisquam explicabo
+                suscipit possimus modi similique mollitia voluptatem molestias
+                ipsam, excepturi illum? Adipisci aperiam qui voluptatem.
+                <div class="emojiReaction">&#128526;</div>
+              </div>
+
+              <div class="commentReaction">
+                <strong class="commentReactionButton">Like</strong>
+                <strong class="commentReactionButton">Comment</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="userComments">
+            <div class="userCommentsContent">
+              <div class="profileUserComment">
+                <a href="">
+                  <img
+                    src="./assets/profile.jpg"
+                    alt="profile picture"
+                    class="profileImage"
+                  />
+                </a>
+                <span>User Name</span>
+              </div>
+
+              <div class="userCommentText">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro
+                consequatur nemo nisi quasi dignissimos quisquam explicabo
+                suscipit possimus modi similique mollitia voluptatem molestias
+                ipsam, excepturi illum? Adipisci aperiam qui voluptatem.
+                <div class="emojiReaction">&#128526;</div>
+              </div>
+
+              <div class="commentReaction">
+                <strong class="commentReactionButton">Like</strong>
+                <strong class="commentReactionButton">Comment</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <aside class="rightContent">
+        <div class="friendRequestsContent">
+          <div class="requestContent">
+            <h6>Friend Requests</h6>
+            <a href="landingPage.html">View all</a>
+          </div>
+          <div class="request">
+            <a href="">
+              <img
+                src="./assets/profile.jpg"
+                alt="profile picture"
+                class="profileImage"
+              />
+            </a>
+            <div class="profileName">
+              <span>Cerere Unu</span>
+              <div class="requestButons">
+                <button
+                  type="button"
+                  class="btn btn-outline-primary"
+                  style="
+                    --bs-btn-padding-y: 0.25rem;
+                    --bs-btn-padding-x: 0.5rem;
+                    --bs-btn-font-size: 0.75rem;
+                  "
+                >
+                  Accept
+                </button>
+
+                <button
+                  type="button"
+                  class="btn btn-outline-secondary"
+                  style="
+                    --bs-btn-padding-y: 0.25rem;
+                    --bs-btn-padding-x: 0.5rem;
+                    --bs-btn-font-size: 0.75rem;
+                  "
+                >
+                  Refuse
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="request">
+            <a href="">
+              <img
+                src="./assets/profile.jpg"
+                alt="profile picture"
+                class="profileImage"
+              />
+            </a>
+            <div class="profileName">
+              <span>Cerere Doi</span>
+              <div class="requestButons">
+                <button
+                  type="button"
+                  class="btn btn-outline-primary"
+                  style="
+                    --bs-btn-padding-y: 0.25rem;
+                    --bs-btn-padding-x: 0.5rem;
+                    --bs-btn-font-size: 0.75rem;
+                  "
+                >
+                  Accept
+                </button>
+
+                <button
+                  type="button"
+                  class="btn btn-outline-secondary"
+                  style="
+                    --bs-btn-padding-y: 0.25rem;
+                    --bs-btn-padding-x: 0.5rem;
+                    --bs-btn-font-size: 0.75rem;
+                  "
+                >
+                  Refuse
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr />
+
+        <div class="birthdaysContent">
+          <h6>Birthdays</h6>
+          <div class="birthday">
+            <a href="./profile.html">
+              <i class="bi bi-gift birthdaysImage"></i>
+              <div class="birthdayPerson">
+                <span
+                  >Astazi este ziua lui
+                  <span class="personName">Andrei Stefan</span>
+                </span>
+              </div>
+            </a>
+          </div>
+          <div class="birthday">
+            <a href="./profile.html">
+              <i class="bi bi-gift birthdaysImage"></i>
+              <div class="birthdayPerson">
+                <span
+                  >Astazi este ziua lui
+                  <span class="personName">Stefan Andrei</span>
+                </span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <hr />
+        <div class="adsContent">
+          <h6>Ads</h6>
+          <div class="content">
+            <a href="https://romautentic.ro/" target="_blank"
+              ><img src="./assets/reclama.gif" alt="romautentic.ro"
+            /></a>
+          </div>
+        </div>
+        <hr />
+        <div class="contactsContent">
+          <div class="contactNav">
+            <h6>Contacts</h6>
+            <div class="contactSettings">
+              <i class="bi bi-search"></i>
+              <a href="#" class=""><i class="bi bi-three-dots"></i></a>
+            </div>
+          </div>
+          <div class="contacts">
+            <div class="friend">
+              <a href="">
+                <img
+                  src="./assets/profile.jpg"
+                  alt="profile picture"
+                  class="profileImage"
+                />
+              </a>
+              <a
+                href="#"
+                title="View notifications"
+                class="statusIcon offline"
+              ></a>
+
+              <div class="profileName">
+                <span>Prieten Unu</span>
+              </div>
+            </div>
+
+            <div class="friend">
+              <a href="">
+                <img
+                  src="./assets/profile.jpg"
+                  alt="profile picture"
+                  class="profileImage"
+                />
+              </a>
+              <a
+                href="#"
+                title="View notifications"
+                class="statusIcon online"
+              ></a>
+
+              <div class="profileName">
+                <span>Prieten Doi</span>
+              </div>
+            </div>
+            <div class="friend">
+              <a href="">
+                <img
+                  src="./assets/profile.jpg"
+                  alt="profile picture"
+                  class="profileImage"
+                />
+              </a>
+              <a
+                href="#"
+                title="View notifications"
+                class="statusIcon online"
+              ></a>
+
+              <div class="profileName">
+                <span>Prieten Trei</span>
+              </div>
+            </div>
+            <div class="friend">
+              <a href="">
+                <img
+                  src="./assets/profile.jpg"
+                  alt="profile picture"
+                  class="profileImage"
+                />
+              </a>
+              <a
+                href="#"
+                title="View notifications"
+                class="statusIcon offline"
+              ></a>
+              <div class="profileName friend">
+                <span>Prieten Patru</span>
+              </div>
+            </div>
+            <div class="friend">
+              <a href="">
+                <img
+                  src="./assets/profile.jpg"
+                  alt="profile picture"
+                  class="profileImage"
+                />
+              </a>
+              <a
+                href="#"
+                title="View notifications"
+                class="statusIcon online"
+              ></a>
+              <div class="profileName friend">
+                <span>Prieten Cinci</span>
+              </div>
+            </div>
+            <div class="friend">
+              <a href="">
+                <img
+                  src="./assets/profile.jpg"
+                  alt="profile picture"
+                  class="profileImage"
+                />
+              </a>
+              <a
+                href="#"
+                title="View notifications"
+                class="statusIcon offline"
+              ></a>
+              <div class="profileName friend">
+                <span>Prieten Sase</span>
+              </div>
+            </div>
+            <div class="friend">
+              <a href="">
+                <img
+                  src="./assets/profile.jpg"
+                  alt="profile picture"
+                  class="profileImage"
+                />
+              </a>
+              <a
+                href="#"
+                title="View notifications"
+                class="statusIcon online"
+              ></a>
+              <div class="profileName friend">
+                <span>Prieten Sapte</span>
+              </div>
+            </div>
+            <div class="friend">
+              <a href="">
+                <img
+                  src="./assets/profile.jpg"
+                  alt="profile picture"
+                  class="profileImage"
+                />
+              </a>
+              <a
+                href="#"
+                title="View notifications"
+                class="statusIcon offline"
+              ></a>
+              <div class="profileName friend">
+                <span>Prieten Opt</span>
+              </div>
+            </div>
+            <div class="friend">
+              <a href="">
+                <img
+                  src="./assets/profile.jpg"
+                  alt="profile picture"
+                  class="profileImage"
+                />
+              </a>
+              <a
+                href="#"
+                title="View notifications"
+                class="statusIcon online"
+              ></a>
+              <div class="profileName friend">
+                <span>Prieten Noua</span>
+              </div>
+            </div>
+            <div class="friend">
+              <a href="">
+                <img
+                  src="./assets/profile.jpg"
+                  alt="profile picture"
+                  class="profileImage"
+                />
+              </a>
+              <a
+                href="#"
+                title="View notifications"
+                class="statusIcon offline"
+              ></a>
+              <div class="profileName friend">
+                <span>Prieten Zece</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <div class="groupConversations">
+          <h6>Group conversations</h6>
+          <dvi class="conversations">
+            <!-- <div class="friend">
+              <a href="">
+                <img
+                  src="./assets/profile.jpg"
+                  alt="profile picture"
+                  class="profileImage"
+                />
+              </a>
+              <a
+                href="#"
+                title="View notifications"
+                class="statusIcon offline"
+              ></a>
+              <div class="profileName friend">
+                <span>grup</span>
+              </div>
+            </div> -->
+
+            <div class="conversation">
+              <a href="">
+                <img
+                  src="./assets/profile.jpg"
+                  alt="profile picture"
+                  class="profileImage"
+                />
+              </a>
+              <div class="profileName friend">
+                <span>Grup Unu</span>
+              </div>
+            </div>
+
+            <div class="conversation">
+              <a href="">
+                <img
+                  src="./assets/profile.jpg"
+                  alt="profile picture"
+                  class="profileImage"
+                />
+              </a>
+              <div class="profileName friend">
+                <span>Grup Doi</span>
+              </div>
+            </div>
+
+            <div class="conversation">
+              <a href="">
+                <img
+                  src="./assets/profile.jpg"
+                  alt="profile picture"
+                  class="profileImage"
+                />
+              </a>
+              <div class="profileName friend">
+                <span>Grup Trei</span>
+              </div>
+            </div>
+          </dvi>
+
+          <div class="conversation">
+            <a href="">
+              <img
+                src="./assets/profile.jpg"
+                alt="profile picture"
+                class="profileImage"
+              />
+            </a>
+            <div class="profileName friend">
+              <span>Grup Cinci</span>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </main>
+
+    <footer>@SocialMedia</footer>
+
+    <script>
+      var slideIndex = 1;
+      showDivs(slideIndex);
+
+      function plusDivs(n) {
+        showDivs((slideIndex += n));
+      }
+
+      function currentDiv(n) {
+        showDivs((slideIndex = n));
+      }
+
+      function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("demo");
+        if (n > x.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = x.length;
+        }
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" w3-white", "");
+        }
+        x[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " w3-white";
+      }
+    </script>
+  </body>
+</html>
