@@ -1,22 +1,22 @@
-import "./Feature.scss";
+import './Feature.scss';
 
-const Feature = ({ name, action, toggleAction }) => {
-  //   const smartHomeApp = {
-  //     toggleLights: "Toggle Lights",
-  //     toggleAc: "Toggle AC",
-  //     startCleaning: "Start cleaning",
-  //     espresso: "Make coffe",
-  //   };
+const Feature = ({name, action, toggleAction}) => {
 
-  //   const { toggleLights, espresso } = smartHomeApp;
-  //   console.log(name, ' Feature');
+    // const smartHomeApp = {
+    //     toggleLights: 'Toggle Lights',
+    //     toggleAc: 'Toggle Ac',
+    //     startCleaning: 'Start Cleaning',
+    //     espresso: 'Make a coffee'
+    // }
 
-  //   console.log(toggleLights);
-  //   console.log(espresso);
+    // const {toggleLights, espresso} = smartHomeApp;
+    // console.log(name, ' Feature')
+    // console.log(toggleLights)
+    // console.log(espresso)
 
-  function featureButtonHandler() {
-    toggleAction(name);
-  }
+    function featureButtonHandler() {
+        toggleAction(name);
+    }
 
   return (
     <div className="feature">

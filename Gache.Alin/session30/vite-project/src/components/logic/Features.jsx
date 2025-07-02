@@ -1,6 +1,6 @@
 import Feature from "./Feature";
 
-function Features({ toggleAction }) {
+function Features({toggleAction}) {
   const FEATURES = [
     {
       name: "Toggle lights",
@@ -10,7 +10,7 @@ function Features({ toggleAction }) {
     },
     {
       name: "Toggle AC",
-      action: "Turn the AC on",
+      action: "Turn on the AC",
       state: false,
       id: 1,
     },
@@ -21,16 +21,16 @@ function Features({ toggleAction }) {
       id: 2,
     },
     {
-      name: "Coffe time ",
-      action: "Make a coffe",
+      name: "Coffee time",
+      action: "Make a coffee",
       state: false,
       id: 3,
     },
   ];
 
-  const toggleTheActionHandler = (value) => {
-    toggleAction(value);
-  };
+  const toggleActionHandler = (value) => {
+    toggleAction(value)
+  }
 
   return (
     <div className="features-container">
@@ -40,16 +40,17 @@ function Features({ toggleAction }) {
             name={feature.name}
             action={feature.action}
             key={feature.id}
-            toggleAction={toggleTheActionHandler}
+            toggleAction={toggleActionHandler}
           />
         );
       })}
 
-      {/* <Feature name={FEATURES[0].name} action={FEATURES[0].action} />
-      <Feature name={FEATURES[1].name} action={FEATURES[1].action} />
-      <Feature name={FEATURES[2].name} action={FEATURES[2].action} />
-      <Feature name={FEATURES[3].name} action={FEATURES[3].action} /> */}
+      {/* <Feature name={FEATURES[0].name} action={FEATURES[0].action}/>
+      <Feature name={FEATURES[1].name} action={FEATURES[1].action}/>
+      <Feature name={FEATURES[2].name} action={FEATURES[2].action}/>
+      <Feature name={FEATURES[3].name} action={FEATURES[3].action}/> */}
     </div>
   );
 }
+
 export default Features;
