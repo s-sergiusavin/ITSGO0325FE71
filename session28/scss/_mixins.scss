@@ -1,0 +1,13 @@
+@mixin box {
+    width: 5rem;
+    height: 5rem;
+    background-color: $globalRed;
+    margin: 0.5rem;
+}
+
+@mixin flexBox($direction) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction;
+  }
