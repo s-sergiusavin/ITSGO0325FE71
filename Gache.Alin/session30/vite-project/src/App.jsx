@@ -3,9 +3,11 @@ import './App.scss'
 import Features from './components/logic/Features'
 import Light from './components/ui/Light'
 import Room from './components/ui/Room';
+import Ac from './components/ui/Ac';
 
 function App() {
   let [lightsOn, setLightsOn] = useState(false)
+  let [acOn, setAcOn] = useState(false)
   // const [counter, setCounter] = useState(0);
   // const count = () => {
   //   setCounter(counter + 1)
@@ -15,6 +17,8 @@ function App() {
   const toggleActionHandler = (name) => {
     if (name === 'Toggle lights') {
       setLightsOn(!lightsOn)
+    }else if( name === 'Toggle AC'){
+      setAcOn(!acOn)
     }
   }
 
@@ -41,6 +45,7 @@ function App() {
     <div>
       <div className="ui-features">
         <Light lightsOn={lightsOn}/>
+        <Ac acOn={acOn}/>
         <Room status={0.7}/>
         {/* {counter} */}
       </div>
