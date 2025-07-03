@@ -627,6 +627,16 @@ svg {
   display: none;
 }
 
+/* .animatie {
+  transition: all 5s ease-in-out;
+  transform-origin: left top;
+  transform: scaleY(0);
+ }
+ 
+ .animatie:target {
+  transform: scaleY(1);
+} */
+ 
 .rightContent .requests {
   width: 100%;
 }
@@ -634,7 +644,7 @@ svg {
   display: flex;
   justify-content: start;
   align-items: center;
-  gap: 0.5rem;
+  gap: 1rem;
   margin: 0 0.5rem;
   height: 4rem;
 }

@@ -168,7 +168,7 @@
               </button>
               <div class="profileOptionsDropdown">
                 <button>Edit this post</button>
-                <button>Remove this post</button>
+                <button id="removePost">Remove this post</button>
               </div>
             </div>
           </div>
@@ -643,6 +643,7 @@
                       --bs-btn-padding-x: 0.5rem;
                       --bs-btn-font-size: 0.75rem;
                     "
+                    id="acceptButton"
                   >
                     Accept
                   </button>
@@ -655,6 +656,7 @@
                       --bs-btn-padding-x: 0.5rem;
                       --bs-btn-font-size: 0.75rem;
                     "
+                    id="declinedButton"
                   >
                     Refuse
                   </button>
@@ -700,7 +702,9 @@
               </div>
             </div>
           </div>
-          <div class="requestNotification">Cererea a fost acceptata</div>
+          <div class="requestNotification">
+            <span id="requestNotification"></span>
+          </div>
         </div>
 
         <hr />

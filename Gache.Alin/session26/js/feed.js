@@ -163,9 +163,9 @@ profileOptionsButton.addEventListener("click", function () {
     profileOptionsDropdown.style.display = "none";
   }
 });
-profileOptionsButton.addEventListener("blur", function () {
-  profileOptionsDropdown.style.display = "none";
-});
+// profileOptionsButton.addEventListener("blur", function () {
+//   profileOptionsDropdown.style.display = "none";
+// });
 
 const searchInput = document.querySelector(".searchInput");
 
@@ -229,6 +229,44 @@ async function filterData(searchTerm) {
   return response.json();
 }
 
+const acceptButton = document.getElementById("acceptButton");
+const declinedButton = document.getElementById("declinedButton");
+const requestNotification = document.getElementsByClassName(
+  "requestNotification"
+)[0];
+
+const request = document.getElementsByClassName("request")[0];
+
+acceptButton.addEventListener("click", function () {
+  requestNotification.innerText = "Cererea a fost acceptata";
+  requestNotification.style.display = "flex";
+  // requestNotification.classList.add = "animatie";
+
+  setTimeout(function () {
+    request.style.display = "none";
+    requestNotification.style.display = "none";
+  }, 1000);
+});
+
+declinedButton.addEventListener("click", function () {
+  requestNotification.innerText = "Cererea a fost respinsa";
+  requestNotification.style.display = "flex";
+
+  setTimeout(function () {
+    request.style.display = "none";
+    requestNotification.style.display = "none";
+  }, 1000);
+});
+
+const removePost = document.getElementById("removePost");
+const post = document.querySelector(".post");
+
+removePost.addEventListener("click", function () {
+  // debugger
+  // console.log("test");
+  post.style.display = "none";
+});
+
 const themeButton = document.getElementById("themeButton");
 // const header = document.getElementsByTagName("header")[0];
 const content = document.querySelectorAll(
@@ -242,6 +280,7 @@ let toggleDark = false;
 themeButton.addEventListener("click", function () {
   toggleDark = !toggleDark;
   if (toggleDark) {
+    requestNotification.classList.add("black");
     content.forEach((elements) => {
       elements.classList.add("black");
     });
@@ -249,6 +288,7 @@ themeButton.addEventListener("click", function () {
       elements.classList.add("contentComments");
     });
   } else {
+    requestNotification.classList.remove("black");
     content.forEach((elements) => {
       elements.classList.remove("black");
     });
