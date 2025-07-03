@@ -79,6 +79,9 @@
             </button>
             <div class="accountSettingsMenu">
               <button>Profile Settings</button
+              ><button id="themeButton">
+                <i class="bi bi-sun"></i> /
+                <i class="bi bi-sun-fill"></i></button
               ><button id="logoutButton">Logout</button>
             </div>
           </div>
@@ -146,7 +149,7 @@
         <div class="post">
           <div class="postHeader">
             <div class="profileUserInfo">
-              <a href="">
+              <a href="#">
                 <img
                   src="../assets/profile.jpg"
                   alt="profile picture"
@@ -244,12 +247,17 @@
                 class="profileImage"
               />
             </a>
-            <input
-              type="text"
-              placeholder="Adauga un comentariu"
-              class="newCommentField"
-              id="commentInput"
-            />
+
+            <div class="postCommentSection">
+              <input
+                type="text"
+                placeholder="Adauga un comentariu"
+                class="newCommentField"
+                id="commentInput"
+              />
+              <p id="fieldErrorMessage" class="fieldError"></p>
+            </div>
+
             <button class="insertCommentButton" id="commentInputButton">
               <i class="bi bi-send-plus"></i>
             </button>
@@ -615,81 +623,86 @@
             <h6>Friend Requests</h6>
             <a href="landingPage.html">View all</a>
           </div>
-          <div class="request">
-            <a href="">
-              <img
-                src="../assets/profile.jpg"
-                alt="profile picture"
-                class="profileImage"
-              />
-            </a>
-            <div class="profileName">
-              <span>Cerere Unu</span>
-              <div class="requestButons">
-                <button
-                  type="button"
-                  class="btn btn-outline-primary"
-                  style="
-                    --bs-btn-padding-y: 0.25rem;
-                    --bs-btn-padding-x: 0.5rem;
-                    --bs-btn-font-size: 0.75rem;
-                  "
-                >
-                  Accept
-                </button>
+          <div class="requests">
+            <div class="request">
+              <a href="">
+                <img
+                  src="../assets/profile.jpg"
+                  alt="profile picture"
+                  class="profileImage"
+                />
+              </a>
+              <div class="profileName">
+                <span>Cerere Unu</span>
+                <div class="requestButons">
+                  <button
+                    type="button"
+                    class="btn btn-outline-primary"
+                    style="
+                      --bs-btn-padding-y: 0.25rem;
+                      --bs-btn-padding-x: 0.5rem;
+                      --bs-btn-font-size: 0.75rem;
+                    "
+                  >
+                    Accept
+                  </button>
 
-                <button
-                  type="button"
-                  class="btn btn-outline-secondary"
-                  style="
-                    --bs-btn-padding-y: 0.25rem;
-                    --bs-btn-padding-x: 0.5rem;
-                    --bs-btn-font-size: 0.75rem;
-                  "
-                >
-                  Refuse
-                </button>
+                  <button
+                    type="button"
+                    class="btn btn-outline-secondary"
+                    style="
+                      --bs-btn-padding-y: 0.25rem;
+                      --bs-btn-padding-x: 0.5rem;
+                      --bs-btn-font-size: 0.75rem;
+                    "
+                  >
+                    Refuse
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="request">
+              <a href="">
+                <img
+                  src="../assets/profile.jpg"
+                  alt="profile picture"
+                  class="profileImage"
+                />
+              </a>
+              <div class="profileName">
+                <span>Cerere Doi</span>
+                <div class="requestButons">
+                  <button
+                    type="button"
+                    class="btn btn-outline-primary"
+                    style="
+                      --bs-btn-padding-y: 0.25rem;
+                      --bs-btn-padding-x: 0.5rem;
+                      --bs-btn-font-size: 0.75rem;
+                    "
+                  >
+                    Accept
+                  </button>
+
+                  <button
+                    type="button"
+                    class="btn btn-outline-secondary"
+                    style="
+                      --bs-btn-padding-y: 0.25rem;
+                      --bs-btn-padding-x: 0.5rem;
+                      --bs-btn-font-size: 0.75rem;
+                    "
+                  >
+                    Refuse
+                  </button>
+                </div>
               </div>
             </div>
           </div>
-          <div class="request">
-            <a href="">
-              <img
-                src="../assets/profile.jpg"
-                alt="profile picture"
-                class="profileImage"
-              />
-            </a>
-            <div class="profileName">
-              <span>Cerere Doi</span>
-              <div class="requestButons">
-                <button
-                  type="button"
-                  class="btn btn-outline-primary"
-                  style="
-                    --bs-btn-padding-y: 0.25rem;
-                    --bs-btn-padding-x: 0.5rem;
-                    --bs-btn-font-size: 0.75rem;
-                  "
-                >
-                  Accept
-                </button>
-
-                <button
-                  type="button"
-                  class="btn btn-outline-secondary"
-                  style="
-                    --bs-btn-padding-y: 0.25rem;
-                    --bs-btn-padding-x: 0.5rem;
-                    --bs-btn-font-size: 0.75rem;
-                  "
-                >
-                  Refuse
-                </button>
-              </div>
-            </div>
-          </div>
+          <div class="requestNotification">Cererea a fost acceptata</div>
         </div>
+
         <hr />
 
         <div class="birthdaysContent">

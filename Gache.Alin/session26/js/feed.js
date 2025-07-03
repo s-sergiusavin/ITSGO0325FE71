@@ -73,6 +73,8 @@ const commentInput = document.getElementById("commentInput");
 const commentMessage = document.getElementById("commentMessage");
 const removeCommentButton = document.getElementById("removeCommentButton");
 
+const fieldErrorMessage = document.getElementById("fieldErrorMessage");
+
 const initialComment = commentMessage.innerText;
 commentMessage.innerText =
   localStorage.getItem("comment") || commentMessage.innerText;
@@ -82,9 +84,16 @@ commentButton.addEventListener("click", function () {
 });
 
 function setComment() {
-  commentMessage.innerText = commentInput.value;
-  localStorage.setItem("comment", JSON.stringify(commentInput.value));
-  commentInput.value = "";
+  if (commentInput.value.trim() !== "") {
+    commentMessage.innerText = commentInput.value;
+    localStorage.setItem("comment", JSON.stringify(commentInput.value));
+    commentInput.value = "";
+    fieldErrorMessage.style.display = "none";
+    fieldErrorMessage.innerText = "";
+  } else {
+    fieldErrorMessage.style.display = "block";
+    fieldErrorMessage.innerText = "This field cannot be empty";
+  }
 }
 
 removeCommentButton.addEventListener("click", () => {
@@ -215,8 +224,37 @@ async function filterData(searchTerm) {
     searchTerm: searchTerm,
   };
 
-  
   const response = await fetch(`${filteredPostUrl}?searchTerm=${serachterm}`);
 
   return response.json();
 }
+
+const themeButton = document.getElementById("themeButton");
+// const header = document.getElementsByTagName("header")[0];
+const content = document.querySelectorAll(
+  "header, .leftContent, .rightContent, .post, .contentBtn, .birthday a ,a, .postCommentSection, .bi-send-plus"
+);
+const contentComments = document.querySelectorAll(
+  "header .mainSearch .searchInput, .mainContent .post .commentSection .newCommentField  ,.reaction, .mainContent .post .userComments .userCommentText  "
+);
+
+let toggleDark = false;
+themeButton.addEventListener("click", function () {
+  toggleDark = !toggleDark;
+  if (toggleDark) {
+    content.forEach((elements) => {
+      elements.classList.add("black");
+    });
+    contentComments.forEach((elements) => {
+      elements.classList.add("contentComments");
+    });
+  } else {
+    content.forEach((elements) => {
+      elements.classList.remove("black");
+    });
+
+    contentComments.forEach((elements) => {
+      elements.classList.remove("contentComments");
+    });
+  }
+});

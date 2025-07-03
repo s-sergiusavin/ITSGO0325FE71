@@ -376,6 +376,7 @@ main {
   bottom: -1rem;
   right: 1rem;
   background-color: white;
+  color: black;
   border-radius: 50%;
   display: flex;
   cursor: pointer;
@@ -433,21 +434,24 @@ main {
   justify-content: space-evenly;
   padding-bottom: 1rem;
   align-items: center;
-  gap: 1rem;
+  /* gap: 1rem; */
 }
 
 /* .mainContent .post .commentSection .profileImage {
   width: 3rem;
   border-radius: 50%;
 } */
-
+.mainContent .post .commentSection .postCommentSection {
+  width: 88%;
+}
 .mainContent .post .commentSection .newCommentField {
-  width: 80%;
+  width: 100%;
   border-radius: 0.3rem;
   padding: 0.5rem 1rem;
   background-color: #dcf2f9;
   border: 1px solid #888;
   cursor: pointer;
+  display: flex;
 }
 
 .mainContent .post .commentSection .newCommentField::placeholder {
@@ -460,6 +464,13 @@ main {
 
 .mainContent .post .commentSection .newCommentField:focus {
   outline-color: royalblue;
+}
+
+.fieldError {
+  color: red;
+  font-size: 14px;
+  display: none;
+  margin-top: 5px;
 }
 
 .mainContent .post .commentSection .insertCommentButton {
@@ -487,6 +498,7 @@ main {
 .profileImage {
   width: 3rem;
   border-radius: 50%;
+  margin-right: 0.5rem;
 }
 .mainContent .post .userComments .userCommentsContent .profileUserComment {
   margin-bottom: 0.5rem;
@@ -598,9 +610,27 @@ svg {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  position: relative;
 }
 
-.rightContent .request {
+.rightContent .friendRequestsContent .requestNotification {
+  width: 17rem;
+  height: 3rem;
+  position: absolute;
+  background-color: #98bec4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 1.3rem;
+  left: 0.5rem;
+  border-radius: 0.5rem;
+  display: none;
+}
+
+.rightContent .requests {
+  width: 100%;
+}
+.rightContent .requests .request {
   display: flex;
   justify-content: start;
   align-items: center;
@@ -786,4 +816,38 @@ svg {
   .mainContent {
     width: 50%;
   }
+}
+
+.black {
+  background-color: #272626 !important;
+  color: #a8a8a8;
+}
+
+.black span {
+  color: #a8a8a8;
+}
+
+.black .bi-send-plus {
+  color: #a8a8a8;
+  background-color: #272626 !important;
+}
+
+.black button:hover {
+  background-color: #2e2d2d !important;
+}
+
+.contentComments {
+  background-color: #272630 !important;
+  color: #a8a8a8 !important ;
+}
+
+.contentComments:hover {
+  background-color: #211a66 !important;
+  color: #a8a8a8 !important ;
+}
+.contentComments::placeholder {
+  color: white !important ;
+}
+.contentComments:focus {
+  background-color: #272630 !important;
 }
