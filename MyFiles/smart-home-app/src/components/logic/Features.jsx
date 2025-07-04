@@ -3,7 +3,7 @@ import Feature from "./Feature";
 function Features({toggleAction}) {
   const FEATURES = [
     {
-      name: "Toggle lights",
+      name: "Toggle Lights",
       action: "Turn the lights on",
       state: false,
       id: 0,

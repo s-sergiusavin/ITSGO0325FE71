@@ -3,9 +3,11 @@ import './App.scss'
 import Features from './components/logic/Features'
 import Light from './components/ui/Light'
 import Room from './components/ui/Room';
+import AC from './components/ui/AC';
 
 function App() {
   let [lightsOn, setLightsOn] = useState(false)
+  const [acOn, setAcOn] = useState(false);
   // const [counter, setCounter] = useState(0);
   // const count = () => {
   //   setCounter(counter + 1)
@@ -13,10 +15,14 @@ function App() {
   // }
 
   const toggleActionHandler = (name) => {
-    if (name === 'Toggle lights') {
-      setLightsOn(!lightsOn)
+    if (name === "Toggle Lights") {
+      setLightsOn(prev => !prev);
     }
-  }
+    if (name === "Toggle AC") {
+      setAcOn(prev => !prev);
+    }
+    console.log(name + ' clicked');
+  };
 
   /**
    * Destructuring explained
@@ -41,6 +47,7 @@ function App() {
     <div>
       <div className="ui-features">
         <Light lightsOn={lightsOn}/>
+        <AC acOn={acOn}/>
         <Room status={0.7}/>
         {/* {counter} */}
       </div>
@@ -50,4 +57,4 @@ function App() {
   )
 }
 
-export default App
+export default App;
