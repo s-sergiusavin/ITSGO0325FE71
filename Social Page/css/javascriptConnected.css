@@ -1,0 +1,106 @@
+/* Left icons */
+
+.iconToChangeColor {
+    background-color: orange;
+    color: white;
+    width: 2.5rem;
+    display: flex;
+    height: 2.5rem;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.3rem;
+
+}
+
+/* Mini calendar */
+
+#calendarContainer {
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    left: -450%;
+    margin-left: 10px;
+    display: block;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+.monthName {
+    margin: 0;
+    background-color: orangered;
+    color: white;
+    padding: 0.5rem;
+    font-size: 1.7rem;
+    font-weight: bold;
+}
+
+.dayName {
+    font-size: 1rem;
+    color: darkgray;
+}
+
+.dayNumber {
+    font-size: 4rem;
+    margin: 0;
+    font-weight: bold;
+}
+
+.year {
+    margin: 1.2rem;
+    font-size: 1.2rem;
+    color: darkgray;
+    font-weight: 500;
+}
+
+#marketplaceIcon {
+    position: relative;
+    display: inline-block;
+}
+
+/* Exchanger */
+
+.exchanger {
+    padding: 1.2rem;
+    width: 100%;
+    display: block;
+    position: absolute;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: -450%;
+    margin-left: 10px;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .3);
+    /* z-index: 1000; */
+
+}
+
+.placeholderEuro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.input {
+    padding: 0.8rem;
+    width: 70%;
+    background: rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.5);
+    border-radius: 0.7rem;
+    color: darkgreen;
+    /* outline: none; */
+}
+
+.error {
+    color: red;
+}

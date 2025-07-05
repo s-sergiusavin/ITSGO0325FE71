@@ -303,15 +303,15 @@ main {
 }
 
 .galleryImageFriends {
-    height: 2.7rem;
-    width: 2.7rem;
+    height: 3rem;
+    width: 3rem;
     border-radius: 50%;
 }
 
 .moreFriends {
     background-color: orange;
-    height: 2.7rem;
-    width: 2.7rem;
+    height: 3rem;
+    width: 3rem;
     border-radius: 50%;
     display: flex;
     justify-content: center;

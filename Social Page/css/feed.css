@@ -412,6 +412,20 @@ svg {
 
 /* Left Side */
 
+.myProfile {
+  background-color: white;
+  border-radius: 1rem;
+}
+
+.pToEdit {
+  background-color: orange;
+  height: 3rem;
+  width: 100%;
+  border-top-left-radius: 1.2rem ;
+  border-top-right-radius: 1.2rem;
+}
+
+
 .infoLeftMenu {
   display: flex;
   flex-direction: column;
@@ -493,6 +507,9 @@ svg {
   height: 30rem;
   background-color: white;
   border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  margin-top: 1.5rem;
+  
 }
 
 .titleWhoToFollow {
@@ -515,9 +532,17 @@ svg {
 .celebrity {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 1rem;
   padding: 0.5rem;
 }
+
+.profileInfo {
+  display: flex;
+  gap: 1rem;
+}
+
+
 
 .viewMore {
   display: flex;
@@ -540,6 +565,7 @@ svg {
 .addCelebrity {
   color: #4F95DA;
   font-size: 1.5rem;
+  margin-right: 1rem;
 }
 
 .addCelebrity:hover {
@@ -554,6 +580,7 @@ svg {
   margin-top: 2rem;
   padding-top: 1rem;
   overflow-y: scroll;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .spanTodaysNews {
@@ -667,6 +694,7 @@ svg {
   border-radius: 1rem;
   margin-top: 2rem;
   padding-top: 0.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .Art,
