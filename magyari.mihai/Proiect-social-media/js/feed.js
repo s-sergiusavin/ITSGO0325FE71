@@ -29,6 +29,27 @@ likeBtn.addEventListener('click', () => {
 
 })
 
+
+let isSaved = false;
+
+const saveBtn = document.getElementById('saveBtn');
+
+saveBtn.addEventListener('click', () => {
+    isSaved = !isSaved;
+
+    saveImg = document.getElementById('saveImg');
+    saveText = document.getElementById('saveText');
+
+    if (isSaved) {
+        saveText.style.color = '#5FA8D3'
+    } else {
+        saveText.style.color = 'black'
+    }
+
+    saveImg.classList.toggle('liked');
+
+})
+
 const accountSettingsBtn = document.getElementById('accountSettingsBtn');
 const accountSettingsMenu = document.getElementsByClassName('accountSettingsMenu')[0];
 
@@ -154,4 +175,11 @@ newCommentForm.addEventListener('submit', (event) => {
 
     document.getElementById('newCommentText').value = ''
 
+})
+
+
+const commentBtn = document.getElementById('commBtn')
+commentBtn.addEventListener('click', () => {
+    const commentText = document.getElementById('newCommentText')
+    commentText.focus();
 })
