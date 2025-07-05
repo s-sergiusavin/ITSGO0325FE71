@@ -2,10 +2,12 @@ import { useState } from 'react';
 import './App.scss'
 import Features from './components/logic/Features'
 import Light from './components/ui/Light'
-import Room from './components/ui/room';
+import Room from './components/ui/Room';
+import AirCon from './components/ui/AirCon';
 
 function App() {
   const [lightsOn, setLightsOn] = useState(false)
+  const [acOn, turnOnAc] = useState(false)
 
   // const [counter, setCounter] = useState(0);
 
@@ -18,9 +20,9 @@ function App() {
 
     if (name === 'Toggle Lights') {
       setLightsOn(!lightsOn)
+    } else if (name === 'Toggle A/C'){
+      turnOnAc(!acOn)
     }
-
-    console.log(feature + ` clicked`)
   }
 
 
@@ -50,6 +52,7 @@ function App() {
     <div>
       <div className="ui-features">
         <Light lightsOn={lightsOn} />
+        <AirCon acOn={acOn}/>
         <Room status={0.7} />
         {/* {counter} */}
       </div>
