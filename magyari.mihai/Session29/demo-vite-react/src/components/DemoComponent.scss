@@ -1,5 +1,30 @@
 .demo-component {
-    border: 2px solid blue;
+    border: 1px solid #e8f813;
     margin: 0.5rem;
     padding: 0.5rem;
+    background-color: #c5752a;
+    font-size: larger;
+    font-family: sans-serif;
+    color: rgb(255, 255, 255);
+    border-radius: 1rem 0rem 1rem 0rem;
+
+    .cityElem {
+        font-size: larger;
+        font-weight: 500;
+        font-style: oblique;
+        text-transform: uppercase;
+    }
+
+    .cityBtn {
+        margin-top: 0.5rem;
+        background-color: rgb(72, 6, 196);
+    }
+
+    .birthdayBtn {
+         margin-top: 0.5rem;
+        background-color: rgb(85, 145, 241);
+    }
+
+
 }
+

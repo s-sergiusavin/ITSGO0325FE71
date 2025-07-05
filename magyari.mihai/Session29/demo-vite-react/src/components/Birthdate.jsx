@@ -10,8 +10,8 @@ function Birthdate({ birthdate, loggerHandler }) {
 
     return <div>
         <p>Birthday: {birthdate.toLocaleDateString()}</p>
-        <p>Age: {age}</p>
-        <button onClick={doSomething}>Do something</button>
+        <p>Age: {age} years old</p>
+        <button onClick={doSomething}>Log the age in console</button>
     </div>
 }
 
