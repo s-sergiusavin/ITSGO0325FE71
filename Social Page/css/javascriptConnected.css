@@ -1,16 +1,79 @@
 /* Left icons */
 
+.javas {
+    display: flex;
+    /* flex-direction: column; */
+    gap: 2rem;
+}
+
+.iconLeftBar {
+    display: flex;
+    gap: 1rem;
+    font-size: 1.2rem;
+    /* background-color: rgba(251, 255, 226, 0.753); */
+    background-color: rgb(255, 227, 238);
+    box-shadow: 0 0.2rem 0.6rem rgba(0, 0, 0, 0.3);
+    border: black;
+    border-radius: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    font-family: sans-serif;
+    z-index: 1001;
+    height: 2rem;
+}
+
+
+.iconLeftBar:hover {
+    background-color: orange;
+}
+
 .iconToChangeColor {
     background-color: orange;
     color: white;
-    width: 2.5rem;
+    width: max-content;
     display: flex;
     height: 2.5rem;
     justify-content: center;
     align-items: center;
     border-radius: 0.3rem;
-
 }
+
+/* Dark mode */
+
+.dark-mode {
+    background-color: #121212;
+}
+
+
+.dark-mode.iconLeftBar {
+    background-color: white;
+    color: black
+}
+
+.dark-mode .sidebar {
+    background-color: rgb(255, 232, 188);
+}
+
+.dark-mode .sidebar .logo-details #btn {
+    color: black;
+}
+
+.dark-mode .sidebar .profile #log_out {
+    background-color: rgb(255, 232, 188);
+    border-radius: 0%;
+    color: ;
+}
+
+.dark-mode .bi-box-arrow-right {
+    color: black;
+}
+
+
 
 /* Mini calendar */
 
@@ -19,15 +82,17 @@
     position: absolute;
     text-align: center;
     top: 0;
-    left: -450%;
-    margin-left: 10px;
-    display: block;
+    /* margin-top: 1rem; */
+    left: -425%;
+    margin-left: 35px;
+    display: none;
     background-color: white;
     border: 1px solid #ccc;
     padding: 10px;
     border-radius: 1rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     z-index: 1000;
+    
 }
 
 .monthName {
@@ -67,14 +132,14 @@
 .exchanger {
     padding: 1.2rem;
     width: 100%;
-    display: block;
+    display: none;
     position: absolute;
     width: 100%;
-    position: absolute;
     top: 0;
-    left: -450%;
-    margin-left: 10px;
-    background-color: white;
+    /* margin-top: 20rem; */
+    left: -425%;
+    margin-left: 35px;
+    background-color: rgb(244, 235, 203);
     border: 1px solid #ccc;
     padding: 10px;
     border-radius: 1rem;
@@ -103,4 +168,57 @@
 
 .error {
     color: red;
+}
+
+
+/**
+Joke Genrator
+ /*  */
+
+.jokeGeneratorContainer {
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border: 1px solid #ccc;
+    padding: 3rem 1.2rem;
+    /* margin-top: 20rem; */
+    left: -425%;
+    text-align: center;
+    max-width: 100%;
+    margin-left: 35px;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    display: none;
+    z-index: 1000;
+    /* display: none; */
+
+}
+
+
+.joke {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    margin: 3rem auto;
+}
+
+.btn {
+    background-color: rgb(57, 255, 46);
+    color: #a354fe;
+    font-weight: 700;
+    border: 0;
+    width: auto;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    /* padding-top: 0.2rem; */
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+.btn:focus {
+    outline: 0;
 }
