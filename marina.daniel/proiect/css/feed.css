@@ -591,49 +591,55 @@ color: black;
 
 
 .insertCommentButton {
-    width: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .center {
-    width: 5rem;
-    height: 1.5rem;
+  width: 5rem;
+  height: 2rem;
 }
 
 .btn {
-    width: 5rem;
-    height: 1.5rem;
-    cursor: pointer;
-    background: transparent;
-    border: 1px solid #91C9FF;
-    outline: none;
-    transition: 1s ease-in-out;
+  width: 5rem;
+  height: 1.5rem;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid #91c9ff;
+  outline: none;
+  transition: 1s ease-in-out;
 }
 
 svg {
-    position: absolute;
-    left: 0;
-    top: 0;
-    fill: none;
-    stroke: orange;
-    stroke-dasharray: 150 480;
-    stroke-dashoffset: 150;
-    transition: 1s ease-in-out;
+  position: absolute;
+  left: 0;
+  top: 0;
+  fill: none;
+  stroke: orange;
+  stroke-dasharray: 150 480;
+  stroke-dashoffset: 150;
+  transition: 1s ease-in-out;
 }
 
 .btn:hover {
-    transition: 1s ease-in-out;
-    background: #4F95DA;
+  transition: 1s ease-in-out;
+  background: #4f95da;
 }
 
 .btn:hover svg {
-    stroke-dashoffset: -480;
+  stroke-dashoffset: -480;
 }
 
-.btn span {
-    color: white;
-    font-size: 18px;
-    font-weight: 100;
+.btn i {
+  color: orange;
+  font-size: 18px;
+  font-weight: 100;
+}
+
+@media only screen and (max-width: 600px) {
+  .rightContent {
+    display: none;
+  }
 }

@@ -202,7 +202,7 @@ async function filterData(searchTerm) {
         searchTerm: searchTerm
     }
 
-    const response = await fetch(`${filteredPostUrl}?searchTerm=${serachterm}`)
+    const response = await fetch(`${filteredPostUrl}?searchTerm=${searchterm}`)
 
     return response.json()
 
