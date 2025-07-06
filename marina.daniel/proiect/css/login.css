@@ -7,9 +7,9 @@ a {
 }
 
 .formContainer {
-    background-color: rgb(59, 184, 167);
+    background-color: teal;
     color: white;
-    width: 90%;
+    width: 95%;
     max-width: 30rem;
     border-radius: 0.5rem;
     box-shadow: 0 1px 4px #888;
@@ -18,9 +18,13 @@ a {
     margin: 5rem auto;
 }
 
-.form {
+form {
     display: flex;
     flex-direction: column;
+}
+
+form #error {
+    display: none;
 }
 
 form .formField {
@@ -36,23 +40,23 @@ form .formField input {
     border: 2px solid white;
 }
 
-
 form .formField label {
     font-weight: bold;
-    font-variant: normal;
+    font-variant: small-caps;
+    font-size: 1.2rem;
 }
 
-form .formField.rememberUderField {
+form .formField.remeberUserField {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-form .formField.rememberUderField input {
+form .formField.remeberUserField input {
     width: 10%;
 }
 
-form .formField.rememberUderField label {
+form .formField.remeberUserField label {
     font-size: 0.8rem;
     font-variant: normal;
     cursor: pointer;
@@ -67,18 +71,18 @@ form .loginButton {
     cursor: pointer;
     margin-bottom: 1rem;
     font-size: 1.2rem;
-
 }
 
 form .loginButton:hover {
     background-color: lightblue;
     border: cadetblue;
     color: black;
+    border: 1px solid cadetblue;
     font-weight: bold;
 }
 
 a strong {
-    color: green;
+    color: greenyellow;
 }
 
 .registerButton {
@@ -86,7 +90,7 @@ a strong {
     border: 1px solid white;
     padding: 0.5rem 2rem;
     display: block;
-    margin: auto;
+    margin: 0 auto;
     border-radius: 0.3rem;
     width: 75%;
     margin-bottom: 1rem;
