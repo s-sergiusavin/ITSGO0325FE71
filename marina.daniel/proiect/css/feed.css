@@ -53,6 +53,35 @@ header .links {
     display: flex;
 }
 
+.accountSettings {
+    position: relative;
+}
+
+.accountSettings button {
+    cursor: pointer;
+    border: none;
+    background-color: inherit;
+}
+
+.accountSettings .accountSettingsMenu {
+    display: none;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 4rem;
+    right: 0;
+    width: 7rem;
+    background-color: lightgray;
+}
+
+.accountSettings .accountSettingsMenu button {
+    padding: 0.5rem 0;
+}
+
+.accountSettings .accountSettingsMenu button:hover {
+    background-color: #6ffafa;
+}
+
 header .navigation>li>a {
     border-radius: 50%;
     background-color: aqua;
