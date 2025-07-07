@@ -145,7 +145,7 @@
         </div>
       </aside>
 
-      <section class="mainContent">
+      <section class="mainContent" id="mainContentPost">
         <div class="post">
           <div class="postHeader">
             <div class="profileUserInfo">
@@ -616,6 +616,160 @@
             </div>
           </div>
         </div>
+
+        <div class="post">
+          <div class="postHeader">
+            <div class="profileUserInfo">
+              <a href="#">
+                <img
+                  src="../assets/profile.jpg"
+                  alt="profile picture"
+                  class="profileImage"
+                  id="profilePic"
+                />
+              </a>
+              <div class="profileName">
+                <span id="userName"></span>
+                <span id="postDate">16 Apr 2025</span>
+              </div>
+            </div>
+
+            <div class="profileOptionsWrapper">
+              <button class="profileOptions">
+                <i class="bi bi-three-dots"></i>
+              </button>
+              <div class="profileOptionsDropdown">
+                <button>Edit this post</button>
+                <button id="removePost">Remove this post</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="content">
+            <div class="imgWrapper">
+              <img
+                src="../assets/city.jpeg"
+                alt="post content picture"
+                class="imgContent"
+              />
+
+              <div class="infoIconWrapper">
+                <i class="bi bi-info-circle infoIcon" tabindex="1"></i>
+                <p class="infoMessage" >
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Repellendus et deleniti commodi nisi nobis accusantium sed
+                  reprehenderit voluptate, optio aspernatur quisquam eveniet
+                  dicta ipsum quos doloremque quibusdam possimus? Officia,
+                  harum.
+                  <a href="landingPage.html">Read more...</a>
+                </p>
+              </div>
+            </div>
+
+            <strong class="postTitle" id="postTitle">Titlul postarii</strong>
+
+            <p class="postDescription" id="postDescription">
+              Aceasta este prima postare facuta pe reteaua de socializare create
+              de mine in timpul cursului de Front End Development
+            </p>
+
+            <a href="landingPage.html"><strong>Read more...</strong></a>
+          </div>
+
+          <div class="reacts">
+            <div class="likesInfo">
+              <!-- <span>😍</span>
+              <span>&#128525;</span> -->
+              <i class="bi bi-hand-thumbs-up reactsIcons"></i>
+              <span id="likesNumber"> </span> <span> likes</span>
+            </div>
+
+            <div class="commentsinfo">
+              <span id="shersNumber"></span> <span> shares</span>
+              <i class="bi bi-send reactsIcons"></i>
+            </div>
+          </div>
+
+          <hr />
+
+          <div class="reactsActions">
+            <ul class="actions">
+              <li class="reaction" id="likeButton">
+                <i class="bi bi-hand-thumbs-up"></i>
+                <span>Like</span>
+              </li>
+              <li class="reaction" id="commentButton">
+                <i class="bi bi-chat-text"></i>
+                <span>Comments</span>
+              </li>
+              <li class="reaction" id="shareButton">
+                <i class="bi bi-send"></i>
+                <span>Share</span>
+              </li>
+            </ul>
+          </div>
+
+          <hr />
+
+          <div class="commentSection">
+            <a href="">
+              <img
+                src="../assets/profile.jpg"
+                alt="profile picture"
+                class="profileImage"
+              />
+            </a>
+
+            <div class="postCommentSection">
+              <input
+                type="text"
+                placeholder="Adauga un comentariu"
+                class="newCommentField"
+                id="commentInput"
+              />
+              <p id="fieldErrorMessage" class="fieldError"></p>
+            </div>
+
+            <button class="insertCommentButton" id="commentInputButton">
+              <i class="bi bi-send-plus"></i>
+            </button>
+          </div>
+
+          <div class="userComments">
+            <div class="userCommentsContent">
+              <div class="profileUserComment">
+                <a href="">
+                  <img
+                    src="../assets/profile.jpg"
+                    alt="profile picture"
+                    class="profileImage"
+                  />
+                </a>
+                <span id="friendUserName">User Name</span>
+              </div>
+
+              <div class="userCommentText">
+
+                <span id="commentMessageNewPost">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Porro consequatur nemo nisi quasi dignissimos quisquam
+                  explicabo suscipit possimus modi similique mollitia voluptatem
+                  molestias ipsam, excepturi illum? Adipisci aperiam qui
+                  voluptatem.
+                </span>
+
+                <div class="emojiReaction">&#128526;</div>
+                <span id="removeCommentButton">Remove this comment</span>
+              </div>
+
+              <div class="commentReaction">
+                <strong class="commentReactionButton">Like</strong>
+                <strong class="commentReactionButton">Comment</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </section>
       <aside class="rightContent">
         <div class="friendRequestsContent">
@@ -1043,5 +1197,6 @@
       }
     </script>
     <script src="../js/feed.js"></script>
+    <script src="../js/feedTest.js"></script>
   </body>
 </html>
