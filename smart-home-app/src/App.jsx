@@ -1,51 +1,102 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import './App.scss'
 import Features from './components/logic/Features'
 import Light from './components/ui/Light'
 import Room from './components/ui/Room';
+import Ac from './components/ui/Ac';
 
 function App() {
-  let [lightsOn, setLightsOn] = useState(false)
-  // const [counter, setCounter] = useState(0);
-  // const count = () => {
-  //   setCounter(counter + 1)
-  //   console.log(counter)
-  // }
+  // Correct way of managing states
+  const [lightsOn, setLightsOn] = useState(false);
+  const [acOn, setAcOn] = useState(false);
+  const [dirtProgress, setDirtProgress] = useState({
+    status: 0,
+    cleaned: 0
+  })
 
-  const toggleActionHandler = (name) => {
-    if (name === 'Toggle lights') {
-      setLightsOn(!lightsOn)
+  // bad example: Nu folositi state-uri care nu au legatura intre ele, in acelasi obiect
+  const [actions, setActions] = useState({
+    lightState: false,
+    acState: false,
+    dirtStatus: 0,
+    cleaned: 0
+  });
+
+  /** Use effect model */
+  // useEffect( () => {
+  //   console.log('Éffect triggered');
+
+  //   return () => {
+  //     console.log('Component Unmount');
+  //   }
+  // }, [lightsOn]);
+
+  let dirtInterval = useRef();
+
+  useEffect( () => {
+    dirtInterval.current = setInterval( () => {
+      setDirtProgress( prevState => {
+        console.log(prevState.status)
+        if (prevState.status > 1) {
+          clearInterval(dirtInterval.current)
+        }
+        return {
+          ...prevState,
+          status: prevState.status + 0.1
+        }
+      })
+    }, 2000);
+
+    return () => {
+      clearInterval(dirtInterval.current)
     }
+  }, [dirtProgress.cleaned])
+
+  const toggleLights = () => {
+    setLightsOn((prevState) => {
+      return !prevState
+    });
   }
 
-  /**
-   * Destructuring explained
-   */
+  const toggleAc = () => {
+    setAcOn((prevState) => {
+      return !prevState
+    });
+  }
 
-  // function returnPuppy() {
-  //   const puppy = {
-  //     name: 'Rex'
-  //   }
+  const startCleaning = () => {
+    setDirtProgress(prevState => {
+      return {
+        ...prevState,
+        status: 0,
+        cleaned: prevState.cleaned + 1
+      }
+    })
+  }
 
-  //   function changePuppyName() {
-  //     puppy.name = 'Azorel';
-  //   }
+  const toggleActionHandler = (name) => {
+    switch (name) {
+      case 'Toggle lights':
+        toggleLights();
+        break;
+      case 'Toggle AC':
+        toggleAc();
+        break;
+      case 'Clean':
+        startCleaning();
+        break;
 
-  //   return [puppy, changePuppyName];
-  // }
-  // const [myPuppy, myFunction] = returnPuppy();
-  // console.log(myPuppy)
-  // console.log(myFunction)
+    }
+  }
 
   return (
     <div>
       <div className="ui-features">
-        <Light lightsOn={lightsOn}/>
-        <Room status={0.7}/>
-        {/* {counter} */}
+        <Light lightsOn={lightsOn} />
+        <Room status={dirtProgress.status} />
+        <Ac acOn={acOn} />
       </div>
-      <Features toggleAction={toggleActionHandler}/>
-      {/* <button onClick={count}>Count</button> */}
+      <Features toggleAction={toggleActionHandler} />
     </div>
   )
 }
