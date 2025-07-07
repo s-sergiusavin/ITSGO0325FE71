@@ -828,6 +828,8 @@ svg {
   }
 }
 
+
+
 .black {
   background-color: #272626 !important;
   color: #a8a8a8;
@@ -843,7 +845,7 @@ svg {
 }
 
 .black button:hover {
-  background-color: #2e2d2d !important;
+  background-color: #3f3e3e !important;
 }
 
 .contentComments {

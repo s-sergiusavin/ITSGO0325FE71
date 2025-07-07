@@ -1,71 +1,71 @@
-const POSTINFO = [
-  {
-    profilePicInfo: "../assets/city.jpeg",
-    userNameInfo: "Test user name unu",
-    postDateInfo: "24 apr ",
-    imgContentNewPost: "../assets/paris1.webp",
-    postTitleInfo: "Test post title unu",
-    postDescriptionInfo: "Test post description unu",
-    friendUserNameInfo: "Friend unu",
-    commentMessageInfo: "Test prim",
-  },
-  {
-    profilePicInfo: "../assets/city.jpeg",
-    userNameInfo: "Test user name doi",
-    postDateInfo: "24 apr ",
+// const POSTINFO = [
+//   {
+//     profilePicInfo: "../assets/city.jpeg",
+//     userNameInfo: "Test user name unu",
+//     postDateInfo: "24 apr ",
+//     imgContentNewPost: "../assets/paris1.webp",
+//     postTitleInfo: "Test post title unu",
+//     postDescriptionInfo: "Test post description unu",
+//     friendUserNameInfo: "Friend unu",
+//     commentMessageInfo: "Test prim",
+//   },
+//   {
+//     profilePicInfo: "../assets/city.jpeg",
+//     userNameInfo: "Test user name doi",
+//     postDateInfo: "24 apr ",
 
-    imgContentNewPost: "../assets/paris3.jfif",
+//     imgContentNewPost: "../assets/paris3.jfif",
 
-    postTitleInfo: "Test post title doi",
-    postDescriptionInfo: "Test post description doi",
-    friendUserNameInfo: "Friend doi",
-    commentMessageInfo: "Test doi",
-  },
-  {
-    profilePicInfo: "../assets/profile.jpg",
-    userNameInfo: "Test user name trei",
-    postDateInfo: "24 apr ",
+//     postTitleInfo: "Test post title doi",
+//     postDescriptionInfo: "Test post description doi",
+//     friendUserNameInfo: "Friend doi",
+//     commentMessageInfo: "Test doi",
+//   },
+//   {
+//     profilePicInfo: "../assets/profile.jpg",
+//     userNameInfo: "Test user name trei",
+//     postDateInfo: "24 apr ",
 
-    imgContentNewPost: "../assets/paris5.webp",
+//     imgContentNewPost: "../assets/paris5.webp",
 
-    postTitleInfo: "Test post title trei",
-    postDescriptionInfo: "Test post description trei",
-    friendUserNameInfo: "Friend trei",
-    commentMessageInfo: "Test trei",
-  },
-  {
-    profilePicInfo: "../assets/profile.jpg",
-    userNameInfo: "Test user name patru",
-    postDateInfo: "24 apr ",
-    imgContentNewPost: "../assets/paris2.avif",
-    postTitleInfo: "Test post title patru",
-    postDescriptionInfo: "Test post description patru",
-    friendUserNameInfo: "Friend patru",
-    commentMessageInfo: "Test patru",
-  },
+//     postTitleInfo: "Test post title trei",
+//     postDescriptionInfo: "Test post description trei",
+//     friendUserNameInfo: "Friend trei",
+//     commentMessageInfo: "Test trei",
+//   },
+//   {
+//     profilePicInfo: "../assets/profile.jpg",
+//     userNameInfo: "Test user name patru",
+//     postDateInfo: "24 apr ",
+//     imgContentNewPost: "../assets/paris2.avif",
+//     postTitleInfo: "Test post title patru",
+//     postDescriptionInfo: "Test post description patru",
+//     friendUserNameInfo: "Friend patru",
+//     commentMessageInfo: "Test patru",
+//   },
 
-    {
-    profilePicInfo: "../assets/profile.jpg",
-    userNameInfo: "Test user name cinci",
-    postDateInfo: "24 apr ",
-    imgContentNewPost: "../assets/paris4.webp",
-    postTitleInfo: "Test post title cinci",
-    postDescriptionInfo: "Test post description cinci",
-    friendUserNameInfo: "Friend cinci",
-    commentMessageInfo: "Test cinci",
-  },
+//     {
+//     profilePicInfo: "../assets/profile.jpg",
+//     userNameInfo: "Test user name cinci",
+//     postDateInfo: "24 apr ",
+//     imgContentNewPost: "../assets/paris4.webp",
+//     postTitleInfo: "Test post title cinci",
+//     postDescriptionInfo: "Test post description cinci",
+//     friendUserNameInfo: "Friend cinci",
+//     commentMessageInfo: "Test cinci",
+//   },
 
-      {
-    profilePicInfo: "../assets/profile.jpg",
-    userNameInfo: "Test user name sase",
-    postDateInfo: "24 apr ",
-    imgContentNewPost: "../assets/paris6.jpg",
-    postTitleInfo: "Test post title sase",
-    postDescriptionInfo: "Test post description sase",
-    friendUserNameInfo: "Friend sase",
-    commentMessageInfo: "Test sase",
-  },
-];
+//       {
+//     profilePicInfo: "../assets/profile.jpg",
+//     userNameInfo: "Test user name sase",
+//     postDateInfo: "24 apr ",
+//     imgContentNewPost: "../assets/paris6.jpg",
+//     postTitleInfo: "Test post title sase",
+//     postDescriptionInfo: "Test post description sase",
+//     friendUserNameInfo: "Friend sase",
+//     commentMessageInfo: "Test sase",
+//   },
+// ];
 
 const mainContentPost = document.getElementById("mainContentPost");
 // const profilePic = document.getElementById("profilePic");
