@@ -1,6 +1,8 @@
 import Feature from "./Feature";
+import FeaturesForm from "./FeaturesForm";
+import {  useState } from "react";
 
-function Features({toggleAction}) {
+function Features({ toggleAction }) {
   const FEATURES = [
     {
       name: "Toggle lights",
@@ -16,7 +18,7 @@ function Features({toggleAction}) {
     },
     {
       name: "Clean",
-      action: "Turn on the vacuum",
+      action: "Start cleaning",
       state: false,
       id: 2,
     },
@@ -28,27 +30,41 @@ function Features({toggleAction}) {
     },
   ];
 
+  const [feature, setFeature] = useState(FEATURES)
+
   const toggleActionHandler = (value) => {
-    toggleAction(value)
-  }
+    toggleAction(value);
+  };
+
+  const updateFeaturesHeandler = (feature) => {
+    console.log(feature);
+
+    setFeature((prevState) => {
+      return [feature, ...prevState];
+    });
+  };
 
   return (
     <div className="features-container">
-      {FEATURES.map((feature) => {
-        return (
-          <Feature
-            name={feature.name}
-            action={feature.action}
-            key={feature.id}
-            toggleAction={toggleActionHandler}
-          />
-        );
-      })}
+      <div className="features">
+        {feature.map((feature) => {
+          return (
+            <Feature
+              name={feature.name}
+              action={feature.action}
+              key={feature.id}
+              toggleAction={toggleActionHandler}
+            />
+          );
+        })}
+      </div>
 
       {/* <Feature name={FEATURES[0].name} action={FEATURES[0].action}/>
       <Feature name={FEATURES[1].name} action={FEATURES[1].action}/>
       <Feature name={FEATURES[2].name} action={FEATURES[2].action}/>
       <Feature name={FEATURES[3].name} action={FEATURES[3].action}/> */}
+
+      <FeaturesForm updateFeatures={updateFeaturesHeandler} />
     </div>
   );
 }
