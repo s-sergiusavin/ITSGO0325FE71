@@ -1,3 +1,5 @@
+
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -12,6 +14,9 @@
 }
 
 .features-container {
+  .features {
+    @include flexbox();
+  }
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,4 +24,5 @@
   border: 3px solid blue;
   padding: 1.5rem;
   gap: 2rem;
+  flex-direction: column;
 }

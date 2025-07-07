@@ -1,6 +1,7 @@
 import Feature from "./Feature";
+import FeaturesForm from "./FeaturesForm";
 
-function Features({toggleAction}) {
+function Features({ toggleAction }) {
   const FEATURES = [
     {
       name: "Toggle lights",
@@ -16,7 +17,7 @@ function Features({toggleAction}) {
     },
     {
       name: "Clean",
-      action: "Turn on the vacuum",
+      action: "Start cleaning",
       state: false,
       id: 2,
     },
@@ -29,26 +30,26 @@ function Features({toggleAction}) {
   ];
 
   const toggleActionHandler = (value) => {
-    toggleAction(value)
-  }
+    toggleAction(value);
+  };
+
+  
 
   return (
     <div className="features-container">
-      {FEATURES.map((feature) => {
-        return (
-          <Feature
-            name={feature.name}
-            action={feature.action}
-            key={feature.id}
-            toggleAction={toggleActionHandler}
-          />
-        );
-      })}
-
-      {/* <Feature name={FEATURES[0].name} action={FEATURES[0].action}/>
-      <Feature name={FEATURES[1].name} action={FEATURES[1].action}/>
-      <Feature name={FEATURES[2].name} action={FEATURES[2].action}/>
-      <Feature name={FEATURES[3].name} action={FEATURES[3].action}/> */}
+      <div className="Features">
+        {FEATURES.map((feature) => {
+          return (
+            <Feature
+              name={feature.name}
+              action={feature.action}
+              key={feature.id}
+              toggleAction={toggleActionHandler}
+            />
+          );
+        })}
+      </div>
+      <FeaturesForm updateFeatures={updateFeaturesHandler}/>
     </div>
   );
 }
