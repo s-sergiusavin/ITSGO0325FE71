@@ -16,7 +16,7 @@ function Features({toggleAction}) {
     },
     {
       name: "Clean",
-      action: "Turn on the vacuum",
+      action: "Start cleaning",
       state: false,
       id: 2,
     },
