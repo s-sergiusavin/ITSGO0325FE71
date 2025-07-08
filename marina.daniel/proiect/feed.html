@@ -158,9 +158,15 @@
               </div>
             </div>
 
-            <a href="#" class="profileOptions"
-              ><i class="bi bi-three-dots"></i
-            ></a>
+            <div class="profileOptionsWrapper">
+              <button class="profileOptions">
+                <i class="bi bi-three-dots"></i>
+              </button>
+              <div class="profileOptionsDropdown">
+                <button>Edit this post</button>
+                <button>Remove this post</button>
+              </div>
+            </div>
           </div>
 
           <div class="content">
@@ -171,7 +177,15 @@
                 class="imgContent"
               />
 
-              <i class="bi bi-info-circle infoIcon"></i>
+              <div class="infoIconWrapper">
+                <i class="bi bi-info-circle infoIcon" tabindex="1"></i>
+                <p class="infoMessage">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi
+                  deleniti optio maiores ab libero, pariatur corporis sapiente
+                  provident est iste, excepturi quidem amet quibusdam impedit
+                  temporibus omnis voluptatem. Accusamus, sed! <a href="landingPage.html">Read more...</a>
+                </p>
+              </div>
             </div>
 
             <strong class="postTitle">Titlul Postarii</strong>
@@ -186,14 +200,14 @@
 
           <div class="reacts">
             <div class="likesInfo">
-              <span>😁</span>
+              <!-- <span>😁</span> -->
               <i class="bi bi-hand-thumbs-up reactsIcons"></i>
-              <span>10 likes</span>
+              <span id="likesNumber"></span><span></span> likes</span>
             </div>
 
             <div class="commentsInfo">
-              <span>15 comments</span>
-              <i class="bi bi-chat-text reactsIcons"></i>
+              <span id="sharesNumber"></span><span></span> shares</span>
+              <i class="bi bi-send reactsIcons"></i>
             </div>
           </div>
 
@@ -201,15 +215,15 @@
 
           <div class="reactsActions">
             <ul class="actions">
-              <li class="reaction">
+              <li class="reaction" id="likeButton">
                 <i class="bi bi-hand-thumbs-up reactsIcons"></i>
                 <span>Like</span>
               </li>
-              <li class="reaction">
+              <li class="reaction" id="commentButton">
                 <i class="bi bi-chat-text reactsIcons"></i>
                 <span>Comments</span>
               </li>
-              <li class="reaction">
+              <li class="reaction" id="shareButton">
                 <i class="bi bi-send"></i>
                 <span>Share</span>
               </li>
@@ -230,10 +244,11 @@
               type="text"
               placeholder="Adauga un comentariu"
               class="newCommentField"
+              id="commentInput"
             />
             <!-- <button class="insertCommentButton"><i class="bi bi-send-plus"></i></button> -->
 
-            <div class="insertCommentButton">
+            <div class="insertCommentButton" id="commentInputButton">
               <div class="center">
                 <button class="btn">
                   <svg
@@ -272,11 +287,15 @@
               </div>
 
               <div class="userCommentText">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
-                aspernatur vitae minima atque excepturi, veritatis obcaecati
-                pariatur doloremque maiores voluptas repellat animi facere, non
-                quibusdam reprehenderit illo dolore ut eaque.
-                <div class="emojiReaction">&#128545;</div>
+                <div id="commentMessage">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Porro consequatur nemo nisi quasi dignissimos quisquam
+                  explicabo suscipit possimus modi similique mollitia voluptatem
+                  molestias ipsam, excepturi illum? Adipisci aperiam qui
+                  voluptatem.
+                </div>
+                <div class="emojiReaction">&#128526;</div>
+                <span id="removeCommentButton">Remove this comment</span>
               </div>
             </div>
 

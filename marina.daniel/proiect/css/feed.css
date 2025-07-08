@@ -70,12 +70,13 @@ header .links {
     position: absolute;
     top: 4rem;
     right: 0;
-    width: 7rem;
+    width: 12rem;
     background-color: lightgray;
 }
 
 .accountSettings .accountSettingsMenu button {
     padding: 0.5rem 0;
+    border: 1px solid gray;
 }
 
 .accountSettings .accountSettingsMenu button:hover {
@@ -185,6 +186,30 @@ main {
     flex-direction: column;
 }
 
+.profileOptionsWrapper {
+  position: relative;
+}
+
+.profileOptionsWrapper .profileOptionsDropdown {
+  position: absolute;
+  z-index: 1;
+  right: 0.5rem;
+  width: 10rem;
+  display: flex;
+  flex-direction: column;
+  display: none;
+}
+
+.profileOptionsWrapper .profileOptionsDropdown button {
+  padding: 0.2rem;
+  cursor: pointer;
+}
+
+.profileOptionsWrapper .profileOptionsDropdown button:hover {
+  border: 1px solid teal;
+  background-color: lightgray;
+}
+
 
 .mainContent .post .postHeader .profileOptions {
     width: 2rem;
@@ -214,6 +239,20 @@ main {
     max-width: 100%;
     border: 1px solid black;
     box-shadow: 1px 1px 1px 1px;
+}
+
+.infoIconWrapper {
+    position: relative;
+}
+
+.infoMessage {
+    position: absolute;
+    display: none;
+    background-color: white;
+    border: 3px solid black;
+    top: -0.5rem;
+    padding: 0.5rem;
+    left: 5rem;
 }
 
 .mainContent .post .content .infoIcon {
@@ -268,6 +307,16 @@ main {
     color: #0f43df;
     background-color: #d7e9f0;
     font-weight: 600;
+}
+
+.mainContent .post .reactsActions .actions .reaction.touched {
+    color: #e3eaff;
+    background-color: teal;
+}
+
+.mainContent .post .reactsActions .actions .reaction.touched:hover {
+   color: #b4c3f0; 
+   background-color: #026161;
 }
 
 .mainContent .post .commentSection {
@@ -349,6 +398,10 @@ main {
     border-radius: 1rem;
     background-color: lightgray;
     position: relative;
+}
+
+.mainContent .post .userComments .userCommentText #removeCommentButton {
+    display: none;
 }
 
 .mainContent .post .userComments .userCommentText .emojiReaction {
