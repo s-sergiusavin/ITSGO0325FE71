@@ -4,6 +4,7 @@ import Features from './components/logic/Features'
 import Light from './components/ui/Light'
 import Room from './components/ui/Room';
 import AirCon from './components/ui/AirCon';
+import FeaturesForm from './components/logic/FeaturesForm';
 
 function App() {
   //Correct way of managing states
@@ -12,6 +13,13 @@ function App() {
   const [dirtProgress, setDirtProgress] = useState({
     status: 0,
     cleaned: 0,
+  })
+
+  const [feature, setFeature] = useState({
+    name: '',
+    action: '',
+    state: false,
+    id: 0
   })
 
 
@@ -51,7 +59,7 @@ function App() {
   useEffect(() => {
     dirtInterval.current = setInterval(() => {
       setDirtProgress(prevState => {
-        console.log(prevState.status)
+
         if (prevState.status > 1) {
           clearInterval(dirtInterval.current)
         }
@@ -128,6 +136,11 @@ function App() {
   // console.log(myFunction)
 
 
+  const updateFeaturesHandler = (newFeature) => {
+    setFeature(newFeature);
+
+  }
+
 
   return (
     <div>
@@ -137,7 +150,8 @@ function App() {
         <Room status={dirtProgress.status} />
         {/* {counter} */}
       </div>
-      <Features toggleAction={toggleActionHandler} />
+      <Features toggleAction={toggleActionHandler} newFeature={feature} />
+      <FeaturesForm updateFeatures={updateFeaturesHandler} />
       {/* <button onClick={count}>Count</button> */}
     </div>
   )

@@ -1,4 +1,4 @@
-@import './scss/mixins';
+@use './scss/mixins' as mixins;
 
 #root {
   max-width: 1280px;
@@ -8,11 +8,11 @@
 }
 
 .ui-features {
-  @include flexbox();
+  @include mixins.flexbox();
 }
 
 .features-container {
-  @include flexbox();
+  @include mixins.flexbox();
   flex-direction: column;
   margin-top: 6rem;
   border: 3px solid blue;
@@ -20,6 +20,26 @@
   gap: 2rem;
 
   .features{
-    @include flexbox();
+    @include mixins.flexbox();
+  }
+}
+
+
+.form {
+  margin-top: 3rem;
+  padding: 0.5rem;
+  @include mixins.flexbox();
+  flex-direction: column;
+  gap: 1rem;
+
+  &.invalid {
+    border: 1px solid red;
+  }
+
+  .control {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 20rem;
   }
 }
