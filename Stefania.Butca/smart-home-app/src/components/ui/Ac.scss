@@ -1,10 +1,12 @@
-.Ac {
-width: 6rem;
-height: 6rem;
-border-radius: 50%;
-background-color: #810505;
-transition: background-color 0.3s ease;
-display: flex;
-justify-content: center;
-align-items: center;
+.ac {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    background-color: #f1eeee;
+    transition: background-color 0.3s ease;
+    border: 1px solid #b8b4b4;
+}
+
+.blue {
+    background-color: #0b2ea0;
 }

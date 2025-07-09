@@ -1,3 +1,5 @@
+@import './scss/mixin.scss';
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -6,15 +8,14 @@
 }
 
 .ui-features {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flexbox();
 }
 
 .features-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  .features {
+  @include flexbox();
+  }
+  flex-direction: column;
   margin-top: 6rem;
   border: 3px solid #ccc;
   gap: 2rem;
