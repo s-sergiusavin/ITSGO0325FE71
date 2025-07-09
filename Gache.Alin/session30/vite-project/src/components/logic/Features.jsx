@@ -2,7 +2,6 @@ import Feature from "./Feature";
 import FeaturesForm from "./FeaturesForm";
 import { useEffect, useState } from "react";
 
-
 function Features({ toggleAction, newFeature }) {
   const FEATURES = [
     {
@@ -39,8 +38,43 @@ function Features({ toggleAction, newFeature }) {
     }
   }, [newFeature]);
 
+  const toggleLights = () => {
+    setFeature((prevState) => {
+      const updateFeatures = prevState.map((feature) => {
+        if (feature.name === "Toggle lights") {
+          feature.state = !feature.state;
+          feature.action = `Turn the lights ${feature.state ? "off" : "on"}`;
+        }
+        return feature;
+      });
+      return updateFeatures;
+    });
+  };
+
+  const toggleAc = () => {
+    setFeature((prevState) => {
+      const updateFeatures = prevState.map((feature) => {
+        if (feature.name === "Toggle AC") {
+          feature.state = !feature.state;
+          feature.action = `Turn the AC ${feature.state ? "off" : "on"}`;
+        }
+        return feature;
+      });
+      return updateFeatures;
+    });
+  };
+
   const toggleActionHandler = (value) => {
     toggleAction(value);
+
+    switch (value) {
+      case "Toggle lights":
+        toggleLights();
+        break;
+      case "Toggle AC":
+        toggleAc();
+        break;
+    }
   };
 
   return (
