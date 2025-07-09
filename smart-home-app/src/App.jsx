@@ -4,6 +4,7 @@ import Features from './components/logic/Features'
 import Light from './components/ui/Light'
 import Room from './components/ui/Room';
 import Ac from './components/ui/Ac';
+import FeaturesForm from './components/logic/FeaturesForm';
 
 function App() {
   // Correct way of managing states
@@ -12,31 +13,21 @@ function App() {
   const [dirtProgress, setDirtProgress] = useState({
     status: 0,
     cleaned: 0
-  })
-
-  // bad example: Nu folositi state-uri care nu au legatura intre ele, in acelasi obiect
-  const [actions, setActions] = useState({
-    lightState: false,
-    acState: false,
-    dirtStatus: 0,
-    cleaned: 0
   });
 
-  /** Use effect model */
-  // useEffect( () => {
-  //   console.log('Éffect triggered');
-
-  //   return () => {
-  //     console.log('Component Unmount');
-  //   }
-  // }, [lightsOn]);
+  const [feature, setFeature] = useState({
+    name: '',
+    action: '',
+    state: false,
+    id: 0
+  })
 
   let dirtInterval = useRef();
 
   useEffect( () => {
     dirtInterval.current = setInterval( () => {
       setDirtProgress( prevState => {
-        console.log(prevState.status)
+        // console.log(prevState.status)
         if (prevState.status > 1) {
           clearInterval(dirtInterval.current)
         }
@@ -89,6 +80,10 @@ function App() {
     }
   }
 
+  const updateFeaturesHandler = (newFeature) => {
+    setFeature(newFeature);
+  }
+
   return (
     <div>
       <div className="ui-features">
@@ -96,7 +91,8 @@ function App() {
         <Room status={dirtProgress.status} />
         <Ac acOn={acOn} />
       </div>
-      <Features toggleAction={toggleActionHandler} />
+      <Features toggleAction={toggleActionHandler} newFeature={feature} />
+      <FeaturesForm updateFeatures={updateFeaturesHandler}/>
     </div>
   )
 }
