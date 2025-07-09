@@ -1,8 +1,7 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Feature from "./Feature";
-import FeaturesForm from "./FeaturesForm";
 
-function Features({ toggleAction }) {
+function Features({ toggleAction, newFeature }) {
   const FEATURES = [
     {
       name: "Toggle lights",
@@ -32,14 +31,22 @@ function Features({ toggleAction }) {
 
   const [features, setFeatures] = useState(FEATURES);
 
+  useEffect( () => {
+    if (newFeature.name !== '') {
+      setFeatures(prevState => [newFeature, ...prevState])
+    }
+  }, [newFeature]);
+
+  // useEffect( () => {
+  //   if (newFeature.name !== '') {
+  //     setFeatures(prevState => {
+  //       return [newFeature, ...prevState]
+  //     })
+  //   }
+  // }, [newFeature]);
+
   const toggleActionHandler = (value) => {
     toggleAction(value)
-  }
-
-  const updateFeaturesHandler = (feature) => {
-    setFeatures( prevState => {
-      return [...prevState, feature]
-    })
   }
 
   return (
@@ -52,11 +59,11 @@ function Features({ toggleAction }) {
               action={feature.action}
               key={feature.id}
               toggleAction={toggleActionHandler}
+              state={feature.state}
             />
           );
         })}
       </div>
-      <FeaturesForm updateFeatures={updateFeaturesHandler}/>
     </div>
   );
 }
