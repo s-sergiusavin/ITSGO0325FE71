@@ -35,7 +35,7 @@ const FeaturesForm = ({ updateFeatures }) => {
     const titleValue = titleInputRef.current.value;
     const actionValue = actionInputRef.current.value;
     const stateValue = stateInputRef.current.value;
-    const descriptionValue = descriptionInputRef.current.value;
+    // const descriptionValue = descriptionInputRef.current.value;
 
     const newFeature = {
       name: titleValue,

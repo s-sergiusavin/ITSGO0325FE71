@@ -1,4 +1,5 @@
 import './Feature.scss';
+// import buttotIcone from './../../assets/buttonIconeON.webp'
 
 const Feature = ({name, action, toggleAction}) => {
 
@@ -20,6 +21,7 @@ const Feature = ({name, action, toggleAction}) => {
 
   return (
     <div className="feature">
+      {/* <img src={buttotIcone} alt="" /> */}
       <h3>{name}</h3>
       <button onClick={featureButtonHandler}>{action}</button>
     </div>

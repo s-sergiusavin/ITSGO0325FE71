@@ -4,6 +4,7 @@ import Features from "./components/logic/Features";
 import Light from "./components/ui/Light";
 import Room from "./components/ui/Room";
 import Ac from "./components/ui/Ac";
+import FeaturesForm from "./components/logic/FeaturesForm";
 
 function App() {
   const [lightsOn, setLightsOn] = useState(false);
@@ -11,6 +12,13 @@ function App() {
   const [dirtProgress, setDirtProgress] = useState({
     status: 0,
     cleaned: 0,
+  });
+
+  const [feature, setFeature] = useState({
+    name: "",
+    action: "",
+    state: false,
+    id: 0,
   });
   // const [counter, setCounter] = useState(0);
   // const count = () => {
@@ -103,6 +111,10 @@ function App() {
   // console.log(myPuppy)
   // console.log(myFunction)
 
+  const updateFeaturesHeandler = (newFeature) => {
+    setFeature(newFeature);
+  };
+
   return (
     <div>
       <div className="ui-features">
@@ -111,7 +123,8 @@ function App() {
         <Room status={dirtProgress.status} />
         {/* {counter} */}
       </div>
-      <Features toggleAction={toggleActionHandler} />
+      <Features toggleAction={toggleActionHandler}  newFeature={feature}/>
+      <FeaturesForm updateFeatures={updateFeaturesHeandler} />
       {/* <button onClick={count}>Count</button> */}
     </div>
   );
