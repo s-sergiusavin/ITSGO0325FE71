@@ -45,8 +45,45 @@ function Features({ toggleAction, newFeature }) {
   //   }
   // }, [newFeature]);
 
+  const toggleLights = () => {
+    setFeatures( prevState => {
+      const updatedFeatures = prevState.map( feature => {
+        if (feature.name === 'Toggle lights') {
+          feature.state = !feature.state;
+          feature.action = `Turn the lights ${feature.state ? 'off' : 'on'}`
+        }
+        return feature;
+      });
+
+      return updatedFeatures;
+    })
+  }
+
+  const toggleAc = () => {
+    setFeatures( prevState => {
+      const updatedFeatures = prevState.map( feature => {
+        if (feature.name === 'Toggle AC') {
+          feature.state = !feature.state;
+          feature.action = `Turn the ac ${feature.state ? 'off' : 'on'}`
+        }
+        return feature;
+      });
+
+      return updatedFeatures;
+    })
+  }
+
   const toggleActionHandler = (value) => {
     toggleAction(value)
+
+    switch(value) {
+      case 'Toggle lights':
+        toggleLights();
+        break;
+      case 'Toggle AC':
+        toggleAc();
+        break;  
+    }
   }
 
   return (
