@@ -4,10 +4,11 @@ import Features from "./components/logic/Features";
 import Light from "./components/ui/Light";
 import Room from "./components/ui/room";
 import Ac from "./components/ui/Ac";
+import FeaturesForm from "./components/logic/FeaturesForm";
 
 function App() {
   const [lightsOn, setLightsOn] = useState(false);
-  const [acOn, setAcOn] =  useState(true);
+  const [acOn, setAcOn] = useState(true);
   const [dirtProgress, setDirtProgress] = useState({
     status: 0.5,
     cleaned: 0,
@@ -17,6 +18,15 @@ function App() {
   //   setCounter(counter + 1);
   //   console.log(counter);
   // };
+
+  const [feature, setFeatures] = useState([
+    {
+      name: "",
+      action: "",
+      state: false,
+      id: 0,
+    },
+  ]);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -28,7 +38,7 @@ function App() {
       });
     }, 2000);
     return () => clearInterval(interval);
-  },[]);
+  }, []);
 
   const toggleLights = () => {
     setLightsOn((prevState) => {
@@ -37,7 +47,7 @@ function App() {
   };
 
   const toggleAc = () => {
-        setAcOn((prevState) => {
+    setAcOn((prevState) => {
       return !prevState;
     });
   };
@@ -61,21 +71,26 @@ function App() {
       case "Toggle AC":
         toggleAc();
         break;
-        case "Clean the room":
+      case "Clean the room":
         startCleaning();
         break;
-          };
-    }
+    };
+  }
+
+  const updateFeaturesHandler = (newFeature) => {
+    setFeatures(newFeature);
+  };
 
   return (
     <div>
       <div className="ui-features">
         <Light lightsOn={lightsOn} />
-        <Room status = {dirtProgress.status} />
-        <Ac acOn={acOn}/>
+        <Room status={dirtProgress.status} />
+        <Ac acOn={acOn} />
         {/* {counter} */}
       </div>
-      <Features toggleAction={toggleActionHandler} />
+      <Features toggleAction={toggleActionHandler} newFeature={feature} />
+      <FeaturesForm updateFeatures={updateFeaturesHandler} />
       {/* <button onClick={count}>Count</button> */}
     </div>
   );
