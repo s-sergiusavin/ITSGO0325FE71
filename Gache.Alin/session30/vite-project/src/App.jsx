@@ -1,133 +1,133 @@
-import { useEffect, useRef, useState } from "react";
-import "./App.scss";
-import Features from "./components/logic/Features";
-import Light from "./components/ui/Light";
-import Room from "./components/ui/Room";
-import Ac from "./components/ui/Ac";
-import FeaturesForm from "./components/logic/FeaturesForm";
+import { useEffect, useRef, useState } from 'react';
+import './App.scss'
+import Features from './components/logic/Features'
+import Light from './components/ui/Light'
+import Room from './components/ui/Room';
+import Ac from './components/ui/Ac';
+import FeaturesForm from './components/logic/FeaturesForm';
 
 function App() {
+  // Correct way of managing states
   const [lightsOn, setLightsOn] = useState(false);
   const [acOn, setAcOn] = useState(false);
   const [dirtProgress, setDirtProgress] = useState({
     status: 0,
-    cleaned: 0,
+    cleaned: 0
   });
 
   const [feature, setFeature] = useState({
-    name: "",
-    action: "",
+    name: '',
+    action: '',
     state: false,
-    id: 0,
-  });
-  // const [counter, setCounter] = useState(0);
-  // const count = () => {
-  //   setCounter(counter + 1)
-  //   console.log(counter)
-  // }
-
-  // Use Effect model
-  // useEffect(() => {
-  //   console.log("Effect triggered");
-  //   return () => {
-  //     console.log("Component Unount");
-  //   };
-  // }, [lightsOn]);
+    id: 0
+  })
 
   let dirtInterval = useRef();
 
-  useEffect(() => {
-    dirtInterval.current = setInterval(() => {
-      setDirtProgress((prevState) => {
+  useEffect( () => {
+    dirtInterval.current = setInterval( () => {
+      setDirtProgress( prevState => {
+        // console.log(prevState.status)
         if (prevState.status > 1) {
-          clearInterval(dirtInterval.current);
+          clearInterval(dirtInterval.current)
         }
-        console.log(prevState.status);
-
         return {
           ...prevState,
-          status: prevState.status + 0.1,
-        };
-      });
+          status: prevState.status + 0.1
+        }
+      })
     }, 2000);
 
     return () => {
-      clearInterval(dirtInterval.current);
-    };
-  }, [dirtProgress.cleaned]);
+      clearInterval(dirtInterval.current)
+    }
+  }, [dirtProgress.cleaned])
 
   const toggleLights = () => {
     setLightsOn((prevState) => {
-      return !prevState;
+      return !prevState
     });
-  };
+  }
 
   const toggleAc = () => {
     setAcOn((prevState) => {
-      return !prevState;
+      return !prevState
     });
-  };
+  }
 
   const startCleaning = () => {
-    setDirtProgress((prevState) => {
+    setDirtProgress(prevState => {
       return {
         ...prevState,
         status: 0,
-        cleaned: prevState.cleaned + 1,
-      };
-    });
-  };
+        cleaned: prevState.cleaned + 1
+      }
+    })
+  }
 
   const toggleActionHandler = (name) => {
     switch (name) {
-      case "Toggle lights":
+      case 'Toggle lights':
         toggleLights();
         break;
-      case "Toggle AC":
+      case 'Toggle AC':
         toggleAc();
         break;
-      case "Clean":
+      case 'Clean':
         startCleaning();
         break;
+
     }
-  };
+  }
 
-  /**
-   * Destructuring explained
-   */
-
-  // function returnPuppy() {
-  //   const puppy = {
-  //     name: 'Rex'
-  //   }
-
-  //   function changePuppyName() {
-  //     puppy.name = 'Azorel';
-  //   }
-
-  //   return [puppy, changePuppyName];
-  // }
-  // const [myPuppy, myFunction] = returnPuppy();
-  // console.log(myPuppy)
-  // console.log(myFunction)
-
-  const updateFeaturesHeandler = (newFeature) => {
+  const updateFeaturesHandler = (newFeature) => {
     setFeature(newFeature);
-  };
+  }
 
   return (
     <div>
       <div className="ui-features">
         <Light lightsOn={lightsOn} />
-        <Ac acOn={acOn} />
         <Room status={dirtProgress.status} />
-        {/* {counter} */}
+        <Ac acOn={acOn} />
       </div>
-      <Features toggleAction={toggleActionHandler}  newFeature={feature}/>
-      <FeaturesForm updateFeatures={updateFeaturesHeandler} />
-      {/* <button onClick={count}>Count</button> */}
+      <Features toggleAction={toggleActionHandler} newFeature={feature} />
+      <FeaturesForm updateFeatures={updateFeaturesHandler}/>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
+
+// const [counter, setCounter] = useState(0);
+// const count = () => {
+  //   setCounter(counter + 1)
+  //   console.log(counter)
+  // }
+  
+  // Use Effect model
+  // useEffect(() => {
+    //   console.log("Effect triggered");
+    //   return () => {
+      //     console.log("Component Unount");
+      //   };
+      // }, [lightsOn]);
+      /**
+       * Destructuring explained
+      */
+      
+      // function returnPuppy() {
+      //   const puppy = {
+        //     name: 'Rex'
+        //   }
+        
+        //   function changePuppyName() {
+          //     puppy.name = 'Azorel';
+          //   }
+          
+          //   return [puppy, changePuppyName];
+          // }
+          // const [myPuppy, myFunction] = returnPuppy();
+          // console.log(myPuppy)
+          // console.log(myFunction)
+          

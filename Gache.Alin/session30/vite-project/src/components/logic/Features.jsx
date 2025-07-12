@@ -1,6 +1,5 @@
-import Feature from "./Feature";
-import FeaturesForm from "./FeaturesForm";
 import { useEffect, useState } from "react";
+import Feature from "./Feature";
 
 function Features({ toggleAction, newFeature }) {
   const FEATURES = [
@@ -30,37 +29,47 @@ function Features({ toggleAction, newFeature }) {
     },
   ];
 
-  const [feature, setFeature] = useState(FEATURES);
+  const [features, setFeatures] = useState(FEATURES);
 
   useEffect(() => {
     if (newFeature.name !== "") {
-      setFeature((prevState) => [newFeature, ...prevState]);
+      setFeatures((prevState) => [newFeature, ...prevState]);
     }
   }, [newFeature]);
 
+  // useEffect( () => {
+  //   if (newFeature.name !== '') {
+  //     setFeatures(prevState => {
+  //       return [newFeature, ...prevState]
+  //     })
+  //   }
+  // }, [newFeature]);
+
   const toggleLights = () => {
-    setFeature((prevState) => {
-      const updateFeatures = prevState.map((feature) => {
+    setFeatures((prevState) => {
+      const updatedFeatures = prevState.map((feature) => {
         if (feature.name === "Toggle lights") {
           feature.state = !feature.state;
           feature.action = `Turn the lights ${feature.state ? "off" : "on"}`;
         }
         return feature;
       });
-      return updateFeatures;
+
+      return updatedFeatures;
     });
   };
 
   const toggleAc = () => {
-    setFeature((prevState) => {
-      const updateFeatures = prevState.map((feature) => {
+    setFeatures((prevState) => {
+      const updatedFeatures = prevState.map((feature) => {
         if (feature.name === "Toggle AC") {
           feature.state = !feature.state;
-          feature.action = `Turn the AC ${feature.state ? "off" : "on"}`;
+          feature.action = `Turn the ac ${feature.state ? "off" : "on"}`;
         }
         return feature;
       });
-      return updateFeatures;
+
+      return updatedFeatures;
     });
   };
 
@@ -80,24 +89,24 @@ function Features({ toggleAction, newFeature }) {
   return (
     <div className="features-container">
       <div className="features">
-        {feature.map((feature) => {
+        {features.map((feature) => {
           return (
             <Feature
               name={feature.name}
               action={feature.action}
               key={feature.id}
               toggleAction={toggleActionHandler}
+              state={feature.state}
             />
           );
         })}
-      </div>
 
-      {/* <Feature name={FEATURES[0].name} action={FEATURES[0].action}/>
+        {/* <Feature name={FEATURES[0].name} action={FEATURES[0].action}/>
       <Feature name={FEATURES[1].name} action={FEATURES[1].action}/>
       <Feature name={FEATURES[2].name} action={FEATURES[2].action}/>
       <Feature name={FEATURES[3].name} action={FEATURES[3].action}/> */}
+      </div>
     </div>
   );
 }
-
 export default Features;

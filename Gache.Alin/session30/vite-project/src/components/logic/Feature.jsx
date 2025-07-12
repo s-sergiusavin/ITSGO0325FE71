@@ -1,8 +1,9 @@
-import { useEffect, useState } from "react";
 import "./Feature.scss";
-
-import buttonIconeOFF from "../../assets/buttonIconeOff.png";
-import buttonIconeON from "../../assets/buttonIconeON.webp";
+import buttonIcon from "./../../assets/images/buttonIcon.webp";
+import buttonIconOff from "./../../assets/images/buttonIconOff.png";
+import acOn from "./../../assets/images/acOn.jpg";
+import acOff from "./../../assets/images/acOff.png";
+import { useEffect, useState } from "react";
 
 const Feature = ({ name, action, toggleAction, state }) => {
   // const smartHomeApp = {
@@ -16,10 +17,16 @@ const Feature = ({ name, action, toggleAction, state }) => {
   // console.log(name, ' Feature')
   // console.log(toggleLights)
   // console.log(espresso)
-  const [icon, setIcon] = useState("");
+
+  const [lightsIcon, setLightsIcon] = useState(null);
+  const [acIcon, setAcIcon] = useState(null);
 
   useEffect(() => {
-    state ? setIcon(buttonIconeON) : setIcon(buttonIconeOFF);
+    if (name === "Toggle lights") {
+      state ? setLightsIcon(buttonIcon) : setLightsIcon(buttonIconOff);
+    } else if (name === "Toggle AC") {
+      state ? setAcIcon(acOn) : setAcIcon(acOff);
+    }
   }, [state]);
 
   function featureButtonHandler() {
@@ -29,9 +36,11 @@ const Feature = ({ name, action, toggleAction, state }) => {
   return (
     <div className="feature">
       {name === "Toggle lights" && (
-        <img src={icon} alt="bulb" className="buttonImg" />
+        <img src={lightsIcon} alt="bulb" className="buttonImg" />
       )}
-
+      {name === "Toggle AC" && (
+        <img src={acIcon} alt="bulb" className="buttonImg" />
+      )}
       <h3>{name}</h3>
       <button onClick={featureButtonHandler}>{action}</button>
     </div>

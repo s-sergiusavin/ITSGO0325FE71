@@ -7,18 +7,18 @@ const FeaturesForm = ({ updateFeatures }) => {
   const [actionField, setActionField] = useState("");
   const [stateField, setStateField] = useState("");
   const [descriptionField, setDescriptionField] = useState("");
-
   // const titleInputRef = useRef();
   // const actionInputRef = useRef();
   // const stateInputRef = useRef();
   // const descriptionInputRef = useRef();
 
   const checkValid = () => {
+    // titleInputRef.current.value === "" ||
+    // actionInputRef.current.value === "" ||
+    // stateInputRef.current.value === "" ||
+    // descriptionInputRef.current.value === ""
+
     if (
-      // titleInputRef.current.value === "" ||
-      // actionInputRef.current.value === "" ||
-      // stateInputRef.current.value === "" ||
-      // descriptionInputRef.current.value === ""
       nameField === "" ||
       actionField === "" ||
       stateField === "" ||
@@ -31,26 +31,39 @@ const FeaturesForm = ({ updateFeatures }) => {
   };
 
   const resetFields = () => {
-    // titleInputRef.current.value = "";
     // actionInputRef.current.value = "";
     // stateInputRef.current.value = "";
+    // titleInputRef.current.value = "";
     // descriptionInputRef.current.value = "";
-    nameField = "";
-    actionField = "";
-    stateField = "";
-    descriptionField = "";
+    setNameField("");
+    setActionField("");
+    setStateField("");
+    setDescriptionField("");
   };
 
   const nameChangeHandler = (e) => {
-    console.log(e);
+    // console.log(e)
     setNameField(e.target.value);
+  };
+
+  const actionChangeHandler = (e) => {
+    // console.log(e)
+    setActionField(e.target.value);
+  };
+
+  const stateChangeHandler = (e) => {
+    // console.log(e)
+    setStateField(e.target.value);
+  };
+
+  const descriptionChangeHandler = (e) => {
+    // console.log(e)
+    setDescriptionField(e.target.value);
   };
 
   const submitHandler = (event) => {
     event.preventDefault();
     checkValid();
-
-    // const descriptionValue = descriptionInputRef.current.value;
 
     const newFeature = {
       name: nameField,
@@ -62,6 +75,7 @@ const FeaturesForm = ({ updateFeatures }) => {
     updateFeatures(newFeature);
     resetFields();
   };
+
   return (
     <form
       className={`form ${isFormValid ? "valid" : "invalid"}`}
@@ -70,22 +84,46 @@ const FeaturesForm = ({ updateFeatures }) => {
     >
       <div className="control">
         <label htmlFor="title">Feature title</label>
-        <input type="text" id="title" required onChange={nameChangeHandler} />
+        <input
+          type="text"
+          id="title"
+          required
+          onChange={nameChangeHandler}
+          value={nameField}
+        />
       </div>
 
       <div className="control">
         <label htmlFor="action">Feature action</label>
-        <input type="text" id="action" required />
+        <input
+          type="text"
+          id="action"
+          required
+          onChange={actionChangeHandler}
+          value={actionField}
+        />
       </div>
 
       <div className="control">
         <label htmlFor="state">Feature state</label>
-        <input type="text" id="state" required />
+        <input
+          type="text"
+          id="state"
+          required
+          onChange={stateChangeHandler}
+          value={stateField}
+        />
       </div>
 
       <div className="control">
         <label htmlFor="description">Feature description</label>
-        <textarea name="" id="description" rows={5} required></textarea>
+        <textarea
+          id="description"
+          rows={5}
+          required
+          onChange={descriptionChangeHandler}
+          value={descriptionField}
+        ></textarea>
       </div>
 
       <div className="actions">
