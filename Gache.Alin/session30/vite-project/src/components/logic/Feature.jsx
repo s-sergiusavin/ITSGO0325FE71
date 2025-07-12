@@ -1,8 +1,8 @@
 import "./Feature.scss";
-import buttonIcon from "./../../assets/images/buttonIcon.webp";
-import buttonIconOff from "./../../assets/images/buttonIconOff.png";
-import acOn from "./../../assets/images/acOn.jpg";
-import acOff from "./../../assets/images/acOff.png";
+import buttonIcon from "../../assets/buttonIconeON.png";
+import buttonIconOff from "../../assets/buttonIconeOff.png";
+import acOn from "../../assets/acOn.jpg";
+import acOff from "../../assets/acOff.png";
 import { useEffect, useState } from "react";
 
 const Feature = ({ name, action, toggleAction, state }) => {
