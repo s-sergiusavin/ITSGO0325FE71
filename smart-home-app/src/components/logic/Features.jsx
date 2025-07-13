@@ -1,8 +1,7 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Feature from "./Feature";
-import FeaturesForm from "./FeaturesForm";
 
-function Features({ toggleAction }) {
+function Features({ toggleAction, newFeature }) {
   const FEATURES = [
     {
       name: "Toggle lights",
@@ -32,14 +31,59 @@ function Features({ toggleAction }) {
 
   const [features, setFeatures] = useState(FEATURES);
 
-  const toggleActionHandler = (value) => {
-    toggleAction(value)
+  useEffect( () => {
+    if (newFeature.name !== '') {
+      setFeatures(prevState => [newFeature, ...prevState])
+    }
+  }, [newFeature]);
+
+  // useEffect( () => {
+  //   if (newFeature.name !== '') {
+  //     setFeatures(prevState => {
+  //       return [newFeature, ...prevState]
+  //     })
+  //   }
+  // }, [newFeature]);
+
+  const toggleLights = () => {
+    setFeatures( prevState => {
+      const updatedFeatures = prevState.map( feature => {
+        if (feature.name === 'Toggle lights') {
+          feature.state = !feature.state;
+          feature.action = `Turn the lights ${feature.state ? 'off' : 'on'}`
+        }
+        return feature;
+      });
+
+      return updatedFeatures;
+    })
   }
 
-  const updateFeaturesHandler = (feature) => {
+  const toggleAc = () => {
     setFeatures( prevState => {
-      return [...prevState, feature]
+      const updatedFeatures = prevState.map( feature => {
+        if (feature.name === 'Toggle AC') {
+          feature.state = !feature.state;
+          feature.action = `Turn the ac ${feature.state ? 'off' : 'on'}`
+        }
+        return feature;
+      });
+
+      return updatedFeatures;
     })
+  }
+
+  const toggleActionHandler = (value) => {
+    toggleAction(value)
+
+    switch(value) {
+      case 'Toggle lights':
+        toggleLights();
+        break;
+      case 'Toggle AC':
+        toggleAc();
+        break;  
+    }
   }
 
   return (
@@ -52,11 +96,11 @@ function Features({ toggleAction }) {
               action={feature.action}
               key={feature.id}
               toggleAction={toggleActionHandler}
+              state={feature.state}
             />
           );
         })}
       </div>
-      <FeaturesForm updateFeatures={updateFeaturesHandler}/>
     </div>
   );
 }
