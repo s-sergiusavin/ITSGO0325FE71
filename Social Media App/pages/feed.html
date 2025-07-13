@@ -82,23 +82,29 @@
       </nav>
       <div class="logoBox"><img src="../assets/LOGO.png" alt="eyeSEE Logo" class="logo-img" />
       </div>
-      <ul class="links">
-        <li>
-          <a href="landingPage.html" title="To Landing page"
-            ><i class="bi bi-plus-circle navIcons"></i
-          ></a>
-        </li>
-        <li>
-          <a href="#" title="View notifications" class="bellIcon"
-            ><i class="bi bi-bell navIcons"></i> <span>12</span></a
-          >
-        </li>
-        <li>
-          <a href="login.html" title="Settings"
-            ><i class="bi bi-gear navIcons"></i
-          ></a>
-        </li>
-      </ul>
+<ul class="links">
+  <li>
+    <a href="landingPage.html" title="To Landing page">
+      <i class="bi bi-plus-circle navIcons"></i>
+    </a>
+  </li>
+  <li>
+    <a href="#" title="View notifications" class="bellIcon">
+      <i class="bi bi-bell navIcons"></i> <span>12</span>
+    </a>
+  </li>
+  <li class="settings-container">
+    <button id="settingsButton" title="Settings" style="background:none; border:none; padding:0;">
+      <i class="bi bi-gear navIcons"></i>
+    </button>
+    <div id="settingsMenu" class="settings-menu" style="display: none;">
+      <a href="../pages/profile.html">Profile</a>
+      <a href="../pages/landingPage.html">Settings</a>
+      <a href="../login.html">Logout</a>
+    </div>
+  </li>
+</ul>
+
 
     </header>
 
@@ -107,7 +113,7 @@
 
  <!-- User Profile -->
  <div class="sidebarProfile">
-  <a href="profile.html"><img src="../assets/photo5.jpg" alt="Alexandra Predoiu" class="profileImage" /></a>
+  <a href="profile.html"><img src="../assets/PROFILE.jpg" alt="Alexandra Predoiu" class="profileImage" /></a>
   <a href="profile.html"><span class="profileName">Alexandra Predoiu</span></a>
 </div>
 <!-- Navigation Links -->
@@ -161,13 +167,13 @@
             <div class="profileUserInfo">
               <a href="">
                 <img
-                  src="#"
+                  src="../assets/profile.jpg"
                   alt="profile picture"
                   class="profileImage"
                 />
               </a>
               <div class="profileName">
-                <span>Alexandra Predoiu</span>
+                  <a href="../pages/profile.html" class="profileName">Alexandra Predoiu</a>
                 <span>28 Apr 2025</span>
               </div>
             </div>
@@ -201,14 +207,12 @@
 
           <div class="reacts">
             <div class="likesInfo">
-              <span>😍</span>
-              <span>&#128525;</span>
               <i class="bi bi-hand-thumbs-up reactsIcons"></i>
               <span class="likeCount">10 likes</span>
             </div>
 
             <div class="commentsinfo">
-              <span>15 comments</span>
+              <span class="commentsCount">4 comments</span>
               <i class="bi bi-chat-text reactsIcons"></i>
             </div>
           </div>
@@ -237,7 +241,7 @@
           <div class="commentSection">
             <a href="">
               <img
-                src="#"
+                src="../assets/profile.jpg"
                 alt="profile picture"
                 class="profileImage"
               />
@@ -262,12 +266,11 @@
                     class="profileImage"
                   />
                 </a>
-                <span>Andrei R</span>
+                <span class="userProfileName">Andrei R</span>
               </div>
 
               <div class="userCommentText">
                 👁️‍🗨️👁️‍🗨️👁️‍🗨️
-                <div class="emojiReaction">&#128526;</div>
               </div>
 
               <div class="commentReaction">
@@ -286,12 +289,11 @@
                     class="profileImage"
                   />
                 </a>
-                <span>Gabriel S</span>
+                <span class="userProfileName">Gabriel S</span>
               </div>
 
               <div class="userCommentText">
      Already subscribed!
-                <div class="emojiReaction">&#128526;</div>
               </div>
 
               <div class="commentReaction">
@@ -310,12 +312,11 @@
                     class="profileImage"
                   />
                 </a>
-                <span>Patricia M</span>
+                <span class="userProfileName">Patricia M</span>
               </div>
 
               <div class="userCommentText">
              Joined 😁
-                <div class="emojiReaction">&#128526;</div>
               </div>
 
               <div class="commentReaction">
@@ -340,7 +341,7 @@
                 />
               </a>
               <div class="profileName">
-                <span>Alexandra Predoiu</span>
+                               <a href="../pages/profile.html" class="profileName">Alexandra Predoiu</a>
                 <span>28 Apr 2025</span>
               </div>
             </div>
@@ -382,7 +383,7 @@
             </div>
 
             <div class="commentsinfo">
-              <span>15 comments</span>
+              <span class="commentsCount">15 comments</span>
               <i class="bi bi-chat-text reactsIcons"></i>
             </div>
           </div>
@@ -441,7 +442,6 @@
 
               <div class="userCommentText">
                 😍😍😍😍😍😍😍😍
-                <div class="emojiReaction">&#128526;</div>
               </div>
 
               <div class="commentReaction">
@@ -465,7 +465,6 @@
 
               <div class="userCommentText">
      Already subscribed!
-                <div class="emojiReaction">&#128526;</div>
               </div>
 
               <div class="commentReaction">
@@ -489,7 +488,6 @@
 
               <div class="userCommentText">
              Joined 😁
-                <div class="emojiReaction">&#128526;</div>
               </div>
 
               <div class="commentReaction">
@@ -555,7 +553,7 @@
             </div>
 
             <div class="commentsinfo">
-              <span>11 comments</span>
+              <span class="commentsCount">7 comments</span>
               <i class="bi bi-chat-text reactsIcons"></i>
             </div>
           </div>
@@ -604,20 +602,16 @@
               <div class="profileUserComment">
                 <a href="">
                   <img
-                    src="../assets/profile.jpg"
+                    src="../assets/friend4.jpg"
                     alt="profile picture"
                     class="profileImage"
                   />
                 </a>
-                <span>User Name</span>
+                <span>Matei D</span>
               </div>
 
               <div class="userCommentText">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro
-                consequatur nemo nisi quasi dignissimos quisquam explicabo
-                suscipit possimus modi similique mollitia voluptatem molestias
-                ipsam, excepturi illum? Adipisci aperiam qui voluptatem.
-                <div class="emojiReaction">&#128526;</div>
+                What a great time! Can't wait for the next one!
                 
               </div>
        
@@ -659,7 +653,7 @@
                 class="postVideo"
                 width="100%"
                 height="340"
-                src="https://www.youtube.com/embed/AgBaI5SnKCs"
+  src="https://www.youtube-nocookie.com/embed/ScMzIvxBSi4"
                 title="YouTube video player"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -687,7 +681,7 @@
             </div>
 
             <div class="commentsinfo">
-              <span>15 comments</span>
+              <span class="commentsCount">8 comments</span>
               <i class="bi bi-chat-text reactsIcons"></i>
             </div>
           </div>
@@ -717,7 +711,7 @@
           <div class="commentSection">
             <a href="">
               <img
-                src="#"
+                src="../assets/profile.jpg"
                 alt="profile picture"
                 class="profileImage"
               />
@@ -737,20 +731,16 @@
               <div class="profileUserComment">
                 <a href="">
                   <img
-                    src="#"
+                    src="../assets/profile picture Catalina.jpg"
                     alt="profile picture"
                     class="profileImage"
                   />
                 </a>
-                <span>User Name</span>
+                <span>Catalina A</span>
               </div>
 
               <div class="userCommentText">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro
-                consequatur nemo nisi quasi dignissimos quisquam explicabo
-                suscipit possimus modi similique mollitia voluptatem molestias
-                ipsam, excepturi illum? Adipisci aperiam qui voluptatem.
-                <div class="emojiReaction">&#128526;</div>
+           Amazing video!
               </div>
 
               <div class="commentReaction">
@@ -769,13 +759,13 @@
             <div class="profileUserInfo">
               <a href="">
                 <img
-                  src="#"
+                  src="../assets/profile.jpg"
                   alt="profile picture"
                   class="profileImage"
                 />
               </a>
               <div class="profileName">
-                <span>Alexandra Predoiu</span>
+                <a href="../pages/profile.html" class="profileName">Alexandra Predoiu</a>
                 <span>16 Apr 2025</span>
               </div>
             </div>
@@ -816,7 +806,7 @@
             </div>
 
             <div class="commentsinfo">
-              <span>15 comments</span>
+              <span class="commentsCount">2 comments</span>
               <i class="bi bi-chat-text reactsIcons"></i>
             </div>
           </div>
@@ -845,7 +835,7 @@
           <div class="commentSection">
             <a href="">
               <img
-                src="#"
+                src="../assets/profile.jpg"
                 alt="profile picture"
                 class="profileImage"
               />
@@ -865,20 +855,16 @@
               <div class="profileUserComment">
                 <a href="">
                   <img
-                    src="#"
+                    src="../assets/profile picture Andrei.jpg"
                     alt="profile picture"
                     class="profileImage"
                   />
                 </a>
-                <span>User Name</span>
+                <span>Andrei D</span>
               </div>
 
               <div class="userCommentText">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro
-                consequatur nemo nisi quasi dignissimos quisquam explicabo
-                suscipit possimus modi similique mollitia voluptatem molestias
-                ipsam, excepturi illum? Adipisci aperiam qui voluptatem.
-                <div class="emojiReaction">&#128526;</div>
+       wow, this is great
               </div>
 
               <div class="commentReaction">
@@ -894,20 +880,16 @@
               <div class="profileUserComment">
                 <a href="">
                   <img
-                    src="#"
+                    src="../assets/friend5.jpg"
                     alt="profile picture"
                     class="profileImage"
                   />
                 </a>
-                <span>User Name</span>
+                <span>Angela T</span>
               </div>
 
               <div class="userCommentText">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro
-                consequatur nemo nisi quasi dignissimos quisquam explicabo
-                suscipit possimus modi similique mollitia voluptatem molestias
-                ipsam, excepturi illum? Adipisci aperiam qui voluptatem.
-                <div class="emojiReaction">&#128526;</div>
+                This is a great start! Keep it up!
               </div>
 
               <div class="commentReaction">
@@ -962,7 +944,7 @@
             </div>
             <div class="conversationItem">
               <i class="fa-solid fa-house-chimney"></i>
-              <span>Purchase requests Bucharest</span>
+              <span>Looking for a house?</span>
             </div>
           </div>
           <hr>
@@ -988,11 +970,3 @@
     <script src="../js/feed.js"></script>
   </body>
 </html>
-
-
-
-
-
-
-
-
