@@ -1,112 +1,100 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import './App.scss'
 import Features from './components/logic/Features'
 import Light from './components/ui/Light'
 import Room from './components/ui/Room';
-import AC from './components/ui/AC';
+import Ac from './components/ui/Ac';
+import FeaturesForm from './components/logic/FeaturesForm';
 
 function App() {
-  // Correct way of managing state
+  // Correct way of managing states
   const [lightsOn, setLightsOn] = useState(false);
-const [acOn, setAcOn] = useState(false);
-const [dirtProgress, setDirtProgress] = useState({
-  status: 0.5,
-  cleaned: 0
-});
+  const [acOn, setAcOn] = useState(false);
+  const [dirtProgress, setDirtProgress] = useState({
+    status: 0,
+    cleaned: 0
+  });
 
-// Wrong way of managing state ! Nu folositi state-uri care nu au legatura intre ele in acelasi obiect
-// const [state, setState] = useState({
-// let lightsOn : false;
-// let acOn : false;
-// dirtStatus : 0;
-// cleaned : 0
+  const [feature, setFeature] = useState({
+    name: '',
+    action: '',
+    state: false,
+    id: 0
+  })
 
-/** Use effect model */
-// useEffect(() => {
-//   console.log('Effect triggered');
+  let dirtInterval = useRef();
 
-//   return () => {
-//     console.log('Component unmounted');
-//   }, [lightsOn]);
-
-let dirtInterval = useRef();
-
-useEffect() => {
-  dirtInterval.current = setInterval(() => {
-    setDirtProgress((prevState) => {
-      return {
-        ...prevState,
-        status: prevState.status + 0.1
-      }
-    })
-  }, 2000);
-
- const toggleLights = () => {
-    setLightsOn((prevState) => {
-      return !prevState;
- })
-};
-
-    const toggleAc = () => {
-      setAcOn((prevState) => {
-        return !prevState;
-      })
-    };
-
-
-    const startCleaning = () => {
-      setDirtProgress((prevState) => {
+  useEffect( () => {
+    dirtInterval.current = setInterval( () => {
+      setDirtProgress( prevState => {
+        // console.log(prevState.status)
+        if (prevState.status > 1) {
+          clearInterval(dirtInterval.current)
+        }
         return {
           ...prevState,
-          status: 0.2,
-          cleaned: prevState.cleaned + 1}
+          status: prevState.status + 0.1
+        }
       })
-    };
+    }, 2000);
+
+    return () => {
+      clearInterval(dirtInterval.current)
+    }
+  }, [dirtProgress.cleaned])
+
+  const toggleLights = () => {
+    setLightsOn((prevState) => {
+      return !prevState
+    });
+  }
+
+  const toggleAc = () => {
+    setAcOn((prevState) => {
+      return !prevState
+    });
+  }
+
+  const startCleaning = () => {
+    setDirtProgress(prevState => {
+      return {
+        ...prevState,
+        status: 0,
+        cleaned: prevState.cleaned + 1
+      }
+    })
+  }
 
   const toggleActionHandler = (name) => {
-switch (name) {
-  case 'Toggle lights':
-    toggleLights();
-    break;
-  case 'Toggle AC':
-    toggleAc();
-    break;
-      case 'Start Cleaning':
-    startCleaning();
-    break;
-  } };
+    switch (name) {
+      case 'Toggle lights':
+        toggleLights();
+        break;
+      case 'Toggle AC':
+        toggleAc();
+        break;
+      case 'Clean':
+        startCleaning();
+        break;
 
-  /**
-   * Destructuring explained
-   */
+    }
+  }
 
-  // function returnPuppy() {
-  //   const puppy = {
-  //     name: 'Rex'
-  //   }
-
-  //   function changePuppyName() {
-  //     puppy.name = 'Azorel';
-  //   }
-
-  //   return [puppy, changePuppyName];
-  // }
-  // const [myPuppy, myFunction] = returnPuppy();
-  // console.log(myPuppy)
-  // console.log(myFunction)
+  const updateFeaturesHandler = (newFeature) => {
+    setFeature(newFeature);
+  }
 
   return (
     <div>
       <div className="ui-features">
-        <Light lightsOn={lightsOn}/>
-        <AC acOn={acOn}/>
-        <Room status={dirtProgress.status}/>
-        {/* {counter} */}
+        <Light lightsOn={lightsOn} />
+        <Room status={dirtProgress.status} />
+        <Ac acOn={acOn} />
       </div>
-      <Features toggleAction={toggleActionHandler}/>
-      {/* <button onClick={count}>Count</button> */}
+      <Features toggleAction={toggleActionHandler} newFeature={feature} />
+      <FeaturesForm updateFeatures={updateFeaturesHandler}/>
     </div>
   )
 }
 
-export default App;
+export default App
