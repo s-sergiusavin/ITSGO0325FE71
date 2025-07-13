@@ -60,7 +60,7 @@ function Feed() {
       <header className={styles.header}>
         <img src={logo} alt="EyeSee Logo" className={styles.logo} />
         <nav className={styles.nav}>
-          <Link to="">Feed</Link>
+          <Link to="/LandingPage">Landing Page</Link>
           <Link to="/profile">Profile</Link>
           <Link to="/Login">Logout</Link>
         </nav>
