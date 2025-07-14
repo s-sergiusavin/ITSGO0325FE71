@@ -1,7 +1,6 @@
-import './Light.scss';
-
+import styles from './Light.module.scss'
 const Light = ({lightsOn}) => {
-    return <div className={`lights ${lightsOn ? 'yellow' : ''}`}></div>
+    return <div className={`${styles.Light} ${lightsOn ? styles.yellow : ''}`}></div>
 }
 
 export default Light;

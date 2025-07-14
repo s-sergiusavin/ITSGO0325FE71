@@ -1,4 +1,8 @@
-import { useRef, useState } from "react";
+import { useState } from "react";
+
+import TextField from "@mui/material/TextField";
+import { useNavigate } from "react-router-dom";
+import Button from "@mui/material/Button";
 
 const FeaturesForm = ({ updateFeatures }) => {
   const [isFormValid, setIsFormValid] = useState(true);
@@ -12,22 +16,21 @@ const FeaturesForm = ({ updateFeatures }) => {
   // const stateInputRef = useRef();
   // const descriptionInputRef = useRef();
 
+  const [nameFieldError, setNameFieldError] = useState(false);
+  const navigate = useNavigate;
+
   const checkValid = () => {
     // titleInputRef.current.value === "" ||
     // actionInputRef.current.value === "" ||
     // stateInputRef.current.value === "" ||
     // descriptionInputRef.current.value === ""
 
-    if (
-      nameField === "" ||
-      actionField === "" ||
-      stateField === "" ||
-      descriptionField === ""
-    ) {
-      setIsFormValid(false);
-    } else {
-      setIsFormValid(true);
-    }
+    return (
+      nameField !== "" &&
+      actionField !== "" &&
+      stateField !== "" &&
+      descriptionField !== ""
+    );
   };
 
   const resetFields = () => {
@@ -64,16 +67,20 @@ const FeaturesForm = ({ updateFeatures }) => {
   const submitHandler = (event) => {
     event.preventDefault();
     checkValid();
-
-    const newFeature = {
-      name: nameField,
-      action: actionField,
-      state: stateField,
-      id: Math.random() * 100,
-    };
-
-    updateFeatures(newFeature);
-    resetFields();
+    const isValid = checkValid();
+    setIsFormValid(isValid);
+    if (isValid) {
+      const newFeature = {
+        name: nameField,
+        action: actionField,
+        state: stateField,
+        id: Math.random() * 100,
+      };
+      updateFeatures(newFeature);
+      resetFields();
+    }
+    navigate("/smart-home");
+    console.log(isFormValid);
   };
 
   return (
@@ -83,51 +90,66 @@ const FeaturesForm = ({ updateFeatures }) => {
       noValidate
     >
       <div className="control">
-        <label htmlFor="title">Feature title</label>
+        {/* <label htmlFor="title">Feature title</label>
         <input
           type="text"
           id="title"
           required
-          onChange={nameChangeHandler}
+         
           value={nameField}
+        /> */}
+
+        <TextField
+          error={nameFieldError}
+          id="outlined-error-helper-text"
+          label="Future title"
+          value={nameField}
+          required
+          helperText={nameFieldError && "Incorrect entry."}
+          onChange={nameChangeHandler}
         />
       </div>
 
       <div className="control">
-        <label htmlFor="action">Feature action</label>
-        <input
-          type="text"
-          id="action"
-          required
-          onChange={actionChangeHandler}
+        <TextField
+          error={nameFieldError}
+          id="actionField"
+          label="Future action"
           value={actionField}
+          required
+          helperText={nameFieldError && "Incorrect entry."}
+          onChange={actionChangeHandler}
         />
       </div>
 
       <div className="control">
-        <label htmlFor="state">Feature state</label>
-        <input
-          type="text"
-          id="state"
-          required
-          onChange={stateChangeHandler}
+        <TextField
+          error={nameFieldError}
+          id="stateField"
+          label="Future state"
           value={stateField}
+          required
+          helperText={nameFieldError && "Incorrect entry."}
+          onChange={stateChangeHandler}
         />
       </div>
 
       <div className="control">
-        <label htmlFor="description">Feature description</label>
-        <textarea
-          id="description"
-          rows={5}
-          required
-          onChange={descriptionChangeHandler}
+        <TextField
+          error={descriptionField}
+          id="descriptionField"
+          label="Future description field"
           value={descriptionField}
-        ></textarea>
+          required
+          multiline
+          minRows={4}
+          helperText={nameFieldError && "Incorrect entry."}
+          onChange={descriptionChangeHandler}
+        />
       </div>
 
       <div className="actions">
-        <button>Add feature</button>
+        <Button variant="contained">Add feature</Button>
       </div>
     </form>
   );

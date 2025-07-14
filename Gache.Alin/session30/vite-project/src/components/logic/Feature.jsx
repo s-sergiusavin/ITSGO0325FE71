@@ -5,6 +5,12 @@ import acOn from "../../assets/acOn.jpg";
 import acOff from "../../assets/acOff.png";
 import { useEffect, useState } from "react";
 
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
+import Typography from "@mui/material/Typography";
+import CardActionArea from "@mui/material/CardActionArea";
+
 const Feature = ({ name, action, toggleAction, state }) => {
   // const smartHomeApp = {
   //     toggleLights: 'Toggle Lights',
@@ -35,14 +41,33 @@ const Feature = ({ name, action, toggleAction, state }) => {
 
   return (
     <div className="feature">
-      {name === "Toggle lights" && (
+      {/* {name === "Toggle lights" && (
         <img src={lightsIcon} alt="bulb" className="buttonImg" />
       )}
       {name === "Toggle AC" && (
         <img src={acIcon} alt="bulb" className="buttonImg" />
       )}
       <h3>{name}</h3>
-      <button onClick={featureButtonHandler}>{action}</button>
+      <button>{action}</button> */}
+
+      <Card sx={{ maxWidth: 345 }} onClick={featureButtonHandler}>
+        <CardActionArea>
+          <CardMedia
+            component="img"
+            height="140"
+            image={name === "Toggle lights" ? lightsIcon : acIcon}
+            alt="green iguana"
+          />
+          <CardContent>
+            <Typography gutterBottom variant="h5" component="div">
+              {name}
+            </Typography>
+            <Typography variant="body2" sx={{ color: "text.secondary" }}>
+              {action}
+            </Typography>
+          </CardContent>
+        </CardActionArea>
+      </Card>
     </div>
   );
 };

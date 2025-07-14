@@ -6,6 +6,20 @@
   text-align: center;
 }
 
+header {
+  nav {
+    ul {
+      list-style: none;
+      @include flexBox;
+      gap: 1.5rem;
+      li {
+        @include flexBox;
+        gap: 0.5rem;
+      }
+    }
+  }
+}
+
 .ui-features {
   @include flexBox;
 }
