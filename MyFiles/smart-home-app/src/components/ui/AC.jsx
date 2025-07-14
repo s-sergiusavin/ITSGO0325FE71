@@ -1,7 +1,7 @@
-import './AC.scss';
+import './Ac.scss';
 
-const AC = ({ acOn }) => {
-  return <div className={`ac ${acOn ? 'blue' : ''}`}></div>;
-};
+const Ac = ({acOn}) => {
+    return <div className={`ac ${acOn ? 'blue' : ''}`}></div>
+}
 
-export default AC;
+export default Ac;
