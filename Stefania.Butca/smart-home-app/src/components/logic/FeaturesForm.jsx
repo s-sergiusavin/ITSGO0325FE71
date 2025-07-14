@@ -66,12 +66,12 @@ const FeaturesForm = ({ updateFeatures }) => {
     return <form className={`form ${isFormValid ? 'valid' : 'invalid'}`} onSubmit={submitHandler} noValidate>
         <div className="control">
             <label htmlFor="title">Feature title</label>
-            <input type="text" id="title" required onChange={nameChangeHandler} value={nameField}/>
+            <input type="text" id="title" required onChange={nameChangeHandler} value={nameField} />
         </div>
 
         <div className="control">
             <label htmlFor="action">Feature action</label>
-            <input type="text" id="action" required onChange={actionChangeHandler} value={actionField}/>
+            <input type="text" id="action" required onChange={actionChangeHandler} value={actionField} />
         </div>
 
         <div className="control">
