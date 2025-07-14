@@ -1,76 +1,131 @@
-import { useRef, useState } from "react";
+import { useState } from "react";
+import TextField from '@mui/material/TextField';
+import { useNavigate } from "react-router-dom";
+import Button from '@mui/material/Button';
 
 const FeaturesForm = ({ updateFeatures }) => {
     const [isFormValid, setIsFormValid] = useState(true);
 
-    const titleInputRef = useRef();
-    const actionInputRef = useRef()
-    const stateInputRef = useRef()
-    const descriptionInputRef = useRef();
+    const [nameField, setNameField] = useState('');
+    const [actionField, setActionField] = useState('');
+    const [stateField, setStateField] = useState('');
+    const [descriptionField, setDescriptionField] = useState('');
+
+    const [nameFieldError, setNameFieldError] = useState(false);
+
+    const navigate = useNavigate()
 
     const checkValid = () => {
-        if (titleInputRef.current.value === '' ||
-            actionInputRef.current.value === '' ||
-            stateInputRef.current.value === '' ||
-            descriptionInputRef.current.value === ''
-        ) {
-            setIsFormValid(false)
-        } else {
-            setIsFormValid(true)
-        }
+        return (
+            nameField !== '' &&
+            actionField !== '' &&
+            stateField !== '' &&
+            descriptionField !== ''
+        );
     }
 
     const resetFields = () => {
-        titleInputRef.current.value = '';
-        actionInputRef.current.value = '';
-        stateInputRef.current.value = '';
-        descriptionInputRef.current.value = '';
+        setNameField('');
+        setActionField('');
+        setStateField('');
+        setDescriptionField('');
+    }
+
+    const nameChangeHandler = (e) => {
+        // console.log(e)
+        setNameField(e.target.value)
+    }
+
+    const actionChangeHandler = (e) => {
+        // console.log(e)
+        setActionField(e.target.value)
+    }
+
+    const stateChangeHandler = (e) => {
+        // console.log(e)
+        setStateField(e.target.value)
+    }
+
+    const descriptionChangeHandler = (e) => {
+        // console.log(e)
+        setDescriptionField(e.target.value)
     }
 
     const submitHandler = (event) => {
-        event.preventDefault()
-        checkValid()
-
-        const titleValue = titleInputRef.current.value;
-        const actionValue = actionInputRef.current.value;
-        const stateValue = stateInputRef.current.value;
-        const descriptionValue = descriptionInputRef.current.value;
-
-        const newFeature = {
-            name: titleValue,
-            action: actionValue,
-            state: stateValue,
-            id: Math.random() * 100,
-        };
+        event.preventDefault();
+        const isValid = checkValid();
+        setIsFormValid(isValid)
+        if (isValid) {
+            const newFeature = {
+                name: nameField,
+                action: actionField,
+                state: stateField,
+                id: Math.random() * 100,
+            };
 
 
-        updateFeatures(newFeature);
-        resetFields()
+            updateFeatures(newFeature);
+            resetFields()
+            navigate('/smart-home')
+        }
     }
 
     return <form className={`form ${isFormValid ? 'valid' : 'invalid'}`} onSubmit={submitHandler} noValidate>
         <div className="control">
-            <label htmlFor="title">Feature title</label>
-            <input type="text" id="title" required ref={titleInputRef} />
+            <TextField
+                error={nameFieldError}
+                id="nameField"
+                label="Feature title"
+                value={nameField}
+                required
+                helperText={nameFieldError && 'Incorrect entry.'}
+                onChange={nameChangeHandler}
+            />
         </div>
 
         <div className="control">
-            <label htmlFor="action">Feature action</label>
-            <input type="text" id="action" required ref={actionInputRef} />
+
+            <TextField
+                error={nameFieldError}
+                id="actionField"
+                label="Feature action"
+                value={actionField}
+                required
+                helperText={nameFieldError && 'Incorrect entry.'}
+                onChange={actionChangeHandler}
+            />
         </div>
 
         <div className="control">
-            <label htmlFor="state">Feature state</label>
-            <input type="text" id="state" required ref={stateInputRef} />
+
+            <TextField
+                error={nameFieldError}
+                id="stateField"
+                label="Feature state"
+                value={stateField}
+                required
+                helperText={nameFieldError && 'Incorrect entry.'}
+                onChange={stateChangeHandler}
+            />
         </div>
 
         <div className="control">
-            <label htmlFor="description">Feature description</label>
-            <textarea id="description" rows={5} required ref={descriptionInputRef}></textarea>
+
+            <TextField
+                error={nameFieldError}
+                id="descriptionField"
+                label="Feature description"
+                value={descriptionField}
+                required
+                multiline
+                minRows={4}
+                helperText={nameFieldError && 'Incorrect entry.'}
+                onChange={descriptionChangeHandler}
+            />
         </div>
 
         <div className="actions">
-            <button>Add feature</button>
+            <Button variant="contained">Add feature</Button>
         </div>
     </form>
 }
