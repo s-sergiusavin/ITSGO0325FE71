@@ -1,4 +1,7 @@
-import { useRef, useState } from "react";
+import { useState } from "react";
+import TextField from '@mui/material/TextField';
+import { useNavigate } from "react-router-dom";
+import Button from '@mui/material/Button';
 
 const FeaturesForm = ({ updateFeatures }) => {
 
@@ -7,20 +10,19 @@ const FeaturesForm = ({ updateFeatures }) => {
     const [nameField, setNameField] = useState('');
     const [actionField, setActionField] = useState('');
     const [stateField, setStateField] = useState('');
-    const [descriptionField,setDescriptionField] = useState('');
+    const [descriptionField, setDescriptionField] = useState('');
 
+    const [nameFieldError, setNameFieldError] = useState(false);
 
+    const navigate = useNavigate();
 
     const checkValid = () => {
-        if (nameField === '' ||
-            actionField === '' ||
-            stateField === '' ||
-            descriptionField === ''
-        ) {
-            setIsFormValid(false)
-        } else {
-            setIsFormValid(true)
-        }
+        return (
+            nameField !== '' &&
+            actionField !== '' &&
+            stateField !== '' &&
+            descriptionField !== ''
+        );
     }
 
     const resetField = () => {
@@ -49,18 +51,22 @@ const FeaturesForm = ({ updateFeatures }) => {
 
     const submitHandler = (event) => {
         event.preventDefault();
-        checkValid();
-        
+        const isValid = checkValid();
+        setIsFormValid(isValid);
 
-        const newFeature = {
-            name: nameField,
-            action: actionField,
-            state: stateField,
-            id: Math.random() * 100
+        if (isValid) {
+
+            const newFeature = {
+                name: nameField,
+                action: actionField,
+                state: stateField,
+                id: Math.random() * 100
+            }
+
+            updateFeatures(newFeature);
+            resetField();
+            navigate('/smart-home')
         }
-
-        updateFeatures(newFeature);
-        resetField();
 
     }
 
@@ -69,27 +75,59 @@ const FeaturesForm = ({ updateFeatures }) => {
 
     return <form className={`form ${isFormValid ? 'valid' : 'invalid'}`} onSubmit={submitHandler} noValidate>
         <div className="control">
-            <label htmlFor="title">Feature title</label>
-            <input type="text" id="title" required onChange={nameChangeHandler} value={nameField}/>
+            <TextField
+                error={nameFieldError}
+                id="nameField"
+                label="Feature title"
+                value={nameField}
+                required
+                defaultValue="Hello World"
+                helperText={nameFieldError && 'Incorrect entry'}
+                onChange={nameChangeHandler}
+            />
         </div>
 
         <div className="control">
-            <label htmlFor="action">Feature action</label>
-            <input type="text" id="action" required onChange={actionChangeHandler} value={actionField}/>
+            <TextField
+                error={actionField}
+                id="outlined-error-helper-text"
+                label="Feature title"
+                value={actionField}
+                required
+                defaultValue="Hello World"
+                helperText={nameFieldError && 'Incorrect entry'}
+                onChange={actionChangeHandler}
+            />
         </div>
 
         <div className="control">
-            <label htmlFor="state">Feature state</label>
-            <input type="text" id="state" required onChange={stateChangeHandler} value={stateField}/>
+            <TextField
+                error={actionField}
+                id="stateField"
+                label="Feature title"
+                value={stateField}
+                required
+                defaultValue="Hello World"
+                helperText={nameFieldError && 'Incorrect entry'}
+                onChange={stateChangeHandler}
+            />
         </div>
 
         <div className="control">
-            <label htmlFor="description">Feature description</label>
-            <textarea id="description" rows={5} required onChange={descriptionChangeHandler} value={descriptionField}></textarea>
+            <TextField
+                error={actionField}
+                id="descriptionField"
+                label="Feature title"
+                value={descriptionField}
+                required
+                defaultValue="Hello World"
+                helperText={nameFieldError && 'Incorrect entry'}
+                onChange={descriptionChangeHandler}
+            />
         </div>
 
         <div className="actions">
-            <button>Add Feature</button>
+            <Button variant="contained">Add Feature</Button>
         </div>
 
 

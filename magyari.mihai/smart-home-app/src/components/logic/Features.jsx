@@ -29,14 +29,22 @@ function Features({ toggleAction, newFeature }) {
             state: false,
             id: 3
         },
-
+        {
+            name: 'Watch TV',
+            action: 'Turn on the TV',
+            state: false,
+            id: 4
+        }
 
     ];
 
     const [features, setFeatures] = useState(FEATURES);
 
     useEffect(() => {
-        if (newFeature.name !== '') {
+        if (newFeature.name !== ''
+            // &&
+            // newFeature.action !== ''
+        ) {
             setFeatures(prevState => [newFeature, ...prevState])
         }
     }, [newFeature]);
@@ -70,6 +78,20 @@ function Features({ toggleAction, newFeature }) {
         })
     }
 
+    const toggleTv = () => {
+        setFeatures(prevState => {
+            const updatedFeatures = prevState.map(feature => {
+                if (feature.name === 'Watch TV') {
+                    feature.state = !feature.state;
+                    feature.action = `Turn ${feature.state ? 'Off' : 'On'} the TV`
+                }
+                return feature;
+            })
+
+            return updatedFeatures;
+        })
+    }
+
     const toggleActionHandler = (value) => {
         toggleAction(value)
 
@@ -80,10 +102,11 @@ function Features({ toggleAction, newFeature }) {
             case 'Toggle A/C':
                 toggleAc();
                 break;
+            case 'Watch TV':
+                toggleTv();
+                break;
         }
     }
-
-
 
     return <div className="features-container">
         <div className="features">
