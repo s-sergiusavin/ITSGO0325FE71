@@ -8,6 +8,7 @@ import { useState } from 'react';
 import HomeIcon from '@mui/icons-material/Home';
 import DevicesIcon from '@mui/icons-material/Devices';
 import AddToQueueIcon from '@mui/icons-material/AddToQueue';
+import TicTacToe from './components/logic/TicTactoe';
 
 function App() {
   const [feature, setFeature] = useState({
@@ -38,6 +39,9 @@ function App() {
               <AddToQueueIcon/>
               <NavLink to={'/features-form'}>Features Form</NavLink>
             </li>
+            <li>
+              <NavLink to={'/TicTacToe'}>TicTacToe</NavLink>
+            </li>
           </ul>
         </nav>
       </header>
@@ -50,8 +54,13 @@ function App() {
         <Route path='/smart-home' element={<SmartHome newFeature={feature}/>} />
         <Route path='/features-form' element={<FeaturesForm updateFeatures={updateFeaturesHandler} />} />
         <Route path='*' element={<NotFound />} />
+        <Route path='/TicTacToe' element={<TicTacToe />} />
       </Routes>
+
+      <TicTacToe/>
     </>
+
+    
   )
 }
 
