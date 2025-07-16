@@ -1,58 +1,27 @@
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 
 import Ac from "../ui/Ac";
 import Light from "../ui/Light";
 import Room from "../ui/Room";
 import Features from "./Features";
+import useInterval from "../../hooks/use-interval";
 
-const SmartHome = ({newFeature}) => {
+const SmartHome = ({ newFeature }) => {
   const [lightsOn, setLightsOn] = useState(false);
   const [acOn, setAcOn] = useState(false);
-  const [dirtProgress, setDirtProgress] = useState({
-    status: 0,
-    cleaned: 0,
-  });
-  const [kidsRoom, setKidsRoom] = useState({
-    status: 0,
-    cleaned: 0,
-  });
- 
 
-  let dirtInterval = useRef();
-  let kidsMess = useRef();
+  const [roomActions, resetRoomActions] = useInterval(4000, 0);
+  const [childRoomActions, resetChildRoomActions] = useInterval(2000, 0.3);
+  // const [kidsRoomMess, setKidsRoomMess] = useState({
+  //   status: 0,
+  //   cleaned: 0,
+  // });
 
-  useEffect(() => {
-    dirtInterval.current = setInterval(() => {
-      setDirtProgress((prevState) => {
-        // console.log(prevState.status)
-        if (prevState.status > 1) {
-          clearInterval(dirtInterval.current);
-        }
-        return {
-          ...prevState,
-          status: prevState.status + 0.1,
-        };
-      });
-    }, 2000);
+  // let kidsMess = useRef();
 
-    kidsMess.current = setInterval(() => {
-      setKidsRoom((prevState) => {
-        // console.log(prevState.status)
-        if (prevState.status > 1) {
-          clearInterval(kidsMess.current);
-        }
-        return {
-          ...prevState,
-          status: prevState.status + 0.1,
-        };
-      });
-    }, 1000);
+  // }, [dirtProgress.cleaned, kidsRoomMess.cleaned]);
 
-    return () => {
-      clearInterval(dirtInterval.current);
-      clearInterval(kidsMess.current);
-    };
-  }, [dirtProgress.cleaned, kidsRoom.cleaned]);
+  // TO DO de mutat in alt useEffect
 
   const toggleLights = () => {
     setLightsOn((prevState) => {
@@ -67,20 +36,15 @@ const SmartHome = ({newFeature}) => {
   };
 
   const startCleaning = () => {
-    setDirtProgress((prevState) => {
-      return {
-        ...prevState,
-        status: 0,
-        cleaned: prevState.cleaned + 1,
-      };
-    });
-    setKidsRoom((prevState) => {
-      return {
-        ...prevState,
-        status: 0,
-        cleaned: prevState.cleaned + 1,
-      };
-    });
+    // setKidsRoomMess((prevState) => {
+    //   return {
+    //     ...prevState,
+    //     status: 0,
+    //     cleaned: prevState.cleaned + 1,
+    //   };
+    // });
+    resetRoomActions();
+    resetChildRoomActions();
   };
 
   const toggleActionHandler = (name) => {
@@ -97,14 +61,13 @@ const SmartHome = ({newFeature}) => {
     }
   };
 
- 
-
   return (
     <>
       <div className="ui-features">
         <Light lightsOn={lightsOn} />
-        <Room status={dirtProgress.status} />
-        <Room status={kidsRoom.status} />
+        <Room status={roomActions.dirtProgress} />
+        <Room status={childRoomActions.dirtProgress} />
+        {/* <Room status={kidsRoomMess.status} /> */}
         <Ac acOn={acOn} />
       </div>
       <Features toggleAction={toggleActionHandler} newFeature={newFeature} />

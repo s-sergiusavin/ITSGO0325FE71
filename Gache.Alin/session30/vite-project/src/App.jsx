@@ -9,6 +9,8 @@ import NotFound from "./components/logic/NotFound";
 import HomeIcon from "@mui/icons-material/Home";
 import DevicesIcon from "@mui/icons-material/Devices";
 import AddToQueueIcon from "@mui/icons-material/AddToQueue";
+import useFetch from "./hooks/use-fetch";
+import useAxios from "./hooks/use-axios";
 
 function App() {
   // Correct way of managing states
@@ -17,17 +19,43 @@ function App() {
     name: "",
     action: "",
     state: false,
-    id: 0,
+    id: Math.random() * 100,
   });
+
+  const userURL = "https://reqres.in/api/users?page=2";
+  const users = useFetch("https://reqres.in/api/users?page=2"); //sau userURL
+
+  const { data, loading, error } = useAxios(userURL);
+  console.log(data);
+
+  // console.log(users);
 
   const updateFeaturesHandler = (newFeature) => {
     setFeature(newFeature);
   };
 
+
+  
+  const testLocalStorage = "Apare in local storage";
+  const sessionStorageTest = "Apare in session storage";
+
+  const setStorage = () => {
+    localStorage.setItem("localStorageTest", testLocalStorage);
+    sessionStorage.setItem("sessionStorageTest", sessionStorageTest);
+  };
+  const resetStorage = () => {
+    //Sterge elementul selectat
+    // localStorage.removeItem("localStorageTest");
+    // sessionStorage.removeItem("sessionStorageTest");
+
+    //Sterge tot
+    localStorage.clear();
+    sessionStorage.clear();
+  };
+
   return (
     <>
       {/* <FeaturesForm updateFeatures={updateFeaturesHandler} /> */}
-
       <header>
         <nav>
           <ul>
@@ -46,6 +74,8 @@ function App() {
           </ul>
         </nav>
       </header>
+      <button onClick={setStorage}>SessionStorage</button>
+      <button onClick={resetStorage}>ClearSessionStorage</button>
       <div className="lights yellow"></div>
       <Routes>
         <Route path="/" element={<SmartHome newFeature={feature} />} />
@@ -60,6 +90,23 @@ function App() {
         />
         <Route path="*" element={<NotFound />} />
       </Routes>
+      <h2>Data with usefetch</h2>
+      {/* {users &&
+        users.data.map((user) => {
+        return  <div key={user.id}>{user.first_name}</div>;
+        })} */}
+      {/* {users?.data.map((user) => {
+        return <div key={user.id}>{user.first_name}</div>;
+      })}   */}
+      {users?.data.map((user) => (
+        <div key={user.id}>{user.first_name}</div>
+      ))}
+
+      <h2>Data with Axios</h2>
+
+      {loading && <div>{loading}</div>}
+      {error && <div>{error}</div>}
+      {/* {!loading && !error data?.map((user)=> <div key={user.id}>{user.first_name}</div>)} */}
     </>
   );
 }

@@ -56,7 +56,6 @@ const Feature = ({ name, action, toggleAction, state }) => {
             component="img"
             height="140"
             image={name === "Toggle lights" ? lightsIcon : acIcon}
-            alt="green iguana"
           />
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">
