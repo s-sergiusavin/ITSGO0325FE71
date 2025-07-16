@@ -3,37 +3,14 @@ import Ac from "../ui/Ac";
 import Light from "../ui/Light";
 import Room from "../ui/Room";
 import Features from "./Features";
+import useInterval from "../../hooks/use-interval";
 
 const SmartHome = ({newFeature}) => {
     const [lightsOn, setLightsOn] = useState(false);
     const [acOn, setAcOn] = useState(false);
-    const [dirtProgress, setDirtProgress] = useState({
-        status: 0,
-        cleaned: 0
-    });
 
-    
-
-    let dirtInterval = useRef();
-
-    useEffect(() => {
-        dirtInterval.current = setInterval(() => {
-            setDirtProgress(prevState => {
-                // console.log(prevState.status)
-                if (prevState.status > 1) {
-                    clearInterval(dirtInterval.current)
-                }
-                return {
-                    ...prevState,
-                    status: prevState.status + 0.1
-                }
-            })
-        }, 2000);
-
-        return () => {
-            clearInterval(dirtInterval.current)
-        }
-    }, [dirtProgress.cleaned])
+    const [roomActions, resetRoomActions] = useInterval(4000, 0);
+    const [childRoomActions, resetChildRoomActions] = useInterval(2000, 0.3) 
 
     const toggleLights = () => {
         setLightsOn((prevState) => {
@@ -48,13 +25,8 @@ const SmartHome = ({newFeature}) => {
     }
 
     const startCleaning = () => {
-        setDirtProgress(prevState => {
-            return {
-                ...prevState,
-                status: 0,
-                cleaned: prevState.cleaned + 1
-            }
-        });
+        resetRoomActions();
+        resetChildRoomActions();
     }
 
     const toggleActionHandler = (name) => {
@@ -68,7 +40,6 @@ const SmartHome = ({newFeature}) => {
             case 'Clean':
                 startCleaning();
                 break;
-
         }
     }
 
@@ -76,7 +47,8 @@ const SmartHome = ({newFeature}) => {
         <>
             <div className="ui-features">
                 <Light lightsOn={lightsOn} />
-                <Room status={dirtProgress.status} />
+                <Room status={roomActions.dirtProgress} />
+                <Room status={childRoomActions.dirtProgress} />
                 <Ac acOn={acOn} />
             </div>
             <Features toggleAction={toggleActionHandler} newFeature={newFeature} />
