@@ -22,7 +22,7 @@ function App() {
 
   const usersUrl = 'https://reqres.in/api/users?page=2';
   const users = useFetch(usersUrl);
-  const { data } = useAxios(usersUrl);
+  const {data, loading, error} = useAxios(usersUrl);
 
 
   /**
