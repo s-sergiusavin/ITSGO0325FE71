@@ -33,6 +33,7 @@ const Feature = ({ name, action, toggleAction, state }) => {
     const [TvIcon, setTvIcon] = useState(null);
 
 
+
     useEffect(() => {
         if (name === 'Toggle Lights') {
             state ? setLightsIcon(buttonIcon) : setLightsIcon(buttonIconOff)
@@ -49,19 +50,23 @@ const Feature = ({ name, action, toggleAction, state }) => {
     }
 
     return <div className="feature">
-        {name === 'Toggle Lights' && <img src={LightsIcon} alt="bulb" className='buttonImg' />}
-        {name === 'Toggle A/C' && <img src={AcIcon} alt="ac" className='buttonImg' />}
-        {name === 'Watch TV' && <img src={TvIcon} alt="tv" className='buttonImg' />}
-        <h3></h3>
-        <button ></button>
 
-        <Card sx={{ maxWidth: 250 }} onClick={featureButtonHandler}>
+        {/* {name === 'Toggle Lights' && <img src={LightsIcon} alt="bulb" className='buttonImg' />}
+        {name === 'Toggle A/C' && <img src={AcIcon} alt="ac" className='buttonImg' />}
+        {name === 'Watch TV' && <img src={TvIcon} alt="tv" className='buttonImg' />} */}
+
+
+
+        <Card sx={{ maxWidth: 450 }} onClick={featureButtonHandler}>
             <CardActionArea>
                 <CardMedia
                     component="img"
-                    height="140"
-                    image={name === 'Toggle Lights' ? LightsIcon : AcIcon}
-                    alt="green iguana"
+                    height="50"
+                    image={name === 'Toggle Lights' ? LightsIcon : '' ||
+                        name === 'Toggle A/C' ? AcIcon : '' ||
+                        name === 'Watch TV' ? TvIcon : '' 
+
+                    }
                 />
                 <CardContent>
                     <Typography gutterBottom variant="h5" component="div">

@@ -1,22 +1,20 @@
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 import AirCon from "../ui/AirCon";
 import Light from "../ui/Light";
 import Room from "../ui/Room";
 import Tv from "../ui/tv";
 import Features from "./Features";
+import useInterval from "../../hooks/use-interval";
 
-const SmartHome = (newFeature) => {
+const SmartHome = ({ newFeature }) => {
 
   const [lightsOn, setLightsOn] = useState(false);
   const [acOn, setAcOn] = useState(false);
-  const [dirtProgress, setDirtProgress] = useState({
-    status: 0,
-    cleaned: 0,
-  });
   const [tvOn, setTvOn] = useState(false);
+  const [roomActions, resetRoomActions] = useInterval(4000,0);
+  const [childRoomActions, resetChildRoomActions] = useInterval(2000, 0.5);
 
 
-  //Wrong way -> nu definiti in acelasi obiect lucruri care nu au legatura
 
 
 
@@ -47,27 +45,6 @@ const SmartHome = (newFeature) => {
   //   }
   // }, [lightsOn])
 
-  let dirtInterval = useRef();
-
-  useEffect(() => {
-    dirtInterval.current = setInterval(() => {
-      setDirtProgress(prevState => {
-
-        if (prevState.status > 1) {
-          clearInterval(dirtInterval.current)
-        }
-        return {
-          ...prevState,
-          status: prevState.status + 0.1
-        }
-      })
-
-    }, 2000)
-    return () => {
-      clearInterval(dirtInterval.current)
-    }
-  }, [dirtProgress.cleaned]);
-
 
   const toggleLights = () => {
     setLightsOn((prevState) => {
@@ -82,14 +59,8 @@ const SmartHome = (newFeature) => {
   }
 
   const startCleaning = () => {
-    setDirtProgress((prevState) => {
-      return {
-        ...prevState,
-        status: 0,
-        cleaned: prevState.cleaned + 1
-
-      }
-    })
+    resetRoomActions();
+    resetChildRoomActions();
   }
 
   const toggleTv = () => {
@@ -121,8 +92,8 @@ const SmartHome = (newFeature) => {
       <div className="ui-features">
         <Light lightsOn={lightsOn} />
         <AirCon acOn={acOn} />
-        <Room status={dirtProgress.status} />
-        <Room status={0.7} />
+        <Room status={roomActions.dirtProgress} />
+        <Room status={childRoomActions.dirtProgress} />
         <Tv tvOn={tvOn} />
       </div>
       <Features toggleAction={toggleActionHandler} newFeature={newFeature} />
