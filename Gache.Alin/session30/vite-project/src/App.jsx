@@ -34,8 +34,6 @@ function App() {
     setFeature(newFeature);
   };
 
-
-  
   const testLocalStorage = "Apare in local storage";
   const sessionStorageTest = "Apare in session storage";
 
@@ -106,6 +104,13 @@ function App() {
 
       {loading && <div>{loading}</div>}
       {error && <div>{error}</div>}
+      {!loading &&
+        !error &&
+        data?.map((user) => (
+          <div key={user.id}>
+            {user.first_name} {user.last_name}
+          </div>
+        ))}
       {/* {!loading && !error data?.map((user)=> <div key={user.id}>{user.first_name}</div>)} */}
     </>
   );
