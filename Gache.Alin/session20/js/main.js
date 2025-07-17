@@ -358,3 +358,142 @@ girl.sayHiGirl = boy.sayHi;
 
 console.log(girl);
 girl.sayHiGirl();
+
+
+// Exerctitii
+
+// const valoare = true
+// const convertBoolean = (val) =>{
+//     if(val == true){
+//         console.log('Yes')
+//     }else{
+//         console.log('No')
+//     }
+// }
+// convertBoolean(valoare)
+// const valoare = [true, true, false]
+//  const convertBoolean = (val) =>{
+// val.forEach((elem)=>{
+//   if(elem == true){
+//         console.log('Yes')
+//     }else{
+//         console.log('No')
+//     }
+// })
+// }
+// convertBoolean(valoare)
+
+
+
+
+// let x = [1,6,29,30,52]
+// const evenOrOdd = (num) =>{
+// for(i=0; i< num.length;i++){
+//         if(i % 2 === 0){
+//         console.log('Even')
+//     }else{
+//         console.log('Odd')
+//     }
+// }}
+// evenOrOdd(x)
+
+// const newArr=[3, 10, 200, 0, -3]
+
+// let sum = 0
+// newArr.forEach((x)=>{
+    
+//     sum = x * (5**Math.abs(x).toString().length)
+//     // console.log(x)
+//     console.log(sum)
+// })
+
+// const newArr=[2,5,6,-7,0,4,8]
+
+// const newArr2=[42,-5,-4,64,0,-43,82]
+// let test = 0
+
+// const makeNeg = (num)=>{
+// num.forEach((elem)=>{
+//     if(elem > 0 ){
+//      console.log(   elem * -1)
+//     }else if( elem < 0){
+//       console.log(   elem * 1)
+//     }else{
+//         console.log( `${elem} nu poate sa fie negativ`)
+//     }})}
+
+// makeNeg(newArr2)
+
+// const newArr= [1,5,-3,4]
+// let sum = 0
+
+// const sumOfPos = (arr)=>{
+    
+// for(i=0; i<arr.length; i++){
+//     if(arr[i]<0){
+//         // console.log('test')
+//     }else if(arr[i]>0){
+//     //   console.log(arr[i])
+//       sum += arr[i]
+//     }else{
+//         sum = 0
+//     }
+// }
+//  return sum 
+    
+// }
+// sumOfPos(newArr)
+// console.log(sum)
+
+
+// let string = 'Salut'
+
+// const reverse = (str) =>{
+//     return str.split('').reverse().join('')
+// }
+// console.log(reverse(string))
+
+// const number = 100
+
+// const toString =(num)=>{
+//     console.log(num.toString() )
+// }
+// toString(1234)
+// const makeNeg = (num)=>{
+//     if(num > 0 ){
+//      console.log(   num * -1)
+//     }else if( num < 0){
+//       console.log(   num * 1)
+//     }else{
+//         return `${num} nu poate sa fie negativ`
+//     }
+// }
+
+
+// makeNeg(5)
+
+// const arr1= [1,6,8,9,5]
+// const arr2 =[9,8,7,6,5]
+
+// const newArr = arr1.map((x,y)=> x + arr2[y])
+// console.log(newArr)
+
+// const arrEq = arr1.map((x,y) =>{
+//     // console.log(x)
+//     arr2.map((y)=>{
+//         // console.log(y)
+//         if(x === y){
+//             console.log('egale')
+//         }else{
+//             console.log('nu')
+//         }
+//     })
+// })
+
+
+// arr1.forEach((x)=>{
+//     if(arr2.includes(x)){
+//         console.log('Egale')
+//     }
+// })
+
