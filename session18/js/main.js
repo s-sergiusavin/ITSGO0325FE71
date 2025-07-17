@@ -2,9 +2,9 @@
  * Scope
  */
 
-let testLet = 'let-global';
-const testConst = 'const-global';
-var testVar = 'var-global';
+let testLet = "let-global";
+const testConst = "const-global";
+var testVar = "var-global";
 
 // let & const cannot be redeclared in the same scope
 // let testLet = 3;
@@ -32,7 +32,7 @@ var testVar = 'var-global';
 //         console.log(testVar)
 
 //         console.log('Sfarsitul celui de-al doilea if -------')
-//     }   
+//     }
 
 //     if (true) {
 //         console.log('Al treilea if -------')
@@ -46,7 +46,7 @@ var testVar = 'var-global';
 //         console.log(testVar)
 
 //         console.log('Sfarsitul celui de-al treilea if -------')
-//     } 
+//     }
 // }
 
 // console.log('----Dupa if----')
@@ -54,21 +54,21 @@ var testVar = 'var-global';
 // console.log(testConst)
 // console.log(testVar)
 
-let outside = 'Outside';
+let outside = "Outside";
 
 if (true) {
-    let outside = 'Inside'
-    console.log(outside)
+  let outside = "Inside";
+  console.log(outside);
 }
 
-console.log(outside)
+console.log(outside);
 
-let globalVariable = 'unchanged';
+let globalVariable = "unchanged";
 
 function addTwo(number) {
-    globalVariable = 'changed!!!';
+  globalVariable = "changed!!!";
 
-    const total = number + 2;
+  const total = number + 2;
 }
 
 console.log(globalVariable);
@@ -79,14 +79,14 @@ console.log(globalVariable);
 let needMoney = true;
 
 if (needMoney) {
-    addTwo(3)
+  addTwo(3);
 }
 
 console.log(globalVariable);
 
 if (needMoney) {
-    let noAccessToThisVar = 'Nu vom avea acces la valoarea asta';
-    console.log(noAccessToThisVar)
+  let noAccessToThisVar = "Nu vom avea acces la valoarea asta";
+  console.log(noAccessToThisVar);
 }
 
 // console.log(noAccessToThisVar) // error: variable is not defined
@@ -98,59 +98,61 @@ if (needMoney) {
 
 showTimisoara();
 function showTimisoara() {
-    console.log('Timisoara')
+  console.log("Timisoara");
 }
 
 showTimisoara();
 
 // console.log(notHoistedConst) // error
-const notHoistedConst = 'nu se aplica';
+const notHoistedConst = "nu se aplica";
 
 // console.log(notHoistedLet) //erorr
-let notHoistedlet = 'nu se aplica';
+let notHoistedlet = "nu se aplica";
 
 // showCluj(); //error
 const showCluj = () => {
-    console.log('Cluj');
-}
+  console.log("Cluj");
+};
 
 showCluj();
 
 // showBrasov();
 const showBrasov = function () {
-    console.log("Brasov");
-}
+  console.log("Brasov");
+};
 
-showBrasov()
+showBrasov();
 
 // The return value of a function
 // Valoarea returnata a unei functii
 
 const addFive = (number) => {
-    return number + 5;
-}
+  return number + 5;
+};
 
-console.log(addFive(10))
-console.log(addFive(20))
+console.log(addFive(10));
+console.log(addFive(20));
 
 const onePlusFive = addFive(1);
 console.log(onePlusFive);
 
 const changeEur = (value) => {
-    const total = value * 5;
+  const total = value * 5;
 
-    console.log('Acest text va fi vizibil')
+  console.log("Acest text va fi vizibil");
 
-    return total;
+  return total;
 
-    console.log('Orice cod aflat dupa return in interiorul unei functii, nu va fi executat');
+  console.log(
+    "Orice cod aflat dupa return in interiorul unei functii, nu va fi executat"
+  );
 
-    return 'totalul poate fi orice';
-}
+  return "totalul poate fi orice";
+};
 
-const fiveEur = changeEur(5)
-console.log(fiveEur)
-console.log(changeEur(10))
+const fiveEur = changeEur(5);
+console.log(fiveEur);
+console.log(changeEur(10));
 
 // Particularities of arrow functions
 // Daca am un singur parametru, parantezele rotunde sunt optionale
@@ -160,9 +162,9 @@ console.log(changeEur(10))
 //     return value * 4.5;
 // }
 
-const changeUsd = value => value * 4.5;
+const changeUsd = (value) => value * 4.5;
 
-console.log(changeUsd(10))
+console.log(changeUsd(10));
 
 const addTwoNumbers = (val1, val2) => val1 + val2;
 
@@ -177,24 +179,23 @@ console.log(addTwoNumbers(1, 2));
  * Parametrii default functioneaza la fel pt toate tipurile de functii
  */
 
-const makeBurger = (ingredient = 'porc') => {
+const makeBurger = (ingredient = "porc") => {
+  if (ingredient === undefined) {
+    ingredient = "pui";
+  }
 
-    if (ingredient === undefined) {
-        ingredient = 'pui';
-    }
+  if (!ingredient) {
+    ingredient = "oaie";
+  }
 
-    if (!ingredient) {
-        ingredient = 'oaie';
-    }
+  console.log("Burgerul meu preferat este cu " + ingredient);
+};
 
-    console.log('Burgerul meu preferat este cu ' + ingredient);
-}
-
-makeBurger('vita');
+makeBurger("vita");
 makeBurger();
-makeBurger('rata');
-makeBurger('wagyu');
-makeBurger('');
+makeBurger("rata");
+makeBurger("wagyu");
+makeBurger("");
 
 // const rateMovie = (movie) => {
 //     if (movie === 'Home Alone') {
@@ -215,116 +216,149 @@ makeBurger('');
 // }
 
 const rateMovie = (movie) => {
-    switch (movie) {
-        case 'Home Alone':
-            console.log('Filmul ' + movie + ' e de nota 10')
-            break;
-        case 'Pulp Fiction':
-            console.log('Filmul ' + movie + ' e de nota 9')
-            break;
-        case 'Avatar':
-            console.log('Filmul ' + movie + ' e de nota 8')
-            break;
-        case 'Avangers':
-            console.log('Filmul ' + movie + ' e de nota 7')
-            break;
-        case 'Justice League':
-            console.log('Filmul ' + movie + ' e de nota 6')
-            break;
-        case 'Jumanji':
-            console.log('Filmul ' + movie + ' e de nota 5')
-            break;
-        case undefined:
-            console.log('Te rugam, sa introduci numele filmului');
-            break   
-        default:
-            console.log('Filmul nu exista in baza noastra de date');
-    }
-}
+  switch (movie) {
+    case "Home Alone":
+      console.log("Filmul " + movie + " e de nota 10");
+      break;
+    case "Pulp Fiction":
+      console.log("Filmul " + movie + " e de nota 9");
+      break;
+    case "Avatar":
+      console.log("Filmul " + movie + " e de nota 8");
+      break;
+    case "Avangers":
+      console.log("Filmul " + movie + " e de nota 7");
+      break;
+    case "Justice League":
+      console.log("Filmul " + movie + " e de nota 6");
+      break;
+    case "Jumanji":
+      console.log("Filmul " + movie + " e de nota 5");
+      break;
+    case undefined:
+      console.log("Te rugam, sa introduci numele filmului");
+      break;
+    default:
+      console.log("Filmul nu exista in baza noastra de date");
+  }
+};
 
-rateMovie('Home Alone') // Filmul e de nota 10
-rateMovie('Pulp Fiction') // Filmul e de nota 9
-rateMovie('Avatar') // Filmul e de nota 8
-rateMovie('Avangers') // Filmul e de nota 7
-rateMovie('Justice League') // Filmul e de nota 6
-rateMovie('Jumanji') // Filmul e de nota 6
-rateMovie() // Te rugam sa introduci numele filmului
-rateMovie('Titanic');
+rateMovie("Home Alone"); // Filmul e de nota 10
+rateMovie("Pulp Fiction"); // Filmul e de nota 9
+rateMovie("Avatar"); // Filmul e de nota 8
+rateMovie("Avangers"); // Filmul e de nota 7
+rateMovie("Justice League"); // Filmul e de nota 6
+rateMovie("Jumanji"); // Filmul e de nota 6
+rateMovie(); // Te rugam sa introduci numele filmului
+rateMovie("Titanic");
 
 // Object with function as a property (methods)
 
 const complexObject = {
-    name: 'Sergiu',
-    address: {
-        city: "Brasov",
-        zip: 500500,
-        additionalInfo: ['interfon', 'etaj', 'apartament']
-    },
-    favouriteMovies: ['Home Alone', 'Pulp Fiction', 'Avatar'],
-    hasPassport: true,
-    hobbies: ['travel', 'eat', 'drink'],
-    watchMovie: function (movie) {
-        console.log('Uita-te la ' + movie);
-    },
-    sleep: () => {
-        console.log('Du-te la culcare');
-    },
-    work() {
-        console.log('Mergi la munca')
-    },
-    age: 19
-}
+  name: "Sergiu",
+  address: {
+    city: "Brasov",
+    zip: 500500,
+    additionalInfo: ["interfon", "etaj", "apartament"],
+  },
+  favouriteMovies: ["Home Alone", "Pulp Fiction", "Avatar"],
+  hasPassport: true,
+  hobbies: ["travel", "eat", "drink"],
+  watchMovie: function (movie) {
+    console.log("Uita-te la " + movie);
+  },
+  sleep: () => {
+    console.log("Du-te la culcare");
+  },
+  work() {
+    console.log("Mergi la munca");
+  },
+  age: 19,
+};
 
-console.log(complexObject.name)
-console.log(complexObject.address.city)
-console.log(complexObject.address.additionalInfo[2])
-console.log(complexObject.favouriteMovies[2])
-complexObject.watchMovie('Harry Potter');
+console.log(complexObject.name);
+console.log(complexObject.address.city);
+console.log(complexObject.address.additionalInfo[2]);
+console.log(complexObject.favouriteMovies[2]);
+complexObject.watchMovie("Harry Potter");
 
-console.log(console)
+console.log(console);
 
-complexObject.watchMovie(complexObject.favouriteMovies[0])
+complexObject.watchMovie(complexObject.favouriteMovies[0]);
 complexObject.sleep();
 complexObject.work();
 
 // Flip a coin
 
-let valoriMoneda = ['cap', 'stema'];
+let valoriMoneda = ["cap", "stema"];
 
-console.log(valoriMoneda[0])
-console.log(valoriMoneda[1])
+console.log(valoriMoneda[0]);
+console.log(valoriMoneda[1]);
 console.log(Math.random());
 console.log(Math.random());
 console.log(Math.random());
 console.log(Math.round(Math.random()));
 
-if (valoriMoneda[Math.round(Math.random())] === 'cap') {
-    console.log('A iesit cap') 
+if (valoriMoneda[Math.round(Math.random())] === "cap") {
+  console.log("A iesit cap");
 } else {
-    console.log('A iesit stema')
+  console.log("A iesit stema");
 }
 
 // Palindrome game
-debugger;
 const palindrome = [1, 9, 7, 8, 7, 9, 1];
 const checkPalindrome = (array) => {
-    for (let i = 0; i < array.length / 2; i++) {
-        if (array[i] !== array[array.length - 1 - i]) {
-            return 'Arrayul nu este palindrom'
-            // console.log('Arrayul este palindrom')
-        }
+  for (let i = 0; i < array.length / 2; i++) {
+    if (array[i] !== array[array.length - 1 - i]) {
+      return "Arrayul nu este palindrom";
+      // console.log('Arrayul este palindrom')
     }
+  }
 
-    return 'Arrayul este palindrom'
-    // console.log('Arrayul  nu este palindrom')
-}
+  return "Arrayul este palindrom";
+  // console.log('Arrayul  nu este palindrom')
+};
 
 console.log(checkPalindrome(palindrome));
 // checkPalindrome(palindrome)
 
+// const newArr=[3, 10, 200, 0, -3]
+// let sum = 0
+// newArr.forEach((x)=>{
+//     debugger
+//     sum = x * (5**x.toString().length)
+//     // console.log(x)
+//     console.log(sum)
+// })
 
+// const newArr=[2,5,6,-7,0,4,8]
+// let test = 0
+// const makeNeg = (num)=>{
+//     debugger
+// for(i=0; i< num.length; i++){
+//     if(i > 0){
+//         console.log(test =i * 1)
+//     }else if(i < 0){
+//           console.log(i * -1)
+//     }
+// }
+// }
 
+// makeNeg(newArr)
 
+// const newArr = [1, 5, -3, 4];
+// let sum = 0;
 
-
-
+// const sumOfPos = (arr) => {
+//   debugger;
+//   arr.forEach((elem) => {
+//     sum = elem;
+//     if (elem > 0) {
+//       sum = elem + elem;
+//     } else {
+//       return 0;
+//     }
+//   });
+// };
+// sumOfPos(newArr);
+// console.log(sum);
