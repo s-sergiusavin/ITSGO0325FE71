@@ -49,7 +49,7 @@ const SmartHome = ({ newFeature }) => {
       <div className="ui-features">
         <Light lightsOn={lightsOn} />
         <Room status={roomAction.dirtProgress} />
-        <ChildRoom status={childRoomActions.childDirtProgress} />
+        <ChildRoom status={childRoomActions.DirtProgress} />
         <Ac acOn={acOn} />
       </div>
       <Features toggleAction={toggleActionHandler} newFeature={newFeature} />
