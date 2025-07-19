@@ -1,0 +1,66 @@
+@use '../../styles/variables' as *;
+
+.post-card {
+  background-color: rgb(255, 255, 255);
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 24px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+
+  .post-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+
+    .avatar {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-right: 10px;
+    }
+
+    .username {
+      font-weight: 600;
+      color: $color-text;
+    }
+  }
+
+  .post-content {
+    margin-bottom: 12px;
+
+    img, video {
+      width: 100%;
+      border-radius: 10px;
+      object-fit: cover;
+      max-height: 400px;
+    }
+  }
+
+  .post-text {
+    color: $color-text;
+    margin-bottom: 10px;
+  }
+
+  .post-actions {
+    display: flex;
+    gap: 16px;
+
+    button {
+      font-size: 1.3rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+      transition: color 0.2s;
+
+      &:hover {
+        color: $color-accent;
+      }
+    }
+  }
+}

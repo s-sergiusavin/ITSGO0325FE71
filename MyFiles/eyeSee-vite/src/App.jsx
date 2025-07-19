@@ -1,19 +1,27 @@
 import { Routes, Route, Navigate } from 'react-router-dom';
-import Feed from './Feed';
-import Login from './Login';
-import Profile from './Profile';
-import LandingPage from './LandingPage';
+import Layout from './layout/Layout';
+import Home from './pages/Home';
+import LandingPage from './pages/LandingPage';
+import Profile from './pages/Profile';
+import Signin from './pages/Signin';
+import Signup from './pages/Signup';
 
-function App() {
+const App = () => {
   return (
     <Routes>
-      <Route path="/" element={<Navigate to="/login" />} />
-      <Route path="/login" element={<Login />} />
-      <Route path="/feed" element={<Feed />} />
-      <Route path="/profile" element={<Profile />} />
-      <Route path="/landingpage" element={<LandingPage />} />
+      {/* Auth Routes */}
+      <Route path="/signin" element={<Signin />} />
+      <Route path="/signup" element={<Signup />} />
+
+      {/* Main App */}
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Navigate to="/home" />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/landing" element={<LandingPage />} />
+        <Route path="/profile" element={<Profile />} />
+      </Route>
     </Routes>
   );
-}
+};
 
 export default App;
