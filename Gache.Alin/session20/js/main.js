@@ -152,6 +152,7 @@ console.log(array);
  *  .concat()
  *  Imbinarea array-ului
  */
+console.log(`=====CONCAT=====`);
 
 const concatArray = ["add", "me"];
 // const newConcatenatedArray = array.concat(concatArray);
@@ -161,7 +162,8 @@ console.log(array.concat(concatArray));
 console.log(concatArray.concat(array));
 
 console.log([1, 2, 3].concat(concatArray));
-
+console.log(concatArray.concat([1,2,3]));
+console.log(`===============`);
 /**
  * .join()
  * Transform array into string
@@ -189,14 +191,16 @@ console.log(reducedValue);
  * Sorting an array
  * MODIFICA array-ul original
  */
+console.log('=====SORT=====');
 
 let arrayToSort = [1, 7, 200, 34, -8, 1024, 855, 11, 4, "asd", "aac", "sum"];
 // console.log(arrayToSort.sort());
 arrayToSort.sort((a, b) => {
-  // return a - b;
-  return b - a;
+  return a - b;
+  // return b - a;
 });
 console.log(arrayToSort);
+console.log('===============');
 
 /**
  * .find()
@@ -359,7 +363,6 @@ girl.sayHiGirl = boy.sayHi;
 console.log(girl);
 girl.sayHiGirl();
 
-
 // Exerctitii
 
 // const valoare = true
@@ -383,9 +386,6 @@ girl.sayHiGirl();
 // }
 // convertBoolean(valoare)
 
-
-
-
 // let x = [1,6,29,30,52]
 // const evenOrOdd = (num) =>{
 // for(i=0; i< num.length;i++){
@@ -401,7 +401,7 @@ girl.sayHiGirl();
 
 // let sum = 0
 // newArr.forEach((x)=>{
-    
+
 //     sum = x * (5**Math.abs(x).toString().length)
 //     // console.log(x)
 //     console.log(sum)
@@ -428,7 +428,7 @@ girl.sayHiGirl();
 // let sum = 0
 
 // const sumOfPos = (arr)=>{
-    
+
 // for(i=0; i<arr.length; i++){
 //     if(arr[i]<0){
 //         // console.log('test')
@@ -439,12 +439,11 @@ girl.sayHiGirl();
 //         sum = 0
 //     }
 // }
-//  return sum 
-    
+//  return sum
+
 // }
 // sumOfPos(newArr)
 // console.log(sum)
-
 
 // let string = 'Salut'
 
@@ -469,7 +468,6 @@ girl.sayHiGirl();
 //     }
 // }
 
-
 // makeNeg(5)
 
 // const arr1= [1,6,8,9,5]
@@ -490,10 +488,8 @@ girl.sayHiGirl();
 //     })
 // })
 
-
 // arr1.forEach((x)=>{
 //     if(arr2.includes(x)){
 //         console.log('Egale')
 //     }
 // })
-
