@@ -1,0 +1,68 @@
+@use '../scss/mixins' as mixins;
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5rem;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background-color: lightblue;
+
+    #headerIcon {
+        font-size: 3rem;
+        color: black;
+    }
+
+    #headerIcon:hover {
+            color: #7e8ccf
+        }
+}
+
+.mainSearch {
+    @include mixins.flexbox();
+    align-items: center;
+    padding: 0;
+    gap: 1rem;
+    
+    .logo {
+    display: flex;
+    padding: 1rem;
+    color: royalblue;
+    }
+}
+
+
+.mainNavigation {
+    @include mixins.flexbox();
+    
+
+    .navigation {
+        margin-right: 40rem;
+      list-style: none;
+      @include mixins.flexbox();
+      gap: 3.5rem;
+      padding: 0;
+    
+
+      li {
+        @include mixins.flexbox();
+        gap: 0.5rem;
+      }
+    }
+  }
+
+  .links {
+    @include mixins.flexbox();
+    padding: 0;
+    gap: 1rem;
+    list-style: none;
+    color: black;
+
+    .controlPoint {
+        padding-right: 15px;
+    }
+  }
+   
