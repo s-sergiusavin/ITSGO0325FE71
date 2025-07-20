@@ -1,0 +1,19 @@
+.coffeeCup {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    background-color: transparent;
+    margin: 0.5rem;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+    .coffee {
+        width: 6rem;
+        height: 6rem;
+        border-radius: 50%;
+        background-color: burlywood;
+    }
+}

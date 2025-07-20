@@ -81,7 +81,6 @@ const FeaturesForm = ({ updateFeatures }) => {
                 label="Feature title"
                 value={nameField}
                 required
-                defaultValue="Hello World"
                 helperText={nameFieldError && 'Incorrect entry'}
                 onChange={nameChangeHandler}
             />
@@ -89,12 +88,11 @@ const FeaturesForm = ({ updateFeatures }) => {
 
         <div className="control">
             <TextField
-                error={actionField}
-                id="outlined-error-helper-text"
-                label="Feature title"
+                error={nameFieldError}
+                id="actionField"
+                label="Feature action"
                 value={actionField}
                 required
-                defaultValue="Hello World"
                 helperText={nameFieldError && 'Incorrect entry'}
                 onChange={actionChangeHandler}
             />
@@ -102,12 +100,11 @@ const FeaturesForm = ({ updateFeatures }) => {
 
         <div className="control">
             <TextField
-                error={actionField}
+                error={nameFieldError}
                 id="stateField"
-                label="Feature title"
+                label="Feature state"
                 value={stateField}
                 required
-                defaultValue="Hello World"
                 helperText={nameFieldError && 'Incorrect entry'}
                 onChange={stateChangeHandler}
             />
@@ -115,12 +112,13 @@ const FeaturesForm = ({ updateFeatures }) => {
 
         <div className="control">
             <TextField
-                error={actionField}
+                error={nameFieldError}
                 id="descriptionField"
-                label="Feature title"
+                label="Feature description"
                 value={descriptionField}
                 required
-                defaultValue="Hello World"
+                multiline
+                minRows={4}
                 helperText={nameFieldError && 'Incorrect entry'}
                 onChange={descriptionChangeHandler}
             />

@@ -5,17 +5,20 @@ import Room from "../ui/Room";
 import Tv from "../ui/tv";
 import Features from "./Features";
 import useInterval from "../../hooks/use-interval";
+import Coffee from "../ui/Coffee";
+import useCoffee from "../../hooks/use-coffee";
+
+
 
 const SmartHome = ({ newFeature }) => {
 
   const [lightsOn, setLightsOn] = useState(false);
   const [acOn, setAcOn] = useState(false);
   const [tvOn, setTvOn] = useState(false);
-  const [roomActions, resetRoomActions] = useInterval(4000,0);
-  const [childRoomActions, resetChildRoomActions] = useInterval(2000, 0.5);
-
-
-
+  const [roomActions, resetRoomActions] = useInterval(2000, 0);
+  const [childRoomActions, resetChildRoomActions] = useInterval(1000, 0.5);
+  const [pourCoffee, resetCoffee, startFilling] = useCoffee(1000, 0)
+  const coffeeVolume = pourCoffee.coffeeVolume;
 
 
 
@@ -69,6 +72,7 @@ const SmartHome = ({ newFeature }) => {
     })
   }
 
+  
 
 
   const toggleActionHandler = (name) => {
@@ -85,6 +89,14 @@ const SmartHome = ({ newFeature }) => {
       case 'Watch TV':
         toggleTv();
         break;
+      case 'Coffee time':
+        if (coffeeVolume === 0){
+          startFilling();
+        }else{
+           resetCoffee();
+        }
+       
+        break;
     }
   }
   return (
@@ -94,6 +106,7 @@ const SmartHome = ({ newFeature }) => {
         <AirCon acOn={acOn} />
         <Room status={roomActions.dirtProgress} />
         <Room status={childRoomActions.dirtProgress} />
+        <Coffee status={pourCoffee.coffeeVolume} />
         <Tv tvOn={tvOn} />
       </div>
       <Features toggleAction={toggleActionHandler} newFeature={newFeature} />

@@ -4,7 +4,7 @@ import axios from 'axios';
 function useAxios(url) {
     axios.headers = {
         'x-api-key': 'reqres-free-v1'
-    };
+    }
 
     const [data, setData] = useState(null);
     const [loading, setLoading] = useState(false);

@@ -52,13 +52,15 @@ function App() {
   }
 
   const testLocalStorage = 'Acest text va aparea in local storage'
+  const testLocalStorage2 ='Al doilea test pe local storage'
   const testSessionStorage = 'Acest text va aparea in session storage'
 
   const setStorage = () => {
     localStorage.setItem('localStorageTest', testLocalStorage)
     sessionStorage.setItem('sessionStorageTest', testSessionStorage)
+    localStorage.setItem('localStorageTest2',testLocalStorage2)
   }
-
+  
   const removeStorage = () => {
 
     //Metoda removeItem sterge elementul mentionat
@@ -91,6 +93,9 @@ function App() {
           </ul>
         </nav>
       </header>
+
+      <button onClick={setStorage}>Set storage</button>
+      <button onClick={removeStorage}>Remove storage</button>
 
       <div className='lights yellow'></div>
 
