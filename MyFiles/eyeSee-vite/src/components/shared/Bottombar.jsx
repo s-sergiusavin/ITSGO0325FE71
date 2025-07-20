@@ -16,8 +16,8 @@ const Bottombar = () => {
     }}>
       <NavLink to="/home">🏠</NavLink>
       <NavLink to="/landingpage">🔍</NavLink>
-      <NavLink to="/signin">Logout</NavLink>
       <NavLink to="/profile">👤</NavLink>
+      <NavLink to="/signin">Logout</NavLink>
     </footer>
   );
 };

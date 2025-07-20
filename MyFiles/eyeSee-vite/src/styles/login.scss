@@ -105,6 +105,28 @@
     }
   }
 
+  .error {
+  color: rgb(255, 100, 100);
+  font-size: 0.8rem;
+  margin-top: -10px;
+  margin-bottom: 10px;
+  text-align: left;
+  width: 100%;
+}
+
+.toast {
+  margin-top: 2rem;
+  background-color: rgb(124, 235, 235);
+  padding: 12px 20px;
+  border-radius: 8px;
+  color: #000000;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border: 1px solid #82e3aa;
+  text-align: center;
+}
+
+
   // Responsive layout for smaller screens
   @media (max-width: 768px) {
     flex-direction: column;
