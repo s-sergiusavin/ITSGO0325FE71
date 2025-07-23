@@ -21,6 +21,7 @@
         }
 }
 
+
 .mainSearch {
     @include mixins.flexbox();
     align-items: center;
@@ -65,4 +66,78 @@
         padding-right: 15px;
     }
   }
-   
+
+  #main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+#postHeader {
+        display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+  #main #postOne {
+    width: 40%;
+    flex-direction: column;
+    box-shadow: 5px 5px 5px 5px;
+    margin: 3rem 0;
+    padding: 1rem;
+
+}
+
+#leftContent,
+#rightContent {
+    width: 15%;
+    /* border: 5px solid black; */
+    height: 100%;
+    position: fixed;
+    top: 5.5rem;
+}
+
+#leftContent {
+    left: 0;
+
+
+}
+
+#rightContent {
+    right: 0;
+
+}
+
+#profileUserInfo {
+    display: flex;
+    align-items: center;
+    
+}
+
+#profilePicture {
+    width: 3rem;
+    border-radius: 50%;
+}
+
+#profileName {
+    display: flex;
+    flex-direction: column;
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+}
+
+#content #imageWrapper {
+    position: relative;
+}
+
+ #content #imageWrapper #postContent {
+    max-width: 100%;
+    border: 1px solid black;
+    box-shadow: 1px 1px 1px 1px;
+ }

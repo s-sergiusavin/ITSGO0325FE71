@@ -4,6 +4,7 @@ import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import SettingsIcon from "@mui/icons-material/Settings";
 import { Link, NavLink, Route, Routes } from "react-router-dom";
+import "./PositionedMenu.scss"
 
 export default function PositionedMenu() {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -42,13 +43,13 @@ export default function PositionedMenu() {
         }}
       >
         <MenuItem onClick={handleClose}>
-          <NavLink to={"/profile"}>Profile</NavLink>
+          <NavLink to={"/profile"} className={'navLink'}>Profile</NavLink>
         </MenuItem>
         <MenuItem onClick={handleClose}>
-          <NavLink to={"/LandingPage"}>Landing Page</NavLink>
+          <NavLink to={"/LandingPage"} className={'navLink'}>Landing Page</NavLink>
         </MenuItem>
         <MenuItem onClick={handleClose}>
-          <NavLink to={"/login"}>Log Out</NavLink>
+          <NavLink to={"/login"} className={'navLink'}>Log Out</NavLink>
         </MenuItem>
       </Menu>
     </div>

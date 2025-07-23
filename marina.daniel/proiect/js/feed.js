@@ -64,12 +64,6 @@ likeButton.addEventListener("click", function () {
 
   console.dir(noOfLikesElem);
 
-  // if (isLiked) {
-  //     noOfLikesElem.innerText = Number(noOfLikesElem.innerText) + 1
-  // } else {
-  //     noOfLikesElem.innerText = Number(noOfLikesElem.innerText) - 1
-  // }
-
   noOfLikesElem.innerText = isLiked
     ? Number(noOfLikesElem.innerText) + 1
     : Number(noOfLikesElem.innerText) - 1;
