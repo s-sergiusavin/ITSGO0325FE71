@@ -1,6 +1,8 @@
+import AuthForm from "./AuthForm";
+
 const AuthPage = () => {
     return <div>
-        AuthPage
+        <AuthForm/>
     </div>
 }
 
