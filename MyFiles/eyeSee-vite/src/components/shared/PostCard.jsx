@@ -15,7 +15,7 @@ const PostCard = ({ username, avatar, content, text }) => {
         {content.type === 'image' && <img src={content.src} alt="Post content" />}
         {content.type === 'video' && (
           <video controls>
-            <source src={content.src} type="video/mp4" />
+            <source src={content.src} type="./assets/add.mp4" />
           </video>
         )}
       </div>
