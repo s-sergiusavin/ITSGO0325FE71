@@ -1,12 +1,12 @@
 import Navigation from "./Navigation";
 
-const Layout = () => {
-  return (
-    <>
-      <Navigation />
-      <div>Layout</div>
-    </>
-  );
-};
+const Layout = ({children}) => {
+    return (
+        <>
+            <Navigation/>
+            <main>{children}</main>
+        </>
+    )
+}
 
 export default Layout;
