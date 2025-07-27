@@ -1,12 +1,60 @@
 .mainContainer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 3rem;
+  padding: 2rem;
+  background-color: #f5f6fa;
+  font-family: 'Segoe UI', sans-serif;
 
-    aside {
-        width: 20rem;
-        background-color: lightgray;
-        height: 50vh;
+  aside {
+    width: 20rem;
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 80px;
+    height: fit-content;
+    align-self: flex-start;
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-size: 16px;
+        color: #333;
+        padding: 10px 0;
+        cursor: pointer;
+        transition: color 0.2s ease;
+
+        svg {
+          font-size: 18px;
+          color: #5a4fcf;
+        }
+
+        &:hover {
+          color: #5a4fcf;
+        }
+      }
     }
+
+    h3, h4 {
+      font-size: 18px;
+      margin-bottom: 16px;
+      color: #444;
+    }
+
+    h4 {
+      margin-top: 24px;
+      font-size: 14px;
+      text-transform: uppercase;
+      color: #888;
+    }
+  }
 }

@@ -1,0 +1,49 @@
+.left {
+  width: 270px;
+  padding: 24px;
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 80px;
+  height: fit-content;
+
+  h4 {
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #888;
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+}
+
+.menu,
+.shortcuts {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 16px;
+    color: #333;
+    padding: 10px 0;
+    cursor: pointer;
+    transition: color 0.2s ease;
+
+    svg {
+      font-size: 18px;
+      color: #5a4fcf;
+    }
+
+    &:hover {
+      color: #5a4fcf;
+    }
+  }
+}

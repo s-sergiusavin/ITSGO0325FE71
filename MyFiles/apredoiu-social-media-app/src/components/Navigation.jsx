@@ -18,10 +18,10 @@ const Navigation = () => {
         <nav>
             <ul className={styles.menu}>
                 <li className={styles.menuItem}>
-                    <NavLink to='/my-profile'> My Profile</NavLink>
+                    <NavLink to='/profile'> My Profile</NavLink>
                 </li>
                 <li className={styles.menuItem}>
-                    <NavLink to='/friends'> Friends</NavLink>
+                    <NavLink to='/settings'> Settings</NavLink>
                 </li>
                 <li className={styles.menuItem} onClick={toggleAuth}>
                     <NavLink to='/auth'> {isLoggedIn ? 'Logout' : 'Login'}</NavLink>

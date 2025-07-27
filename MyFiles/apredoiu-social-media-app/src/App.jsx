@@ -1,23 +1,22 @@
 import './App.css'
-import Layout from './components/Layout'
-import {Route, Routes} from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
+import Layout from './components/Layout';
 import HomePage from './pages/home/HomePage';
 import AuthPage from './pages/auth/AuthPage';
 import NotFound from './pages/NotFound';
+import Profile from './pages/profile/Profile';
 
 function App() {
-
   return (
-    <>
-  <Layout>
     <Routes>
-      <Route path='/' element={<HomePage/>}/>
-      <Route path='auth' element={<AuthPage/>}/>
-      <Route path='*' element={<NotFound/>}/>
+      <Route path='/' element={<Layout />}>
+        <Route index element={<HomePage />} />
+        <Route path='profile' element={<Profile />} />
+        <Route path='auth' element={<AuthPage />} />
+        <Route path='*' element={<NotFound />} />
+      </Route>
     </Routes>
-  </Layout>
-    </>
-  )
+  );
 }
 
-export default App
+export default App;

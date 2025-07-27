@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+.profileMain {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #f9f9fb;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+}
+
+.profileCard {
+  width: 100%;
+  max-width: 1150px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  margin-bottom: 2rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.bannerWrapper {
+  position: relative;
+  width: 100%;
+  height: 180px;
+}
+
+.spiralBackground {
+  position: absolute;
+  top: 97%;
+  left: 52%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  opacity: 0.08;
+  z-index: 0;
+  pointer-events: none;
+}
+
+
+.privacyButton {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.profileAvatarBox {
+  position: absolute;
+  top: 130px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 2;
+}
+
+.profileAvatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  object-fit: cover;
+}
+
+.statusDot {
+  width: 12px;
+  height: 12px;
+  background: #2ecc71;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.profileInfo {
+  margin-top: 60px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.profileInfo h1 {
+  font-size: 22px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.editButton {
+  margin-left: 10px;
+  background: transparent;
+  border: none;
+  color: #5a4fcf;
+  cursor: pointer;
+}
+
+.actions {
+  margin-top: 12px;
+  display: flex;
+  gap: 12px;
+}
+
+.mainBtn {
+  background: #5a4fcf;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  z-index: 1;
+}
+
+.outline {
+  background: transparent;
+  color: #5a4fcf;
+  border: 1px solid #5a4fcf;
+}
+
+.onlineStatus {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 13px;
+  color: #2ecc71;
+}
+
+.profileContent {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 2rem;
+  width: 100%;
+  max-width: 1200px;
+  padding: 2rem;
+}
+
+.profileSide {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  font-size: 14px;
+}
+
+.profileAbout ul,
+.quickActions {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.profileAbout li,
+.quickActions li {
+  margin-bottom: 10px;
+}
+
+.photosGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.socialIcons {
+  display: flex;
+  gap: 14px;
+  margin-top: 12px;
+}
+
+.socialIcons a {
+  color: #5a4fcf;
+  font-size: 20px;
+  transition: transform 0.2s ease;
+}
+
+.socialIcons a:hover {
+  transform: scale(1.2);
+}
+
+.profileFeed {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.profileFeedCard {
+  background: #fff;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.feedHeader {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.feedUser {
+  font-weight: 600;
+}
+
+.feedTime {
+  font-size: 12px;
+  color: #888;
+}
+
+.feedImg {
+  width: 100%;
+  margin-top: 12px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.feedActions {
+  margin-top: 10px;
+  display: flex;
+  gap: 20px;
+  font-size: 14px;
+}
+
+
+.feedAvatar {
+  display: flex;
+  width: 3rem;
+  border-radius: 50%
+}
+
+.friendsGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 10px 0;
+}
+
+.friendItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.friendItem img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.seeAllFriends {
+  display: block;
+  text-align: center;
+  margin-top: 8px;
+  font-size: 13px;
+  color: #5a4fcf;
+}
+
+.quickActions a {
+  color: #444;
+  text-decoration: none;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}

@@ -16,7 +16,6 @@ const AuthForm = () => {
     }
 
     const submitHandler = (event) => {
-        console.log(event);
         event.preventDefault();
 
         navigate('/');
