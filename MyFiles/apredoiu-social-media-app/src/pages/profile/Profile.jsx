@@ -6,13 +6,32 @@ const Profile = () => {
   const [editingBio, setEditingBio] = useState(false);
   const [bio, setBio] = useState("👁️ Building eyeSEE - where your vision meets connection.");
 
+  const posts = [
+    {
+      id: 1,
+      username: "Alexandra Predoiu",
+      avatar: "./src/assets/profile.jpg",
+      time: "2 hours ago",
+      text: "Don’t miss a thing - join our newsletter and get the latest updates first! 🌟",
+      image: "./src/assets/newsletter join.png"
+    },
+    {
+      id: 2,
+      username: "Alexandra Predoiu",
+      avatar: "./src/assets/profile.jpg",
+      time: "Yesterday",
+      text: "This isn't just a magnet.. it's eyeSEE. Where vision pulls people together. 💫👁️ #eyeseeapp",
+      video: "./src/assets/video eyesee.mp4"
+    }
+  ];
+
   return (
     <main className={styles.profileMain}>
       {/* PROFILE CARD */}
       <section className={styles.profileCard}>
         <div className={styles.bannerWrapper}>
           <div className={styles.bannerGradient}></div>
-            <img src="./src//assets/spiral.jpg" alt="Spiral" className={styles.spiralBackground} />
+          <img src="./src/assets/spiral.jpg" alt="Spiral" className={styles.spiralBackground} />
         </div>
         <div className={styles.profileAvatarBox}>
           <img src="./src/assets/profile.jpg" alt="Profile" className={styles.profileAvatar} />
@@ -23,8 +42,7 @@ const Profile = () => {
             <button className={styles.mainBtn}><i className="fas fa-user-plus"></i> Add Friend</button>
             <button className={`${styles.mainBtn} ${styles.outline}`}><i className="far fa-message"></i> Message</button>
           </div>
-          <span className={styles.onlineStatus}><i className="fas fa-circle"></i> Online now </span>
-          <span className={styles.statusDot}></span>
+          <span className={styles.onlineStatus}><i className="fas fa-circle"></i> Online now</span>
           <div className={styles.bioSection}>
             {editingBio ? (
               <textarea
@@ -42,7 +60,6 @@ const Profile = () => {
 
       {/* PROFILE CONTENT */}
       <section className={styles.profileContent}>
-
         {/* LEFT SIDEBAR */}
         <aside className={`${styles.profileSide} ${styles.profileAbout}`}>
           <h2>About</h2>
@@ -72,29 +89,34 @@ const Profile = () => {
 
         {/* CENTER FEED */}
         <section className={styles.profileFeed}>
-          <div className={styles.profileFeedCard}>
-            <div className={styles.feedHeader}>
-              <img src="./src/assets/profile.jpg" className={styles.feedAvatar} alt="Alexandra" />
-              <div>
-                <span className={styles.feedUser}>Alexandra Predoiu</span>
-                <span className={styles.feedTime}>2 hours ago</span>
+          {posts.map(post => (
+            <div className={styles.profileFeedCard} key={post.id}>
+              <div className={styles.feedHeader}>
+                <img src={post.avatar} className={styles.feedAvatar} alt={post.username} />
+                <div>
+                  <span className={styles.feedUser}>{post.username}</span>
+                  <span className={styles.feedTime}>{post.time}</span>
+                </div>
+                <i className="fas fa-ellipsis-h"></i>
               </div>
-              <i className="fas fa-ellipsis-h"></i>
+              <div className={styles.feedContent}>
+                <p>{post.text}</p>
+                {post.image && (
+                  <img src={post.image} alt="Post" className={styles.feedImg} />
+                )}
+                {post.video && !post.image && (
+                  <video width="100%" controls className={styles.feedVideo}>
+                    <source src={post.video} type="video/mp4" />
+                  </video>
+                )}
+              </div>
+              <div className={styles.feedActions}>
+                <button><i className="far fa-thumbs-up"></i> Like</button>
+                <button><i className="far fa-comment"></i> Comment</button>
+                <button><i className="fas fa-share"></i> Share</button>
+              </div>
             </div>
-            <div className={styles.feedContent}>
-              <p>Had a great day working on eyeSEE! 🌟</p>
-              <img src="https://source.unsplash.com/random/600x400?workspace" alt="Post" className={styles.feedImg} />
-              <video width="100%" controls className={styles.feedVideo}>
-                <source src="/assets/sample-video.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-            </div>
-            <div className={styles.feedActions}>
-              <button><i className="far fa-thumbs-up"></i> Like</button>
-              <button><i className="far fa-comment"></i> Comment</button>
-              <button><i className="fas fa-share"></i> Share</button>
-            </div>
-          </div>
+          ))}
         </section>
 
         {/* RIGHT SIDEBAR */}
@@ -102,11 +124,11 @@ const Profile = () => {
           <h2>Friends</h2>
           <div className={styles.friendsGrid}>
             <div className={styles.friendItem}>
-              <img src="https://source.unsplash.com/random/100x100?man" alt="Friend" />
+              <img src="https://i.pravatar.cc/40?img=7" alt="Friend" />
               <span>Andrei Dumitru</span>
             </div>
             <div className={styles.friendItem}>
-              <img src="https://source.unsplash.com/random/100x100?woman" alt="Friend" />
+              <img src="https://i.pravatar.cc/40?img=16" alt="Friend" />
               <span>Catalina Angel</span>
             </div>
           </div>
@@ -120,7 +142,6 @@ const Profile = () => {
             <li><a href="#"><i className="fas fa-shield-halved"></i> Privacy Center</a></li>
           </ul>
         </aside>
-
       </section>
     </main>
   );
