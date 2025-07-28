@@ -9,15 +9,12 @@ const FeaturesForm = ({ updateFeatures }) => {
     const [descriptionField, setDescriptionField] = useState('');
 
     const checkValid = () => {
-        if (nameField === '' ||
-            actionField === '' ||
-            stateField === '' ||
-            descriptionField === ''
-        ) {
-            setIsFormValid(false)
-        } else {
-            setIsFormValid(true)
-        }
+        return (
+            nameField !== '' &&
+            actionField !== '' &&
+            stateField !== '' &&
+            descriptionField !== ''
+        )
     }
 
     const resetFields = () => {
@@ -49,8 +46,8 @@ const FeaturesForm = ({ updateFeatures }) => {
 
     const submitHandler = (event) => {
         event.preventDefault();
-        checkValid();
-
+        const isValid = checkValid();
+        setIsFormValid(isValid)
         const newFeature = {
             name: nameField,
             action: actionField,
