@@ -9,9 +9,36 @@ import SendAndArchiveIcon from '@mui/icons-material/SendAndArchive';
 import profile from '../../../assets/images/profile.jpg';
 import post1 from '../../../assets/images/post1.jpeg';
 import post2 from '../../../assets/images/post2.jpg';
+import CommentsSection from './comments/CommentsSection';
+import { useState } from 'react';
 
-const NewsFeed = ({postData}) => {
+const NewsFeed = ({ postData }) => {
+    const [isLiked, setIsLiked] = useState(false);
+    const [likes, setLikes] = useState(Math.floor(Math.random() * 100)); // Math.round();
+    const [isShared, setIsShared] = useState(false);
+    const [shares, setShares] = useState(Math.ceil(Math.random() * 100));
+
     const postImages = [post1, post2];
+
+    const handleLike = () => {
+        if (!isLiked) {
+            setLikes(prevState => prevState + 1)
+        } else {
+            setLikes(prevState => prevState - 1)
+        }
+
+        setIsLiked(prevState => !prevState)
+    }
+
+    const handleShare = () => {
+        if (!isShared) {
+            setShares(prevState => prevState + 1)
+        } else {
+            setShares(prevState => prevState - 1)
+        }
+
+        setIsShared(prevState => !prevState)
+    }
 
     return <div className={styles.mainPost}>
         <div className={styles.post}>
@@ -51,7 +78,7 @@ const NewsFeed = ({postData}) => {
 
                     <div className={styles.infoIconWrapper}>
                         <div className={styles.infoIcon}>
-                            <InfoIcon />
+                            <InfoIcon fontSize="large" />
                         </div>
                         <p className={styles.infoMessage}>
                             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi
@@ -62,11 +89,10 @@ const NewsFeed = ({postData}) => {
                     </div>
                 </div>
 
-                <strong className={styles.postTitle}>Titlul postarii</strong>
+                <strong className={styles.postTitle}>{postData.title.charAt(0).toUpperCase() + postData.title.slice(1)}</strong>
 
                 <p className={styles.postDescription}>
-                    Aceasta este prima postare facuta pe reteaua de socializare create
-                    de mine in timpul cursului de Front End Development
+                    {postData.body.charAt(0).toUpperCase() + postData.body.slice(1)}
                 </p>
 
                 <a href="landingPage.html"><strong>Read more...</strong></a>
@@ -80,14 +106,14 @@ const NewsFeed = ({postData}) => {
                     </div>
 
                     {/* Refactor this */}
-                    <span id="likesNumber"></span> <span> likes</span>
+                    <span id="likesNumber">{likes} likes</span>
                 </div>
 
                 <div className={styles.commentsinfo}>
                     {/* refactor this */}
-                    <span id="sharesNumber"></span> <span> shares</span>
+                    <span id="sharesNumber">{shares} shares</span>
                     <div className={styles.reactsIcons}>
-                        <SendIcon/>
+                        <SendIcon />
                     </div>
                 </div>
             </div>
@@ -96,16 +122,16 @@ const NewsFeed = ({postData}) => {
 
             <div className={styles.reactsActions}>
                 <ul className={styles.actions}>
-                    <li className={styles.reaction} id="likeButton">
+                    <li className={`${styles.reaction} ${isLiked ? styles.touched : ''}`} onClick={handleLike}>
                         <ThumbUpIcon />
                         <span>Like</span>
                     </li>
                     <li className={styles.reaction} id="commentButton">
-                        <ChatIcon/>
+                        <ChatIcon />
                         <span>Comments</span>
                     </li>
-                    <li className={styles.reaction} id="shareButton">
-                        <SendIcon/>
+                    <li className={`${styles.reaction} ${isShared ? styles.touched : ''}`} onClick={handleShare}>
+                        <SendIcon />
                         <span>Share</span>
                     </li>
                 </ul>
@@ -128,41 +154,15 @@ const NewsFeed = ({postData}) => {
                     id="commentInput"
                 />
                 <button className={styles.insertCommentButton} id="commentInputButton">
-                    <SendAndArchiveIcon/>
+                    <SendAndArchiveIcon />
                 </button>
             </div>
 
-            <div className={styles.userComments}>
-                <div className={styles.userCommentsContent}>
-                    <div className={styles.profileUserComment}>
-                        <a href="">
-                            <img
-                                src={profile}
-                                alt="profile picture"
-                                className={styles.profileImage}
-                            />
-                        </a>
-                        <span>User Name</span>
-                    </div>
+            <section className={styles.commentsContainer}>
+                <CommentsSection />
+            </section>
 
-                    <div className={styles.userCommentText}>
-                        <div id="commentMessage">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                            Porro consequatur nemo nisi quasi dignissimos quisquam
-                            explicabo suscipit possimus modi similique mollitia voluptatem
-                            molestias ipsam, excepturi illum? Adipisci aperiam qui
-                            voluptatem.
-                        </div>
-                        <div className={styles.emojiReaction}>&#128526;</div>
-                        <span id="removeCommentButton">Remove this comment</span>
-                    </div>
 
-                    <div className={styles.commentReaction}>
-                        <strong className={styles.commentReactionButton}>Like</strong>
-                        <strong className={styles.commentReactionButton}>Comment</strong>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 }
