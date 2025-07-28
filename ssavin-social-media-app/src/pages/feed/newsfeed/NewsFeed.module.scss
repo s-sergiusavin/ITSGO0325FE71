@@ -4,3 +4,260 @@
     justify-content: center;
     align-items: center;
 }
+
+.mainPost .post {
+  box-shadow: 5px 5px 5px 5px #888;
+  margin: 3rem 0;
+  padding: 1rem;
+}
+
+.mainPost .post .postHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mainPost .post .postHeader .profileUserInfo {
+  display: flex;
+  align-items: center;
+}
+
+/* .mainPost .post .postHeader .profileUserInfo .profileImage {
+  width: 3rem;
+  border-radius: 50%;
+} */
+
+.mainPost .post .postHeader .profileUserInfo .profileName {
+  display: flex;
+  flex-direction: column;
+}
+
+.profileOptionsWrapper {
+  position: relative;
+}
+
+.profileOptionsWrapper .profileOptionsDropdown {
+  position: absolute;
+  z-index: 1;
+  right: 0.5rem;
+  width: 10rem;
+  display: flex;
+  flex-direction: column;
+  display: none;
+}
+
+.profileOptionsWrapper .profileOptionsDropdown button {
+  padding: 0.2rem;
+  cursor: pointer;
+}
+
+.profileOptionsWrapper .profileOptionsDropdown button:hover {
+  border: 1px solid teal;
+  background-color: lightgray;
+}
+
+.mainPost .post .postHeader .profileOptions {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.mainPost .post .postHeader .profileOptions:hover {
+  background-color: lightgray;
+}
+
+.mainPost .post .content {
+  display: flex;
+  flex-direction: column;
+}
+
+.mainPost .post .content .imgWrapper {
+  position: relative;
+}
+
+.mainPost .post .content .imgContent {
+  max-width: 100%;
+  border: 1px solid white;
+  box-shadow: 1px 1px 1px 1px #888;
+}
+
+.infoIconWrapper {
+  position: relative;
+}
+
+.infoMessage {
+  position: absolute;
+  display: none;
+  background-color: white;
+  border: 3px solid black;
+  top: -0.5rem;
+  left: 5rem;
+  padding: 0.5rem;
+}
+
+.mainPost .post .content .infoIcon {
+  width: 2rem;
+  height: 2rem;
+  font-size: 2rem;
+  position: absolute;
+  right: 0;
+  bottom: -1rem;
+  right: 1rem;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  cursor: pointer;
+}
+
+.mainPost .post .content .postTitle {
+  padding: 1rem;
+}
+
+.mainPost .post .content .postDescription {
+  padding: 1rem;
+  margin: 0;
+}
+
+.mainPost .post .reacts {
+  display: flex;
+  justify-content: space-between;
+}
+
+.mainPost .post .reacts .reactsIcons {
+  color: royalblue;
+}
+
+.mainPost .post .reactsActions .actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.mainPost .post .reactsActions .actions .reaction {
+  color: royalblue;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+}
+
+.mainPost .post .reactsActions .actions .reaction:hover {
+  color: #1348e8;
+  background-color: #e0f0f6;
+  font-weight: 600;
+}
+
+.mainPost .post .reactsActions .actions .reaction.touched {
+  color: #d6e1ff;
+  background-color: teal;
+}
+
+.mainPost .post .reactsActions .actions .reaction.touched:hover {
+  color: #bbcbf9;
+  background-color: #005151;
+}
+
+.mainPost .post .commentSection {
+  display: flex;
+  justify-content: space-evenly;
+  padding-bottom: 1rem;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* .mainPost .post .commentSection .profileImage {
+  width: 3rem;
+  border-radius: 50%;
+} */
+
+.mainPost .post .commentSection .newCommentField {
+  width: 80%;
+  border-radius: 0.3rem;
+  padding: 0.5rem 1rem;
+  background-color: #dcf2f9;
+  border: 1px solid #888;
+  cursor: pointer;
+}
+
+.mainPost .post .commentSection .newCommentField::placeholder {
+  color: royalblue;
+}
+
+.mainPost .post .commentSection .newCommentField:hover {
+  background-color: #cbecf8;
+}
+
+.mainPost .post .commentSection .newCommentField:focus {
+  outline-color: royalblue;
+}
+
+.mainPost .post .commentSection .insertCommentButton {
+  border: none;
+  background-color: transparent;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: royalblue;
+  width: 5rem;
+}
+
+.mainPost .post .commentSection .insertCommentButton:hover {
+  color: #1348e8;
+  font-size: 1.3rem;
+  background-color: #ffd5ab;
+  border-radius: 0.5rem;
+}
+
+/* .mainPost .post .userComments .profileImage{
+  width: 3rem;
+  border-radius: 50%;
+} */
+
+/* Ideal stilizarea generala sa fie la inceput de fisier */
+.profileImage {
+  width: 3rem;
+  border-radius: 50%;
+}
+
+.mainPost .post .userComments .userCommentText {
+  margin: 0 1rem;
+  border: 1px solid #888;
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: lightgray;
+  position: relative;
+}
+
+.mainPost .post .userComments .userCommentText #removeCommentButton {
+  display: none;
+  cursor: pointer;
+}
+
+.mainPost .post .userComments .userCommentText .emojiReaction {
+  position: absolute;
+  bottom: 0;
+  right: 1rem;
+  display: none;
+}
+
+.mainPost .post .userComments .userCommentText:hover .emojiReaction {
+  display: block;
+}
+
+.mainPost .post .userComments .userCommentText:hover {
+  animation-name: comment-animation;
+  animation-duration: 1s;
+}
+
+.mainPost .post .userComments .commentReaction {
+  margin-left: 3rem;
+  color: #888;
+  display: flex;
+  gap: 1rem;
+}
+
+.mainPost .post .userComments .commentReaction .commentReactionButton:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
