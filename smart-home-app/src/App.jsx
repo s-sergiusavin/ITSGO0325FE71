@@ -1,99 +1,100 @@
-import { useEffect, useRef, useState } from 'react';
 import './App.scss'
-import Features from './components/logic/Features'
-import Light from './components/ui/Light'
-import Room from './components/ui/Room';
-import Ac from './components/ui/Ac';
 import FeaturesForm from './components/logic/FeaturesForm';
+import { Link, NavLink, Route, Routes } from 'react-router-dom';
+import SmartHome from './components/logic/SmartHome';
+import Welcome from './components/logic/Welcome';
+import NotFound from './components/logic/NotFound';
+import { useState } from 'react';
+import HomeIcon from '@mui/icons-material/Home';
+import DevicesIcon from '@mui/icons-material/Devices';
+import AddToQueueIcon from '@mui/icons-material/AddToQueue';
+import useFetch from './hooks/use-fetch';
+import useAxios from './hooks/use-axios';
 
 function App() {
-  // Correct way of managing states
-  const [lightsOn, setLightsOn] = useState(false);
-  const [acOn, setAcOn] = useState(false);
-  const [dirtProgress, setDirtProgress] = useState({
-    status: 0,
-    cleaned: 0
-  });
-
   const [feature, setFeature] = useState({
     name: '',
     action: '',
     state: false,
     id: 0
-  })
+  });
 
-  let dirtInterval = useRef();
-
-  useEffect( () => {
-    dirtInterval.current = setInterval( () => {
-      setDirtProgress( prevState => {
-        // console.log(prevState.status)
-        if (prevState.status > 1) {
-          clearInterval(dirtInterval.current)
-        }
-        return {
-          ...prevState,
-          status: prevState.status + 0.1
-        }
-      })
-    }, 2000);
-
-    return () => {
-      clearInterval(dirtInterval.current)
-    }
-  }, [dirtProgress.cleaned])
-
-  const toggleLights = () => {
-    setLightsOn((prevState) => {
-      return !prevState
-    });
-  }
-
-  const toggleAc = () => {
-    setAcOn((prevState) => {
-      return !prevState
-    });
-  }
-
-  const startCleaning = () => {
-    setDirtProgress(prevState => {
-      return {
-        ...prevState,
-        status: 0,
-        cleaned: prevState.cleaned + 1
-      }
-    })
-  }
-
-  const toggleActionHandler = (name) => {
-    switch (name) {
-      case 'Toggle lights':
-        toggleLights();
-        break;
-      case 'Toggle AC':
-        toggleAc();
-        break;
-      case 'Clean':
-        startCleaning();
-        break;
-
-    }
-  }
+  const usersUrl = 'https://reqres.in/api/users?page=2';
+  const users = useFetch(usersUrl);
+  const {data, loading, error} = useAxios(usersUrl);
 
   const updateFeaturesHandler = (newFeature) => {
     setFeature(newFeature);
   }
 
+  const testLocalStorage = 'Acest text va aparea in local storage';
+  const testSessionStorage = 'Acest text va aparea in session storage;'
+
+  const objectLocalStorage = {
+    testLocalStorage: 'Text in local storage'
+  }
+
+  const setStorage = () => {
+    localStorage.setItem('localStorageTest', testLocalStorage)
+    localStorage.setItem('localStorageTest2', testLocalStorage)
+    localStorage.setItem('localStorageTest3', JSON.stringify(objectLocalStorage))
+    sessionStorage.setItem('sessionStorageTest', testSessionStorage)
+    sessionStorage.setItem('sessionStorageTest2', testSessionStorage)
+  }
+
+  const removeStorage = () => {
+    // Metoda removeItem sterge elementul mentionat
+      // localStorage.removeItem('localStorageTest')
+      // sessionStorage.removeItem('sessionStorageTest')
+
+      // Metoda clear sterge tot
+      localStorage.clear();
+      sessionStorage.clear();
+  }
+
   return (
-    <div>
-      <div className="ui-features">
-        <Light lightsOn={lightsOn} />
-        <Room status={dirtProgress.status} />
-        <Ac acOn={acOn} />
-      </div>
-      <Features toggleAction={toggleActionHandler} newFeature={feature} />
-      <FeaturesForm updateFeatures={updateFeaturesHandler}/>
-    </div>
+    <>
+      <header>
+        <nav>
+          <ul>
+            <li>
+              <HomeIcon/>
+              <Link to={'/welcome'}>Welcome page</Link>
+            </li>
+            <li>
+              <DevicesIcon/>
+              <NavLink to={'/smart-home'}>Smart home</NavLink>
+            </li>
+            <li>
+              <AddToQueueIcon/>
+              <NavLink to={'/features-form'}>Features Form</NavLink>
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+      <button onClick={setStorage}>Set storage</button>
+      <button onClick={removeStorage}>Remove storage</button>
+
+      <div className='lights yellow'>App</div>
+
+      <Routes>
+        <Route path='/' element={<SmartHome newFeature={feature}/>}></Route>
+        <Route path='/welcome' element={<Welcome />} />
+        <Route path='/smart-home' element={<SmartHome newFeature={feature}/>} />
+        <Route path='/features-form' element={<FeaturesForm updateFeatures={updateFeaturesHandler} />} />
+        <Route path='*' element={<NotFound />} />
+      </Routes>
+
+      <h2>Data with use fetch</h2>
+      {/* {users && users.data.map( user => <div key={user.id}>{user.first_name}</div>)} */}
+      {users?.data.map( user => <div key={user.id}>{user.first_name}</div>)}
+
+    <h2>Data with axios</h2>
+    {loading && <div>{loading}</div>}
+    {error && <div>{error}</div>}
+    {!loading && !error && data?.map(user => <div key={user.id}>{user.first_name} {user.last_name}</div>)}
+    </>
   )
 }
 
