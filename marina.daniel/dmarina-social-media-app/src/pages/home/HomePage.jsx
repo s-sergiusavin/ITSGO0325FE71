@@ -8,7 +8,7 @@ const HomePage = () => {
 
     return <div className={styles.mainContainer}>
         <aside>Left Side (folosim componenta leftside)</aside>
-        <section>
+        <section className={styles.newsfeed}>
             {posts?.map( post => {
                 return <NewsFeed postData={post} key={post.id}/>
             })}
