@@ -85,9 +85,10 @@
   #main #postOne {
     width: 40%;
     flex-direction: column;
-    box-shadow: 5px 5px 5px 5px;
+    box-shadow: 1px 2px 2px 3px;
     margin: 3rem 0;
     padding: 1rem;
+    border-radius: 1rem;
 
 }
 
@@ -141,3 +142,5 @@
     border: 1px solid black;
     box-shadow: 1px 1px 1px 1px;
  }
+
+

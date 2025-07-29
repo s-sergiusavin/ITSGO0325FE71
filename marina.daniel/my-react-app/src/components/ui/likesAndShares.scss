@@ -1,0 +1,49 @@
+#reaction {
+    color: black;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: space-between;
+    
+    
+}
+
+#likeButton {
+ display: flex;
+ justify-content: space-between;
+ color: white;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    
+    &:hover {
+        color: #0f43df;
+    background-color: #d7e9f0;
+    font-weight: 600;
+    }
+
+    &.touched {
+        color: #e3eaff;
+    background-color: teal;
+    }
+}
+
+#shareButton {
+display: flex;
+color: white;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+
+    &:hover {
+        color: #0f43df;
+    background-color: #d7e9f0;
+    font-weight: 600;
+    }
+
+    &.touched {
+        color: #e3eaff;
+    background-color: teal;
+    }
+}
