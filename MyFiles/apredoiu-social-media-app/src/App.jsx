@@ -13,8 +13,9 @@ function App() {
         <Route index element={<HomePage />} />
         <Route path='profile' element={<Profile />} />
         <Route path='auth' element={<AuthPage />} />
-        <Route path='*' element={<NotFound />} />
       </Route>
+
+      <Route path='*' element={<NotFound />} />
     </Routes>
   );
 }

@@ -1,10 +1,8 @@
 .right {
   width: 270px;
-  padding: 24px;
-  font-family: 'Segoe UI', sans-serif;
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 11px;
   border-radius: 12px; 
 }
 
@@ -14,6 +12,7 @@
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
   text-align: center;
+  width: 270px;
 
   img {
     width: 80px;
@@ -60,6 +59,7 @@
   padding: 16px;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  width: 270px;
 
   h3 {
     font-size: 14px;

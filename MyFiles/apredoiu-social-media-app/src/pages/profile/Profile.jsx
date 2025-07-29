@@ -2,39 +2,43 @@ import styles from './Profile.module.scss';
 import { FaInstagram, FaTiktok, FaLinkedin, FaGithub, FaGlobe } from 'react-icons/fa';
 import { useState } from 'react';
 
+import profile from './../../assets/images/profile.jpg';
+import newsletterImage from './../../assets/images/newsletter join.png';
+import videoEyesee from './../../assets/videos/video eyesee.mp4';
+import spiral from './../../assets/images/spiral.jpg';
+
 const Profile = () => {
   const [editingBio, setEditingBio] = useState(false);
-  const [bio, setBio] = useState("👁️ Building eyeSEE - where your vision meets connection.");
+  const [bio, setBio] = useState("console.log(''Hello 👁️'')");
 
   const posts = [
     {
       id: 1,
       username: "Alexandra Predoiu",
-      avatar: "./src/assets/profile.jpg",
+      avatar: profile,
       time: "2 hours ago",
       text: "Don’t miss a thing - join our newsletter and get the latest updates first! 🌟",
-      image: "./src/assets/newsletter join.png"
+      image: newsletterImage
     },
     {
       id: 2,
       username: "Alexandra Predoiu",
-      avatar: "./src/assets/profile.jpg",
+      avatar: profile,
       time: "Yesterday",
       text: "This isn't just a magnet.. it's eyeSEE. Where vision pulls people together. 💫👁️ #eyeseeapp",
-      video: "./src/assets/video eyesee.mp4"
+      video: videoEyesee
     }
   ];
 
   return (
     <main className={styles.profileMain}>
-      {/* PROFILE CARD */}
       <section className={styles.profileCard}>
         <div className={styles.bannerWrapper}>
           <div className={styles.bannerGradient}></div>
-          <img src="./src/assets/spiral.jpg" alt="Spiral" className={styles.spiralBackground} />
+          <img src={spiral} alt="Spiral" className={styles.spiralBackground} />
         </div>
         <div className={styles.profileAvatarBox}>
-          <img src="./src/assets/profile.jpg" alt="Profile" className={styles.profileAvatar} />
+          <img src={profile} alt="Profile" className={styles.profileAvatar} />
         </div>
         <div className={styles.profileInfo}>
           <h1>Alexandra Predoiu <button className={styles.editButton}><i className="fas fa-pen"></i> Edit</button></h1>
@@ -66,7 +70,7 @@ const Profile = () => {
           <ul>
             <li>💡 Building cool things at EyeSEE</li>
             <li>🌱 Loves traveling, skincare, and my cat</li>
-            <li>✨ Always learning!</li>
+            <li>✨ Building eyeSEE</li>
           </ul>
           <hr />
           <h2>Photos</h2>
@@ -75,15 +79,6 @@ const Profile = () => {
             <img src="https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=200&h=200&fit=crop" alt="Skincare picture" />
             <img src="https://images.unsplash.com/photo-1500835556837-99ac94a94552?w=200&h=200&fit=crop" alt="Travel picture" />
             <img src="https://images.unsplash.com/photo-1607623488989-d22660f2cc17?w=200&h=200&fit=crop" alt="Cat picture" />
-          </div>
-          <hr />
-          <h2>Links</h2>
-          <div className={styles.socialIcons}>
-            <a href="https://instagram.com" target="_blank" rel="noreferrer"><FaInstagram /></a>
-            <a href="https://linkedin.com" target="_blank" rel="noreferrer"><FaLinkedin /></a>
-            <a href="https://tiktok.com" target="_blank" rel="noreferrer"><FaTiktok /></a>
-            <a href="https://github.com" target="_blank" rel="noreferrer"><FaGithub /></a>
-            <a href="https://alexandra.com" target="_blank" rel="noreferrer"><FaGlobe /></a>
           </div>
         </aside>
 
@@ -135,12 +130,25 @@ const Profile = () => {
           <a href="#" className={styles.seeAllFriends}>See all friends</a>
           <hr />
           <h2>Quick Actions</h2>
-          <ul className={styles.quickActions}>
-            <li><a href="#"><i className="far fa-image"></i> My Photos</a></li>
-            <li><a href="#"><i className="fas fa-pencil"></i> Create Post</a></li>
-            <li><a href="#"><i className="fas fa-user-gear"></i> Settings</a></li>
-            <li><a href="#"><i className="fas fa-shield-halved"></i> Privacy Center</a></li>
+          <div className={styles.quickActions}>
+        <ul className={styles.quickActionslist}>
+            <li><i className="far fa-image"></i> My Photos</li>
+            <li><i className="fas fa-pencil"></i> Create Post</li>
+            <li><i className="fas fa-user-gear"></i> Settings</li>
+            <li><i className="fas fa-shield-halved"></i> Privacy Center</li>
           </ul>
+          </div>
+          <hr />
+
+          <h2>Links</h2>
+          <div className={styles.socialIcons}>
+            <a href="https://instagram.com" target="_blank" rel="noreferrer"><FaInstagram /></a>
+            <a href="https://linkedin.com" target="_blank" rel="noreferrer"><FaLinkedin /></a>
+            <a href="https://tiktok.com" target="_blank" rel="noreferrer"><FaTiktok /></a>
+            <a href="https://github.com" target="_blank" rel="noreferrer"><FaGithub /></a>
+            <a href="https://alexandra.com" target="_blank" rel="noreferrer"><FaGlobe /></a>
+          </div>
+  
         </aside>
       </section>
     </main>

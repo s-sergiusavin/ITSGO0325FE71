@@ -4,7 +4,7 @@ const RightSide = () => {
   return (
     <div className={styles.right}>
       <div className={styles.profileCard}>
-        <img src="./src/assets/profile.jpg" alt="Alexandra Predoiu" />
+        <img src="./src/assets/images/profile.jpg" alt="Alexandra Predoiu" />
         <div className={styles.profileInfo}>
           <h4>Alexandra Predoiu</h4>
           <span>Vision Creator</span>

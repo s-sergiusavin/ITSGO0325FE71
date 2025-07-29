@@ -52,8 +52,8 @@ const NewsFeed = ({ postData }) => {
                         />
                     </a>
                     <div className={styles.profileName}>
-                        <span>Sergiu Savin</span>
-                        <span>16 Apr 2025</span>
+                        <span>Alexandra Predoiu</span>
+                        <span>16 June 2025</span>
                     </div>
                 </div>
 
@@ -149,7 +149,7 @@ const NewsFeed = ({ postData }) => {
                 </a>
                 <input
                     type="text"
-                    placeholder="Adauga un comentariu"
+                    placeholder="Add a comment"
                     className="newCommentField"
                     id="commentInput"
                 />
