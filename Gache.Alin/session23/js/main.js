@@ -251,3 +251,48 @@ const newArr = [...myArr];
 newArr[0] = -14;
 console.log(myArr);
 console.log(newArr);
+
+const addOne = document.getElementById("addOne");
+const subtractOne = document.getElementById("subtractOne");
+const reset = document.getElementById("reset");
+const sum = document.getElementById("sum");
+
+let totalSum = 0;
+sum.innerText = totalSum;
+
+const counter = (op) => {
+  // debugger;
+// let totalSum = 0;
+
+  if (op === "addOne") {
+    console.log("test +");
+    totalSum += 1;
+    sum.innerText = totalSum;
+  } else if (op === "subtractOne") {
+    console.log("test -");
+    totalSum -= 1;
+    sum.innerText = totalSum;
+  } else {
+    totalSum = 0;
+    sum.innerText = totalSum;
+  }
+};
+
+addOne.addEventListener("click", () => {
+  // console.log("test +");
+  counter("addOne");
+  // totalSum += 1;
+  // sum.innerText = totalSum;
+});
+subtractOne.addEventListener("click", () => {
+  // console.log("test -");
+  // totalSum -= 1;
+  // sum.innerText = totalSum;
+  counter("subtractOne");
+});
+reset.addEventListener("click", () => {
+  // console.log("test");
+  // totalSum = 0;
+  // sum.innerText = totalSum;
+  counter("reset");
+});
