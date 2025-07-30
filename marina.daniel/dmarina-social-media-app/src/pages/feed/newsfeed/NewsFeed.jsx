@@ -52,7 +52,7 @@ const NewsFeed = ({ postData }) => {
                         />
                     </a>
                     <div className={styles.profileName}>
-                        <span>Sergiu Savin</span>
+                        <span>Marina Daniel</span>
                         <span>16 Apr 2025</span>
                     </div>
                 </div>
