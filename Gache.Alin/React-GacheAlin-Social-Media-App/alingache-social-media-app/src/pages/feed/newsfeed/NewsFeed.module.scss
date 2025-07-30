@@ -38,6 +38,7 @@
           display: flex;
           flex-direction: column;
           display: none;
+          cursor: pointer;
 
           button {
             background-color: powderblue;
@@ -105,21 +106,31 @@
     .reacts {
       display: flex;
       justify-content: space-between;
+      align-items: center;
 
       .reactsIcons {
         color: royalblue;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
       }
     }
     .reactsActions {
       .actions {
         display: flex;
         justify-content: space-between;
+        align-items: center;
 
         .reaction {
           color: royalblue;
           cursor: pointer;
           padding: 0.5rem 1rem;
           border-radius: 1rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 0.5rem;
 
           &:hover {
             color: #1348e8;
@@ -257,7 +268,7 @@
 }
 
 svg {
-  position: absolute;
+  // position: absolute;
   left: 0;
   top: 0;
   fill: none;

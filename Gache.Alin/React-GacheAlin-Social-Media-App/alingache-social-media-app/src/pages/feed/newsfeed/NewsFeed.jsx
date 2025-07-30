@@ -107,14 +107,14 @@ const NewsFeed = ({ postData }) => {
           <div className={styles.likesInfo}>
             <div className={styles.reactsIcons}>
               <ThumbUpIcon />
+            <span id="likedNumber"> {likes} likes</span>
             </div>
             {/* Refactor this */}
-            <span id="likedNumber"> {likes} likes</span>
           </div>
 
           <div className={styles.commentsinfo}>
-            <span>{shares} shares</span>
             <div className={styles.reactsIcons}>
+            <span>{shares} shares</span>
               <SendIcon />
             </div>
           </div>
@@ -128,7 +128,6 @@ const NewsFeed = ({ postData }) => {
               className={`${styles.reaction}  ${isLiked ? styles.touched : ""}`}
               onClick={handleLike}
               >
-              test
               <ThumbUpIcon />
               <span>Like</span>
             </li>
