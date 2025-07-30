@@ -71,7 +71,7 @@ const NewsFeed = ({ postData }) => {
             <div className={styles.content}>
                 <div className={styles.imgWrapper}>
                     <img
-                        src={postImages[postData.id % 2]}
+                        src={postData.image || postImages[postData.id % 2]}
                         alt="post content picture"
                         className={styles.imgContent}
                     />
@@ -95,7 +95,7 @@ const NewsFeed = ({ postData }) => {
                     {/* Decomentati si comentati liniile urmatoare pt a oscila intre date */}
 
                     {/* {postData.body?.charAt(0).toUpperCase() + postData.body?.slice(1)} */}
-                    
+
                     {postData.description?.charAt(0).toUpperCase() + postData.description?.slice(1)}
                 </p>
 
