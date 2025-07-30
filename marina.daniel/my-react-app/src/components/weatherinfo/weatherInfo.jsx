@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import "./WeatherInfo.scss";
 
 const Weather = () => {
-  const [cityInput, setCityInput] = useState(""); // what user types
-  const [weather, setWeather] = useState(null);   // weather data, initially null
+  const [cityInput, setCityInput] = useState(""); 
+  const [weather, setWeather] = useState(null);   
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
@@ -64,8 +64,6 @@ const Weather = () => {
           </h3>
           <p>Temperature: {weather.main.temp} °C</p>
           <p>Conditions: {weather.weather[0].description}</p>
-          <p>Humidity: {weather.main.humidity}%</p>
-          <p>Wind Speed: {weather.wind.speed} m/s</p>
         </div>
       )}
     </div>
