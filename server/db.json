@@ -18,9 +18,14 @@
   ],
   "users": [
     {
-      "email": "test@test.com",
-      "password": "$2a$10$fG6tfNqdSAR6ptAA6FpLOe9MmA7FrcuxRtv7pZZoMWGTFs4L30oc2",
+      "email": "safdsf@dsaf.cdsa",
+      "password": "$2a$10$ZPerR9DZX46JWWubUixfZ.VRaUvHTLIgpj.irMtvGkFFo64lhOJ2G",
       "id": 1
+    },
+    {
+      "email": "test@test.com",
+      "password": "$2a$10$adi9YV9I5EpljeeomwM4OOlzEzg3TdM1WGr1y4elo.vComJbUU9L6",
+      "id": 2
     }
   ]
 }

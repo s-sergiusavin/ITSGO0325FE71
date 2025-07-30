@@ -89,10 +89,14 @@ const NewsFeed = ({ postData }) => {
                     </div>
                 </div>
 
-                <strong className={styles.postTitle}>{postData.title.charAt(0).toUpperCase() + postData.title.slice(1)}</strong>
+                <strong className={styles.postTitle}>{postData.title?.charAt(0).toUpperCase() + postData.title?.slice(1)}</strong>
 
                 <p className={styles.postDescription}>
-                    {postData.body.charAt(0).toUpperCase() + postData.body.slice(1)}
+                    {/* Decomentati si comentati liniile urmatoare pt a oscila intre date */}
+
+                    {/* {postData.body?.charAt(0).toUpperCase() + postData.body?.slice(1)} */}
+                    
+                    {postData.description?.charAt(0).toUpperCase() + postData.description?.slice(1)}
                 </p>
 
                 <a href="landingPage.html"><strong>Read more...</strong></a>
