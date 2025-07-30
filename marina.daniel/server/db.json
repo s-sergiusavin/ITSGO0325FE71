@@ -1,0 +1,26 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "title": "My first title post",
+      "description": "lorem ipsum dasjfhskdfajh hdkjas hfas"
+    },
+    {
+      "id": "2",
+      "title": "My second title post",
+      "description": "lorem ipsum dasjfhskdfajh hdkjas hfas"
+    },
+    {
+      "id": "3",
+      "title": "My third title post",
+      "description": "lorem ipsum dasjfhskdfajh hdkjas hfas"
+    }
+  ],
+  "users": [
+    {
+      "email": "test@test.com",
+      "password": "$2a$10$fG6tfNqdSAR6ptAA6FpLOe9MmA7FrcuxRtv7pZZoMWGTFs4L30oc2",
+      "id": 1
+    }
+  ]
+}
