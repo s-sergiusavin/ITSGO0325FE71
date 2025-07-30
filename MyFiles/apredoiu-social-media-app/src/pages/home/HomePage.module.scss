@@ -12,12 +12,20 @@
   }
 
   aside {
-    width: 20rem;
+    width: 15rem;
     border-radius: 12px;
     padding: 20px;
-    position: sticky;
-    top: 80px;
+    position: fixed;
+    top: 5rem;
     align-self: flex-start;
+
+    &.leftSide {
+      left: 0;
+    }
+
+    &.rightSide {
+      right: 0;
+    }
 
     ul {
       list-style: none;
