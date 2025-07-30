@@ -1,0 +1,52 @@
+.profileImage {
+  width: 3rem;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+}
+.mainPost .post .userComments .userCommentsContent .profileUserComment {
+  margin-bottom: 0.5rem;
+  gap: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+.mainPost .post .userComments .userCommentText {
+  margin: 0 1rem;
+  border: 1px solid #888;
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: lightgray;
+  position: relative;
+}
+.mainPost .post .userComments .userCommentText #removeCommentButton {
+  display: none;
+  cursor: pointer;
+  color: #1348e8;
+}
+
+.mainPost .post .userComments .userCommentText .emojiReaction {
+  position: absolute;
+  bottom: 0;
+  right: 1rem;
+  display: none;
+}
+
+.mainPost .post .userComments .userCommentText:hover .emojiReaction {
+  display: block;
+}
+
+.mainPost .post .userComments .userCommentText:hover {
+  animation-name: comment-animation;
+  animation-duration: 1s;
+}
+
+.mainPost .post .userComments .commentReaction {
+  margin-left: 3rem;
+  color: #888;
+  display: flex;
+  gap: 1rem;
+}
+
+.mainPost .post .userComments .commentReaction .commentReactionButton:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}

@@ -1,12 +1,19 @@
 .mainContainer {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
   gap: 3rem;
 
+.newsFeed{
+  margin-top: 5rem;
+}
+  
   aside {
     width: 20rem;
     background-color: lightgray;
     height: 50vh;
+    position: sticky;
+    top: 5rem;
+    border: 1px solid black;
   }
+
 }

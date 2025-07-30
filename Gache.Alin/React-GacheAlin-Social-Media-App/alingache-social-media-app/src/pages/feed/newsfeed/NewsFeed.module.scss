@@ -3,4 +3,498 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  .post {
+    box-shadow: 5px 5px 5px 5px #888;
+    margin: 1rem 0 3rem 0;
+    padding: 1rem;
+    background-color: powderblue;
+    /* padding: 0.2rem; */
+    border-radius: 1rem;
+
+    .postHeader {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.5rem;
+
+      .profileUserInfo {
+        display: flex;
+        align-items: center;
+
+        .profileName {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+      .profileOptionsWrapper {
+        position: relative;
+
+        .profileOptionsDropdown {
+          position: absolute;
+          z-index: 1;
+          right: 0.5rem;
+          width: 10rem;
+          display: flex;
+          flex-direction: column;
+          display: none;
+
+          button {
+            background-color: powderblue;
+            border: 1px solid #4169e180;
+            border-collapse: collapse;
+            &:hover {
+              background-color: powderblue;
+              border: 2px solid royalblue;
+              border-collapse: collapse;
+            }
+          }
+        }
+      }
+      .profileOptions {
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:hover {
+          background-color: lightgray;
+        }
+      }
+    }
+    .content {
+      display: flex;
+      flex-direction: column;
+
+      .imgWrapper {
+        position: relative;
+      }
+
+      .imgContent {
+        max-width: 100%;
+        border: 1px solid white;
+        box-shadow: 1px 1px 1px 1px #888;
+      }
+
+      .infoIcon {
+        width: 2rem;
+        height: 2rem;
+        font-size: 2rem;
+        position: absolute;
+        right: 0;
+        bottom: -1rem;
+        right: 1rem;
+        background-color: white;
+        color: black;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+      }
+      .postTitle {
+        padding: 1rem;
+      }
+      .postDescription {
+        padding: 1rem;
+        margin: 0;
+      }
+    }
+
+    .reacts {
+      display: flex;
+      justify-content: space-between;
+
+      .reactsIcons {
+        color: royalblue;
+      }
+    }
+    .reactsActions {
+      .actions {
+        display: flex;
+        justify-content: space-between;
+
+        .reaction {
+          color: royalblue;
+          cursor: pointer;
+          padding: 0.5rem 1rem;
+          border-radius: 1rem;
+
+          &:hover {
+            color: #1348e8;
+            background-color: #e0f0f6;
+            font-weight: 600;
+          }
+
+          &.touched {
+            color: #1348e8;
+            background-color: #e0f0f6;
+            font-weight: 600;
+            &:hover {
+              color: #243b83;
+              background-color: #c9e5f0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.infoIconWrapper {
+  position: relative;
+}
+
+.infoMessage {
+  position: absolute;
+  display: none;
+  background-color: powderblue;
+  border: 3px solid #4169e180;
+  border-radius: 1rem;
+  top: -0.1rem;
+  left: 5rem;
+  padding: 0.5rem;
+}
+
+.mainPost .post .commentSection {
+  display: flex;
+  justify-content: space-evenly;
+  padding-bottom: 1rem;
+  align-items: center;
+  /* gap: 1rem; */
+}
+
+/* .mainPost .post .commentSection .profileImage {
+  width: 3rem;
+  border-radius: 50%;
+} */
+.mainPost .post .commentSection .postCommentSection {
+  width: 88%;
+}
+.mainPost .post .commentSection .newCommentField {
+  width: 100%;
+  border-radius: 0.3rem;
+  padding: 0.5rem 1rem;
+  background-color: #dcf2f9;
+  border: 1px solid #888;
+  cursor: pointer;
+  display: flex;
+}
+
+.mainPost .post .commentSection .newCommentField::placeholder {
+  color: royalblue;
+}
+
+.mainPost .post .commentSection .newCommentField:hover {
+  background-color: #cbecf8;
+}
+
+.mainPost .post .commentSection .newCommentField:focus {
+  outline-color: royalblue;
+}
+
+.fieldError {
+  color: red;
+  font-size: 14px;
+  display: none;
+  margin-top: 5px;
+}
+
+.mainPost .post .commentSection .insertCommentButton {
+  border: none;
+  background-color: transparent;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: royalblue;
+  width: 5rem;
+}
+
+.mainPost .post .commentSection .insertCommentButton:hover {
+  color: #1348e8;
+  font-size: 1.3rem;
+  background-color: #ffd5ab;
+  border-radius: 0.5rem;
+}
+
+/* .mainPost .post .userComments .profileImage{
+  width: 3rem;
+  border-radius: 50%;
+} */
+
+/* Ideal stilizarea generala sa fie la inceput de fisier */
+
+@keyframes comment-animation {
+  from {
+    left: -1rem;
+  }
+
+  to {
+    left: 0rem;
+  }
+}
+
+.insertCommentButton {
+  width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.center {
+  width: 5rem;
+  height: 2rem;
+}
+
+.btn {
+  width: 5rem;
+  height: 1.5rem;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid #91c9ff;
+  outline: none;
+  transition: 1s ease-in-out;
+}
+
+svg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  fill: none;
+  stroke: orange;
+  stroke-dasharray: 150 480;
+  stroke-dashoffset: 150;
+  transition: 1s ease-in-out;
+}
+
+.btn:hover {
+  transition: 1s ease-in-out;
+  background: #4f95da;
+}
+
+.btn:hover svg {
+  stroke-dashoffset: -480;
+}
+
+.btn i {
+  color: orange;
+  font-size: 18px;
+  font-weight: 100;
+}
+
+.rightContent .friendRequestsContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  position: relative;
+}
+
+.rightContent .friendRequestsContent .requestNotification {
+  width: 17rem;
+  height: 3rem;
+  position: absolute;
+  background-color: #98bec4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 1.3rem;
+  left: 0.5rem;
+  border-radius: 0.5rem;
+  display: none;
+}
+
+/* .animatie {
+  transition: all 5s ease-in-out;
+  transform-origin: left top;
+  transform: scaleY(0);
+ }
+ 
+ .animatie:target {
+  transform: scaleY(1);
+} */
+
+.rightContent .requests {
+  width: 100%;
+}
+.rightContent .requests .request {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 1rem;
+  margin: 0 0.5rem;
+  height: 4rem;
+}
+
+.rightContent .friendRequestsContent .requestContent {
+  display: flex;
+  justify-content: space-between;
+}
+
+.rightContent .birthdaysContent .birthday {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  margin: 0.5rem 0;
+}
+
+.rightContent .birthdaysContent .birthday a {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0.8rem 0.5rem;
+  height: 1rem;
+}
+
+.rightContent .birthdaysContent .birthday a .birthdayPerson .personName {
+  color: royalblue;
+  font-weight: lighter;
+}
+
+.rightContent .birthdaysContent .birthday a .birthdaysImage {
+  font-size: 1.5rem;
+  color: royalblue;
+}
+
+.rightContent .adsContent .content > a > img {
+  width: calc(100% - 1rem);
+  height: 10rem;
+  margin: 0 0.5rem;
+  border-radius: 0.4rem;
+}
+
+.rightContent .contactsContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.rightContent .contactsContent .contactNav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.rightContent .contactsContent .contactNav .contactSettings {
+  display: flex;
+  gap: 0.8rem;
+  margin-right: 1rem;
+}
+
+.rightContent .contactsContent .friend,
+.groupConversations .conversation {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 1rem;
+  margin: 0 0.5rem 0.5rem;
+  position: relative;
+}
+
+.rightContent .contactsContent .friend .statusIcon {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0;
+  left: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.rightContent .contactsContent .friend .statusIcon.online {
+  background-color: greenyellow;
+}
+
+.rightContent .contactsContent .friend .statusIcon.offline {
+  background-color: red;
+}
+
+.rightContent .contactsContent .contacts {
+  overflow: auto;
+  height: 24rem;
+}
+
+.rightContent .contactsContent .contacts::-webkit-scrollbar {
+  display: none;
+}
+
+.rightContent .groupConversations {
+  overflow: auto;
+  height: 24rem;
+}
+
+@media (max-width: 750px) {
+  header {
+    flex-direction: column;
+    height: auto;
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  header .mainSearch .searchInput {
+    width: 100%;
+  }
+
+  .leftContent,
+  .rightContent {
+    display: none;
+  }
+
+  .mainPost {
+    width: 95%;
+  }
+
+  .mainPost .post .commentSection {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .mainPost .post .commentSection .newCommentField {
+    width: 100%;
+  }
+
+  .insertCommentButton {
+    width: 100%;
+  }
+}
+
+@media (max-width: 900px) {
+  .leftContent,
+  .rightContent {
+    width: 20%;
+    padding: 0.2rem;
+  }
+
+  .leftContent .content .gamesPosition .games {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .mainPost {
+    width: 60%;
+  }
+
+  .mainPost .post {
+    margin: 1rem 0;
+    padding: 0.8rem;
+  }
+
+  header .mainSearch .searchInput {
+    width: 10rem;
+  }
+
+  .mainPost .post .commentSection {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+.profileImage {
+  width: 3rem;
+  border-radius: 50%;
+  margin-right: 0.5rem;
 }
