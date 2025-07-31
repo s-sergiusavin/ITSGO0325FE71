@@ -1,27 +1,27 @@
-import axios from "axios";
+import axios from 'axios';
 
-axios.defaults.baseURL = "http://localhost:3000";
+axios.defaults.baseURL = 'http://localhost:3000';
 
 async function login(payload) {
-  const respons = await axios.post("/login", payload);
+    const response = await axios.post('/login', payload);
 
-  console.dir(respons);
+    console.dir(response);
 
-  return respons;
+    return response;
 }
 
 async function register(payload) {
-  return axios.post("/register", payload);
+    return axios.post('/register', payload)
 }
 
 async function logout(params) {
-  localStorage.removeItem("token");
+    localStorage.removeItem('token');
 }
 
 const authService = {
-  login, // similar cu cu login:login() => cheia este egala cu valoarea
-  register,
-  logout,
-};
+    login: login, // similar cu aceeasi scriere ca mai jos
+    register,
+    logout
+}
 
 export default authService;

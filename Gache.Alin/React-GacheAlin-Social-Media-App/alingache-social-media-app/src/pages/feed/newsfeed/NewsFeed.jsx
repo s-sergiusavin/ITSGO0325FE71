@@ -8,7 +8,7 @@ import SendAndArchiveIcon from "@mui/icons-material/SendAndArchive";
 import profile from "../../../assets/images/profile.jpg";
 import post1 from "../../../assets/images/post1.jpeg";
 import post2 from "../../../assets/images/post2.jfif";
-import CommentsSection from "./folder/CommentsSection";
+import CommentsSection from "./comments/CommentsSection";
 import { useState } from "react";
 
 const NewsFeed = ({ postData }) => {
@@ -28,8 +28,6 @@ const NewsFeed = ({ postData }) => {
     setIsLiked((prevState) => !prevState);
   };
 
-  console.log(isLiked);
-  
   const handleShare = () => {
     if (!isShared) {
       setShares((prevState) => prevState + 1);
@@ -71,7 +69,8 @@ const NewsFeed = ({ postData }) => {
         <div className={styles.content}>
           <div className={styles.imgWrapper}>
             <img
-              src={postImages[postData.id % 2]}
+          
+              src={postData.image}
               alt="post content picture"
               className={styles.imgContent}
             />
@@ -91,11 +90,12 @@ const NewsFeed = ({ postData }) => {
           </div>
 
           <strong className={styles.postTitle}>
-            {postData.title.charAt(0).toUpperCase() + postData.title.slice(1)}
+            {postData.title.charAt(0)?.toUpperCase() + postData.title?.slice(1)}
           </strong>
 
           <p className={styles.postDescription}>
-            {postData.body.charAt(0).toUpperCase() + postData.body.slice(1)}
+            {postData.description?.charAt(0).toUpperCase() +
+              postData.description?.slice(1)}
           </p>
 
           <a href="landingPage.html">
@@ -107,15 +107,15 @@ const NewsFeed = ({ postData }) => {
           <div className={styles.likesInfo}>
             <div className={styles.reactsIcons}>
               <ThumbUpIcon />
-            <span id="likedNumber"> {likes} likes</span>
+              <span id="likedNumber"> {likes} likes</span>
             </div>
             {/* Refactor this */}
           </div>
 
           <div className={styles.commentsinfo}>
             <div className={styles.reactsIcons}>
-            <span>{shares} shares</span>
               <SendIcon />
+              <span>{shares} shares</span>
             </div>
           </div>
         </div>
@@ -127,7 +127,7 @@ const NewsFeed = ({ postData }) => {
             <li
               className={`${styles.reaction}  ${isLiked ? styles.touched : ""}`}
               onClick={handleLike}
-              >
+            >
               <ThumbUpIcon />
               <span>Like</span>
             </li>
@@ -135,7 +135,12 @@ const NewsFeed = ({ postData }) => {
               <ChatIcon />
               <span>Comments</span>
             </li>
-            <li   className={`${styles.reaction}  ${isShared ? styles.touched : ""}`} onClick={handleShare}>
+            <li
+              className={`${styles.reaction}  ${
+                isShared ? styles.touched : ""
+              }`}
+              onClick={handleShare}
+            >
               <SendIcon />
               <span>Share</span>
             </li>

@@ -1,5 +1,5 @@
 const Rightside= ()=>{
-    return <div>Rightside</div>
+    return <div>awdawd</div>
 }
 
 export default Rightside

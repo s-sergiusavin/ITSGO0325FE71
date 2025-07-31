@@ -1,19 +1,24 @@
 .mainContainer {
-  display: flex;
-  justify-content: space-between;
-  gap: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    z-index: 5;
 
-.newsFeed{
-  margin-top: 5rem;
-}
-  
-  aside {
-    width: 20rem;
-    background-color: lightgray;
-    height: 50vh;
-    position: sticky;
-    top: 5rem;
-    border: 1px solid black;
-  }
+    aside {
+        width: 15rem;
+        background-color: black;
+        height: 50vh;
+        position: fixed;
+        top: 5rem;
+color: white;
 
+        &.leftSide {
+            left: 0;
+        }
+
+        &.rightSide {
+            right: 0;
+        }
+    }
 }
