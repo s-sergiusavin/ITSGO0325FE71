@@ -1,35 +1,189 @@
-header {
-    width: 100%;
-    height: 5rem;
-    background-color: teal;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    z-index: 10;
+* {
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
 
-    .logo {
-        color: white;
-        font-size: 2rem;
-        margin: 0;
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 4rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background-color: #5FA8D3;
+
+    ul {
+        list-style: none;
+        padding: 0;
     }
 
-    .menu {
-        list-style: none;
-        margin: 0;
-        padding: 0;
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+    .navigation {
         display: flex;
-        align-items: baseline;
 
-        .menuItem {
-            margin: 0 1rem;
+        li>a {
+            border-radius: 50%;
+            background-color: #CAE9FF;
+            margin: 0 0.5rem;
+            margin-left: 1rem;
+            display: flex;
+            height: 3rem;
+            padding: 0.3rem;
 
-            a {
-                text-decoration: none;
-                color: white;
+
+
+            &:hover {
+                background-color: #FFE74C;
+            }
+        }
+    }
+
+    .mainSearch {
+        display: flex;
+        align-items: center;
+
+        .logo {
+            width: 3.5rem;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            margin-right: 2rem;
+        }
+
+        span {
+            color: black;
+            position: absolute;
+            left: 39rem;
+        }
+
+        .searchInput {
+            height: 2.5rem;
+            width: 18rem;
+            border-radius: 0.5rem;
+            padding: 0 1rem;
+            text-align: center;
+            /* background-color: #FFE74C; */
+            background-color: #CAE9FF;
+            border-color: black;
+            color: black;
+
+            &::placeholder {
+                color: black;
+            }
+
+            &:focus {
+                border: 0.2rem solid #CAE9FF
             }
 
         }
+
+        .smallScreenSearch {
+            display: none;
+        }
+
+
     }
+
+    .links {
+        display: flex;
+
+        li>a {
+            border-radius: 50%;
+            background-color: #CAE9FF;
+            margin: 0 0.5rem;
+            margin-right: 2rem;
+            display: flex;
+            height: 3rem;
+            padding: 0.3rem;
+
+            &:hover {
+                background-color: #FFE74C;
+            }
+        }
+
+        .bellIcon {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 3rem;
+            height: 3rem;
+
+            img {
+                width: 100%;
+            }
+
+            span {
+                width: 1.5rem;
+                height: 1.5rem;
+                background-color: red;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                bottom: 0;
+                left: 2rem;
+                border-radius: 50%;
+                color: white;
+                font-weight: bold;
+                font-size: 0.8rem;
+            }
+        }
+
+        .accountSettings {
+            button {
+                border-radius: 50%;
+                background-color: #CAE9FF;
+                margin: 0 0.5rem;
+                margin-right: 2rem;
+                display: flex;
+                height: 3rem;
+                padding: 0.3rem;
+                border: transparent;
+
+                &:hover {
+                    background-color: #FFE74C;
+                }
+
+            }
+
+            .accountSettingsMenu {
+
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 4rem;
+                right: 0;
+                width: 12rem;
+                height: 12rem;
+                background-color: #5FA8D3;
+                padding: 0.5rem;
+                gap: 0.5rem;
+                border: 1px solid #1b4965;
+                border-radius: 0.5rem 0rem 0rem 0.5rem;
+
+                button {
+                    border: 1px solid #1b4965;
+                    background-color: white;
+                    border-radius: 0.5rem;
+                    height: 2rem;
+
+                    &:hover {
+                        background-color: #FFE74C;
+                    }
+                }
+
+            }
+        }
+    }
+
+
+
 }
