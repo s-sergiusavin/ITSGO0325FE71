@@ -3,14 +3,20 @@ import setAxiosDefaults from "./config";
 
 setAxiosDefaults();
 
-async function get(params) {
-    const response = await axios.get('/posts')
+async function getPost(params) {
+  const response = await axios.get("/posts");
 
-    return response.data;
+  return response.data;
+}
+async function getFriends(params) {
+  const response = await axios.get("/friends");
+
+  return response.data;
 }
 
 const feedService = {
-    get
-}
+  getPost,
+  getFriends,
+};
 
 export default feedService;

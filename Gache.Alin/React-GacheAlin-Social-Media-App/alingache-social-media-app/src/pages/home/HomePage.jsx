@@ -1,5 +1,5 @@
 import styles from './HomePage.module.scss';
-import useFetch from '../../hooks/useFetch';
+// import useFetch from '../../hooks/useFetch';
 import NewsFeed from '../feed/newsfeed/NewsFeed';
 import { useEffect, useState } from 'react';
 import feedService from '../../services/feedService';
@@ -13,13 +13,13 @@ const HomePage = () => {
     // {postData.body?.charAt(0).toUpperCase() + postData.body?.slice(1)}
     // in loc de {postData.description?.charAt(0).toUpperCase() + postData.description?.slice(1)}
     // si de folosit posts in loc de postList mai jos 
-    // const posts = useFetch('https://jsonplaceholder.typicode.com/posts');
+    // const posts = useFetch('https://jsonplaceholder.typicode.com/posts'); 
 
     const [postList, setPostList] = useState([]);
 
     useEffect( () => {
         async function getPosts() {
-            const response = await feedService.get()
+            const response = await feedService.getPost()
             setPostList(response)
             return response;
         }

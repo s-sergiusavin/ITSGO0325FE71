@@ -1,0 +1,43 @@
+* {
+  box-sizing: border-box;
+}
+
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  gap: 1.5rem;
+  color: white;
+  // border: 1px solid lightgreen;
+  margin-top: 1rem;
+border-radius: 0.5rem;
+
+  .button {
+    border: 1px solid lightgreen;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: normal;
+    gap: 0.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0px -3px 20px 0px #aeeeee;
+    background-color: teal;
+    color: wheat;
+    &:hover {
+      background-color: lightgreen;
+      color: black;
+    }
+  }
+  .buttons {
+    width: 100%;
+  }
+
+  .active {
+    display: flex;
+  }
+  .inactive {
+    display: none;
+  }
+}

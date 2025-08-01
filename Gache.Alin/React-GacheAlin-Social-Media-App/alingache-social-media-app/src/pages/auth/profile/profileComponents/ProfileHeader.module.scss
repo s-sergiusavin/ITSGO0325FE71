@@ -1,0 +1,139 @@
+* {
+  box-sizing: border-box;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  .userPanel {
+    width: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 0.5rem;
+    box-shadow: 1px 1px 20px 5px#4db8b8;
+    padding: 0.5rem;
+    margin: 0.5rem 0 1rem 0;
+
+    .bgFoto {
+      overflow: hidden;
+      max-height: 25rem;
+      border-radius: 0.8rem;
+      display: flex;
+      justify-content: center;
+      align-items: end;
+      cursor: pointer;
+      margin-bottom: 0.5rem;
+      box-shadow: 0px 0px 12px 1px#4db8b8;
+       img {
+        height: 100%;
+        width: 100%;
+      }
+
+      .userImg {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: absolute;
+        height: 8rem;
+        width: 8rem;
+        border-radius: 50%;
+        img {
+          position: absolute;
+          top: 4rem;
+          right: 38rem;
+          border: 5px solid white;
+          height: 7rem;
+          width: 7rem;
+          max-width: inherit;
+          border-radius: inherit;
+          cursor: pointer;
+          &:hover {
+            border: 2px solid lightgreen;
+          }
+        }
+      }
+    }
+    .userMenu {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: row;
+      width: 100%;
+
+      .userInfo {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: row;
+        width: 50%;
+     
+        .userName {
+          font-size: 1.5rem;
+          .friendsNumber{
+            font-size: 1rem;
+            margin-left: 5rem;
+          }
+        }
+      }
+    }
+
+    .buttons {
+      display: flex;
+      align-items: center;
+      justify-content: normal;
+      width: 40%;
+      gap: 0.5rem;
+      margin-right: 2rem;
+
+      .button {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        border-radius: 0.5rem;
+        box-shadow: 0px -3px 20px 0px #4db8b8;
+        color: wheat;
+        background-color: teal;
+        &:hover {
+          color: black;
+          background-color: lightgreen;
+        }
+      }
+    }
+
+    .divider {
+      width: 95%;
+    }
+    .userShortcuts {
+      width: 95%;
+      display: flex;
+      align-items: center;
+      justify-content: start;
+      gap: 0.5rem;
+
+      .navLink {
+        border: 1px solid teal;
+        padding: 0.2rem;
+        width: 7rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        border-radius: 0.5rem;
+        box-shadow: 0px -3px 20px 0px #4db8b8;
+        color: wheat;
+        background-color: teal;
+        &:hover {
+          color: black;
+          background-color: lightgreen;
+        }
+      }
+    }
+  }
+}

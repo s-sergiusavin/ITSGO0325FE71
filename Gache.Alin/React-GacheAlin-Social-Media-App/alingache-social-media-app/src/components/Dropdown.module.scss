@@ -1,0 +1,25 @@
+.dropdown {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 12rem;
+  border-radius: 0.5rem;
+  margin-top: -2rem;
+  margin-bottom: 1rem;
+  background-color: #004d4d9a	;
+  padding: 0.3rem;
+  border: 1px solid lightgreen;
+  z-index: 0;
+
+  Button {
+    width: 100%;
+    background-color: teal;
+    border-radius: 0.5rem;
+    border: 1px solid lightgreen;
+    color: wheat;
+    &:hover {
+      background-color: lightgreen;
+      color: black;
+    }
+  }
+}

@@ -6,8 +6,8 @@ import SendIcon from "@mui/icons-material/Send";
 import ChatIcon from "@mui/icons-material/Chat";
 import SendAndArchiveIcon from "@mui/icons-material/SendAndArchive";
 import profile from "../../../assets/images/profile.jpg";
-import post1 from "../../../assets/images/post1.jpeg";
-import post2 from "../../../assets/images/post2.jfif";
+// import post1 from "../../../assets/images/post1.jpeg";
+// import post2 from "../../../assets/images/post2.jfif";
 import CommentsSection from "./comments/CommentsSection";
 import { useState } from "react";
 
@@ -17,7 +17,7 @@ const NewsFeed = ({ postData }) => {
   const [isShared, setIsShared] = useState(false);
   const [shares, setShares] = useState(Math.ceil(Math.random() * 100));
 
-  const postImages = [post1, post2];
+  // const postImages = [post1, post2];
 
   const handleLike = () => {
     if (!isLiked) {
@@ -70,7 +70,7 @@ const NewsFeed = ({ postData }) => {
           <div className={styles.imgWrapper}>
             <img
           
-              src={postData.image}
+              src={postData?.image}
               alt="post content picture"
               className={styles.imgContent}
             />
@@ -90,12 +90,12 @@ const NewsFeed = ({ postData }) => {
           </div>
 
           <strong className={styles.postTitle}>
-            {postData.title.charAt(0)?.toUpperCase() + postData.title?.slice(1)}
+            {postData?.title.charAt(0).toUpperCase() + postData?.title?.slice(1)}
           </strong>
 
           <p className={styles.postDescription}>
-            {postData.description?.charAt(0).toUpperCase() +
-              postData.description?.slice(1)}
+            {postData?.description?.charAt(0).toUpperCase() +
+              postData?.description?.slice(1)}
           </p>
 
           <a href="landingPage.html">

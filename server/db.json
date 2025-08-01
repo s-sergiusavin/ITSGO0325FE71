@@ -1,58 +1,111 @@
 {
-  "posts": [
+  "friends": [
     {
       "id": "1",
-      "title": "Modificare recenta",
-      "description": "lorem ipsum dasjfhskdfajh hdkjas hfas",
-      "image": "https://cdn-prod.travelfuse.ro/images/originals/_top_0de20d297fe9bcac8754f6aa70f5cc3d.jpg"
+      "name": "Ana Maria",
+      "profilePic": "https://media.dcnews.ro/image/202110/w670/elena-gheorghe--devastata-de-covid-19-familia-mea--11-persoane--am-avut--a-fost-jocul-mintii--o-cursa-pe-viata-si-pe-moarte--de-la-neputinta-la-disperare_62752900.jpg"
     },
     {
       "id": "2",
-      "title": "My second title post",
-      "description": "lorem ipsum dasjfhskdfajh hdkjas hfas",
-      "image": "https://plus.unsplash.com/premium_photo-1661919210043-fd847a58522d?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cGFyaXN8ZW58MHx8MHx8fDA%3D"
+      "name": "Andrei",
+      "profilePic": "https://s.iw.ro/gateway/g/ZmlsZVNvdXJjZT1odHRwJTNBJTJGJTJG/c3RvcmFnZTA4dHJhbnNjb2Rlci5yY3Mt/cmRzLnJvJTJGc3RvcmFnZSUyRjIwMjQl/MkYxMiUyRjAyJTJGMjE0MTAxM18yMTQx/MDEzX0lEMTc1NDQ3X0lOUVVBTV9QaG90/b3NfT2N0YXZfR2FuZWEuanBnJnc9Nzgw/Jmg9NDQwJmhhc2g9MGY5OTY5MWI5NTM0NzAzNTM0MmFmNzRmNGJlNjA1NjE=.thumb.jpg"
     },
     {
       "id": "3",
-      "title": "My third title post",
+      "name": "Alexandra ",
+      "profilePic": "https://storage0.dms.mpinteractiv.ro/media/1/1481/21333/20062337/1/ana-petrescu-onv-law-associate-002.jpg"
+    },
+    {
+      "id": "4",
+      "name": "Raluca Butusina",
+      "profilePic": "https://www.arcadiamedical.ro/storage/6bLXXlWN2FtSrgciYyaQoPiRasvrV86XfLXaXIsv.jpg"
+    },
+    {
+      "id": "5",
+      "name": "Catalin Razvan",
+      "profilePic": "https://storage0.dms.mpinteractiv.ro/media/1/1481/22466/22246283/1/catalin-munteanu-bcr.jpg"
+    },
+    {
+      "id": "6",
+      "name": "George Dragomir",
+      "profilePic": "https://media.hotnews.ro/assets/image/2016/01/4/20704298-0.jpg"
+    },
+    {
+      "id": "7",
+      "name": "Andreea Stefan",
+      "profilePic": "https://scontent.fotp3-3.fna.fbcdn.net/v/t39.30808-6/504198627_4230500137238018_1925113190305034384_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=0b6b33&_nc_ohc=oOysIEjh37AQ7kNvwF-7nnq&_nc_oc=Adm-o-occ5TJUcHag5-K-6zStHl0Th3nDc5cFHelxu8u7s4jYAcY36QjL2XUXTLab_8&_nc_zt=23&_nc_ht=scontent.fotp3-3.fna&_nc_gid=4fO5KfVlbcKX9zpfknGB3w&oh=00_AfRyE3QKaLOz7-51XxNlsBrnaC6aWLZOztfRCbhnBbU_8Q&oe=689212A7"
+    },
+    {
+      "id": "8",
+      "name": "Cosmin Andrei",
+      "profilePic": "https://c.pxhere.com/photos/f5/3d/man_beard_male_guy_fashion-93882.jpg!d"
+    },
+    {
+      "id": "9",
+      "name": "Alex Damian",
+      "profilePic": "https://c.pxhere.com/photos/d0/f4/man_red_hair_beard_red_beard_redhead_greens_summer_portrait-1172578.jpg!d"
+    }
+  ],
+  "posts": [
+    {
+      "id": "1",
+      "title": "Vulcan",
+      "description": "lorem ipsum dasjfhskdfajh hdkjas hfas",
+      "image": "https://scontent.fotp3-2.fna.fbcdn.net/v/t39.30808-6/508720918_24379517264989360_8970630252054349398_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=b0aB_f6yScIQ7kNvwGtHZ8B&_nc_oc=AdnDgWwwDZhPKgqfvjzeHATXUhn-yT4YRmktOQam_ZrmpBX77CBvFBGiM0ExVf-7ocE&_nc_zt=23&_nc_ht=scontent.fotp3-2.fna&_nc_gid=FUIGmt15LmPRqUTgaEyuPg&oh=00_AfT9Q_RJyU8NkdsjXXwPrgth4J9WLst2UHUQDS8XVAThCg&oe=689201CE"
+    },
+    {
+      "id": "2",
+      "title": "Viena",
+      "description": "lorem ipsum dasjfhskdfajh hdkjas hfas",
+      "image": "https://static01.nyt.com/images/2023/12/07/multimedia/36hours-vienna-01-wklj/36hours-vienna-01-wklj-mobileMasterAt3x.jpg"
+    },
+    {
+      "id": "3",
+      "title": "Paris",
       "description": "lorem ipsum dasjfhskdfajh hdkjas hfas",
       "image": "https://images.unsplash.com/photo-1549144511-f099e773c147?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHBhcmlzfGVufDB8fDB8fHww"
     },
     {
       "id": "4",
-      "title": "Modificare recenta",
+      "title": "Viena",
       "description": "lorem ipsum dasjfhskdfajh hdkjas hfas",
       "image": "https://res.klook.com/images/fl_lossy.progressive,q_65/c_fill,w_1200,h_630/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/uztbdmn0iu506yaxrywj/Immerse%20in%20Vienna's%20Old%20Town%3A%20%20Historical%20and%20Cultural%20Walking%20Tour.jpg"
     },
     {
       "id": "5",
-      "title": "My second title post",
+      "title": "Vulcan",
       "description": "lorem ipsum dasjfhskdfajh hdkjas hfas",
-      "image": "https://static01.nyt.com/images/2023/12/07/multimedia/36hours-vienna-01-wklj/36hours-vienna-01-wklj-mobileMasterAt3x.jpg"
+      "image": "https://scontent.fotp3-3.fna.fbcdn.net/v/t39.30808-6/515867052_24519691947638557_7896109867491163876_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_ohc=JdeBr0K8iQwQ7kNvwG5SvbW&_nc_oc=Adn1ZEK8ZGPQiETd1ZjuVEg20e-hSN_Lu8jqLSZwoOsnUQqMyC4lJ-NmarogPNFHqMs&_nc_zt=23&_nc_ht=scontent.fotp3-3.fna&_nc_gid=TCGQnyf6HKVcQHGxf6L94Q&oh=00_AfSJ20imNc2dUl9zf8-XkteU1lwA7qf7ZeLesyRe3DkRJg&oe=6891CDAE"
     },
     {
       "id": "6",
-      "title": "My third title post",
+      "title": "Viena",
       "description": "lorem ipsum dasjfhskdfajh hdkjas hfas",
       "image": "https://th-thumbnailer.cdn-si-edu.com/IasF9CyrmrHfBcw9SvCHa-IUCtc=/fit-in/1600x0/filters:focal(3796x1753:3797x1754)/https://tf-cmsv2-journeys-media.s3.amazonaws.com/filer_public/c8/8e/c88ef3ad-8b44-4195-a046-31487190afce/aut_vienna_viennaatnight_austriantourismb_julius-silver.jpg"
     },
-        {
+    {
       "id": "7",
-      "title": "My third title post",
+      "title": "Bucuresti",
       "description": "lorem ipsum dasjfhskdfajh hdkjas hfas",
       "image": "https://wherefoodtakesus.com/wp-content/uploads/2020/Reasons-to-Visit-Bucharest/old-building-with-french-architecture-in-bucharest.jpg"
     },
-        {
+    {
       "id": "8",
-      "title": "My third title post",
+      "title": "Bucuresti",
       "description": "lorem ipsum dasjfhskdfajh hdkjas hfas",
       "image": "https://www.aviontourism.com/images/1260-2600-fix/942586e6-9023-4730-b795-17f5a89d46a0"
     },
-        {
+    {
       "id": "9",
-      "title": "My third title post",
+      "title": "Bucuresti",
       "description": "lorem ipsum dasjfhskdfajh hdkjas hfas",
       "image": "https://www.cambridgeschool.ro/wp-content/uploads/2022/11/Moving-to-Romania-e1669022689469.jpg"
+    },
+    {
+      "id": "10",
+      "title": "Vulcan",
+      "description": "lorem ipsum dasjfhskdfajh hdkjas hfas",
+      "image": "https://scontent.fotp3-2.fna.fbcdn.net/v/t39.30808-6/508720918_24379517264989360_8970630252054349398_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=b0aB_f6yScIQ7kNvwGtHZ8B&_nc_oc=AdnDgWwwDZhPKgqfvjzeHATXUhn-yT4YRmktOQam_ZrmpBX77CBvFBGiM0ExVf-7ocE&_nc_zt=23&_nc_ht=scontent.fotp3-2.fna&_nc_gid=FUIGmt15LmPRqUTgaEyuPg&oh=00_AfT9Q_RJyU8NkdsjXXwPrgth4J9WLst2UHUQDS8XVAThCg&oe=689201CE"
     }
   ],
   "users": [
