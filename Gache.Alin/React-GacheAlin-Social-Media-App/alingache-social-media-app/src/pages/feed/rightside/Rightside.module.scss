@@ -1,0 +1,10 @@
+* {
+  box-sizing: border-box;
+}
+.mainContainer {
+  color: wheat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}

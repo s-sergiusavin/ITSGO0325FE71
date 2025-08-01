@@ -10,7 +10,7 @@ import feedService from "../../../../services/feedService";
 
 const AboutSection = () => {
   const aboutInfo = {
-    work: "Cursant",
+    work: "Junior Frontend Dev",
     studys: "UTCB",
     location: "Bucuresti",
     from: "Vulcan HD",
