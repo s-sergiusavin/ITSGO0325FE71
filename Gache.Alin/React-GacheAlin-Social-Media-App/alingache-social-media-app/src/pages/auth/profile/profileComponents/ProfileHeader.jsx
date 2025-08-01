@@ -31,7 +31,9 @@ const ProfileHeader = () => {
             <div className={styles.userInfo}>
               <div className={styles.userName}>
                 {userName}
-                <div className={styles.friendsNumber}>{friendsNumber}</div>
+                <div className={styles.friendsNumber}>
+                  Prieteni: {friendsNumber}
+                </div>
               </div>
             </div>
             <div className={styles.buttons}>
