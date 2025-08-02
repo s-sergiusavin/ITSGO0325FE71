@@ -695,6 +695,17 @@ svg {
 
 /* Left Side */
 
+.leftContent {
+    
+    position: fixed;
+    top: 0;
+    margin-top: 7rem;
+    width: 17%;
+    left: 0;
+    height: 42rem;
+    
+}
+
 .myProfile {
   background-color: white;
   border-radius: 1rem;
@@ -785,7 +796,6 @@ svg {
 
 
 /* Right Side */
-
 
 .whoToFollow {
   padding-top: 0.5rem;

@@ -5,6 +5,14 @@
   margin: 0.5rem;
   background-color: black;
 }
+
 .lights.yellow {
   background-color: yellow;
-}/*# sourceMappingURL=Light.css.map */
+}
+
+/*# sourceMappingURL=Light.css.map */
+
+.lights.blue {
+  background-color: blue;
+  ;
+}

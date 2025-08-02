@@ -19,8 +19,118 @@
 
 <body>
 
-  <!-- start mini menu left side -->
-  <div class="sidebar">
+  <header>
+    <nav class="mainNavigation">
+      <ul class="navigation">
+        <li>
+          <a href="feed.html" title="Home">
+            <i class="bi bi-house navIcons"></i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="javas">
+      <i class="bi bi-calendar-day iconLeftBar" id="calendarIcon" title="Calendar">Calendar</i>
+      <i class="bi bi-currency-exchange iconLeftBar" id="exchangerIcon" title="Exchanger">Exchanger</i>
+      <i class="bi bi-emoji-smile-upside-down iconLeftBar" id="jokesGeneratorId" title="Joke Generator">Joke
+        Generator</i>
+      <i class="bi bi bi-moon-fill iconLeftBar" id="darkModeToggle" title="Dark Mode">
+        <span id="LightText">Dark Mode</span>
+      </i>
+    </div>
+
+    <ul class="links">
+      <li>
+        <a href="landingPage.html" title="To Landing page"><i class="bi bi-newspaper navIconsRight"></i></a>
+      </li>
+      <li>
+        <a href="#" title="View notifications" class="bellIcon"><i class="bi bi-bell navIconsRight"></i>
+          <span>12</span></a>
+      </li>
+      <li>
+        <a href="login.html" title="Log Out"><i class="bi bi-box-arrow-right navIconsRight"></i></a>
+      </li>
+    </ul>
+  </header>
+
+  <div class="leftContent">
+    <div class="myProfile">
+      <div class="infoLeftMenu">
+        <div class="pToEdit"></div>
+        <a href=""><img src="../assets/BogdanCozmaniuc.jpeg" alt="background-profile-pic"
+            class="backgroundProficePic2"></a>
+        <h3>Bogdan Cozmaniuc</h3>
+        <span>Web Developer Junior</span>
+        <p style="text-align: center;">This is my first website created during the Web Develpment course.</p>
+      </div>
+
+      <div class="infoProfileLeftMenu">
+
+        <div class="leftPosts">
+          <span style="font-weight: bold;">256</span>
+          <span>Post</span>
+        </div>
+
+        <div class="leftFollowers">
+          <span style="font-weight: bold;">2.5K</span>
+          <span>Followers</span>
+        </div>
+
+        <div class="leftFollowing">
+          <span style="font-weight: bold;">365</span>
+          <span>Following</span>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="leftMenuIcons">
+
+        <div class="leftMenuElement">
+          <i class="bi bi-house iconLeftMenu"></i>
+          <span>Feed</span>
+        </div>
+
+        <div class="leftMenuElement">
+          <i class="bi bi-people iconLeftMenu"></i>
+          <span>Connections</span>
+        </div>
+
+        <div class="leftMenuElement">
+          <i class="bi bi-newspaper iconLeftMenu"></i>
+          <span>Latest News</span>
+        </div>
+
+        <div class="leftMenuElement iconLeftMenu">
+          <i class="bi bi-wechat"></i>
+          <span>Groups</span>
+        </div>
+
+        <div class="leftMenuElement iconLeftMenu">
+          <i class="bi bi-bell"></i>
+          <span>Notifications</span>
+        </div>
+
+        <div class="leftMenuElement iconLeftMenu">
+          <i style="color: red;" class="bi bi-fire"></i>
+          <span>TRENDING</span>
+        </div>
+
+        <div class="leftMenuElement iconLeftMenu">
+          <i class="bi bi-power"></i>
+          <span>Logout</span>
+        </div>
+
+        <hr>
+        <a href="profile.html" class="viewProfile">View Profile</a>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- start mini menu right side -->
+  <!-- <div class="sidebar">
     <div class="logo-details">
       <div class="logo_name">Menu</div>
       <i class="bi bi-list" id="btn"></i>
@@ -87,45 +197,8 @@
           <i class='bi bi-box-arrow-right'></i>
         </a>
     </ul>
-  </div>
-  <!-- Sfarsit mini menu left side -->
-
-  <header>
-    <nav class="mainNavigation">
-      <ul class="navigation">
-        <li>
-          <a href="feed.html" title="Home">
-            <i class="bi bi-house navIcons"></i>
-          </a>
-        </li>
-      </ul>
-    </nav>
-
-    <div class="javas">
-      <i class="bi bi-calendar-day iconLeftBar" id="calendarIcon" title="Calendar">Calendar</i>
-      <i class="bi bi-currency-exchange iconLeftBar" id="exchangerIcon" title="Exchanger">Exchanger</i>
-      <i class="bi bi-emoji-smile-upside-down iconLeftBar" id="jokesGeneratorId" title="Joke Generator">Joke
-        Generator</i>
-      <i class="bi bi bi-moon-fill iconLeftBar" id="darkModeToggle" title="Dark Mode">
-        <span id="LightText">Dark Mode</span>
-      </i>
-    </div>
-
-    <ul class="links">
-      <li>
-        <a href="landingPage.html" title="To Landing page"><i class="bi bi-newspaper navIconsRight"></i></a>
-      </li>
-      <li>
-        <a href="#" title="View notifications" class="bellIcon"><i class="bi bi-bell navIconsRight"></i>
-          <span>12</span></a>
-      </li>
-      <li>
-        <a href="login.html" title="Log Out"><i class="bi bi-box-arrow-right navIconsRight"></i></a>
-      </li>
-    </ul>
-  </header>
-  </div>
-
+  </div> -->
+  <!-- Sfarsit mini menu right side -->
 
   <!-- main content -->
   <section class="mainContent">
@@ -371,111 +444,9 @@
 
   <!-- Start RightSide -->
   <aside class="rightContent">
-    <div class="myProfile">
-      <div class="infoLeftMenu">
-        <div class="pToEdit"></div>
-        <a href=""><img src="../assets/BogdanCozmaniuc.jpeg" alt="background-profile-pic"
-            class="backgroundProficePic2"></a>
-        <h3>Bogdan Cozmaniuc</h3>
-        <span>Web Developer Junior</span>
-        <p style="text-align: center;">This is my first website created during the Web Develpment course.</p>
-      </div>
-
-      <div class="infoProfileLeftMenu">
-
-        <div class="leftPosts">
-          <span style="font-weight: bold;">256</span>
-          <span>Post</span>
-        </div>
-
-        <div class="leftFollowers">
-          <span style="font-weight: bold;">2.5K</span>
-          <span>Followers</span>
-        </div>
-
-        <div class="leftFollowing">
-          <span style="font-weight: bold;">365</span>
-          <span>Following</span>
-        </div>
-      </div>
-
-      <hr>
-
-      <div class="leftMenuIcons">
-
-        <div class="leftMenuElement">
-          <i class="bi bi-house iconLeftMenu"></i>
-          <span>Feed</span>
-        </div>
-
-        <div class="leftMenuElement">
-          <i class="bi bi-people iconLeftMenu"></i>
-          <span>Connections</span>
-        </div>
-
-        <div class="leftMenuElement">
-          <i class="bi bi-newspaper iconLeftMenu"></i>
-          <span>Latest News</span>
-        </div>
-
-        <div class="leftMenuElement iconLeftMenu">
-          <i class="bi bi-wechat"></i>
-          <span>Groups</span>
-        </div>
-
-        <div class="leftMenuElement iconLeftMenu">
-          <i class="bi bi-bell"></i>
-          <span>Notifications</span>
-        </div>
-
-        <div class="leftMenuElement iconLeftMenu">
-          <i style="color: red;" class="bi bi-fire"></i>
-          <span>TRENDING</span>
-        </div>
-
-        <div class="leftMenuElement iconLeftMenu">
-          <i class="bi bi-power"></i>
-          <span>Logout</span>
-        </div>
-
-        <hr>
-        <a href="profile.html" class="viewProfile">View Profile</a>
-
-      </div>
-    </div>
-
-    <!-- FUNCȚIONALITĂȚI -->
-
-    <!-- Mini calendar -->
-    <div class="calendarContainer" id="calendarContainer">
-      <p class="monthName" id="monthName">April</p>
-      <p class="dayName" id="dayName">Friday</p>
-      <p class="dayNumber" id="dayNumber">20</p>
-      <p class="year" id="year">2020</p>
-    </div>
-    <!-- Sfarsit Mini calendar -->
-
-    <!-- Value Euro - lei Exchange -->
-    <div class="exchanger" id="exchanger">
-      <h1 class="heading">Euro - Lei</h1>
-      <div class="placeholderEuro">
-        <label for="pounds">Euro</label>
-        <input type="number" id="input" class="input" placeholder="Enter amount">
-      </div>
-      <p>Lei: <span id="result"></span></p>
-      <p class="error" id="error"></p>
-    </div>
-
-    <!-- Jokes Generator -->
-    <div class="jokeGeneratorContainer" id="jokeGeneratorContainer">
-      <h3>Don't Laugh Challenge</h3>
-      <div id="joke" class="joke">// Joke goes here</div>
-      <button id="jokeBtn" class="btn">Get Another Joke</button>
-    </div>
-    <!-- Sf Joke Generator -->
 
 
-    <!--SF FUNCȚIONALITĂȚI -->
+
 
     <div class="whoToFollow">
       <p class="titleWhoToFollow">Who To Follow</p>
@@ -669,6 +640,38 @@
   </aside>
   <!-- Sfârșit RigthSide -->
 
+  <!-- FUNCȚIONALITĂȚI -->
+
+  <!-- Mini calendar -->
+  <div class="calendarContainer" id="calendarContainer">
+    <p class="monthName" id="monthName">April</p>
+    <p class="dayName" id="dayName">Friday</p>
+    <p class="dayNumber" id="dayNumber">20</p>
+    <p class="year" id="year">2020</p>
+  </div>
+  <!-- Sfarsit Mini calendar -->
+
+  <!-- Value Euro - lei Exchange -->
+  <div class="exchanger" id="exchanger">
+    <h1 class="heading">Euro - Lei</h1>
+    <div class="placeholderEuro">
+      <label for="pounds">Euro</label>
+      <input type="number" id="input" class="input" placeholder="Enter amount">
+    </div>
+    <p>Lei: <span id="result"></span></p>
+    <p class="error" id="error"></p>
+  </div>
+
+  <!-- Jokes Generator -->
+  <div class="jokeGeneratorContainer" id="jokeGeneratorContainer">
+    <h3>Don't Laugh Challenge</h3>
+    <div id="joke" class="joke">// Joke goes here</div>
+    <button id="jokeBtn" class="btn">Get Another Joke</button>
+  </div>
+  <!-- Sf Joke Generator -->
+
+
+  <!--SF FUNCȚIONALITĂȚI -->
 
   <a href="#top"><i class="bi bi-arrow-up-square-fill upArrow"></i></a>
 
