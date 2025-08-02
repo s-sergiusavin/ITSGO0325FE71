@@ -1,18 +1,24 @@
 import { Link, NavLink, useNavigate } from 'react-router-dom';
 import styles from './Navigation.module.scss'
-import { useState } from 'react';
 import logoNoText from '../assets/images/logo-notext.png';
+import { useDispatch, useSelector } from 'react-redux';
+import { selectUser } from '../redux/selectors';
+import { toggleLogin } from '../redux/slices/authSlice';
 
 
 
 const Navigation = () => {
 
-    const [isLoggedIn, setIsLoggedIn] = useState(true);
+    const user = useSelector(selectUser);
+    const isLoggedIn = user.isAuthenticated;
     const navigate = useNavigate();
 
+    const dispatch = useDispatch();
+
     const toggleAuth = () => {
+        dispatch(toggleLogin());
         isLoggedIn ? navigate('/auth') : navigate('/');
-        setIsLoggedIn(prevState => !prevState)
+        
     }
 
     return (

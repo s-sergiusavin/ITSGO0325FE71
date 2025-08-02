@@ -1,6 +1,6 @@
 .mainContainer {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     gap: 3rem;
 
@@ -8,5 +8,15 @@
         width: 20rem;
         background-color: lightgray;
         height: 50vh;
+        position: fixed;
+        top: 5rem;
+
+        &.leftContent {
+            left: 0;
+        }
+
+        &.rightContent {
+            right: 0;
+        }
     }
 }

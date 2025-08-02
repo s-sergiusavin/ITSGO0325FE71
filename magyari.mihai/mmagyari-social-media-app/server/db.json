@@ -1,0 +1,10 @@
+{
+  "posts": [],
+  "users": [
+    {
+      "email": "mihai123@mihai.ro",
+      "password": "$2a$10$djzXh/IU3dU8qYpWUkix1OIr.mgb6yHS7XisIiymXYNNq8sZCMu2S",
+      "id": 1
+    }
+  ]
+}

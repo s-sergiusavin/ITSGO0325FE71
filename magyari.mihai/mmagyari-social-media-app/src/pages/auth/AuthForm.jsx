@@ -1,35 +1,55 @@
 import { useState } from 'react';
-import styles from './AuthForm.module.scss'
-import { useNavigate } from 'react-router-dom'
+import styles from './AuthForm.module.scss';
+import { useNavigate } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { selectUser } from '../../redux/selectors';
+import { loginUser, registerUser } from '../../redux/slices/authSlice';
 
 const AuthForm = () => {
     const [isLogin, setIsLogin] = useState(true);
-    const [isError, setIsError] = useState(false);
-    const [isLoading, setIsLoading] = useState(false);
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
 
+    const user = useSelector(selectUser)
+
     const navigate = useNavigate();
+
+    const dispatch = useDispatch();
 
     const toggleAuthState = () => {
         setIsLogin(prevState => !prevState)
-
     }
 
-    const submitHandler = (event) => {
-        console.log(event)
+    const submitHandler = async (event) => {
         event.preventDefault();
-        navigate('/')
+        const payload = {
+            email: username,
+            password
+        }
+        if (isLogin) {
+            try {
+                await dispatch(loginUser(payload));
+                if (user.isAuthenticated) {
+                    navigate('/')
+                }
+            } catch (err) {
+                console.error(err);
+            }
+        } else {
+            try {
+                await dispatch(registerUser(payload));
+            } catch(err) {
+                console.error(err);
+            }
+        }
     }
 
     const actionIsNotLoading = (
         <button>{isLogin ? 'Login' : 'Create new account'}</button>
-    )
+    );
 
     return <div className={styles.auth}>
-
         <h2>{isLogin ? 'Login' : 'Logout'}</h2>
-
         <form onSubmit={submitHandler} autoComplete='off' noValidate>
             <div className={styles.control}>
                 <label htmlFor="username">Username</label>
@@ -43,16 +63,19 @@ const AuthForm = () => {
                     required onChange={e => setPassword(e.target.value)} />
             </div>
 
-            <div className={styles.action}>
-                {isError && <p>Please try again...</p>}
-                {isLoading && <p>Sending request</p>}
-                {isLoading && actionIsNotLoading}
-                <button className={styles.toggle}>
-                    {isLogin ? 'Create new Account' : 'Login with existing account'}
+            <div className={styles.actions}>
+                {user.error && <p>Please try again...</p>}
+                {user.loading && <p>Sending request...</p>}
+                {!user.loading && actionIsNotLoading}
+                <button className={styles.toggle} onClick={toggleAuthState}>
+                    {isLogin ? 'Create new account' : 'Login with an existing account'}
                 </button>
             </div>
         </form>
-    </div> //adauga functionalitate cu username already existens
+    </div>
 }
 
 export default AuthForm;
+
+
+//adauga functionalitate cu username already existens
