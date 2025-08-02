@@ -1,28 +1,32 @@
 import styles from './NewsFeed.module.scss'
 import profile from '../../../assets/images/profile.jpg'
-import post1 from '../../../assets/images/post1.jpeg'
-import post2 from '../../../assets/images/post2.webp'
+import post1 from '../../../assets/images/post1.jpg'
+import post2 from '../../../assets/images/post2.jpg'
 import { useState } from 'react'
 
 const NewsFeed = ({ postData }) => {
 
     const [isLiked, setIsLiked] = useState(false);
-    const [likes, setLikes] = useState(Math.random() * 100);
-    const [isShared, setIsShared] = useState(false);
-    const [shares, setShares] = useState(Math.random() * 100);
-
-    const postImages = [post1, post2]
+    const [likes, setLikes] = useState(Math.floor((Math.random() * 100)));
 
 
 
     const handleLike = () => {
         if (!isLiked) {
-            setLikes(prevState => prevState + 1)
+            setLikes(prevState => 'You and other ' + prevState)
         } else {
-            setLikes(prevState => prevState - 1)
+            setLikes(prevState => {
+                const cleaned = prevState.replace(/^You and other\s*/, '');
+                return cleaned;
+            });
         }
+
+        setIsLiked(prevState => !prevState)
     }
 
+
+
+    const postImages = [post1, post2]
 
 
     return (
@@ -61,7 +65,7 @@ const NewsFeed = ({ postData }) => {
 
                 <div className={styles.content}>
                     <div className={styles.imageWrapper}>
-                        <img src="https://visitabudhabi.ae/-/media/project/vad/where-to-go/about-abu-dhabi/uae-capital-and-surrounds/new-rebrand-images/header/uae-capital-and-surrounds-header.jpg"
+                        <img src={postImages[postData.id % 2]}
                             alt="post content picture" className={styles.imgContent} />
 
 
@@ -70,13 +74,7 @@ const NewsFeed = ({ postData }) => {
 
 
                     <div className={styles.postDescription}>
-                        <p>Only one more show to go… and I wanted to take a minute to shout out this incredible tour
-                            family.
-                            These are the people who keep this whole thing running. You guys don`t get to see everyone
-                            on
-                            stage, but without every single person in this picture - none of this would be possible. So
-                            much
-                            love. Let`s do it ONE MORE TIME tomorrow night in Abu Dhabi!</p>
+                        <p>{postData.body.charAt(0).toUpperCase() + postData.body.slice(1)}</p>
 
 
                     </div>
@@ -93,7 +91,7 @@ const NewsFeed = ({ postData }) => {
                         <img src="https://cdn-icons-png.flaticon.com/128/3128/3128313.png" alt=""
                             title="Steve Irvin and 7K other loved this" />
 
-                        <span id="reactionsNumber"></span>
+                        <span id="reactionsNumber">{likes}K</span>
                     </div>
 
                     <div className={styles.commentsInfo}>
@@ -109,8 +107,8 @@ const NewsFeed = ({ postData }) => {
 
                     <ul className={styles.actions}>
 
-                        <li className={styles.reaction} id="likeBtn">
-                            <img src="https://cdn-icons-png.flaticon.com/128/11820/11820106.png" alt="" className="likeImg"
+                        <li className={styles.reaction} id="likeBtn" onClick={handleLike}>
+                            <img src="https://cdn-icons-png.flaticon.com/128/11820/11820106.png" alt="" className={`${isLiked ? styles.liked : ''}`}
                                 id="likeImg" />
                             <span id="likeText">Like</span>
                         </li>
