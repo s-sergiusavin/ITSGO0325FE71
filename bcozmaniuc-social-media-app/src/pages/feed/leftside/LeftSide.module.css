@@ -1,0 +1,97 @@
+.sidebarLeft {
+  width: 33rem;
+  background: #fff;
+  border-right: 1px solid #eee;
+}
+
+.containerProfileCard {
+  background-color: #52545F;
+  background: linear-gradient(130deg, rgb(82, 84, 95) 0%, rgb(56, 58, 69) 50%);
+  height: 40rem;
+  position: relative;
+  z-index: 1;
+}
+
+.logoUp {
+  font-weight: bold;
+  font-size: 2rem;
+  color: #ffffff;
+  margin-bottom: 20px;
+  text-align: center;
+  padding-top: 1rem;
+}
+
+.logoImage {
+  width: 10rem;
+  height: 10rem;
+  left: 35%;
+  position: relative;
+}
+
+.textTitle {
+  color: white;
+  text-align: center;
+}
+
+.profileCard {
+  position: absolute;
+  top: 22rem;
+  left: 15%;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  width: 22rem;
+  padding: 6rem;
+  z-index: 1;
+  text-align: center;
+}
+
+.profileCard2 {
+  position: absolute;
+  top: 43rem;
+  left: 17.5%;
+  background: rgb(244, 239, 239);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  width: 20.5rem;
+  padding: 2.5rem;
+  z-index: 0;
+  text-align: center;
+}
+
+.avatar {
+  width: 60px;
+  height: 60px;
+  background: #ddd;
+  border-radius: 50%;
+  margin: 0 auto 10px;
+}
+
+.firstHr {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.friendsAndGroup {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.menu {
+  background-color: #f0f0f0;
+  height: 800px;
+  position: relative;
+  z-index: 0;
+  padding-top: 23rem;
+  display: grid;
+  grid-template-columns: 19rem 5rem;
+  align-items: center;
+}
+
+.menu a {
+  padding: 10px 0;
+  color: #555;
+  text-decoration: none;
+  text-align: center;
+}/*# sourceMappingURL=LeftSide.module.css.map */

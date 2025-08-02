@@ -1,0 +1,101 @@
+.rightContent {
+  position: relative;
+  width: 20rem;
+  margin-right: 3rem;
+  padding-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.whoToFollow {
+  padding-top: 0.5rem;
+  height: 30rem;
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  margin-top: 1.5rem;
+
+  .titleWhoToFollow {
+    font-size: larger;
+    font-weight: bold;
+    padding-left: 1.5rem;
+  }
+
+  .celebrity {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.5rem;
+
+    .profileInfo {
+      display: flex;
+      gap: 1rem;
+
+      .profileImageToFollow {
+        width: 3rem;
+        border-radius: 5rem;
+        margin-left: 1rem;
+      }
+
+      .profileNameToFollow {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
+    i.addCelebrity {
+      color: #4F95DA;
+      font-size: 1.5rem;
+      margin-right: 1rem;
+      cursor: pointer;
+
+      &:hover {
+        color: #1348e8;
+      }
+    }
+  }
+
+  .viewMore {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.5rem;
+    margin-left: 1.5rem;
+    background-color: lightskyblue;
+    height: 2rem;
+    width: 85%;
+    border-radius: 0.5rem;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #1348e8;
+      color: white;
+    }
+  }
+}
+
+.TodaysNews {
+  height: 30rem;
+  background-color: white;
+  border-radius: 1rem;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  overflow-y: scroll;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+
+  .spanTodaysNews {
+    font-size: larger;
+    font-weight: bold;
+    padding-left: 1.5rem;
+    margin-top: 1rem;
+  }
+
+  .News {
+    display: flex;
+    flex-direction: column;
+    padding-top: 1rem;
+    margin-left: 1.5rem;
+  }
+}

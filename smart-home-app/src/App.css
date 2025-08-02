@@ -5,6 +5,20 @@
   text-align: center;
 }
 
+header nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+header nav ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
 .ui-features {
   display: flex;
   justify-content: center;
@@ -15,8 +29,33 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   margin-top: 6rem;
   border: 3px solid blue;
   padding: 1.5rem;
   gap: 2rem;
+}
+.features-container .features {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form {
+  margin-top: 3rem;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+.form.invalid {
+  border: 1px solid red;
+}
+.form .control {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 20rem;
 }/*# sourceMappingURL=App.css.map */
