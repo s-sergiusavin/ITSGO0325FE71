@@ -1,3 +1,5 @@
+@use './scss/mixins' as mixins;
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -5,18 +7,52 @@
   text-align: center;
 }
 
+header {
+  nav {
+    ul {
+      list-style: none;
+      @include mixins.flexbox();
+      gap: 1.5rem;
+
+      li {
+        @include mixins.flexbox();
+        gap: 0.5rem;
+      }
+    }
+  }
+}
+
 .ui-features {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include mixins.flexbox();
 }
 
 .features-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  .features {
+    @include mixins.flexbox();
+  }
+  @include mixins.flexbox();
+  flex-direction: column;
   margin-top: 6rem;
   border: 3px solid blue;
   padding: 1.5rem;
   gap: 2rem;
+}
+
+.form {
+  margin-top: 3rem;
+  padding: 0.5rem;
+  @include mixins.flexbox();
+  flex-direction: column;
+  gap: 1rem;
+
+  &.invalid {
+    border: 1px solid red;
+  }
+
+  .control {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 20rem;
+  }
 }
