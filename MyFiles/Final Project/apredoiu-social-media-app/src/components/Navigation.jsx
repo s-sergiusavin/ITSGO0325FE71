@@ -17,7 +17,7 @@ const Navigation = () => {
     }
     return <header>
         <Link to='/'>
-            <div className={styles.logo}>Social Media App</div>
+            <div className={styles.logo}>eyeSEE</div>
         </Link>
 
         <nav>
@@ -25,10 +25,13 @@ const Navigation = () => {
                 {isLoggedIn &&
                     <>
                         <li className={styles.menuItem}>
-                            <NavLink to='/my-profile'> My Profile</NavLink>
+                            <NavLink to='/profile'>My Profile</NavLink>
                         </li>
                         <li className={styles.menuItem}>
                             <NavLink to='/friends'> Friends</NavLink>
+                        </li>
+                        <li className={styles.menuItem}>
+                            <NavLink to='/friends'> Events</NavLink>
                         </li>
                     </>}
                 <li className={styles.menuItem} onClick={toggleAuth}>

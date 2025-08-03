@@ -3,6 +3,8 @@ import useFetch from '../../hooks/useFetch';
 import NewsFeed from '../feed/newsfeed/NewsFeed';
 import { useEffect, useState } from 'react';
 import feedService from '../../services/feedService';
+import RightSide from '../../pages/feed/RightSide/RightSide';
+import LeftSide from '../../pages/feed/LeftSide/LeftSide';
 
 const HomePage = () => {
 
@@ -28,7 +30,7 @@ const HomePage = () => {
     }, [])
 
     return <div className={styles.mainContainer}>
-        <aside className={styles.leftSide}>Left Side (folosim componenta leftside)</aside>
+        <aside className={styles.leftSide}><LeftSide/></aside>
         <section className={styles.newsfeed}>
             {postList?.map( post => {
                 return <NewsFeed postData={post} key={post.id}/>
@@ -39,7 +41,7 @@ const HomePage = () => {
                 return <NewsFeed postData={post} key={post.id}/>
             })} */}
         </section>
-        <aside className={styles.rightSide}>Right side</aside>
+        <aside className={styles.rightSide}><RightSide/></aside>
     </div>
 }
 

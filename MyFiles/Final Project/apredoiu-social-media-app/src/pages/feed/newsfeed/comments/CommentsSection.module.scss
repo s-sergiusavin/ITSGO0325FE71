@@ -1,0 +1,87 @@
+
+
+.userComments {
+
+    .commentSection {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 1rem 0;
+    }
+    
+  .profileImage {
+    width: 3rem;
+    border-radius: 50%;
+  }
+
+  .commentInput {
+    width: 60%;
+    border-radius: 0.3rem;
+    padding: 0.5rem 1rem;
+    background-color: #dcf2f9;
+    border: 1px solid #888;
+    cursor: pointer;
+    
+  }
+
+  .commentButton {
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    background-color: #e0f0f6;
+    color: #1348e8;
+    font-weight: 600;
+    cursor: pointer;
+    border: 1px solid #888;
+
+    &:hover {
+      background-color: #d6e1ff;
+      color: #005151;
+      border: 2px solid #000000;
+    }
+    }
+
+  .userCommentText {
+    margin: 0 1rem;
+    border: 1px solid #888;
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: lightgray;
+    position: relative;
+
+    .emojiReaction {
+      position: absolute;
+      bottom: 0;
+      right: 1rem;
+      display: none;
+    }
+
+    &:hover {
+      animation-name: comment-animation;
+      animation-duration: 1s;
+
+      .emojiReaction {
+        display: block;
+      }
+    }
+  }
+
+  .commentReaction {
+    margin-left: 3rem;
+    color: #888;
+    display: flex;
+    gap: 1rem;
+
+    .commentReactionButton {
+      &:hover {
+        cursor: pointer;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .emptyMessage {
+    color: #888;
+    text-align: center;
+    margin-top: 1rem;
+  }
+}

@@ -1,0 +1,79 @@
+.mainContainer {
+  display: flex;
+  flex-direction: row;
+  padding: 2rem;
+  background-color: #f5f6fa;
+  font-family: 'Segoe UI', sans-serif;
+  margin-top: 3rem;
+  gap: 2rem;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr 3fr;
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+}
+
+.newsfeed {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.leftSide {
+margin-top: 2rem;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.rightSide {
+  @media (max-width: 1024px) {
+    display: none;
+  }
+}
+
+aside {
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 16px;
+      color: #333;
+      padding: 10px 0;
+      cursor: pointer;
+      transition: color 0.2s ease;
+
+      svg {
+        font-size: 18px;
+        color: #5a4fcf;
+      }
+
+      &:hover {
+        color: #5a4fcf;
+      }
+    }
+  }
+
+  h3, h4 {
+    font-size: 18px;
+    color: #444;
+  }
+
+  h4 {
+    margin-top: 5px;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #888;
+  }
+}

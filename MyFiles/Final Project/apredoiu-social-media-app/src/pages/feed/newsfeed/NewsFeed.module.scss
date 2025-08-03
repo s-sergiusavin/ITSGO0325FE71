@@ -1,8 +1,9 @@
 .mainPost {
-    width: 30rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 100%;
+    max-width: 650px;
+    margin: 0 auto;
+border-radius: 12px;
+
 
     .post {
         box-shadow: 5px 5px 5px 5px #888;
@@ -114,12 +115,16 @@
                 .actions {
                     display: flex;
                     justify-content: space-between;
+                    align-items: center;
+                    list-style: none;
 
                     .reaction {
                         color: royalblue;
                         cursor: pointer;
                         padding: 0.5rem 1rem;
                         border-radius: 1rem;
+                        margin-right: auto;
+                        ;
 
                         &:hover {
                             color: #1348e8;
@@ -166,11 +171,6 @@
     gap: 1rem;
 }
 
-/* .mainPost .post .commentSection .profileImage {
-  width: 3rem;
-  border-radius: 50%;
-} */
-
 .mainPost .post .commentSection .newCommentField {
     width: 80%;
     border-radius: 0.3rem;
@@ -178,34 +178,6 @@
     background-color: #dcf2f9;
     border: 1px solid #888;
     cursor: pointer;
-}
-
-.mainPost .post .commentSection .newCommentField::placeholder {
-    color: royalblue;
-}
-
-.mainPost .post .commentSection .newCommentField:hover {
-    background-color: #cbecf8;
-}
-
-.mainPost .post .commentSection .newCommentField:focus {
-    outline-color: royalblue;
-}
-
-.mainPost .post .commentSection .insertCommentButton {
-    border: none;
-    background-color: transparent;
-    font-size: 1.2rem;
-    cursor: pointer;
-    color: royalblue;
-    width: 5rem;
-}
-
-.mainPost .post .commentSection .insertCommentButton:hover {
-    color: #1348e8;
-    font-size: 1.3rem;
-    background-color: #ffd5ab;
-    border-radius: 0.5rem;
 }
 
 .profileImage {

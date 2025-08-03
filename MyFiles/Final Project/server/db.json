@@ -1,0 +1,51 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "title": "Modificare recenta",
+      "description": "lorem ipsum dasjfhskdfajh hdkjas hfas",
+    },
+    {
+      "id": "2",
+      "title": "My second title post",
+      "description": "lorem ipsum dasjfhskdfajh hdkjas hfas"
+    },
+    {
+      "id": "3",
+      "title": "My third title post",
+      "description": "lorem ipsum dasjfhskdfajh hdkjas hfas"
+    },
+    {
+      "id": "4",
+      "title": "Modificare recenta",
+      "description": "lorem ipsum dasjfhskdfajh hdkjas hfas"
+    },
+    {
+      "id": "5",
+      "title": "My second title post",
+      "description": "lorem ipsum dasjfhskdfajh hdkjas hfas"
+    },
+    {
+      "id": "6",
+      "title": "My third title post",
+      "description": "lorem ipsum dasjfhskdfajh hdkjas hfas"
+    }
+  ],
+  "users": [
+    {
+      "email": "safdsf@dsaf.cdsa",
+      "password": "$2a$10$ZPerR9DZX46JWWubUixfZ.VRaUvHTLIgpj.irMtvGkFFo64lhOJ2G",
+      "id": 1
+    },
+    {
+      "email": "test@test.com",
+      "password": "$2a$10$adi9YV9I5EpljeeomwM4OOlzEzg3TdM1WGr1y4elo.vComJbUU9L6",
+      "id": 2
+    },
+    {
+      "email": "test@test,com",
+      "password": "$2a$10$Lnbn3bR.gcxPDHp.0vjjmu5QhGfz4WVBUcVcDJ8hr460FcRWI19HW",
+      "id": 3
+    }
+  ]
+}
