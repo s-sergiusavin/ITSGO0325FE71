@@ -31,7 +31,7 @@ const Navigation = () => {
                             <NavLink to='/friends'> Friends</NavLink>
                         </li>
                         <li className={styles.menuItem}>
-                            <NavLink to='/friends'> Events</NavLink>
+                            <NavLink to='/landingpage'> Events</NavLink>
                         </li>
                     </>}
                 <li className={styles.menuItem} onClick={toggleAuth}>
