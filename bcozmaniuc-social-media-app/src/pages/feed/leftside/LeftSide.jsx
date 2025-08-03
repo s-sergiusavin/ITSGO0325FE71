@@ -38,8 +38,6 @@ const LeftSide = () => {
                 <p>Groups</p>
                 <a href=""> <Diversity2Icon></Diversity2Icon></a>
                 <p>Blog</p>
-            </nav>
-            <nav className={styles.menu}>
                 <a href=""> <StorefrontIcon></StorefrontIcon></a>
                 <p>Marketplace</p>
                 <a href=""> <WorkIcon></WorkIcon></a>

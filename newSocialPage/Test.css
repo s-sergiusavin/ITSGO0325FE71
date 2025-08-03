@@ -174,9 +174,10 @@ body {
 /* Right Side */
 
 .rightContent {
-  position: relative;
+  position: fixed;
+  right: 0;
   width: 20rem;
-  margin-right: 6rem;
+  /* margin-right: 6rem; */
   padding-left: 1rem;
 }
 

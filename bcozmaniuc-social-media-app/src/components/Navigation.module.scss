@@ -1,19 +1,21 @@
 header {
     width: 100%;
     height: 5rem;
-    background-color: teal;
+    background-color: transparent;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+    color: #626276;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     position: fixed;
     z-index: 10;
     top: 0;
 
     .logo {
-        color: white;
+        color: #626276;
         font-size: 2rem;
         margin: 0;
+        left: 0;
     }
 
     .menu {
@@ -28,7 +30,8 @@ header {
 
             a {
                 text-decoration: none;
-                color: white;
+                color: #8224E3;
+                font-size: 1.2rem;
                 white-space: nowrap;
                 font-weight: bold;
 
