@@ -4,6 +4,7 @@ import logoWebsite from '../../../assets/purplelogo.png'
 import StorefrontIcon from '@mui/icons-material/Storefront';
 import Diversity2Icon from '@mui/icons-material/Diversity2';
 import WorkIcon from '@mui/icons-material/Work';
+import BogdanPic from '../../../assets/BogdanCozmaniuc.jpeg';
 
 const LeftSide = () => {
 
@@ -20,7 +21,7 @@ const LeftSide = () => {
 
 
             <div className={styles.profileCard}>
-                <div className={styles.avatar}></div>
+                <img className={styles.avatar} src={BogdanPic} alt="" />
                 <h3>Bogdan Cozmaniuc</h3>
                 <hr className={styles.firstHr} />
                 <div className={styles.friendsAndGroup}>
@@ -32,18 +33,32 @@ const LeftSide = () => {
             <div className={styles.profileCard2}></div>
         </div>
 
-        <div className={styles.bigMenu}>
-            <nav className={styles.menu}>
-                <a href="/blog"> <Diversity2Icon></Diversity2Icon></a>
-                <p>Groups</p>
-                <a href=""> <Diversity2Icon></Diversity2Icon></a>
-                <p>Blog</p>
-                <a href=""> <StorefrontIcon></StorefrontIcon></a>
-                <p>Marketplace</p>
-                <a href=""> <WorkIcon></WorkIcon></a>
-                <p>Jobs</p>
-            </nav>
-        </div>
+                        <div className={styles.featuresGrid}>
+                    <div className={styles.featureItem}>
+                        <a href="/Groups">
+                            <span className={styles.icon}><Diversity2Icon /></span>
+                            <span className={styles.label}>Groups</span>
+                        </a>
+                    </div>
+                    <div className={styles.featureItem}>
+                        <a href="/Blog">
+                            <span className={styles.icon}><Diversity2Icon /></span>
+                            <span className={styles.label}>Blog</span>
+                        </a>
+                    </div>
+                    <div className={styles.featureItem}>
+                        <a href="/Marketplace">
+                            <span className={styles.icon}><StorefrontIcon /></span>
+                            <span className={styles.label}>Marketplace</span>
+                        </a>
+                    </div>
+                    <div className={styles.featureItem}>
+                        <a href="/Jobs">
+                            <span className={styles.icon}><WorkIcon /></span>
+                            <span className={styles.label}>Jobs</span>
+                        </a>
+                    </div>
+                </div>
 
     </aside >
 }

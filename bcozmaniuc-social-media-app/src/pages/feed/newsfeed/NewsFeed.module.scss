@@ -6,7 +6,7 @@
 }
 
 .mainPost {
-    width: 30rem;
+    width: 40rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,11 +15,13 @@
         box-shadow: 5px 5px 5px 5px #888;
         margin: 3rem 0;
         padding: 1rem;
+        border-radius: 1rem;
 
         .postHeader {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            padding-bottom: 1rem;
 
             .profileUserInfo {
                 display: flex;
@@ -28,6 +30,7 @@
                 .profileName {
                     display: flex;
                     flex-direction: column;
+                    padding-left: 1rem;
                 } 
             }
 
@@ -89,8 +92,9 @@
                 height: 2rem;
                 font-size: 2rem;
                 position: absolute;
-                right: 0;
+                right: -1rem;
                 bottom: -1rem;
+                // top: 1rem;
                 right: 1rem;
                 background-color: white;
                 border-radius: 50%;
@@ -99,7 +103,8 @@
             }
 
             .postTitle {
-                padding: 1rem;
+                padding-top: 0.1rem;
+                padding-left: 1rem;
             }
 
             .postDescription {
@@ -113,7 +118,9 @@
             justify-content: space-between;
 
             .reactsIcons {
+                display: flex;
                 color: royalblue;
+                gap: 0.5rem;
             } 
         }
 
@@ -127,6 +134,8 @@
                         cursor: pointer;
                         padding: 0.5rem 1rem;
                         border-radius: 1rem;
+                        display: flex;
+                        gap: 0.5rem;
 
                         &:hover {
                             color: #1348e8;
@@ -187,6 +196,7 @@
     cursor: pointer;
 }
 
+
 .mainPost .post .commentSection .newCommentField::placeholder {
     color: royalblue;
 }
@@ -218,4 +228,6 @@
 .profileImage {
     width: 3rem;
     border-radius: 50%;
+    padding: 0.1rem;
+    border: 1px solid #888;
 }

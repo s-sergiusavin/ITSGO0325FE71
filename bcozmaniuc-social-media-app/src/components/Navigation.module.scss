@@ -1,7 +1,7 @@
 header {
     width: 100%;
     height: 5rem;
-    background-color: transparent;
+    background-color: #f5f6fa;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
     color: #626276;
     display: flex;
@@ -31,16 +31,18 @@ header {
             a {
                 text-decoration: none;
                 color: #8224E3;
-                font-size: 1.2rem;
+                font-size: 1rem;
                 white-space: nowrap;
                 font-weight: bold;
+                // font-style:oblique;
+                
 
                 &:global.active {
                     color: yellow;
                 }
 
                 &:hover {
-                    color: lightblue;
+                    color: rgb(47, 39, 39);
                 }
             }
         }

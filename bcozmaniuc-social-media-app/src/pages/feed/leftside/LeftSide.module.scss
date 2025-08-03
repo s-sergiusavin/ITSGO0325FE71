@@ -1,8 +1,13 @@
 .sidebarLeft {
-  width: 25rem;
-  background: #fff;
+  width: 24rem;
+  background: #f2f2f6;
   border-right: 1px solid #eee;
-  margin-top: 10rem;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 11;
+  height: 120rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
 
   .containerProfileCard {
     background-color: #52545F;
@@ -10,20 +15,20 @@
     height: 40rem;
     position: relative;
     z-index: 1;
+    width: 24rem;
 
     .logoUp {
       font-weight: bold;
-      font-size: 2rem;
+      font-size: 1.5rem;
       color: #ffffff;
-      margin-bottom: 20px;
+      margin-bottom: 1.25rem;
       text-align: center;
-      padding-top: 1rem;
     }
 
     .logoImage {
-      width: 10rem;
-      height: 10rem;
-      left: 30%;
+      width: 7rem;
+      height: 7rem;
+      left: 37%;
       position: relative;
     }
 
@@ -35,36 +40,39 @@
 
   .profileCard {
     position: absolute;
-    top: 22rem;
-    left: 8%;
+    top: 16rem;
+    left: 9.5%;
     background: white;
-    border-radius: 12px;
+    border-radius: 0.75rem;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    width: 20rem;
-    padding: 6rem;
+    width: 19rem;
+    padding: 5rem;
     z-index: 1;
     text-align: center;
   }
 
   .profileCard2 {
     position: absolute;
-    top: 43rem;
-    left: 12.5%;
+    top: 38rem;
+    left: 17.5%;
     background: rgb(244, 239, 239);
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    width: 18rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 0.6rem 1.85rem rgba(0, 0, 0, 0.2);
+    width: 15.5rem;
     padding: 2.5rem;
     z-index: 0;
     text-align: center;
   }
 
   .avatar {
-    width: 60px;
-    height: 60px;
-    background: #ddd;
+    width: 125px;
+    height: 125px;
     border-radius: 50%;
-    margin: 0 auto 10px;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border: 1px solid black;
+    padding: 0.2rem;
+    background-color: transparent;
   }
 
   .firstHr {
@@ -79,21 +87,27 @@
   }
 
 
-.bigMenu {
-  display: grid;
-  grid-template-columns: repeat(4,2fr);
-  gap: 2rem;
-  margin-top: 10rem;
-  padding: 2rem;
-  align-items: start;
-  font-weight: bold;
-}
+  .featuresGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0 auto;
+    margin-top: 4rem;
+  }
 
-.menu a {
-  padding: 0.6rem 0;
-  color: #555;
-  text-decoration: none;
-  text-align: center;
-}
+  .featureItem a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+  }
+
+  .featureItem .icon {
+    font-size: 40px;
+  }
+
+  .featureItem .label {
+    text-align: center;
+  }
 
 }

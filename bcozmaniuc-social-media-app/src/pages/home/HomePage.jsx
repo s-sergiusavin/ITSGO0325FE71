@@ -32,14 +32,14 @@ const HomePage = () => {
     return <div className={styles.mainContainer}>
         <aside className={styles.leftSide}><LeftSide></LeftSide></aside>
         <section className={styles.newsfeed}>
-            {postList?.map(post => {
+            {/* {postList?.map(post => {
                 return <NewsFeed postData={post} key={post.id} />
-            })}
+            })} */}
 
             {/* Decomentati mai jos si comentati mai sus daca vreti fara server */}
-            {/* {posts?.map( post => {
+            {posts?.map( post => {
                 return <NewsFeed postData={post} key={post.id}/>
-            })} */}
+            })}
         </section>
         <aside className={styles.rightSide}><RightSide></RightSide></aside>
     </div>

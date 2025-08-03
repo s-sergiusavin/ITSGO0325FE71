@@ -9,6 +9,8 @@ import Blog from './pages/additionalPages/Blog';
 import Jobs from './pages/additionalPages/Jobs';
 import Groups from './pages/additionalPages/Groups';
 import Marketplace from './pages/additionalPages/Marketplace';
+import Friends from './pages/additionalPages/Friends';
+import Profile from './pages/additionalPages/Profile';
 
 function App() {
 
@@ -24,6 +26,8 @@ function App() {
           <Route path='/Groups' element={<Groups/>}></Route>
           <Route path='/Marketplace' element={<Marketplace/>}></Route>
           <Route path='/Jobs' element={<Jobs/>}></Route>
+          <Route path='/Friends' element={<Friends/>}></Route>
+          <Route path='/Profile' element={<Profile/>}></Route>
         </Routes>
       </Layout>
     </>

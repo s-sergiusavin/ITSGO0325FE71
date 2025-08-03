@@ -5,8 +5,11 @@ import ThumbUpIcon from '@mui/icons-material/ThumbUp';
 import SendIcon from '@mui/icons-material/Send';
 import ChatIcon from '@mui/icons-material/Chat';
 import SendAndArchiveIcon from '@mui/icons-material/SendAndArchive';
+import ShareIcon from '@mui/icons-material/Share';
+
 
 import profile from '../../../assets/images/profile.jpg';
+import BogdanCozmaniuc from '../../../assets/BogdanCozmaniuc.jpeg';
 import post1 from '../../../assets/images/post1.jpeg';
 import post2 from '../../../assets/images/post2.jpg';
 import CommentsSection from './comments/CommentsSection';
@@ -46,13 +49,13 @@ const NewsFeed = ({ postData }) => {
                 <div className={styles.profileUserInfo}>
                     <a href="">
                         <img
-                            src={profile}
+                            src={BogdanCozmaniuc}
                             alt="profile picture"
                             className={styles.profileImage}
                         />
                     </a>
                     <div className={styles.profileName}>
-                        <span>Sergiu Savin</span>
+                        <span style={{ fontWeight: 'bold' }}>Bogdan Cozmaniuc</span>
                         <span>16 Apr 2025</span>
                     </div>
                 </div>
@@ -69,6 +72,18 @@ const NewsFeed = ({ postData }) => {
             </div>
 
             <div className={styles.content}>
+
+                <strong className={styles.postTitle}>{postData.title?.charAt(0).toUpperCase() + postData.title?.slice(1)}</strong>
+
+
+                <p className={styles.postDescription}>
+                    {/* Decomentati si comentati liniile urmatoare pt a oscila intre date */}
+
+                    {postData.body?.charAt(0).toUpperCase() + postData.body?.slice(1)}
+
+                    {/* {postData.description?.charAt(0).toUpperCase() + postData.description?.slice(1)} */}
+                </p>
+
                 <div className={styles.imgWrapper}>
                     <img
                         src={postData.image || postImages[postData.id % 2]}
@@ -84,43 +99,48 @@ const NewsFeed = ({ postData }) => {
                             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi
                             deleniti optio maiores ab libero, pariatur corporis sapiente
                             provident est iste, excepturi quidem amet quibusdam impedit
-                            temporibus omnis voluptatem. Accusamus, sed! <a href="landingPage.html">Read more...</a>
+                            temporibus omnis voluptatem. Accusamus, sed! <a href="">Read more...</a>
                         </p>
                     </div>
                 </div>
 
-                <strong className={styles.postTitle}>{postData.title?.charAt(0).toUpperCase() + postData.title?.slice(1)}</strong>
 
-                <p className={styles.postDescription}>
-                    {/* Decomentati si comentati liniile urmatoare pt a oscila intre date */}
-
-                    {/* {postData.body?.charAt(0).toUpperCase() + postData.body?.slice(1)} */}
-
-                    {postData.description?.charAt(0).toUpperCase() + postData.description?.slice(1)}
-                </p>
 
                 <a href="landingPage.html"><strong>Read more...</strong></a>
             </div>
 
+
+
+            <hr />
+
             <div className={styles.reacts}>
                 <div className={styles.likesInfo}>
-                    <span>&#128525;</span>
                     <div className={styles.reactsIcons}>
                         <ThumbUpIcon />
+                        <span id="likesNumber">{likes} Likes</span>
                     </div>
 
                     {/* Refactor this */}
-                    <span id="likesNumber">{likes} likes</span>
+
                 </div>
 
                 <div className={styles.commentsinfo}>
                     {/* refactor this */}
-                    <span id="sharesNumber">{shares} shares</span>
+
                     <div className={styles.reactsIcons}>
-                        <SendIcon />
+                        <ShareIcon />
+                        <span id="sharesNumber">{shares} Shares</span>
                     </div>
                 </div>
             </div>
+
+            <hr />
+
+
+
+            <section className={styles.commentsContainer}>
+                <CommentsSection />
+            </section>
 
             <hr />
 
@@ -135,7 +155,7 @@ const NewsFeed = ({ postData }) => {
                         <span>Comments</span>
                     </li>
                     <li className={`${styles.reaction} ${isShared ? styles.touched : ''}`} onClick={handleShare}>
-                        <SendIcon />
+                        <ShareIcon />
                         <span>Share</span>
                     </li>
                 </ul>
@@ -143,29 +163,24 @@ const NewsFeed = ({ postData }) => {
 
             <hr />
 
-            <div className={styles.commentSection}>
+                        <div className={styles.commentSection}>
                 <a href="">
                     <img
-                        src={profile}
+                        src={BogdanCozmaniuc}
                         alt="profile picture"
                         className={styles.profileImage}
                     />
                 </a>
                 <input
                     type="text"
-                    placeholder="Adauga un comentariu"
-                    className="newCommentField"
+                    placeholder="Adaugă un comentariu"
+                    className={styles.newCommentField}
                     id="commentInput"
                 />
                 <button className={styles.insertCommentButton} id="commentInputButton">
-                    <SendAndArchiveIcon />
+                    <SendIcon />
                 </button>
             </div>
-
-            <section className={styles.commentsContainer}>
-                <CommentsSection />
-            </section>
-
 
         </div>
     </div>

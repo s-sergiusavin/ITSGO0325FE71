@@ -38,25 +38,25 @@ const Blog = () => {
 
                 <div className={styles.featuresGrid}>
                     <div className={styles.featureItem}>
-                        <a href="/blog">
+                        <a href="/Groups">
                             <span className={styles.icon}><Diversity2Icon /></span>
                             <span className={styles.label}>Groups</span>
                         </a>
                     </div>
                     <div className={styles.featureItem}>
-                        <a href="">
+                        <a href="/Blog">
                             <span className={styles.icon}><Diversity2Icon /></span>
                             <span className={styles.label}>Blog</span>
                         </a>
                     </div>
                     <div className={styles.featureItem}>
-                        <a href="">
+                        <a href="/Marketplace">
                             <span className={styles.icon}><StorefrontIcon /></span>
                             <span className={styles.label}>Marketplace</span>
                         </a>
                     </div>
                     <div className={styles.featureItem}>
-                        <a href="">
+                        <a href="/Jobs">
                             <span className={styles.icon}><WorkIcon /></span>
                             <span className={styles.label}>Jobs</span>
                         </a>

@@ -1,6 +1,8 @@
 .profileImage {
     width: 3rem;
     border-radius: 50%;
+    padding: 0.1rem;
+    border: 1px solid #888;
 }
 
 .mainPost .post .userComments .userCommentText {
@@ -12,10 +14,29 @@
     position: relative;
 }
 
+.userCommentText {
+    display: flex;
+    margin-top: 2rem;
+    margin-left: 1rem;
+    background-color: white;
+    border-radius: 1rem;
+    padding: 1rem;
+    gap: 1rem;
+
+}
+
 .mainPost .post .userComments .userCommentText #removeCommentButton {
     display: none;
     cursor: pointer;
 }
+
+.removeCommentButton {
+    margin-left: 9rem;
+    font-weight: bold;
+    color: lightcoral;
+    font-size: 0.9rem;
+}
+
 
 .mainPost .post .userComments .userCommentText .emojiReaction {
     position: absolute;
@@ -40,7 +61,29 @@
     gap: 1rem;
 }
 
+.commentReaction {
+    display: flex;
+    gap: 1rem;
+    margin-left: 2rem;
+    color: #888;
+    margin-top: 0.1rem;
+}
+
+.commentReactionButton {
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
 .mainPost .post .userComments .commentReaction .commentReactionButton:hover {
     cursor: pointer;
     text-decoration: underline;
 }
+
+.profileUserComment {
+    color: black;
+}
+
+.nameInCommnet {
+    font-weight: bold;
+}
+

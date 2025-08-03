@@ -1,11 +1,13 @@
 .rightContent {
-  position: relative;
-  width: 20rem;
-  margin-right: 3rem;
-  padding-left: 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  height: 150rem;
+  position: fixed;
+  right: 0;
+  top: 8%;
+  width: 23rem;
+  padding-left: 2rem;
+  padding-right: 1rem;
+  padding-top: 2rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
 }
 
 .whoToFollow {

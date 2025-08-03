@@ -1,107 +1,360 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: #f5f6fa;
+  color: #333;
+  height: 2000px;
+}
+
+/* Sidebar Stânga */
 .sidebarLeft {
-  width: 25rem;
-  background: #fff;
+  width: 24rem;
+  background: #f2f2f6;
   border-right: 1px solid #eee;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 11;
+  height: 120rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+}
 
-  .containerProfileCard {
-    background-color: #52545F;
-    background: linear-gradient(130deg, rgba(82, 84, 95, 1) 0%, rgba(56, 58, 69, 1) 50%);
-    height: 40rem;
-    position: relative;
-    z-index: 1;
+// Sidebar Dreapta
+.rightSide {
+  height: 150rem;
+  position: fixed;
+  right: 0;
+  top: 8%;
+  width: 23rem;
+  padding-left: 1rem;
+  padding-right: 2rem;
+  padding-top: 2rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+}
 
-    .logoUp {
-      font-weight: bold;
-      font-size: 2rem;
-      color: #ffffff;
-      margin-bottom: 20px;
-      text-align: center;
-      padding-top: 1rem;
-    }
+// Main content
+.mainContent {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+}
 
-    .logoImage {
-      width: 10rem;
-      height: 10rem;
-      left: 30%;
-      position: relative;
-    }
+// Left side
 
-    .textTitle {
-      color: white;
-      text-align: center;
-    }
-  }
+.containerProfileCard {
+  background-color: #52545F;
+  background: linear-gradient(130deg, rgba(82, 84, 95, 1) 0%, rgba(56, 58, 69, 1) 50%);
+  height: 40rem;
+  position: relative;
+  z-index: 1;
+  width: 24rem;
 
-  .profileCard {
-    position: absolute;
-    top: 22rem;
-    left: 8%;
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    width: 20rem;
-    padding: 6rem;
-    z-index: 1;
-    text-align: center;
-  }
+}
 
-  .profileCard2 {
-    position: absolute;
-    top: 43rem;
-    left: 12.5%;
-    background: rgb(244, 239, 239);
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    width: 18rem;
-    padding: 2.5rem;
-    z-index: 0;
-    text-align: center;
-  }
+.logoUp {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #ffffff;
+  margin-bottom: 1.25rem;
+  text-align: center;
+  // padding-top: 0.5rem;
+}
 
-  .avatar {
-    width: 60px;
-    height: 60px;
-    background: #ddd;
-    border-radius: 50%;
-    margin: 0 auto 10px;
-  }
+.logoImage {
+  width: 7rem;
+  height: 7rem;
+  left: 37%;
+  position: relative;
 
-  .firstHr {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-  }
+}
 
-  .friendsAndGroup {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-  }
+.textTitle {
+  color: white;
+  text-align: center;
+}
 
-  .bigMenu {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    padding-top: 15rem;
-    align-items: left;
-    justify-content: center;
-  }
+.profileCard {
+  position: absolute;
+  top: 16rem;
+  left: 9.5%;
+  background: white;
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  width: 19rem;
+  padding: 5rem;
+  z-index: 1;
+  text-align: center;
+}
 
-  .menu {
-    background-color: #f0f0f0;
-    height: 100px;
-    // position: relative;
-    // z-index: 0;
-    gap: 1rem;
+.profileCard2 {
+  position: absolute;
+  top: 38rem;
+  left: 17.5%;
+  background: rgb(244, 239, 239);
+  border-radius: 0.75rem;
+  box-shadow: 0 0.6rem 1.85rem rgba(0, 0, 0, 0.2);
+  width: 15.5rem;
+  padding: 2.5rem;
+  z-index: 0;
+  text-align: center;
+}
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.avatar {
+  width: 125px;
+  height: 125px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+  border: 1px solid black;
+  padding: 0.2rem;
+  background-color: transparent;
+}
 
-    a {
-      padding: 10px 0;
-      color: #555;
-      text-decoration: none;
-      text-align: center;
-    }
-  }
+.firstHr {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
 
+.friendsAndGroup {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.featuresGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  // gap: 0.5rem;
+  margin: 0 auto;
+  margin-top: 4rem;
+}
+
+.featureItem a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+}
+
+.featureItem .icon {
+  font-size: 40px;
+  // margin-bottom: 8px;
+}
+
+.featureItem .label {
+  // font-size: 1rem;
+  text-align: center;
+}
+
+// /* Conținut Central */
+
+
+.jobCard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  border-radius: 1rem;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 4px 1rem rgba(0, 0, 0, 0.06);
+  margin-bottom: 24px;
+  max-width: 650px;
+}
+
+.logoAvatar {
+  width: 5rem;
+  height: 5rem;
+  padding: 0.1rem;
+  border-radius: 0.5rem;
+  background: transparent
+}
+
+.jobAvatar {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 0.5rem;
+  border-color: 1px solid linear-gradient(135deg, #FF4EC7 0%, #9A2EFC 50%);
+  // background: linear-gradient(135deg, #FF4EC7 0%, #9A2EFC 50%);
+  padding: 0.1rem;
+}
+
+.jobDetails {
+  flex: 1;
+  margin-left: 1.25rem;
+}
+
+.jobDetails h2 {
+  margin: 0 0 6px 0;
+  font-size: 1.45rem;
+  font-weight: 600;
+  color: #16233A;
+}
+
+.jobLocation {
+  color: #B3B3B3;
+  font-size: 1rem;
+  margin-bottom: 6px;
+}
+
+.companyLink {
+  display: inline-block;
+  color: #8B3FFD;
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: 0.37rem;
+}
+
+.companyLink:hover {
+  text-decoration: underline;
+}
+
+.jobTypeFullTime {
+  background: #ddfaea;
+  color: #24C97B;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.43rem 1.62rem;
+  border-radius: 1rem;
+  margin-left: 1.37rem;
+}
+
+.jobTypePartTime {
+  background: #fde8e8;
+  color: #c97c24;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.43rem 1.62rem;
+  border-radius: 1rem;
+  margin-left: 1.37rem;
+}
+
+.jobTypeTemporary {
+  background: #ffe9f2;
+  color: #ed1e79;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.43rem 1.62rem;
+  border-radius: 1rem;
+  margin-left: 1.37rem;
+}
+
+/* Right Side */
+
+.featuredJobs {
+  background: linear-gradient(135deg, #fff, #f8f8ff 80%);
+  border-radius: 1.5rem;
+  padding: 1.75rem 1.5rem 1.25rem 1.5rem;
+  box-shadow: 0 6px 24px rgba(75, 0, 183, 0.06);
+  max-width: 25rem;
+  font-family: 'Inter', Arial, sans-serif;
+  margin-top: 1rem;
+}
+
+.featuredJobs h3 {
+  margin: 0 0 1.25rem 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #232323;
+  padding-bottom: 0.5rem;
+  border-bottom: 3px solid #a97afe;
+  width: fit-content;
+}
+
+.featuredJobs ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.featuredJobs li {
+  display: flex;
+  align-items: center;
+  padding: 0.68rem 0;
+  padding: 0.5rem;
+  border-radius: 16px;
+  transition: background 0.2s;
+  cursor: pointer;
+}
+
+.featuredJobs li:hover {
+  background: #f3f1fa;
+}
+
+.jobIcon {
+  width: 20px;
+  height: 20px;
+  margin-right: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: #f5f5f7;
+  flex-shrink: 0;
+}
+
+.jobIcon img {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.jobTitle {
+  flex: 1;
+  font-size: 0.805rem;
+  font-weight: 500;
+  color: #25233a;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.jobType {
+  margin-left: 1rem;
+  font-size: 0.99rem;
+  font-weight: 600;
+  border-radius: 0.62rem;
+  padding: 4px 1rem;
+  min-width: 4.37rem;
+  text-align: center;
+}
+
+.jobTypeFullTime {
+  margin-left: 1rem;
+  font-size: 0.99rem;
+  font-weight: 600;
+  border-radius: 0.62rem;
+  padding: 4px 1rem;
+  min-width: 4.37rem;
+  text-align: center;
+  color: #24c97b;
+  background: #f6fffa;
+}
+
+.jobTypeFreelance {
+  margin-left: 1rem;
+  font-size: 0.99rem;
+  font-weight: 600;
+  border-radius: 0.62rem;
+  padding: 4px 1rem;
+  min-width: 4.37rem;
+  text-align: center;
+  color: #914ff7;
+  background: #f7f4ff;
+}
+
+.jobTypeTemporary {
+  margin-left: 1rem;
+  font-size: 0.99rem;
+  font-weight: 600;
+  border-radius: 0.62rem;
+  padding: 4px 1rem;
+  min-width: 4.37rem;
+  text-align: center;
+  color: #ff33a8;
+  background: #fff4fa;
 }
