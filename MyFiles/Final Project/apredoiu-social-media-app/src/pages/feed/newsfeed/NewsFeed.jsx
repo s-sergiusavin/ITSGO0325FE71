@@ -1,17 +1,17 @@
+import { useState } from 'react';
 import styles from './NewsFeed.module.scss';
+
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 import InfoIcon from '@mui/icons-material/Info';
 import ThumbUpIcon from '@mui/icons-material/ThumbUp';
 import SendIcon from '@mui/icons-material/Send';
 import ChatIcon from '@mui/icons-material/Chat';
-import SendAndArchiveIcon from '@mui/icons-material/SendAndArchive';
 
 import profile from '../../../assets/images/profile.jpg';
 import post1 from '../../../assets/images/add.png';
 import post2 from '../../../assets/images/add.png';
 
 import CommentsSection from './comments/CommentsSection';
-import { useState } from 'react';
 
 const Reaction = ({ emoji, icon, count, label }) => (
   <div className={styles.reactionBox}>
@@ -28,6 +28,7 @@ const NewsFeed = ({ postData }) => {
   const [shares, setShares] = useState(Math.ceil(Math.random() * 100));
   const [commentText, setCommentText] = useState('');
   const [comments, setComments] = useState([]);
+  const [showOptions, setShowOptions] = useState(false);
 
   const postImages = [post1, post2];
 
@@ -60,7 +61,7 @@ const NewsFeed = ({ postData }) => {
       <div className={styles.post}>
         <div className={styles.postHeader}>
           <div className={styles.profileUserInfo}>
-            <a href="">
+            <a href="#">
               <img src={profile} alt="profile" className={styles.profileImage} />
             </a>
             <div className={styles.profileName}>
@@ -70,13 +71,19 @@ const NewsFeed = ({ postData }) => {
           </div>
 
           <div className={styles.profileOptionsWrapper}>
-            <button className={styles.profileOptions}>
+            <button
+              className={styles.profileOptions}
+              onClick={() => setShowOptions(prev => !prev)}
+            >
               <MoreHorizIcon />
             </button>
-            <div className={styles.profileOptionsDropdown}>
-              <button>Edit this post</button>
-              <button>Remove this post</button>
-            </div>
+
+            {showOptions && (
+              <div className={styles.profileOptionsDropdown}>
+                <button>Edit this post</button>
+                <button>Remove this post</button>
+              </div>
+            )}
           </div>
         </div>
 
@@ -104,7 +111,7 @@ const NewsFeed = ({ postData }) => {
         </div>
 
         <div className={styles.reacts}>
-          <Reaction emoji="👁️"count={likes} label="likes" />
+          <Reaction emoji="👁️" count={likes} label="likes" />
           <Reaction icon={<SendIcon />} count={shares} label="shares" />
         </div>
 
@@ -128,13 +135,14 @@ const NewsFeed = ({ postData }) => {
         </div>
 
         <hr />
+
         <section className={styles.commentsContainer}>
-       <CommentsSection
-  comments={comments}
-  commentText={commentText}
-  setCommentText={setCommentText}
-  handleAddComment={handleAddComment}
-/>
+          <CommentsSection
+            comments={comments}
+            commentText={commentText}
+            setCommentText={setCommentText}
+            handleAddComment={handleAddComment}
+          />
         </section>
       </div>
     </div>

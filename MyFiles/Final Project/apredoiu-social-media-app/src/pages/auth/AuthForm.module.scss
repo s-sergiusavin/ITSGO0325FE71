@@ -1,64 +1,195 @@
 .auth {
-    margin: 3rem auto;
-    width: 95%;
-    max-width: 25rem;
-    border-radius: 5%;
-    border-color: teal;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
-    padding: 1rem;
-    text-align: center;
-    color: white;
-    background-color: teal;
+  background: #ffffff;
+  border: 1px solid #dcdcdc;
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  max-width: 420px;
+  width: 100%;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  margin: 2rem auto;
 
-    form {
-        .control {
-            margin-bottom: 0.5rem;
+  h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1e1e1e;
+    margin-bottom: 1.5rem;
+  }
 
-            label {
-                display: block;
-                font-weight: bold;
-                margin-bottom: 0.5rem;
-            }
+  .logo {
+    width: 6rem;
+    margin: 0 auto 0.5rem;
 
-            input {
-                background-color: lightgray;
-                border-radius: 5px;
-                color: teal;
-                border: 1px solid teal;
-                width: 100%;
-                text-align: left;
-                padding: 0.25rem;
-            }
-        }
-
-        .actions {
-            margin-top: 1.5rem;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-
-            button {
-                cursor: pointer;
-                color: white;
-                background-color: cadetblue;
-                border: 1px solid white;
-                border-radius: 5%;
-                padding: 0.5rem 2.5rem;
-
-                &:hover {
-                    font-weight: bold;
-                    border: cadetblue;
-                }
-            }
-
-            .toggle {
-                margin-top: 1rem;
-                background-color: transparent;
-                color: white;
-                border: none;
-                padding: 0.15rem 1.5rem;
-            }
-        }
-
+    &:hover {
+      transform: rotate(360deg) scale(1.05);
+      transition: transform 0.7s ease;
+      cursor: pointer;
     }
+  }
+
+  .tagline {
+    font-size: 1.1rem;
+    color: #777;
+    margin-bottom: 1.5rem;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
+
+.control {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+
+  label {
+    font-size: 0.9rem;
+    margin-bottom: 0.4rem;
+    color: #333;
+  }
+
+  input {
+    padding: 0.75rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 0.8rem;
+    background: #f9f9f9;
+    font-size: 1rem;
+
+    &:focus {
+      outline: none;
+      border-color: #999;
+    }
+  }
+
+  .togglePassword {
+    margin-top: 0.3rem;
+    background: none;
+    border: none;
+    color: #9e5959;
+    font-size: 0.85rem;
+    text-decoration: underline;
+    cursor: pointer;
+    align-self: flex-end;
+
+    &:hover {
+      color: #1e1e1e;
+    }
+  }
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #e63946;
+  }
+
+  button {
+    padding: 0.8rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 0.8rem;
+    cursor: pointer;
+    border: none;
+    transition: background 0.2s;
+
+    &:first-of-type {
+      background-color: #1e1e1e;
+      color: white;
+
+      &:hover {
+        background-color: #333;
+      }
+    }
+  }
+}
+
+.extraOptions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: -0.5rem;
+
+  label {
+    font-size: 0.85rem;
+    color: #555;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  .forgotLink {
+    font-size: 0.85rem;
+    color: #1e1e1e;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  input[type='checkbox'] {
+    accent-color: #1e1e1e;
+  }
+}
+@media (max-width: 320px) {
+  .auth {
+    padding: 1.5rem 1rem;
+
+    h2 {
+      font-size: 1.6rem;
+    }
+
+    .logo {
+      width: 5rem;
+    }
+
+    .tagline {
+      font-size: 0.8rem;
+    }
+  }
+
+  .control {
+    label {
+      font-size: 0.8rem;
+    }
+
+    input {
+      font-size: 0.9rem;
+      padding: 0.6rem 0.8rem;
+    }
+
+    .togglePassword {
+      font-size: 0.75rem;
+    }
+  }
+
+  .actions {
+    button {
+      font-size: 0.9rem;
+      padding: 0.7rem;
+    }
+
+    p {
+      font-size: 0.8rem;
+    }
+  }
+
+  .extraOptions {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.3rem;
+
+    label,
+    .forgotLink {
+      font-size: 0.75rem;
+    }
+  }
 }

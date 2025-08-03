@@ -3,6 +3,7 @@
   flex-direction: column;
   align-items: center;
   padding: 4rem 2rem;
+  margin-top: 3rem;
 
   section {
     margin-bottom: 4rem;
@@ -91,6 +92,12 @@
       height: 7rem;
       margin-left: 0.5rem;
       vertical-align: middle;
+
+      &:hover {
+        transform: rotate(360deg) scale(1.05);
+        transition: transform 0.7s ease;
+        cursor: pointer;
+      }
     }
   }
 
@@ -128,7 +135,6 @@
 
   h2 {
     font-size: 2rem;
-    margin-bottom: 2rem;
   }
 
   .testimonials {
