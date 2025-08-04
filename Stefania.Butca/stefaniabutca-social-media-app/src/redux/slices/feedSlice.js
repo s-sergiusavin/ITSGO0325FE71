@@ -20,7 +20,7 @@ const feedSlice = createSlice({
     reducers: {},
     extraReducers: (builder) => {
         builder
-        .addCase(getPosts.pending, (state, action) => {
+        .addCase(getPosts.pending, (state) => {
             state.title = '';
             state.description = '';
         })
@@ -28,7 +28,7 @@ const feedSlice = createSlice({
             state.title = action.payload.title;
             state.description = action.payload.description;
         })
-        .addCase(getPosts.rejected, (state, action) => {
+        .addCase(getPosts.rejected, (state) => {
             state.title = '';
             state.description = '';
         })

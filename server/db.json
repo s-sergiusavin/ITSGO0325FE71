@@ -42,6 +42,11 @@
       "email": "test@test.com",
       "password": "$2a$10$adi9YV9I5EpljeeomwM4OOlzEzg3TdM1WGr1y4elo.vComJbUU9L6",
       "id": 2
+    },
+    {
+      "email": "stefi_ral@yahoo.com",
+      "password": "$2a$10$oKnrifgiDLCMtIk8TOY/fe3sJn3KRfE.vUnoIzl0u79WIv449PDlC",
+      "id": 3
     }
   ]
 }
