@@ -2,9 +2,151 @@
   box-sizing: border-box;
 }
 .mainContainer {
-  color: wheat;
+  color: black;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: start;
+  align-items: center;
+
+  .friendsWrapper {
+    gap: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    .request {
+      display: flex;
+      border: 2px solid;
+      background-color: #005f5f;
+      color: wheat;
+      border-radius: 0 0.7rem;
+      padding: 0.2rem;
+      gap: 0.2rem;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-direction: column;
+      width: 14rem;
+      .personName {
+        color: wheat;
+      }
+      .buttonsWrapper {
+        display: flex;
+        gap: 0.5rem;
+
+        .accept {
+          color: wheat;
+          border: 1px solid #4db8b8;
+          &:hover {
+            background-color: #4db8b8;
+            color: black;
+          }
+        }
+        .refuse {
+          color: wheat;
+          border: 1px solid #4db8b8;
+          &:hover {
+            background-color: #004d4d;
+            color: #ff4d4d;
+          }
+        }
+      }
+    }
+  }
+  hr {
+    width: 90%;
+    border-color: wheat;
+  }
+
+  .birthdayWrapper {
+    gap: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    .birthday {
+      display: flex;
+      align-items: center;
+      border: 2px solid;
+      background-color: #005f5f;
+      color: wheat;
+      border-radius: 0 0.7rem;
+      padding: 0.2rem;
+      gap: 0.5rem;
+      width: 14rem;
+    }
+    .personBirthday {
+      display: flex;
+      flex-direction: column;
+      .personName {
+        color: #4db8b8;
+      }
+    }
+  }
+  .contactsWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    .contactsNav {
+      display: flex;
+      justify-content: space-between;
+    }
+    .contacts {
+      overflow: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      height: 30rem;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+      .friend {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        gap: 1rem;
+        margin: 0 0.5rem 0.5rem;
+        position: relative;
+
+        .profilePic {
+          width: 3rem;
+          height: 3rem;
+          aspect-ratio: 1/1;
+          border-radius: 50%;
+          margin-right: 0.5rem;
+        }
+      }
+    }
+  }
+  .groupsWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    .groupsNav {
+      display: flex;
+      justify-content: space-between;
+    }
+    .groups {
+      overflow: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      height: 30rem;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+      .group {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        gap: 1rem;
+        margin: 0 0.5rem 0.5rem;
+        position: relative;
+
+        .profilePic {
+          width: 3rem;
+          height: 3rem;
+          aspect-ratio: 1/1;
+          border-radius: 50%;
+          margin-right: 0.5rem;
+        }
+      }
+    }
+  }
 }

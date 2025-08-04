@@ -1,39 +1,104 @@
 import styles from "./Rightside.module.scss";
 import Button from "@mui/material/Button";
+import RedeemIcon from "@mui/icons-material/Redeem";
+import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import feedService from "../../../services/feedService";
 
 const Rightside = () => {
-  const friendsRequests = [
-    "Alex Maru",
-    "Cristina Matei",
-    "Daniel Floarea",
-    "Ursu Cosmin",
+  const GROUPS = [
+    "Grup Unu",
+    "Grup Doi",
+    "Grup Trei",
+    "Grup Patru",
+    "Grup Cinci",
+    "Grup Sase",
+    "Grup Sapte",
+    "Grup Opt",
+    "Grup Noua",
+    "Grup Zece",
+    "Grup Unsprezece ",
+    "Grup Doisprezece",
+    "Grup Treizpsrezece",
   ];
+
+  const [friendsList, setFriendsList] = useState([]);
+
+  useEffect(() => {
+    async function friends() {
+      const response = await feedService.getFriends();
+      setFriendsList(response);
+      return response;
+    }
+    friends().catch((error) => {
+      console.log(error);
+    });
+  }, []);
 
   return (
     <div className={styles.mainContainer}>
-      <div>
+      <div className={styles.friendsWrapper}>
         <span>Cererei Prietenie</span>
-        {friendsRequests.slice(0, 2).map((request) => (
-          <div className="CERERE">
-            <span>{request}</span>
-            <div>
-              <Button>Accept</Button>
-              <Button>Refuza</Button>
+
+        {friendsList.slice(0, 2).map((request, id) => (
+          <div key={Math.random() * 10} className={styles.request}>
+            <Link to={`./profile/${id + 52120}`}>
+              <span className={styles.personName}>{request.name}</span>
+            </Link>
+            <div className={styles.buttonsWrapper}>
+              <Button className={styles.accept}>Accept</Button>
+              <Button className={styles.refuse}>Refuza</Button>
             </div>
           </div>
         ))}
       </div>
       <hr />
-      <div>
+      <div className={styles.birthdayWrapper}>
         <span>Zile de nastere</span>
+        {friendsList.slice(4, Math.random() * 9).map((bday, id) => (
+          <div key={Math.random() * 10} className={styles.birthday}>
+            <RedeemIcon />
+            <div className={styles.personBirthday}>
+              Astazi este ziua lui:
+              <Link to={`./profile/${id + 52120}`}>
+                <div className={styles.personName}>{bday.name}</div>
+              </Link>
+            </div>
+          </div>
+        ))}
       </div>
       <hr />
-      <div>
-        <span>Contacte</span>
+      <div className={styles.contactsWrapper}>
+        <div className={styles.contactsNav}>
+          <span>Contacte</span>
+        </div>
+        <div className={styles.contacts}>
+          {friendsList.map((friend, id) => (
+            <div key={id} className={styles.friend}>
+              <Link>
+                <img
+                  className={styles.profilePic}
+                  src={friend.profilePic}
+                  alt="Profile Pic"
+                />
+              </Link>
+              <div>{friend.name}</div>
+            </div>
+          ))}
+        </div>
       </div>
       <hr />
-      <div>
-        <span>Grupuri</span>
+      <div className={styles.groupsWrapper}>
+        <div className={styles.groupsNav}>
+          <span>Grupuri</span>
+        </div>
+        <div className={styles.groups}>
+          {GROUPS.map((group, id) => (
+            <div key={id} className={styles.group}>
+              <div>{group}</div>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
