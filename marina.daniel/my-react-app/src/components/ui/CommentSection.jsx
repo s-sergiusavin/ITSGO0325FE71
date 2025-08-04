@@ -72,7 +72,6 @@ export default function Comment() {
         ref={commentInputRef}
         type="text"
         placeholder="Write a comment..."
-        onKeyDown={handleKeyDown}
         className="commentInput"
       />
       <button id="commentInputButton" onClick={handleSetComment} className="button">
