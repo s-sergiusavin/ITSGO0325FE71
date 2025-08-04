@@ -11,8 +11,6 @@ export default function BasicTextFields() {
       autoComplete="off"
     >
       <TextField id="outlined-basic" label="Search on social media" variant="outlined" />
-      {/* <TextField id="filled-basic" label="Filled" variant="filled" />
-      <TextField id="standard-basic" label="Standard" variant="standard" /> */}
     </Box>
   );
 }

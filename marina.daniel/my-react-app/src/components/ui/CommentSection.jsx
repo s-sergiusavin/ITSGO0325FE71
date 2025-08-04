@@ -44,7 +44,7 @@ export default function Comment() {
 
   
 
-  // Timestamp for demonstration - shows “Just now” or “X seconds ago”
+  
   const [timeAgo, setTimeAgo] = useState("");
   useEffect(() => {
     if (comment !== initialComment) {
@@ -88,7 +88,7 @@ export default function Comment() {
         >
           <div className="commentHeader">
             <img
-              src={pozaJpg} // placeholder avatar URL
+              src={pozaJpg} 
               alt="User Avatar"
               className="avatar"
             />

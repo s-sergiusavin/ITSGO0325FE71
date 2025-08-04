@@ -9,14 +9,14 @@ const Weather = () => {
 
   const apiKey = "b075248b7d6a7dc48599cdcc232780e3";
 
-  // Function to fetch weather when form is submitted
+  
   const handleSearch = async (e) => {
-    e.preventDefault(); // prevent form page reload
-    if (!cityInput.trim()) return; // don't search empty
+    e.preventDefault(); 
+    if (!cityInput.trim()) return; 
 
     setLoading(true);
     setError(null);
-    setWeather(null); // clear old data until new fetch completes
+    setWeather(null); 
 
     try {
       const response = await fetch(
@@ -56,7 +56,6 @@ const Weather = () => {
       {loading && <p className="weather-loading">Loading weather...</p>}
       {error && <p className="weather-error">Error: {error}</p>}
 
-      {/* Render weather info only if data exists */}
       {weather && (
         <div className="weather-info">
           <h3>
