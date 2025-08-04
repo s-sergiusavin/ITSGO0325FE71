@@ -1,0 +1,60 @@
+@import 'variables';
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+header {
+  background-color: $primary-blue-light;
+  color: $text-light;
+  padding: 1rem 0;
+  box-shadow: $box-shadow-medium;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  h1 {
+    margin: 0;
+    color: $text-light;
+  }
+  nav ul {
+    list-style: none;
+    display: flex;
+    li {
+      margin-left: 1.5rem;
+      a {
+        color: $text-light;
+        font-weight: bold;
+        &:hover {
+          color: darken($text-light, 10%);
+        }
+      }
+    }
+  }
+}
+
+main {
+  flex-grow: 1;
+  padding: 2rem 0;
+}
+
+footer {
+  background-color: $text-dark;
+  color: $text-light;
+  padding: 1rem 0;
+  text-align: center;
+  margin-top: auto;
+  p {
+    margin: 0;
+    font-size: $font-size-small;
+  }
+}
