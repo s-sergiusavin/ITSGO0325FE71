@@ -74,6 +74,13 @@ function getNews() {
     <div>
       <h1>News App</h1>
 
+      <button
+        onClick={() => (window.location.href = "/")}
+        style={{ marginTop: "1rem" }}
+      >
+        Go to Main Page
+      </button>
+
       <form onSubmit={onSubmit} style={{ marginBottom: "1rem" }}>
         <input
           type="text"
@@ -106,12 +113,7 @@ function getNews() {
         )}
       </div>
 
-      <button
-        onClick={() => (window.location.href = "/")}
-        style={{ marginTop: "1rem" }}
-      >
-        Go to Main Page
-      </button>
+      
     </div>
   );
 }

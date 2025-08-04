@@ -42,12 +42,7 @@ export default function Comment() {
     setComment(initialComment);
   };
 
-  const handleKeyDown = (e) => {
-    if (e.key === "Enter") {
-      handleSetComment();
-      e.target.blur();
-    }
-  };
+  
 
   // Timestamp for demonstration - shows “Just now” or “X seconds ago”
   const [timeAgo, setTimeAgo] = useState("");
