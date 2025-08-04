@@ -4,12 +4,16 @@ import { useState } from 'react';
 
 import profile from './../../assets/images/profile.jpg';
 import newsletterImage from './../../assets/images/newsletter join.png';
-import videoEyesee from './../../assets/videos/video eyesee.mp4';
+import videoEyesee from './../../assets/videos/video-eyesee.mp4';
 import spiral from './../../assets/images/spiral.jpg';
 
 const Profile = () => {
   const [editingBio, setEditingBio] = useState(false);
   const [bio, setBio] = useState("console.log(''Hello 👁️'')");
+  const [likes, setLikes] = useState({});
+  const [comments, setComments] = useState({});
+  const [shares, setShares] = useState({});
+  const [commentInput, setCommentInput] = useState({});
 
   const posts = [
     {
@@ -24,7 +28,7 @@ const Profile = () => {
       id: 2,
       username: "Alexandra Predoiu",
       avatar: profile,
-      time: "Yesterday",
+      time: "5 days ago",
       text: "This isn't just a magnet.. it's eyeSEE. Where vision pulls people together. 💫👁️ #eyeseeapp",
       video: videoEyesee
     }
@@ -41,12 +45,12 @@ const Profile = () => {
           <img src={profile} alt="Profile" className={styles.profileAvatar} />
         </div>
         <div className={styles.profileInfo}>
-          <h1>Alexandra Predoiu <button className={styles.editButton}><i className="fas fa-pen"></i> Edit</button></h1>
+          <h1>Alexandra Predoiu</h1>
           <div className={styles.actions}>
-            <button className={styles.mainBtn}><i className="fas fa-user-plus"></i> Add Friend</button>
-            <button className={`${styles.mainBtn} ${styles.outline}`}><i className="far fa-message"></i> Message</button>
+            <button className={styles.mainBtn}>See Friend</button>
+            <button className={`${styles.mainBtn} ${styles.outline}`}>Message</button>
           </div>
-          <span className={styles.onlineStatus}><i className="fas fa-circle"></i> Online now</span>
+          <span className={styles.onlineStatus}> Online now</span>
           <div className={styles.bioSection}>
             {editingBio ? (
               <textarea
@@ -62,9 +66,7 @@ const Profile = () => {
         </div>
       </section>
 
-      {/* PROFILE CONTENT */}
       <section className={styles.profileContent}>
-        {/* LEFT SIDEBAR */}
         <aside className={`${styles.profileSide} ${styles.profileAbout}`}>
           <h2>About</h2>
           <ul>
@@ -82,7 +84,6 @@ const Profile = () => {
           </div>
         </aside>
 
-        {/* CENTER FEED */}
         <section className={styles.profileFeed}>
           {posts.map(post => (
             <div className={styles.profileFeedCard} key={post.id}>
@@ -92,7 +93,6 @@ const Profile = () => {
                   <span className={styles.feedUser}>{post.username}</span>
                   <span className={styles.feedTime}>{post.time}</span>
                 </div>
-                <i className="fas fa-ellipsis-h"></i>
               </div>
               <div className={styles.feedContent}>
                 <p>{post.text}</p>
@@ -106,15 +106,52 @@ const Profile = () => {
                 )}
               </div>
               <div className={styles.feedActions}>
-                <button><i className="far fa-thumbs-up"></i> Like</button>
-                <button><i className="far fa-comment"></i> Comment</button>
-                <button><i className="fas fa-share"></i> Share</button>
+                <button onClick={() => setLikes((prev) => ({
+                  ...prev,
+                  [post.id]: (prev[post.id] || 0) + 1
+                }))}>👍 Like ({likes[post.id] || 0})</button>
+
+                <button onClick={() => setShares((prev) => ({
+                  ...prev,
+                  [post.id]: (prev[post.id] || 0) + 1
+                }))}>📤 Share ({shares[post.id] || 0})</button>
+
+                <button disabled>💬 Comment ({(comments[post.id] || []).length})</button>
+              </div>
+
+              <div className={styles.commentInputWrapper}>
+                <input
+                  type="text"
+                  placeholder="Write a comment..."
+                  value={commentInput[post.id] || ''}
+                  onChange={(e) => setCommentInput((prev) => ({ ...prev, [post.id]: e.target.value }))}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter') {
+                      const text = commentInput[post.id]?.trim();
+                      if (!text) return;
+                      const newComment = { id: Date.now(), text, user: "Alexandra Predoiu", date: "Now" };
+                      setComments((prev) => ({
+                        ...prev,
+                        [post.id]: [...(prev[post.id] || []), newComment]
+                      }));
+                      setCommentInput((prev) => ({ ...prev, [post.id]: '' }));
+                    }
+                  }}
+                />
+              </div>
+
+              <div className={styles.commentList}>
+                {(comments[post.id] || []).map((c) => (
+                  <div key={c.id} className={styles.comment}>
+                    <strong>{c.user}</strong>: {c.text}
+                    <span className={styles.commentDate}>{c.date}</span>
+                  </div>
+                ))}
               </div>
             </div>
           ))}
         </section>
 
-        {/* RIGHT SIDEBAR */}
         <aside className={`${styles.profileSide} ${styles.profileFriends}`}>
           <h2>Friends</h2>
           <div className={styles.friendsGrid}>
@@ -131,24 +168,22 @@ const Profile = () => {
           <hr />
           <h2>Quick Actions</h2>
           <div className={styles.quickActions}>
-        <ul className={styles.quickActionslist}>
-            <li><i className="far fa-image"></i> My Photos</li>
-            <li><i className="fas fa-pencil"></i> Create Post</li>
-            <li><i className="fas fa-user-gear"></i> Settings</li>
-            <li><i className="fas fa-shield-halved"></i> Privacy Center</li>
-          </ul>
+            <ul className={styles.quickActionslist}>
+              <li>My Photos</li>
+              <li>Create Post</li>
+              <li>Settings</li>
+              <li>Privacy Center</li>
+            </ul>
           </div>
           <hr />
-
           <h2>Links</h2>
           <div className={styles.socialIcons}>
-            <a href="https://instagram.com" target="_blank" rel="noreferrer"><FaInstagram /></a>
-            <a href="https://linkedin.com" target="_blank" rel="noreferrer"><FaLinkedin /></a>
-            <a href="https://tiktok.com" target="_blank" rel="noreferrer"><FaTiktok /></a>
-            <a href="https://github.com" target="_blank" rel="noreferrer"><FaGithub /></a>
-            <a href="https://alexandra.com" target="_blank" rel="noreferrer"><FaGlobe /></a>
+            <a href="#" target="_blank" rel="noreferrer"><FaInstagram /></a>
+            <a href="#" target="_blank" rel="noreferrer"><FaLinkedin /></a>
+            <a href="#" target="_blank" rel="noreferrer"><FaTiktok /></a>
+            <a href="#" target="_blank" rel="noreferrer"><FaGithub /></a>
+            <a href="#" target="_blank" rel="noreferrer"><FaGlobe /></a>
           </div>
-  
         </aside>
       </section>
     </main>

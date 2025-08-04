@@ -8,6 +8,13 @@
         align-items: center;
         margin: 1rem 0;
     }
+
+    .charCount {
+  font-size: 0.75rem;
+  color: #888;
+  margin-left: 1rem;
+}
+
     
   .profileImage {
     width: 3rem;
@@ -46,6 +53,9 @@
     border-radius: 1rem;
     background-color: lightgray;
     position: relative;
+      word-wrap: break-word;
+  overflow-wrap: break-word;   
+  white-space: pre-wrap;   
 
     .emojiReaction {
       position: absolute;

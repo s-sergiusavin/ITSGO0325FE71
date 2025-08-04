@@ -4,6 +4,23 @@
   align-items: center;
   padding: 4rem 2rem;
   margin-top: 3rem;
+    background: linear-gradient(-45deg, #e0f7fa, #d2d0d3, #dee5e6, #d79268);
+  background-size: 400% 400%;
+  animation: gradientShift 12s ease infinite;
+  min-height: 100vh;
+
+  @keyframes gradientShift {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
 
   section {
     margin-bottom: 4rem;
@@ -13,7 +30,7 @@
 }
 
 .funCard {
-  background: #f0f4ff;
+  background: #ebebec;
   border-radius: 2rem;
   padding: 3rem;
   text-align: center;
@@ -28,7 +45,7 @@
     font-size: 2.5rem;
 
     span {
-      color: #1348e8;
+      color: #5a4fcf;
     }
   }
 
@@ -37,7 +54,7 @@
     font-size: 1.2rem;
 
     .colorfulText {
-      color: #1348e8;
+      color: #5a4fcf;
       font-weight: 600;
     }
   }
@@ -73,6 +90,31 @@
       }
     }
   }
+
+  .successMessage {
+  color: #5a4fcf;
+  font-weight: 600;
+  margin-top: 1rem;
+  font-size: 1rem;
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.subscribeForm button:active {
+  transform: scale(0.96);
+  transition: transform 0.1s ease;
+}
+
 
   .privacyNote {
     margin-top: 1rem;
@@ -120,6 +162,7 @@
       h4 {
         margin-top: 1rem;
         font-size: 1.2rem;
+        color: #5a4fcf;
       }
 
       p {
@@ -155,7 +198,7 @@
 
       span {
         font-size: 0.9rem;
-        color: #666;
+        color: #5a4fcf;
       }
     }
   }

@@ -4,6 +4,7 @@ import { useState } from 'react';
 
 const LandingPage = () => {
   const [formData, setFormData] = useState({ name: '', email: '' });
+  const [subscribed, setSubscribed] = useState(false);
 
   const handleChange = (e) => {
     setFormData({
@@ -14,7 +15,9 @@ const LandingPage = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Subscribed:', formData);
+    localStorage.setItem('eyeSEE_subscriber', JSON.stringify(formData));
+    setSubscribed(true);
+    setFormData({ name: '', email: '' });
   };
 
   return (
@@ -49,6 +52,13 @@ const LandingPage = () => {
             <i className="fa-solid fa-bolt"></i> Count me in!
           </button>
         </form>
+
+        {subscribed && (
+          <p className={styles.successMessage}>
+            🎉 Welcome aboard, <strong>{formData.name || 'friend'}</strong>! You're in the VIP loop now.
+          </p>
+        )}
+
         <p className={styles.privacyNote}>✨ No spam, only friendly updates!</p>
       </section>
 

@@ -25,19 +25,20 @@
 }
 
 .leftSide {
+  margin-top: 2rem;
   @media (max-width: 768px) {
     display: none;
   }
 }
 
 .rightSide {
+    margin-top: 2rem;
   @media (max-width: 1024px) {
     display: none;
   }
 }
 
 aside {
-  margin-top: 2rem;
   ul {
     list-style: none;
     padding: 0;

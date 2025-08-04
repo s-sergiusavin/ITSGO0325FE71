@@ -1,14 +1,53 @@
+import { useState } from 'react';
 import styles from './RightSide.module.scss';
+import profile from '../../../assets/images/profile.jpg';
 
 const RightSide = () => {
+  const [showDropdown, setShowDropdown] = useState(false);
+  const [mood, setMood] = useState('🌈 Inspired');
+
+  const moods = [
+    '😎 Confident',
+    '🥱 Lazy',
+    '🌈 Inspired',
+    '👽 Weird',
+    '🧘 Calm',
+    '💣 Explosive',
+    '😂 Goofy',
+    '😡 Annoyed',
+    '🤓 Focused'
+  ];
+
+  const toggleDropdown = () => {
+    setShowDropdown(prev => !prev);
+  };
+
+  const handleMoodSelect = (selectedMood) => {
+    setMood(selectedMood);
+    setShowDropdown(false); 
+  };
+
   return (
     <div className={styles.right}>
       <div className={styles.profileCard}>
-        <img src="./src/assets/images/profile.jpg" alt="Alexandra Predoiu" />
+        <img src={profile} alt="Alexandra Predoiu" />
         <div className={styles.profileInfo}>
           <h4>Alexandra Predoiu</h4>
           <span>Vision Creator</span>
-          <button className={styles.profileButton}>Profile</button>
+
+          <button className={styles.profileButton} onClick={toggleDropdown}>
+            Mood of today: {mood} ▾
+          </button>
+
+          {showDropdown && (
+            <ul className={styles.moodDropdown}>
+              {moods.map((m, index) => (
+                <li key={index} onClick={() => handleMoodSelect(m)}>
+                  {m}
+                </li>
+              ))}
+            </ul>
+          )}
         </div>
       </div>
 

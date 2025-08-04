@@ -2,33 +2,38 @@
   "posts": [
     {
       "id": "1",
-      "title": "Modificare recenta",
+      "title": "My first title post",
       "description": "lorem ipsum dasjfhskdfajh hdkjas hfas"
     },
     {
       "id": "2",
       "title": "My second title post",
-      "description": "lorem ipsum dasjfhskdfajh hdkjas hfas"
+      "description": "lorem ipsum dasjfhskdfajh hdkjas hfas",
+         "image": "https://picsum.photos/id/244/600/400"
     },
     {
       "id": "3",
       "title": "My third title post",
-      "description": "lorem ipsum dasjfhskdfajh hdkjas hfas"
+      "description": "lorem ipsum dasjfhskdfajh hdkjas hfas",
+      "image": "https://picsum.photos/id/237/600/400"
     },
     {
       "id": "4",
-      "title": "Modificare recenta",
-      "description": "lorem ipsum dasjfhskdfajh hdkjas hfas"
+      "title": "My fourth title post",
+        "description": "lorem ipsum dasjfhskdfajh hdkjas hfas",
+      "image": "https://picsum.photos/id/238/600/400"
     },
     {
       "id": "5",
-      "title": "My second title post",
-      "description": "lorem ipsum dasjfhskdfajh hdkjas hfas"
+      "title": "My fifth title post",
+      "description": "lorem ipsum dasjfhskdfajh hdkjas hfas",
+      "image": "https://picsum.photos/id/239/600/400"
     },
     {
       "id": "6",
-      "title": "My third title post",
-      "description": "lorem ipsum dasjfhskdfajh hdkjas hfas"
+      "title": "My sixth title post",
+      "description": "lorem ipsum dasjfhskdfajh hdkjas hfas",
+      "image": "https://picsum.photos/id/259/600/400"
     }
   ],
   "users": [
