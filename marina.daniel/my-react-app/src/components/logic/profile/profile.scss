@@ -1,0 +1,617 @@
+* {
+    box-sizing: border-box;
+}
+
+
+
+body {
+    height: 100%;
+
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+main .profileCovers .profileCoverPhotos {
+    width: 100%;
+    height: 35rem;
+    border: 1px black;
+    border-radius: 20px;
+}
+
+main .profileCovers .editCoverPhoto {
+    display: flex;
+    position: absolute;
+    right: 35rem;
+    bottom: 20rem;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 2rem;
+    padding: 5px;
+
+}
+
+main .profileCovers .editCoverPhoto {
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    gap: 5px;
+}
+
+main .profileCovers .profilePictures {
+    width: 3rem;
+    border-radius: 50%;
+    position: relative;
+    top: -5rem;
+    left: 2rem;
+
+}
+
+main .profileCovers .profilePictures .profileImages {
+    border: 0.3rem solid white;
+    border-radius: 50%;
+}
+
+main .profileCovers .profileName {
+    position: absolute;
+    font-size: 2rem;
+    bottom: 14rem;
+    left: 45rem;
+}
+
+main .profileCovers .profileFriends {
+    position: absolute;
+    font-size: 1rem;
+    bottom: 12rem;
+    left: 45rem;
+    cursor: pointer;
+}
+
+main .profileCovers .editProfileStuff {
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    gap: 5px;
+}
+
+main .profileCovers .editProfileStuff .editStory {
+    position: absolute;
+    right: 44rem;
+    top: 42rem;
+    background-color: #116af0;
+    padding: 6px;
+    border: 1px solid white;
+    border-radius: 10px;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+main .profileCovers .editProfileStuff .editProfile {
+    position: absolute;
+    right: 36rem;
+    top: 42rem;
+    background-color: #d1d1d1;
+    padding: 6px;
+    border: 1px solid white;
+    border-radius: 10px;
+    color: black;
+    display: flex;
+    align-items: center;
+}
+
+.profileNavigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    width: 70%;
+    margin-left: 25rem;
+    padding-right: 16rem;
+}
+
+.profileNavigation h2 {
+    color: #fff;
+}
+
+.profileNavigation ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.profileNavigation li {
+    margin-left: 1.5rem;
+}
+
+.profileNavigation a {
+    color: #888;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.profileNavigation a:hover {
+    color: #6e6e6e;
+}
+
+
+.profileNavigation .profileOptions {
+    color: black;
+    background-color: #c5c5c5;
+    border-radius: 20%;
+    width: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.feed {
+    padding-left: 28rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.feed .rightFeed {
+    border: 0 solid black;
+    width: 30%;
+    height: 50rem;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+}
+
+.feed .rightFeed .introFeed {
+    border: 1px solid #888;
+    border-radius: 1rem;
+    box-shadow: 1px 1px 1px 1px #888;
+    padding: 1rem;
+
+}
+
+.feed .rightFeed .introFeed h2 {
+    padding: 1rem;
+}
+
+.feed .rightFeed .introFeed .addBio {
+    background-color: #e2e2e2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.feed .rightFeed .introFeed .editBio {
+    padding-bottom: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+
+
+
+
+.feed .leftFeed {
+    border: 0 solid black;
+    width: 40%;
+    height: 50rem;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.leftFeed .firstPost {
+    border: 1px solid #888;
+    border-radius: 1rem;
+    box-shadow: 1px 1px 1px 1px #888;
+}
+
+.leftFeed .firstPost .firstRowPost {
+    display: flex;
+    padding: 1.5rem;
+    gap: 5px;
+}
+
+
+.leftFeed .firstPost .profileImage {
+    width: 3rem;
+    border-radius: 50%;
+}
+
+.leftFeed .firstPost .newCommentField {
+    width: 80%;
+    border-radius: 2rem;
+    padding: 0.5rem 1rem;
+    background-color: inherit;
+    border: none;
+    cursor: pointer;
+}
+
+.leftFeed .firstPost .newCommentField:hover {
+    background-color: #d6d5d5;
+}
+
+.leftFeed .firstPost .mediaStuff {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    color: #6e6e6e;
+}
+
+.leftFeed .firstPost .mediaStuff .cameraColor {
+    color: red;
+    font-size: 1.6rem;
+}
+
+.leftFeed .firstPost .mediaStuff .imageColor {
+    color: green;
+    font-size: 1.6rem;
+}
+
+.leftFeed .firstPost .mediaStuff .flagColor {
+    color: blue;
+    font-size: 1.6rem;
+}
+
+.leftFeed .mainPosts {
+    display: flex;
+    flex-direction: column;
+}
+
+.leftFeed .mainPosts .subMainPosts {
+    border: 1px solid #888;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    box-shadow: 0 0 0 1px #888;
+    display: flex;
+    width: 100%;
+    padding-left: 2rem;
+    align-items: center;
+
+}
+
+.leftFeed .mainPosts .subMainPosts .editMainPosts {
+    display: flex;
+    align-items: center;
+    margin-left: 14rem;
+    gap: 2rem;
+    cursor: pointer;
+}
+
+.leftFeed .mainPosts .subMainPosts .editMainPosts .editMainPostsFirst {
+    // background-color: #e2e2e2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 5px;
+}
+
+.leftFeed .mainPosts .subMainPosts .editMainPosts .editMainPostsSecond {
+    // background-color: #e2e2e2;
+    width: 90%;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.leftFeed .postView {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #929292;
+    cursor: pointer;
+    font-weight: bold;
+    border: 1px solid #888;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    box-shadow: 0 0 0 1px #888;
+}
+
+.listView {
+    display: flex;
+    align-items: center;
+}
+.gridView {
+    display: flex;
+    align-items: center;
+}
+
+.leftFeed .post {
+    box-shadow: 1px 1px 1px 1px;
+    margin: 3rem 0;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+
+.leftFeed .post .postHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.leftFeed .post .postHeader .profileUserInfo {
+    display: flex;
+    align-items: center;
+}
+
+/* .mainContent .post .postHeader .profileUserInfo .profileImage {
+    width: 3rem;
+    border-radius: 50%;
+} */
+
+.leftFeed .post .postHeader .profileUserInfo .profileName {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.leftFeed .post .postHeader .profileOptions {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.leftFeed .post .postHeader .profileOptions:hover {
+    background-color: lightgray;
+}
+
+.leftFeed .post .content {
+    display: flex;
+    flex-direction: column;
+}
+
+.leftFeed .post .content .imageWrapper {
+    position: relative;
+}
+
+
+.leftFeed .post .imgContent {
+    max-width: 100%;
+    border: 1px solid black;
+    box-shadow: 1px 1px 1px 1px;
+}
+
+.leftFeed .post .content .infoIcon {
+    width: 2rem;
+    height: 2rem;
+    font-size: 2rem;
+    position: absolute;
+    bottom: 0.7rem;
+    right: 1rem;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    cursor: pointer;
+}
+
+.leftFeed .post .content .postTitle {
+    padding: 1rem;
+}
+
+
+.leftFeed .post .content .postDescription {
+    padding: 1rem;
+    margin: 0;
+}
+
+
+.leftFeed .post .reacts {
+    display: flex;
+    justify-content: space-between;
+}
+
+.leftFeed .post .reacts .reactsIcons {
+    color: blue;
+}
+
+
+.leftFeed .post .reactsActions .actions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.leftFeed .post .reactsActions .actions .reaction {
+    color: royalblue;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+
+}
+
+
+.leftFeed .post .reactsActions .actions .reaction:hover {
+    color: #0f43df;
+    background-color: #d7e9f0;
+    font-weight: 600;
+}
+
+.leftFeed .post .commentSection {
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 1rem;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* .mainContent .post .commentSection .profileImage {
+    width: 3rem;
+    border-radius: 50%;
+} */
+
+.leftFeed .post .commentSection .newCommentField {
+    width: 70%;
+    border-radius: 0.8rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border: none;
+}
+
+
+.leftFeed .post .commentSection .newCommentField:hover {
+    color: lab(81.58% 4.33 -22.74);
+}
+
+
+.leftFeed .post .commentSection .newCommentField:focus {
+    outline-color: royalblue;
+}
+
+
+.leftFeed .post .commentSection .insertCommentButton {
+    border: none;
+    background-color: transparent;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: royalblue;
+    width: 5rem;
+}
+
+
+.leftFeed .post .commentSection .insertCommentButton:hover {
+    color: #0f43df;
+    font-size: 1.3rem;
+    background-color: #a5a3a1;
+    border-radius: 0.5rem;
+}
+
+/* .mainContent .post .userComments .profileImage {
+    width: 3rem;
+    border-radius: 50%;
+} */
+
+.profileImage {
+    width: 3rem;
+    border-radius: 50%;
+}
+
+.leftFeed .post .userComments .profileUserComment {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+}
+
+
+.leftFeed .post .userComments .userCommentText {
+    margin: 0 1rem;
+    border: 1px solid #888;
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: lightgray;
+    position: relative;
+}
+
+.leftFeed .post .userComments .userCommentText .emojiReaction {
+    position: absolute;
+    bottom: 0;
+    right: 1rem;
+    display: none;
+}
+
+.leftFeed .post .userComments .userCommentText:hover .emojiReaction {
+    display: block;
+}
+
+.leftFeed .post .userComments .userCommentText:hover {
+    animation-name: comment-animation;
+    animation-duration: 1s;
+
+}
+
+.leftFeed .post .userComments .commentReaction {
+    margin-left: 3rem;
+    color: #888;
+    gap: 1rem;
+    display: flex;
+}
+
+.leftFeed .post .userComments .commentReaction .commentReactionButton:hover {
+    cursor: pointer;
+    text-decoration-line: underline;
+}
+
+
+.rightFeed .photosSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 15px;
+    border: 1px solid #888;
+    border-radius: 1rem;
+    box-shadow: 1px 1px 1px 1px #888;
+    
+
+
+}
+
+.rightFeed .photosSection .seePhotos {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15rem;
+    
+
+}
+
+.rightFeed .photosSection .seePhotos .seePhotosOne {
+    color: #137494;
+}
+
+.rightFeed .photosSection .photoSection {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    
+
+
+}
+
+.rightFeed .photosSection .photoSection img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+
+
+

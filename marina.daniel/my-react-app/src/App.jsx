@@ -2,7 +2,7 @@ import "./App.scss";
 import Feed from "./components/logic/feed";
 import Friends from "./components/logic/friends";
 import AuthPage from "./components/logic/LogIn/AuthPage";
-import Profile from "./components/logic/profile";
+import Profile from "./components/logic/profile/profile";
 import {Routes, Route } from "react-router-dom";
 import LandingPage from "./components/logic/landingPage";
 import GetNews from "./components/logic/getNews";
