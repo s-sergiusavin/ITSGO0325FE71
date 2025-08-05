@@ -4,21 +4,36 @@ import profileImg from "../../../../assets/images/profile.jpg";
 import Button from "@mui/material/Button";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { NavLink } from "react-router-dom";
+import { useState } from "react";
+import CloseIcon from "@mui/icons-material/Close";
 
 <img src={bgImage} alt="bgImg" />;
 
 const ProfileHeader = () => {
   const userName = "Alin Gabriel";
   const friendsNumber = Math.floor(Math.random() * 1000);
+  const [isActive, setIsActive] = useState(true);
 
   return (
     <div>
       <div className={styles.header}>
+        {isActive && (
+          <div className={styles.displayBgImage}>
+            <img src={bgImage} />
+            <CloseIcon className={styles.closeIcon}
+              onClick={() => {
+                console.log("test");
+                setIsActive((prevState) => !prevState);
+              }}
+            />
+          </div>
+        )}
         <div className={styles.userPanel}>
           <div className={styles.bgFoto}>
             <img
               onClick={() => {
                 console.log("test");
+                setIsActive((prevState) => !prevState);
               }}
               src={bgImage}
               alt="bgImg"
