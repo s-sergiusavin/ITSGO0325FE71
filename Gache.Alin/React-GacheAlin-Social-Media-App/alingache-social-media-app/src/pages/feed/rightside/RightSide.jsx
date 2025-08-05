@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import feedService from "../../../services/feedService";
 import pic from "/src/assets/images/profile.jpg";
-import Message from "../../../components/Message";
 
 const Rightside = ({  setActive }) => {
   const GROUPS = [
