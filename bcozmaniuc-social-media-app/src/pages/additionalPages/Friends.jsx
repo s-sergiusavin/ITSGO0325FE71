@@ -19,6 +19,8 @@ import ClearIcon from '@mui/icons-material/Clear';
 import FriendRequestButton from '../../components/FriendRequestSend.jsx'
 import FriendRequest from '../../components/FriendRequest.jsx'
 
+import MyComponent from '../../components/Whotofollow.jsx'
+
 
 
 const Friends = () => {
@@ -284,7 +286,7 @@ const Friends = () => {
                                 <span>Singer</span>
                             </div>
                         </div>
-                        <i className={styles.addCelebrity}><PersonAddIcon /></i>
+                        <MyComponent />
                     </div>
 
                     <div className={styles.celebrity}>
@@ -298,7 +300,7 @@ const Friends = () => {
                                 <span>Actor</span>
                             </div>
                         </div>
-                        <i className={styles.addCelebrity}><PersonAddIcon /></i>
+                        <MyComponent />
                     </div>
 
                     <div className={styles.celebrity}>
@@ -312,7 +314,7 @@ const Friends = () => {
                                 <span>Actor</span>
                             </div>
                         </div>
-                        <i className={styles.addCelebrity}><PersonAddIcon /></i>
+                        <MyComponent />
                     </div>
 
                     <div className={styles.celebrity}>
@@ -326,7 +328,7 @@ const Friends = () => {
                                 <span>Record Producer</span>
                             </div>
                         </div>
-                        <i className={styles.addCelebrity}><PersonAddIcon /></i>
+                        <MyComponent />
                     </div>
 
                     <div className={styles.celebrity}>
@@ -340,7 +342,7 @@ const Friends = () => {
                                 <span>Football Coach</span>
                             </div>
                         </div>
-                        <i className={styles.addCelebrity}><PersonAddIcon /></i>
+                        <MyComponent />
                     </div>
 
                     <span className={styles.viewMore}>View More</span>

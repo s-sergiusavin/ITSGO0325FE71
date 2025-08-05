@@ -14,6 +14,12 @@ import profile from '../../../assets/images/profile.jpg';
 import BogdanCozmaniuc from '../../../assets/BogdanCozmaniuc.jpeg';
 import post1 from '../../../assets/images/post1.jpeg';
 import post2 from '../../../assets/images/post2.jpg';
+
+import main1 from '../../../assets/main1.jpg'
+import main2 from '../../../assets/main2.jpg'
+import main3 from '../../../assets/main3.jpg'
+import main4 from '../../../assets/main4.jpeg'
+
 import CommentsSection from './comments/CommentsSection';
 import { useState } from 'react';
 import AccountMenu from '../../../components/OptionForImage.jsx'
@@ -24,7 +30,7 @@ const NewsFeed = ({ postData }) => {
     const [isShared, setIsShared] = useState(false);
     const [shares, setShares] = useState(Math.ceil(Math.random() * 100));
 
-    const postImages = [post1, post2];
+    const postImages = [main1, main2, main3, main4];
 
     const handleLike = () => {
         if (!isLiked) {
@@ -90,7 +96,7 @@ const NewsFeed = ({ postData }) => {
 
                     <div className={styles.imgWrapper}>
                         <img
-                            src={postData.image || postImages[postData.id % 2]}
+                            src={postData.image || postImages[postData.id % 4]}
                             alt="post content picture"
                             className={styles.imgContent}
                         />
