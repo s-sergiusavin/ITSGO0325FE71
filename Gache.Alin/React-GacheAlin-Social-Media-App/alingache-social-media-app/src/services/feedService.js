@@ -3,7 +3,7 @@ import setAxiosDefaults from "./config";
 
 setAxiosDefaults();
 
-async function getPost(params) {
+async function getPost() {
   const response = await axios.get("/posts");
 
   return response.data;

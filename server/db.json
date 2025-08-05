@@ -138,6 +138,11 @@
       "email": "test@test.com",
       "password": "$2a$10$adi9YV9I5EpljeeomwM4OOlzEzg3TdM1WGr1y4elo.vComJbUU9L6",
       "id": 2
+    },
+    {
+      "email": "test1@test1.com",
+      "password": "$2a$10$hk0ouIlcrM6D6uJYhMd2iOJ5tzQqocqWFbf2GDOg98NqgcXPGIHQW",
+      "id": 3
     }
   ]
 }

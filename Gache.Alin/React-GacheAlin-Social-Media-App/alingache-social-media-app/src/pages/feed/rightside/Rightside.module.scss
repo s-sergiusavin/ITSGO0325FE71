@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
 }
+// De sters
 .mainContainer {
   color: black;
   display: flex;
@@ -111,7 +112,7 @@
           border-radius: 50%;
           margin-right: 0.5rem;
         }
-        .cursorStyle{
+        .cursorStyle {
           cursor: pointer;
         }
       }
