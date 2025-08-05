@@ -16,6 +16,12 @@ import AccordionExpandDefault from "../ui/InfoIconWrapper";
 import GetNumberOfLikes from "../ui/likesAndShares";
 import Comment from "../ui/commentSection";
 import Weather from "../weatherinfo/weatherInfo";
+import GroupIcon from '@mui/icons-material/Group';
+import HistoryIcon from '@mui/icons-material/History';
+import BookmarksIcon from '@mui/icons-material/Bookmarks';
+import GroupsIcon from '@mui/icons-material/Groups';
+import VideocamIcon from '@mui/icons-material/Videocam';
+import StoreIcon from '@mui/icons-material/Store';
 
 function Feed() {
   return (
@@ -71,7 +77,46 @@ function Feed() {
         </div>
       </>
       <aside className="leftContent" id="leftContent">
-        
+        <div className="leftMenu">
+          <div className="profileUserInfo">
+            <NavLink to={"/profile"}>
+              <img
+                src={pozaJpg}
+                alt="profile picture"
+                className="profileImage"
+              />
+            </NavLink>
+            <div className="profileName">
+              <span>Marina Daniel</span>
+            </div>
+          </div>
+          <div className="profileFriends">
+            <NavLink to={"/friends"}>
+              <GroupIcon className="friends"/>
+            </NavLink>
+            <span className="fri">Friends</span>
+          </div>
+          <div className="profileMemories">
+            <HistoryIcon className="Memories"/>
+            <span className="memo">Memories</span>
+          </div>
+          <div className="profileSaved">
+            <BookmarksIcon className="Savey"/>
+            <span className="save">Saved</span>
+          </div>
+          <div className="profileGroups">
+            <GroupsIcon className="Group"/>
+            <span className="grou">Groups</span>
+          </div>
+          <div className="profileVideo">
+            <VideocamIcon className="Videos"/>
+            <span className="vide">Video</span>
+          </div>
+          <div className="profileMarket">
+            <StoreIcon className="Market"/>
+            <span className="mark">Market</span>
+          </div>
+        </div>
       </aside>
       <section className="mainContent" id="main">
         <div className="post" id="postOne">
@@ -118,14 +163,13 @@ function Feed() {
           <hr />
 
           <div className="commentSection">
-            
             <Comment />
           </div>
-          
         </div>
       </section>
       <aside className="rightContent" id="rightContent">
-       <Weather/>
+        <Weather />
+        
       </aside>
     </div>
   );
