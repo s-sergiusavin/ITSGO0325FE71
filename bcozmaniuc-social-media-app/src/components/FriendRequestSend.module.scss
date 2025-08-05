@@ -1,0 +1,23 @@
+.sendFriendRequest {
+  background-color: #7e58df;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  padding: 6px 12px;
+  margin-top: 1rem;
+
+  // &:hover {
+  //   // background-color: #5a3db9;
+  // }
+}
+
+.requestSent {
+  background-color: #4caf50;  // verde pentru confirmare
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: default;
+  padding: 6px 12px;
+  margin-top: 1rem;
+}

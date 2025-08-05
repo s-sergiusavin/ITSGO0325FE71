@@ -16,6 +16,10 @@ import PersonAddIcon from '@mui/icons-material/PersonAdd';
 import CheckIcon from '@mui/icons-material/Check';
 import ClearIcon from '@mui/icons-material/Clear';
 
+import FriendRequestButton from '../../components/FriendRequestSend.jsx'
+import FriendRequest from '../../components/FriendRequest.jsx'
+
+
 
 const Friends = () => {
 
@@ -89,7 +93,7 @@ const Friends = () => {
                         <p>15 Friends</p>
                         <p>3 Groups</p>
                         <button className={styles.viewProfile}>View Profile</button>
-                        <button className={styles.sendFriendRequest}>Send friend request</button>
+                        <FriendRequestButton />
                     </div>
 
                     <div className={styles.profileCardFriends}>
@@ -100,7 +104,7 @@ const Friends = () => {
                         <p>125 Friends</p>
                         <p>6 Groups</p>
                         <button className={styles.viewProfile}>View Profile</button>
-                        <button className={styles.sendFriendRequest}>Send friend request</button>
+                        <FriendRequestButton />
                     </div>
 
                     <div className={styles.profileCardFriends}>
@@ -111,7 +115,7 @@ const Friends = () => {
                         <p>236 Friends</p>
                         <p>5 Groups</p>
                         <button className={styles.viewProfile}>View Profile</button>
-                        <button className={styles.sendFriendRequest}>Send friend request</button>
+                        <FriendRequestButton />
                     </div>
 
                     <div className={styles.profileCardFriends}>
@@ -122,7 +126,7 @@ const Friends = () => {
                         <p>12 Friends</p>
                         <p>3 Groups</p>
                         <button className={styles.viewProfile}>View Profile</button>
-                        <button className={styles.sendFriendRequest}>Send friend request</button>
+                        <FriendRequestButton />
                     </div>
 
                     <div className={styles.profileCardFriends}>
@@ -133,7 +137,7 @@ const Friends = () => {
                         <p>1021 Friends</p>
                         <p>5 Groups</p>
                         <button className={styles.viewProfile}>View Profile</button>
-                        <button className={styles.sendFriendRequest}>Send friend request</button>
+                        <FriendRequestButton />
                     </div>
 
                     <div className={styles.profileCardFriends}>
@@ -144,7 +148,7 @@ const Friends = () => {
                         <p>230 Friends</p>
                         <p>1 Group</p>
                         <button className={styles.viewProfile}>View Profile</button>
-                        <button className={styles.sendFriendRequest}>Send friend request</button>
+                        <FriendRequestButton />
                     </div>
 
                     <div className={styles.profileCardFriends}>
@@ -155,7 +159,7 @@ const Friends = () => {
                         <p>97 Friends</p>
                         <p>2 Groups</p>
                         <button className={styles.viewProfile}>View Profile</button>
-                        <button className={styles.sendFriendRequest}>Send friend request</button>
+                        <FriendRequestButton />
                     </div>
 
                     <div className={styles.profileCardFriends}>
@@ -166,7 +170,7 @@ const Friends = () => {
                         <p>231 Friends</p>
                         <p>1 Group</p>
                         <button className={styles.viewProfile}>View Profile</button>
-                        <button className={styles.sendFriendRequest}>Send friend request</button>
+                        <FriendRequestButton />
                     </div>
 
                     <div className={styles.profileCardFriends}>
@@ -177,7 +181,7 @@ const Friends = () => {
                         <p>1021 Friends</p>
                         <p>32 Groups</p>
                         <button className={styles.viewProfile}>View Profile</button>
-                        <button className={styles.sendFriendRequest}>Send friend request</button>
+                        <FriendRequestButton />
                     </div>
                 </div>
 
@@ -200,10 +204,7 @@ const Friends = () => {
                                 <span>2 mutual friends</span>
                             </div>
                         </div>
-                        <div className={styles.acceptOrDecline}>
-                            <i className={styles.respondRequest}><CheckIcon /></i>
-                            <i className={styles.respondRequest}><ClearIcon /></i>
-                        </div>
+                        <FriendRequest />
                     </div>
 
 
@@ -217,8 +218,7 @@ const Friends = () => {
                             </div>
                         </div>
                         {<div className={styles.acceptOrDecline}>
-                            <i className={styles.respondRequest}><CheckIcon /></i>
-                            <i className={styles.respondRequest}><ClearIcon /></i>
+                            <FriendRequest />
                         </div >}
                     </div >
 
@@ -232,8 +232,7 @@ const Friends = () => {
                             </div>
                         </div>
                         {<div className={styles.acceptOrDecline}>
-                            <i className={styles.respondRequest}><CheckIcon /></i>
-                            <i className={styles.respondRequest}><ClearIcon /></i>
+                            <FriendRequest />
                         </div >}
                     </div >
 
@@ -247,8 +246,7 @@ const Friends = () => {
                             </div>
                         </div>
                         {<div className={styles.acceptOrDecline}>
-                            <i className={styles.respondRequest}><CheckIcon /></i>
-                            <i className={styles.respondRequest}><ClearIcon /></i>
+                            <FriendRequest />
                         </div >}
                     </div >
 
@@ -262,8 +260,7 @@ const Friends = () => {
                             </div>
                         </div>
                         {<div className={styles.acceptOrDecline}>
-                            <i className={styles.respondRequest}><CheckIcon /></i>
-                            <i className={styles.respondRequest}><ClearIcon /></i>
+                            <FriendRequest />
                         </div >}
                     </div >
 

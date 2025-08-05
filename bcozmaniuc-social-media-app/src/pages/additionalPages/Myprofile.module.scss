@@ -1,91 +1,87 @@
 * {
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: "Segoe UI", sans-serif;
 }
 
 body {
     background-color: #edf2f6;
     height: 150rem;
+
 }
 
 .mainProfile {
     display: flex;
     justify-content: center;
     align-items: center;
+}
 
-    .principalHeader {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        height: 25rem;
-        background-color: white;
-        width: 75%;
-        border-radius: 1rem;
-        margin-top: 1rem;
+.principalHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 34rem;
+    background-color: white;
+    width: 75%;
+    border-radius: 1rem;
+    margin-top: 1rem;
+}
 
-        .image {
-            width: 100%;
+.image {
+    width: 100%;
+}
 
-            .imgHeader {
-                height: 25rem;
-                width: 100%;
-                border-radius: 0.5rem;
-            }
-        }
+.imgHeader {
+    height: 25rem;
+    width: 100%;
+    border-radius: 0.5rem;
+}
 
-        .headerOptions {
-            display: flex;
-            justify-content: space-around;
-            height: 10rem;
-            gap: 5rem;
+.headerOptions {
+    display: flex;
+    justify-content: space-around;
+    height: 10rem;
+    gap: 5rem;
+}
 
-            .headerOptionsRight,
-            .headerOptionsLeft {
-                display: flex;
-                gap: 5rem;
-                padding-top: 4rem;
-                font-weight: bold;
-                color: #888;
-            }
+.profilePic {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-            .profilePic {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
+.profilePicName {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    bottom: 3.2rem;
+}
 
-                .profilePicName {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    position: relative;
-                    bottom: 3.2rem;
-                }
+.profilePicResize {
+    position: relative;
+    bottom: 4rem;
+    z-index: 1;
+    height: 7rem;
+    border-radius: 5rem;
+    border: 3px solid white;
+}
 
-                .profilePicResize {
-                    position: relative;
-                    bottom: 4rem;
-                    z-index: 1;
-                    height: 7rem;
-                    border-radius: 5rem;
-                    border: 3px solid white;
+.headerOptionsRight,
+.headerOptionsLeft {
+    display: flex;
+    gap: 5rem;
+    padding-top: 4rem;
+    font-weight: bold;
+    color: #888;
+}
 
-                    span {
-                        &:hover {
-                            color: black;
-                            cursor: pointer;
-                        }
-                    }
-                }
-            }
-        }
-    }
+.headerOptionsLeft span:hover {
+    color: black;
+    cursor: pointer;
+}
 
-
-
-
-
+.headerOptionsRight span:hover {
+    color: black;
+    cursor: pointer;
 }
 
 .imageSettings {
@@ -101,25 +97,21 @@ body {
     position: absolute;
     top: 25rem;
     right: 32rem;
-
-    &:hover {
-        cursor: pointer;
-    }
 }
+
+.imageSettings:hover {
+    cursor: pointer;
+}
+
+/* Main */
 
 main {
     /* border: 1px solid black; */
     height: 1000px;
     display: flex;
-    // flex-direction: column;
-    // justify-content: center;
-    gap: 2rem;
     justify-content: center;
-    margin-top: 7rem;
-}
+    gap: 2rem;
 
-.mainContent {
-    display: block;
 }
 
 .leftContentProfile,
@@ -142,13 +134,13 @@ main {
     background-color: white;
     border-radius: 0.5rem;
     padding-bottom: 1.5rem;
+}
 
-    &Title {
-        font-size: 1.3rem;
-        font-weight: bold;
-        padding-top: 1rem;
-        padding-left: 1rem;
-    }
+.profileIntroTitle {
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding-top: 1rem;
+    padding-left: 1rem;
 }
 
 .aboutMe,
@@ -179,11 +171,6 @@ main {
     padding-left: 4.5rem;
     color: white;
     border-radius: 0.35rem;
-
-    &:hover {
-        color: black;
-        cursor: pointer;
-    }
 }
 
 .facebook {
@@ -198,20 +185,37 @@ main {
     background-color: #0077B5;
 }
 
+.facebook:hover {
+    color: black;
+    cursor: pointer;
+}
+
+.twitter:hover {
+    color: black;
+    cursor: pointer;
+}
+
+.linkedIn:hover {
+    color: black;
+    cursor: pointer;
+}
+
 /* My Playlist */
+
 .myPlaylist {
     background-color: white;
     border-radius: 0.5rem;
     padding-bottom: 1.5rem;
     margin-top: 2rem;
-
-    &Title {
-        font-size: 1.3rem;
-        font-weight: bold;
-        padding-top: 1rem;
-        padding-left: 1rem;
-    }
 }
+
+.myPlaylistTitle {
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding-top: 1rem;
+    padding-left: 1rem;
+}
+
 
 .thePastStarts,
 .thePretender,
@@ -247,17 +251,18 @@ main {
 }
 
 /* Last posts */
+
 .lastPhotos {
     background-color: white;
     border-radius: 0.5rem;
     padding-bottom: 1.5rem;
+}
 
-    &Title {
-        font-size: 1.3rem;
-        font-weight: bold;
-        padding-top: 1rem;
-        padding-left: 1rem;
-    }
+.lastPhotosTitle {
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding-top: 1rem;
+    padding-left: 1rem;
 }
 
 .gallery {
@@ -274,18 +279,19 @@ main {
 }
 
 /* Friends */
+
 .friends {
     background-color: white;
     border-radius: 0.5rem;
     padding-bottom: 1.5rem;
     margin-top: 2rem;
+}
 
-    &Title {
-        font-size: 1.3rem;
-        font-weight: bold;
-        padding-top: 1rem;
-        padding-left: 1rem;
-    }
+.friendsTitle {
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding-top: 1rem;
+    padding-left: 1rem;
 }
 
 .galleryFriends {
@@ -300,7 +306,6 @@ main {
     height: 3rem;
     width: 3rem;
     border-radius: 50%;
-    object-fit: cover;
 }
 
 .moreFriends {
@@ -312,26 +317,27 @@ main {
     justify-content: center;
     align-items: center;
     font-weight: bolder;
+}
 
-    &:hover {
-        background-color: black;
-        color: orange;
-    }
+.moreFriends:hover {
+    background-color: black;
+    color: orange;
 }
 
 /* Blog */
+
 .blogPosts {
     background-color: white;
     border-radius: 0.5rem;
     padding-bottom: 1.5rem;
     margin-top: 2rem;
+}
 
-    &TitleProfile {
-        font-size: 1.3rem;
-        font-weight: bold;
-        padding-top: 1rem;
-        padding-left: 1rem;
-    }
+.blogTitleProfile {
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding-top: 1rem;
+    padding-left: 1rem;
 }
 
 .firstBlog,
@@ -343,18 +349,19 @@ main {
 }
 
 /* Favourites Pages */
-.favouritePages {
+
+.FavouritePages {
     background-color: white;
     border-radius: 0.5rem;
     padding-bottom: 1.5rem;
     margin-top: 2rem;
+}
 
-    &Title {
-        font-size: 1.3rem;
-        font-weight: bold;
-        padding-top: 1rem;
-        padding-left: 1rem;
-    }
+.FavouritePagesTitle {
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding-top: 1rem;
+    padding-left: 1rem;
 }
 
 .theMarinaBar,
@@ -387,16 +394,15 @@ main {
     border-radius: 50%;
 }
 
-.iconsFavouritePages {
-    &:hover {
-        color: blue;
-        background-color: orange;
-        display: flex;
-        border-radius: 2rem;
-    }
+.iconsFavouritePages:hover {
+    color: blue;
+    background-color: orange;
+    display: flex;
+    border-radius: 2rem;
 }
 
 /* main Content */
+
 .postProfile,
 .postProfileSecond,
 .postProfileThird {
@@ -426,6 +432,7 @@ main {
     flex-direction: column;
 }
 
+
 .reactionImagesPeople1,
 .reactionImagesPeople2,
 .reactionImagesPeople3,
@@ -434,7 +441,6 @@ main {
     height: 2.5rem;
     width: 2.5rem;
     border-radius: 50%;
-    object-fit: cover;
 }
 
 .reactionImagesPeople2,
@@ -442,7 +448,6 @@ main {
 .reactionImagesPeople4,
 .reactionImagesPeople5 {
     margin-left: -1rem;
-    object-fit: cover;
 }
 
 .reactions {
@@ -455,11 +460,6 @@ main {
     display: flex;
     flex-direction: column;
     margin-left: 1rem;
-
-    &:hover {
-        color: orange;
-        cursor: pointer;
-    }
 }
 
 .reactionsLove,
@@ -469,11 +469,16 @@ main {
     gap: 0.5rem;
     font-weight: bold;
     font-size: 1.1rem;
+}
 
-    &:hover {
-        color: orange;
-        cursor: pointer;
-    }
+.reactionsLove:hover {
+    color: orange;
+    cursor: pointer;
+}
+
+.reactionsCommnetAndShare:hover {
+    color: orange;
+    cursor: pointer;
 }
 
 .reactionsLove {
@@ -485,12 +490,16 @@ main {
     justify-content: space-around;
 }
 
+.reactionNames:hover {
+    color: orange;
+    cursor: pointer;
+}
+
 .youtube {
     border: 1px solid #ccc;
     display: flex;
     justify-content: space-between;
     border-radius: 0.5rem;
-    margin-top: 1rem;
 }
 
 .videoYoutube {
@@ -509,6 +518,8 @@ main {
     width: 1px;
     height: 10rem;
 }
+
+/* sharedPhoto */
 
 .profileUserShared {
     display: flex;
@@ -529,14 +540,14 @@ main {
     right: 1rem;
     font-size: 2rem;
     color: #ff5e3a;
+}
 
-    &:hover {
-        color: black;
-    }
+.upArrow:hover {
+    color: black;
 }
 
 /* Breakpoints */
-@media only screen and (max-width: 1600px) {
+@media only screen and (max-width:1600px) {
 
     .facebook,
     .twitter,
@@ -575,4 +586,5 @@ main {
     .iconsFavouritePages {
         padding-right: 1rem;
     }
+
 }

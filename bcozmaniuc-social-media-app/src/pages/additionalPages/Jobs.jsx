@@ -1,4 +1,4 @@
-import styles from './Groups.module.scss';
+import styles from './Jobs.module.scss';
 
 import logoWebsite from '../../assets/purplelogo.png'
 import StorefrontIcon from '@mui/icons-material/Storefront';
@@ -6,8 +6,21 @@ import Diversity2Icon from '@mui/icons-material/Diversity2';
 import WorkIcon from '@mui/icons-material/Work';
 import BogdanPic from '../../assets/BogdanCozmaniuc.jpeg';
 
+import Adecco from '../../assets/logosCompanies/adecco.jpg';
+import Idrive from '../../assets/logosCompanies/iDrive.jpg';
+import Logoc from '../../assets/logosCompanies/logoc.jpg';
+import Mongo from '../../assets/logosCompanies/mongo.png';
+import Nexer from '../../assets/logosCompanies/nexer.jpg';
+import Pixeldata from '../../assets/logosCompanies/pixeldata.jpg';
+import Raffall from '../../assets/logosCompanies/Raffall.jpg';
+import Sigmasoftware from '../../assets/logosCompanies/Sigmasoftware.jpg';
+import Unisoftwareplus from '../../assets/logosCompanies/unisoftwareplus.jpg';
+import Xebia from '../../assets/logosCompanies/xebia.jpg';
+import Xreacherlogo from '../../assets/logosCompanies/xreacherlogo.jpg';
+import Zipper from '../../assets/logosCompanies/zipper.jpg';
 
-const Groups = () => {
+
+const Jobs = () => {
 
     return (
 
@@ -71,187 +84,180 @@ const Groups = () => {
             <section className={styles.mainContent}>
 
 
-                <div className={styles.shopContainer}>
-                    <div className={styles.shopHeader}>
-                        <span>Showing 9 of 9 results</span>
-                        <select>
-                            <option>Newest</option>
-                            <option>Lowest price</option>
-                            <option>Highest price</option>
-                        </select>
+                <div className={styles.jobCard}>
+                    <div className={styles.jobAvatar}>
+                        <img src={Logoc} alt="Company Logo" />
                     </div>
+                    <div className={styles.jobDetails}>
+                        <h2>Sales &amp; Customer Manager</h2>
+                        <p className={styles.jobLocation}>Bd. 1 Decembrie 1918, nr. 1G, Bucuresti</p>
+                        <a href="#" className={styles.companyLink}>42Crunch</a>
+                    </div>
+                    <div className={styles.jobTypeFullTime}>
+                        Full Time
+                    </div>
+                </div>
 
-                    <div className={styles.productGrid}>
+                <div className={styles.jobCard}>
+                    <div className={styles.jobAvatar}>
+                        <img src={Unisoftwareplus} alt="Company Logo" />
+                    </div>
+                    <div className={styles.jobDetails}>
+                        <h2>iOs and Android Developer Needed</h2>
+                        <p className={styles.jobLocation}>Știrbei Vodă 114-116, Bucuresti</p>
+                        <a href="#" className={styles.companyLink}>Uni Software Plus</a>
+                    </div>
+                    <div className={styles.jobTypeFullTime}>
+                        Full Time
+                    </div>
+                </div>
 
-                        <div className={styles.productCard}>
-                            <div className={styles.productImage}>
-                                <img src="https://static.bershka.net/assets/public/1e7d/cdc5/9acf4d9187e9/8238c61a5873/05023211800-a4o/05023211800-a4o.jpg?ts=1751529986469&w=1920"
-                                    alt="Kenton Boat Shoes" />
-                            </div>
-                            <div className={styles.productRating}>★★★★★</div>
-                            <h3 className={styles.productTitle}>Blugi bootcut cu clape</h3>
-                            <div className={styles.productPrice}>
-                                <span className={styles.newPrice}>£149.00</span>
-                            </div>
-                        </div>
+                <div className={styles.jobCard}>
+                    <div className={styles.jobAvatar}>
+                        <img src={Sigmasoftware} alt="Company Logo" />
+                    </div>
+                    <div className={styles.jobDetails}>
+                        <h2>Full Stack Software Engineer PHP/React</h2>
+                        <p className={styles.jobLocation}>Sf. Lazar nr.4, Iasi, MUN. IAŞI</p>
+                        <a href="#" className={styles.companyLink}>Sigma Software</a>
+                    </div>
+                    <div className={styles.jobTypePartTime}>
+                        Part Time
+                    </div>
+                </div>
 
-                        <div className={styles.productCard}>
-                            <div className={styles.productImage}>
-                                <img src="https://static.bershka.net/assets/public/7a80/0746/67a545edbbfc/2be52e7fb01a/00017211400-b/00017211400-b.jpg?ts=1737120923694&w=800"
-                                    alt="Kenton Boat Shoes" />
-                            </div>
-                            <div className={styles.productRating}>★★★★★</div>
-                            <h3 className={styles.productTitle}>Blugi evazați</h3>
-                            <div className={styles.productPrice}>
-                                <span className={styles.newPrice}>£139.00</span>
-                            </div>
-                        </div>
+                <div className={styles.jobCard}>
+                    <div className={styles.jobAvatar}>
+                        <img src={Sigmasoftware} alt="Company Logo" />
+                    </div>
+                    <div className={styles.jobDetails}>
+                        <h2>Fullstack Web Developer (Angular / NestJS / Java)</h2>
+                        <p className={styles.jobLocation}>Calea Floreasca 246C, București 014476, Bucharest</p>
+                        <a href="#" className={styles.companyLink}>Sigma Software</a>
+                    </div>
+                    <div className={styles.jobTypeTemporary}>
+                        Temporary
+                    </div>
+                </div>
 
-                        <div className={styles.productCard}>
-                            <div className={styles.productImage}>
-                                <img src="https://static.bershka.net/assets/public/178a/5afb/69fc4628a480/bf568bbaac8b/07824187251-03-a4o/07824187251-03-a4o.jpg?ts=1753793303921&w=800"
-                                    alt="Kenton Boat Shoes}" />
-                            </div>
-                            <div className={styles.productRating}>★★★★★</div>
-                            <h3 className={styles.productTitle}>Tricou mânecă scurtă print
-                            </h3>
-                            <div className={styles.productPrice}>
-                                <span className={styles.newPrice}>£69.00</span>
-                            </div>
-                        </div>
+                <div className={styles.jobCard}>
+                    <div className={styles.jobAvatar}>
+                        <img src={Xreacherlogo} alt="Company Logo" />
+                    </div>
+                    <div className={styles.jobDetails}>
+                        <h2>Senior Fullstack Developer - Python + React | EU</h2>
+                        <p className={styles.jobLocation}>Corneliu Coposu, Bucuresti</p>
+                        <a href="#" className={styles.companyLink}>xReacher</a>
+                    </div>
+                    <div className={styles.jobTypeFullTime}>
+                        Full Time
+                    </div>
+                </div>
 
-                        <div className={styles.productCard}>
-                            <div className={styles.productImage}>
-                                <img src="https://static.bershka.net/assets/public/193d/575c/0b694007874e/14ef27b0b9d5/06084168462-a4o/06084168462-a4o.jpg?ts=1753704177069&w=800"
-                                    alt="Kenton Boat Shoes" />
-                            </div>
-                            <div className={styles.productRating}>★★★★★</div>
-                            <h3 className={styles.productTitle}>Fustă mini tailoring</h3>
-                            <div className={styles.productPrice}>
-                                <span className={styles.newPrice}>£109.00</span>
-                            </div>
-                        </div>
+                <div className={styles.jobCard}>
+                    <div className={styles.jobAvatar}>
+                        <img src={Pixeldata} alt="Company Logo" />
+                    </div>
+                    <div className={styles.jobDetails}>
+                        <h2>.NET Web Developer (Industrial Applications)</h2>
+                        <p className={styles.jobLocation}>Bld. Decebal, Nr. 2, Bl. H3/18, Piatra-Neamt</p>
+                        <a href="#" className={styles.companyLink}>PixelData</a>
+                    </div>
+                    <div className={styles.jobTypeTemporary}>
+                        Temporary
+                    </div>
+                </div>
 
-                        <div className={styles.productCard}>
-                            <div className={styles.productImage}>
-                                <img src="https://static.bershka.net/assets/public/e5c2/1865/13aa4fda975a/bcfea375faaa/11500560001-a4o/11500560001-a4o.jpg?ts=1736414261528&w=800"
-                                    alt="Kenton Boat Shoes" />
-                            </div>
-                            <div className={styles.productRating}>★★★★★</div>
-                            <h3 className={styles.productTitle}>Shoes</h3>
-                            <div className={styles.productPrice}>
-                                <span className={styles.newPrice}>£349.00</span>
-                            </div>
-                        </div>
+                <div className={styles.jobCard}>
+                    <div className={styles.jobAvatar}>
+                        <img src={Pixeldata} alt="Company Logo" />
+                    </div>
+                    <div className={styles.jobDetails}>
+                        <h2>Mid-Level Frontend Developer</h2>
+                        <p className={styles.jobLocation}>Dr. Victor Poloni, 28, Bucuresti</p>
+                        <a href="#" className={styles.companyLink}>PixelData</a>
+                    </div>
+                    <div className={styles.jobTypePartTime}>
+                        Part Time
+                    </div>
+                </div>
 
-                        <div className={styles.productCard}>
-                            <div className={styles.productImage}>
-                                <img src="https://static.bershka.net/assets/public/87f4/2990/b3b44c82887e/7ab295dbc377/00911727251-03-a4o/00911727251-03-a4o.jpg?ts=1746006376635&w=800"
-                                    alt="Kenton Boat Shoes" />
-                            </div>
-                            <div className={styles.productRating}>★★★★★</div>
-                            <h3 className={styles.productTitle}>Salopetă scurtă din denim</h3>
-                            <div className={styles.productPrice}>
-                                <span className={styles.newPrice}>£219.00</span>
-                            </div>
-                        </div>
+                <div className={styles.jobCard}>
+                    <div className={styles.jobAvatar}>
+                        <img src={Xebia} alt="Company Logo" />
+                    </div>
+                    <div className={styles.jobDetails}>
+                        <h2>Product compliance specialist</h2>
+                        <p className={styles.jobLocation}>Dimitrie Pompeiu 6E, Bucuresti</p>
+                        <a href="#" className={styles.companyLink}>Xebia</a>
+                    </div>
+                    <div className={styles.jobTypeFullTime}>
+                        Full Time
+                    </div>
+                </div>
 
-                        <div className={styles.productCard}>
-                            <div className={styles.productImage}>
-                                <img src="https://static.bershka.net/assets/public/d9aa/6dd8/b17b40be9859/44ce9544f279/07824187712-a4o/07824187712-a4o.jpg?ts=1753773837970&w=800"
-                                    alt="Kenton Boat Shoes" />
-                            </div>
-                            <div className={styles.productRating}>★★★★★</div>
-                            <h3 className={styles.productTitle}>Tricou mânecă scurtă print</h3>
-                            <div className={styles.productPrice}>
-                                <span className={styles.newPrice}>£69.00</span>
-                            </div>
-                        </div>
+                <div className={styles.jobCard}>
+                    <div className={styles.jobAvatar}>
+                        <img src={Raffall} alt="Company Logo" />
+                    </div>
+                    <div className={styles.jobDetails}>
+                        <h2>Senior Full Stack Developer | Web3</h2>
+                        <p className={styles.jobLocation}>Bulevardul Iuliu Maniu 6F, București</p>
+                        <a href="#" className={styles.companyLink}>Raffall</a>
+                    </div>
+                    <div className={styles.jobTypeTemporary}>
+                        Temporary
+                    </div>
+                </div>
 
-                        <div className={styles.productCard}>
-                            <div className={styles.productImage}>
-                                <img src="https://static.bershka.net/assets/public/f7c4/6135/b4984020acc4/003087012c8f/05103700807-03-a4o/05103700807-03-a4o.jpg?ts=1753363079677&w=800"
-                                    alt="Kenton Boat Shoes" />
-                            </div>
-                            <div className={styles.productRating}>★★★★★</div>
-                            <h3 className={styles.productTitle}>Pantaloni jogger flaușați stoppers</h3>
-                            <div className={styles.productPrice}>
-                                <span className={styles.newPrice}>£59.00</span>
-                            </div>
-                        </div>
-
-                        <div className={styles.productCard}>
-                            <div className={styles.productImage}>
-                                <img src="https://static.bershka.net/assets/public/7caa/9db9/7d9440daa01b/27d0c0b10817/06384710717-a4o/06384710717-a4o.jpg?ts=1752748564103&w=800"
-                                    alt="Kenton Boat Shoes" />
-                            </div>
-                            <div className={styles.productRating}>★★★★★</div>
-                            <h3 className={styles.productTitle}>Cămașă mânecă scurtă tailored fit</h3>
-                            <div className={styles.productPrice}>
-                                <span className={styles.newPrice}>£85.00</span>
-                            </div>
-                        </div>
+                <div className={styles.jobCard}>
+                    <div className={styles.jobAvatar}>
+                        <img src={Idrive} alt="Company Logo" />
+                    </div>
+                    <div className={styles.jobDetails}>
+                        <h2>Python Developer for AI startup</h2>
+                        <p className={styles.jobLocation}>Str Zaharia Barsan nr. 7, CLUJ-NAPOCA</p>
+                        <a href="#" className={styles.companyLink}>iDrive</a>
+                    </div>
+                    <div className={styles.jobTypeFullTime}>
+                        Full Time
                     </div>
                 </div>
             </section>
 
 
             <aside className={styles.rightSide}>
-                <div className={styles.productsContainer}>
-                    <h3>Biggest discounts</h3>
-                    <div className={styles.productsList}>
 
-
-                        <div className={styles.productItem}>
-                            <img src="https://contents.mediadecathlon.com/p2838697/k$2cb758761aed99249077887d3b27b5cf/sq/8940550.jpg?format=auto&f=320x320" alt="Turtleneck Sweater" />
-                            <div className={styles.productDetails}>
-                                <span className={styles.productName}>Încălțăminte Drumeție la munte MERRELL CROSSLANDER Bărbați</span>
-                                <p className={styles.stars}>★★★★</p>
-                                <span className={styles.price}><del>£98.00</del> <span className={styles.newPriceRight}>£57.00</span></span>
-                            </div>
-                        </div>
-
-
-                        <div className={styles.productItem}>
-                            <img src="https://contents.mediadecathlon.com/p2149686/k$46e6e1749ea933857eec64100e65bbfd/sq/8761330.jpg?format=auto&f=320x320" alt="Vintage Shirt" />
-                            <div className={styles.productDetails}>
-                                <span className={styles.productName}>Încălțăminte mers sportiv PW 160 Slip-On Negru Bărbați</span>
-                                <p className={styles.stars}>★★★</p>
-                                <span className={styles.price}><del>£104.00</del> <span className={styles.newPriceRight}>£75.00</span></span>
-                            </div>
-                        </div>
-
-
-                        <div className={styles.productItem}>
-                            <img src="https://contents.mediadecathlon.com/p2838659/k$9540be2d726a6acaf753a8ed1a036420/sq/8940968.jpg?format=auto&f=320x320" alt="Stretch Short Sleeve" />
-                            <div className={styles.productDetails}>
-                                <span className={styles.productName}>Încălțăminte joasă Drumeție la Munte MH100 Gri Bărbați</span>
-                                <p className={styles.stars}>★★★★★</p>
-                                <span className={styles.price}><del>£60.00</del> <span className={styles.newPriceRight}>£32.00</span></span>
-                            </div>
-                        </div>
-
-
-                        <div className={styles.productItem}>
-                            <img src="https://contents.mediadecathlon.com/p1804455/k$aff9d14c919707cffa8fe6e39ca63254/sq/8555093.jpg?format=auto&f=320x320" alt="Slimfit Shorts Men" />
-                            <div className={styles.productDetails}>
-                                <span className={styles.productName}>Încălțăminte Drumeție în natură ARPENAZ 500 REVIVAL Bej Bărbați</span>
-                                <p className={styles.stars}>★★★★</p>
-                                <span className={styles.price}><del>£58.00</del> <span className={styles.newPriceRight}>£28.00</span></span>
-                            </div>
-                        </div >
-
-
-                        <div className={styles.productItem}>
-                            <img src="https://contents.mediadecathlon.com/p2394163/k$52a7f228ec98b2067049824ca4311ea2/sq/8774141.jpg?format=auto&f=320x320" alt="Ruffled Top" />
-                            <div className={styles.productDetails}>
-                                <span className={styles.productName}>Încălțăminte alergare pe șosea și trail, Kiprun JF 190 Grip albastru bărbați</span>
-                                <span className={styles.price}><del>£64.00</del> <span className={styles.newPriceRight}>£28.00</span></span>
-                                <p className={styles.stars}>★★★★</p>
-                            </div>
-                        </div >
-                    </div >
-                </div >
+                <div className={styles.featuredJobs}>
+                    <h3>Featured Jobs</h3>
+                    <ul>
+                        <li>
+                            <span className={styles.jobIcon}><img src={Zipper} alt="" /></span>
+                            <span className={styles.jobTitle}>Sales & Customer Success ...</span>
+                            <span className={styles.jobTypeFullTime}>Full Time</span>
+                        </li>
+                        <li>
+                            <span className={styles.jobIcon}><img src={Nexer} alt="" /></span>
+                            <span className={styles.jobTitle}>Marketing Data Enrichment ...</span>
+                            <span className={styles.jobTypeFullTime}>Full Time</span>
+                        </li>
+                        <li>
+                            <span className={styles.jobIcon}><img src={Adecco} alt="" /></span>
+                            <span className={styles.jobTitle}>Software Quality Assurance ...</span>
+                            <span className={styles.jobTypeFullTime}>Full Time</span>
+                        </li>
+                        <li>
+                            <span className={styles.jobIcon}><img src={Mongo} alt="" /></span>
+                            <span className={styles.jobTitle}>iOS and Android Developer ...</span>
+                            <span className={styles.jobTypeFreelance}>Freelance</span>
+                        </li>
+                        <li>
+                            <span className={styles.jobIcon}><img src={Mongo} alt="" /></span>
+                            <span className={styles.jobTitle}>Officer, Global Product Deve...</span>
+                            <span className={styles.jobTypeTemporary}>Temporary</span>
+                        </li>
+                    </ul>
+                </div>
             </aside >
 
         </div >
@@ -260,5 +266,5 @@ const Groups = () => {
     );
 };
 
-export default Groups;
+export default Jobs;
 

@@ -10,94 +10,248 @@
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
 }
 
-.whoToFollow {
-  padding-top: 0.5rem;
-  height: 30rem;
-  background-color: white;
-  border-radius: 1rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  margin-top: 1.5rem;
 
-  .titleWhoToFollow {
-    font-size: larger;
-    font-weight: bold;
-    padding-left: 1.5rem;
+.container {
+  width: 300px;
+  font-family: Arial, sans-serif;
+}
+
+.title {
+  color: #555;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.card {
+  display: flex;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.image {
+  width: 80px;
+  height: 80px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.headline {
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+.subtext {
+  color: #777;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+/* Active users */
+
+.activeUsersContainer {
+  width: 320px;
+  margin-top: 3rem;
+  top: 2rem;
+  overflow-y: scroll;
+  height: 26rem;
+}
+
+.activeTitle {
+  font-size: 12px;
+  color: gray;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+
+.userList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.userItem {
+  display: flex;
+  align-items: center;
+  padding: 8px 10px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.userItem:hover {
+  background-color: #f2f2f2;
+}
+
+.avatarWrapper {
+  position: relative;
+  margin-right: 10px;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.activeDot {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 10px;
+  height: 10px;
+  background-color: #31a24c;
+  border: 2px solid white;
+  border-radius: 50%;
+}
+
+.userName {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* ---------- Responsive ---------- */
+
+
+@media only screen and (max-width: 600px) {
+  .rightContent {
+    display: none;
+    position: relative;
+    width: 100%;
+    height: auto;
+    top: 0;
+    right: 0;
+    padding: 1rem 1rem 2rem 1rem;
+    box-shadow: none;
+
+  }
+  
+  .rightSide {
+    display: none;
   }
 
-  .celebrity {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1rem;
-    padding: 0.5rem;
-
-    .profileInfo {
-      display: flex;
-      gap: 1rem;
-
-      .profileImageToFollow {
-        width: 3rem;
-        border-radius: 5rem;
-        margin-left: 1rem;
-      }
-
-      .profileNameToFollow {
-        display: flex;
-        flex-direction: column;
-      }
-    }
-
-    i.addCelebrity {
-      color: #4F95DA;
-      font-size: 1.5rem;
-      margin-right: 1rem;
-      cursor: pointer;
-
-      &:hover {
-        color: #1348e8;
-      }
-    }
+  .container {
+    width: 100%;
   }
 
-  .viewMore {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  .image {
+    width: 60px;
+    height: 60px;
+  }
+
+  .headline {
+    font-size: 12px;
+  }
+
+  .subtext {
+    font-size: 10px;
+  }
+
+  .activeUsersContainer {
+    width: 100%;
+    height: 15rem;
+    overflow-y: auto;
     margin-top: 1.5rem;
-    margin-left: 1.5rem;
-    background-color: lightskyblue;
-    height: 2rem;
-    width: 85%;
-    border-radius: 0.5rem;
-    cursor: pointer;
+  }
 
-    &:hover {
-      background-color: #1348e8;
-      color: white;
-    }
+  .avatar {
+    width: 30px;
+    height: 30px;
+  }
+
+  .userName {
+    font-size: 12px;
+  }
+
+  .activeDot {
+    width: 8px;
+    height: 8px;
+  }
+
+  .mainPost {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+}
+
+
+@media only screen and (min-width: 601px) and (max-width: 992px) {
+
+  .rightSide {
+    display: none;
+  }
+
+  .rightContent {
+    display: none;
+    width: 18rem;
+    height: auto;
+    top: 4%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  .image {
+    width: 70px;
+    height: 70px;
+  }
+
+  .headline {
+    font-size: 13px;
+  }
+
+  .subtext {
+    font-size: 11px;
+  }
+
+  .activeUsersContainer {
+    width: 100%;
+    height: 20rem;
+  }
+
+  .avatar {
+    width: 35px;
+    height: 35px;
+  }
+
+  .userName {
+    font-size: 13px;
+  }
+
+  .activeDot {
+    width: 9px;
+    height: 9px;
   }
 }
 
-.TodaysNews {
-  height: 30rem;
-  background-color: white;
-  border-radius: 1rem;
-  margin-top: 2rem;
-  padding-top: 1rem;
-  overflow-y: scroll;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-
-  .spanTodaysNews {
-    font-size: larger;
-    font-weight: bold;
-    padding-left: 1.5rem;
-    margin-top: 1rem;
+@media only screen and (max-width: 1224px) {
+  .container {
+    display: none;
   }
 
-  .News {
-    display: flex;
-    flex-direction: column;
-    padding-top: 1rem;
-    margin-left: 1.5rem;
+  .rightSide {
+    display: none;
+    
+  }
+
+  .rightContent {
+    display: none;
+    box-shadow: none;
   }
 }

@@ -1,0 +1,28 @@
+.acceptOrDecline {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-right: 0.5rem;
+}
+
+.respondRequest {
+  font-size: 1.5rem;
+  color: #7e58df;
+  cursor: pointer;
+
+  &:hover {
+    color: #1348e8;
+  }
+}
+
+.requestSentMessage {
+  font-weight: 600;
+  color: #24c97b;
+  margin-top: 0.5rem;
+}
+
+.requestDeclinedMessage {
+  font-weight: 600;
+  color: #e53935;
+  margin-top: 0.5rem;
+}

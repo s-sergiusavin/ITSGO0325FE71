@@ -1,64 +1,102 @@
+header.li {
+    display: none;
+}
+
+
 .auth {
-    margin: 3rem auto;
-    width: 95%;
-    max-width: 25rem;
-    border-radius: 5%;
-    border-color: teal;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
-    padding: 1rem;
-    text-align: center;
-    color: white;
-    background-color: teal;
+  background-color: #ffffff;
+  padding: 3rem 2.5rem;
+  border-radius: 16px;
+  width: 360px;
+  margin: 100px auto;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  color: #000;
+  text-align: center;
+}
 
-    form {
-        .control {
-            margin-bottom: 0.5rem;
+.auth h2 {
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
 
-            label {
-                display: block;
-                font-weight: bold;
-                margin-bottom: 0.5rem;
-            }
+.control {
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
 
-            input {
-                background-color: lightgray;
-                border-radius: 5px;
-                color: teal;
-                border: 1px solid teal;
-                width: 100%;
-                text-align: left;
-                padding: 0.25rem;
-            }
-        }
+.control label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #444;
+}
 
-        .actions {
-            margin-top: 1.5rem;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+.control input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  background-color: transparent;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s;
+}
 
-            button {
-                cursor: pointer;
-                color: white;
-                background-color: cadetblue;
-                border: 1px solid white;
-                border-radius: 5%;
-                padding: 0.5rem 2.5rem;
+.control input::placeholder {
+  color: #999;
+}
 
-                &:hover {
-                    font-weight: bold;
-                    border: cadetblue;
-                }
-            }
+.control input:focus {
+  border-bottom: 1px solid #6c63ff;
+}
 
-            .toggle {
-                margin-top: 1rem;
-                background-color: transparent;
-                color: white;
-                border: none;
-                padding: 0.15rem 1.5rem;
-            }
-        }
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  margin-bottom: 1.5rem;
+  color: #444;
+}
 
-    }
+.actions button {
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 50px;
+  background: linear-gradient(to right, #34d399, #2563eb);
+  color: #fff;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.actions button:hover {
+  opacity: 0.9;
+}
+
+.toggle {
+  margin-top: 2rem;
+  background: transparent;
+  border: 1px solid #6c63ff;
+  color: #6c63ff;
+  padding: 0.6rem;
+  border-radius: 50px;
+  width: 100%;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.toggle:hover {
+  background: #6c63ff;
+  color: #fff;
+}
+
+.auth p {
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 1rem;
 }

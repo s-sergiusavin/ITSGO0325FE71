@@ -31,10 +31,14 @@
 }
 
 .removeCommentButton {
-    margin-left: 9rem;
+    margin-left: 20rem;
     font-weight: bold;
-    color: lightcoral;
+    color: rgb(234, 147, 147);
     font-size: 0.9rem;
+}
+
+.removeCommentButton:hover {
+    cursor: pointer;
 }
 
 
@@ -72,6 +76,10 @@
 .commentReactionButton {
     font-size: 0.8rem;
     font-weight: 500;
+}
+
+.commentReactionButton:hover {
+    cursor: pointer;
 }
 
 .mainPost .post .userComments .commentReaction .commentReactionButton:hover {

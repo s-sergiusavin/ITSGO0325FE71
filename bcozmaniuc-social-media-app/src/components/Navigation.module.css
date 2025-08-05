@@ -10,11 +10,13 @@ header {
   z-index: 10;
   top: 0;
 }
+
 header .logo {
   color: white;
   font-size: 2rem;
   margin: 0;
 }
+
 header .menu {
   list-style: none;
   margin: 0;
@@ -22,18 +24,24 @@ header .menu {
   display: flex;
   align-items: baseline;
 }
+
 header .menu .menuItem {
   margin: 0 1rem;
 }
+
 header .menu .menuItem a {
   text-decoration: none;
   color: white;
   white-space: nowrap;
   font-weight: bold;
 }
+
 header .menu .menuItem a:global.active {
   color: yellow;
 }
+
 header .menu .menuItem a:hover {
   color: lightblue;
-}/*# sourceMappingURL=Navigation.module.css.map */
+}
+
+/*# sourceMappingURL=Navigation.module.css.map */
