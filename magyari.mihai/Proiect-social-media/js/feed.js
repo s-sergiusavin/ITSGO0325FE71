@@ -156,7 +156,7 @@ newCommentForm.addEventListener('submit', (event) => {
 
                     <div class="commentReaction">
 
-                        <strong title="Posted 3 hours ago">Just now</strong>
+                        <strong title="Posted just now">Just now</strong>
                         <strong class="commentReactionButton">Like</strong>
                         <strong class="commentReactionButton">Reply</strong>
 

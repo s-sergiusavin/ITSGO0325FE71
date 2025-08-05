@@ -52,7 +52,7 @@ form .formField.rememberUserField{
 }
 
 form .formField.rememberUserField input {
-    width: 10%;
+    width: 20%;
 }
 
 form .formField.rememberUserField label{
@@ -102,9 +102,9 @@ a strong {
     background-color: #FFE74C;
 }
 
-a {
+/* a {
     color: white;
-}
+} */
 
 .loginError {
     color: red;

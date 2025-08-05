@@ -1,0 +1,350 @@
+.leftContent {
+    top: 3rem;
+    width: 15vw;
+    height: 100vh;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    left: 0;
+    background-color: #CAE9FF;
+
+    a {
+        color: black;
+        display: inline-block;
+
+        &:hover {
+            background-color: transparent;
+            border: none;
+        }
+    }
+
+    .quickAccess {
+
+        flex: 3;
+        display: flex;
+        flex-direction: column;
+
+
+
+        .myProfile {
+            display: flex;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+            margin-left: 1rem;
+
+
+            .myPic {
+                img {
+                    height: 3rem;
+                    border-radius: 50%;
+                }
+            }
+
+            span {
+                display: flex;
+                align-items: center;
+                margin-left: 0.5rem;
+                font-weight: bold;
+            }
+
+            .profileButtons {
+                display: flex;
+                margin-left: 1.5rem;
+                gap: 0.5rem;
+                justify-content: center;
+                align-items: center;
+
+                a {
+                    border-radius: 50%;
+
+                    &:hover {
+                        background-color: #FFE74C;
+                    }
+
+                }
+
+                button.logOutButton {
+                    background-color: transparent;
+                    border: none;
+                    padding: 0;
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: #FFE74C;
+                        border-radius: 50%;
+                    }
+
+                }
+
+                .switchAcc {
+                    position: absolute;
+                    top: 3rem;
+                    margin-left: 16.5rem;
+                    flex-direction: column;
+
+                    button {
+                        width: 10rem;
+                        height: 4rem;
+                        border-radius: 0.5rem;
+                        cursor: pointer;
+                        box-shadow: -0.2rem 0.2rem 0.5rem black;
+
+                        &:hover {
+                            background-color: #5fa8d3;
+                        }
+
+                        span {
+                            color: black;
+                            font-weight: normal;
+                            justify-content: center;
+                        }
+                    }
+
+                    img {
+                        height: 2rem;
+                        border-radius: 50%;
+                    }
+                }
+
+                .buttonImg {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 2rem;
+                    height: 2rem;
+                    padding: 0.2rem;
+                }
+            }
+
+
+        }
+
+        .quickAccessLinks {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            margin-left: 0.5rem;
+            margin-right: 0.5rem;
+            margin-bottom: 2rem;
+            // padding: 0.5rem 0;
+            // border: 1px solid black;
+            width: 17rem;
+
+            &:hover {
+                background-color: #FFE74C;
+                border-radius: 2rem;
+            }
+
+            img {
+                height: 2.5rem;
+            }
+
+        }
+
+        .chooseMode {
+            display: flex;
+            padding-top: 0.5rem;
+            padding-left: 0.5rem;
+            padding-right: 0.5rem;
+            border-bottom: 1px solid black;
+
+
+            .colorBtn {
+                background-color: transparent;
+                border: none;
+                height: 2.5rem;
+                font-size: medium;
+
+                &:hover {
+                    cursor: pointer;
+                    background-color: #FFE74C;
+                    border-radius: 2rem;
+                }
+            }
+
+            .modeMenu {
+                flex-direction: column;
+                margin-left: 16rem;
+                position: absolute;
+
+                button {
+                    width: 10rem;
+                    height: 3.5rem;
+                    text-align: center;
+                    text-justify: center;
+                    box-shadow: -0.2rem 0.2rem 0.5rem black;
+                    border-radius: 0.5rem;
+
+
+                    &:hover {
+                        cursor: pointer;
+                        background-color: #5fa8d3;
+                    }
+
+                    span {
+                        color: black;
+                    }
+                }
+
+                img {
+                    height: 2.5rem;
+                    padding: 0.2rem;
+                    border-radius: 50%;
+                    border: 2px solid white;
+                    background-color: #cae9ff;
+
+                }
+
+            }
+        }
+
+    }
+
+    footer {
+        display: flex;
+        position: absolute;
+        left: 0;
+        bottom: 3rem;
+        padding: 5rem 0.4rem 0 0;
+        margin-bottom: 0.5rem;
+        margin-left: 0.2rem;
+
+    }
+}
+
+//Media queries
+
+
+@media (max-width:1540px) {
+
+    .leftContent {
+
+        .quickAccess {
+            .myProfile {
+                .profileButtons {
+                    .switchAcc {
+                        margin-left: 14rem;
+                    }
+                }
+            }
+
+
+            .chooseMode {
+                .modeMenu {
+                    margin-left: 14rem;
+                }
+            }
+        }
+    }
+
+}
+
+@media (max-width:1480px) {
+    .leftContent {
+
+        .quickAccess {
+            .myProfile {
+                .profileButtons {
+                    .switchAcc {
+                        margin-left: 10rem;
+
+                        button {
+                            width: 6rem;
+                            height: 5rem;
+                        }
+                    }
+                }
+            }
+
+
+            .chooseMode {
+                .modeMenu {
+                    margin-left: 13rem;
+                    bottom: 3.5rem;
+
+                    button {
+                        width: 5rem;
+                        height: 6rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:1420px) {
+    .leftContent {
+
+        .quickAccess {
+
+            .myProfile {
+                flex-direction: column;
+                margin-left: 0;
+
+                .myPic {
+                    display: flex;
+                    justify-content: center;
+                }
+
+                span {
+                    display: flex;
+                    justify-content: center;
+
+                }
+
+                .profileButtons {
+                    justify-content: center;
+
+                    .switchAcc {
+                        margin-left: 18rem;
+
+                        button {
+                            width: 6rem;
+                            height: 5rem;
+                        }
+                    }
+                }
+            }
+
+            .chooseMode {
+                border-bottom: none;
+            }
+        }
+
+        footer {
+            display: none;
+        }
+    }
+
+}
+
+
+@media (max-width:1240px) {
+    .leftContent {
+
+        .quickAccess {
+            .myProfile {
+                .profileButtons {
+                    .switchAcc {
+                        margin-left: 12rem;
+                    }
+                }
+            }
+
+
+            .chooseMode {
+                .modeMenu {
+                    margin-left: 9rem;
+                }
+            }
+        }
+    }
+
+
+}
+
+@media (max-width:1100px) {
+    .leftContent {
+        display: none;
+    }
+}

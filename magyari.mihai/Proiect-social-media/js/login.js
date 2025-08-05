@@ -5,6 +5,7 @@ const loginBtn = document.getElementsByClassName('loginButton')[0];
 const createAccountBtn = document.getElementsByClassName('registerButton')[0];
 const formTitle = document.getElementsByTagName('h1')[0];
 const rememberMeBox = document.getElementById('rememberCheckbox');
+const rememberMeText = document.getElementById('rememberMeText');
 const forgotPassword = document.getElementsByClassName('forgotPassword')[0];
 const loginErrorMessage = document.getElementsByClassName('loginError')[0];
 
@@ -44,12 +45,14 @@ createAccountBtn.addEventListener('click', (event) => {
         loginBtn.value = 'Create account';
         createAccountBtn.innerText = 'Switch to Login';
         rememberMeBox.style.display = 'none';
+        rememberMeText.style.display = 'none';
         forgotPassword.style.display = 'none';
     } else {
         formTitle.innerText = 'Login to AttentionSeeker';
         loginBtn.value = 'Log in';
         createAccountBtn.innerText = 'Create an account';
         rememberMeBox.style.display = 'block';
+        rememberMeText.style.display = 'block';
         forgotPassword.style.display = 'block';
     }
 

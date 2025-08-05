@@ -1,0 +1,246 @@
+
+
+.topBar {
+    position: fixed;
+    top: 5rem;
+    left: 0px;
+    height: 4rem;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    z-index: 1;
+}
+
+.menuAndLogo {
+    margin: 1rem;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.search {
+    margin: 1rem;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.search input {
+    height: 2.5rem;
+    width: 34rem;
+    border: 1px solid lightgray;
+    border-radius: 1rem;
+}
+
+.channel {
+    display: flex;
+    margin: 1rem;
+    gap: 1rem;
+
+}
+
+.topBar img:hover {
+    background-color: lightgrey;
+    border: 2px solid #0f0f0f;
+    border-radius: 0.5rem;
+}
+
+
+
+/* SIDE BAR */
+.sideBar {
+
+    position: fixed;
+    left: 0px;
+    top: 4rem;
+    width: 15rem;
+    height: calc(100% - 4rem);
+    overflow: auto;
+    scrollbar-width: thin;
+    padding-left: 0.5rem;
+}
+
+.sideBar img {
+    width: 1.7rem;
+}
+
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+
+}
+
+a:hover {
+    background-color: gray;
+    border: solid 1px #0f0f0f;
+    border-radius: 0.5rem;
+}
+
+
+/* Category Section */
+
+.categorySection{
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    top: 4rem;
+    left: 15rem;
+    justify-content: space-around;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.categorySection .category{
+    border: 1px solid rgb(34, 33, 33);
+    background-color: rgb(34, 33, 33);
+    color: white;
+    border-radius: 0.4rem;
+    padding: 0rem;
+    width: 4rem;
+    height: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+   
+    
+}
+
+.categorySection .category:hover{
+    background-color: grey;
+}
+
+.categorySection .category h4{
+    background-color: transparent;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/* Main YT Page */
+
+.mainPage {
+    position: absolute;
+    right: 0;
+    left: 15rem;
+    top: 1rem;
+    height: 100%;
+    z-index: -1;
+
+}
+
+
+/* Video + Shorts Section */
+
+.videosSection {
+    margin-top: 8rem;
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+   
+}
+
+.videosSection .video {
+    height: 14rem;
+    width: 23rem;
+
+}
+
+
+.videosSection video {
+    height: 14rem;
+    width: 23rem;
+    border: 1px solid black;
+    border-radius: 1rem;
+}
+
+.videosSection video:hover {
+    background-color: lightgray;
+}
+
+
+
+
+.title {
+    display: flex;
+    position: relative;
+    margin-top: 3rem;
+    margin-left: 3rem;
+}
+
+.shortsSection {
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 1rem;
+    padding-left: 1.2rem;
+}
+
+.shortsSection .short {
+    height: 30rem;
+    width: 16rem;
+}
+
+
+
+.shortsSection .short video {
+    height: 30rem;
+    width: 16rem;
+    border: 1px solid black;
+    border-radius: 0.5rem;
+}
+
+.shortsSection .short video:hover {
+    background-color: lightgray;
+}
+
+/* Video + Shorts Description section */
+
+.videoDescription {
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 0.5rem;
+}
+
+.videoDescription .underVideo {
+    display: flex;
+    height: 5rem;
+    width: 23rem;
+}
+
+
+.channelPic {
+    margin-top: 0.5rem;
+    flex: 1
+}
+
+.videoText {
+    flex: 6
+}
+
+
+.videoDescription .underVideo .videoText p {
+    line-height: 0.5;
+}
+
+
+.shortDescription {
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    padding-left: 1.2rem;
+}
+
+.shortDescription .underShort {
+    height: 3rem;
+    width: 16rem;
+}
+
+.shortDescription .underShort p {
+    line-height: 0.2;
+}

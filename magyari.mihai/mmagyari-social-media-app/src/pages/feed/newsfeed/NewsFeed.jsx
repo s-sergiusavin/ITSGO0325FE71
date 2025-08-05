@@ -1,15 +1,16 @@
 import styles from './NewsFeed.module.scss'
-import profile from '../../../assets/images/profile.jpg'
 import post1 from '../../../assets/images/post1.jpg'
 import post2 from '../../../assets/images/post2.jpg'
-import { useState } from 'react'
+import { useRef, useState } from 'react'
+import CircleIcon from '@mui/icons-material/Circle';
+import PublicIcon from '@mui/icons-material/Public';
 
 const NewsFeed = ({ postData }) => {
 
+
+    //like button
     const [isLiked, setIsLiked] = useState(false);
     const [likes, setLikes] = useState(Math.floor((Math.random() * 100)));
-
-
 
     const handleLike = () => {
         if (!isLiked) {
@@ -25,8 +26,52 @@ const NewsFeed = ({ postData }) => {
     }
 
 
+    //save button
+
+    const [isSaved, setIsSaved] = useState(false);
+
+    const handleSave = () => {
+        setIsSaved(prevState => !prevState)
+    }
+
+    //hide post button
+
+    const [isVisible, setIsVisible] = useState(true);
+    const handleHide = () => {
+        setIsVisible(false);
+    }
 
     const postImages = [post1, post2]
+
+    //new comment feature
+    const [comments, setComments] = useState([]);
+    const [newComment, setNewComment] = useState('');
+
+    const handleCommentSubmit = (e) => {
+        e.preventDefault();
+
+        if (newComment.trim() !== '') {
+            const commentObj = {
+                username: 'Tony Stark',
+                avatar: 'https://i.pinimg.com/736x/24/84/70/248470199d7901dd9f5adbed7a6a3932.jpg',
+                content: newComment,
+                timestamp: 'Just now' //varianta cu data de azi: new Date().toLocaleString()
+            }; //payload - modul de transmitere a comentariului
+
+            setComments(prev => [commentObj, ...prev]);
+            setNewComment('');
+        }
+    }
+
+    //comment button feature
+
+    const commentInputRef = useRef(null);
+    const focusCommentField = () => {
+        if (commentInputRef.current) {
+            commentInputRef.current.focus();
+        }
+    };
+
 
 
     return (
@@ -34,8 +79,7 @@ const NewsFeed = ({ postData }) => {
         <section className={styles.mainContent}>
 
             <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
-
-            <div className={styles.post} id="feedPost">
+            {isVisible && (<div className={styles.post} id="feedPost">
 
                 <div className={styles.postHeader}>
 
@@ -48,16 +92,16 @@ const NewsFeed = ({ postData }) => {
 
                         <div className={styles.profileName}>
                             <span><strong>Justin Timberlake</strong></span>
-                            <span>July 19 <i className="bi bi-dot"></i> <i className="bi bi-globe-americas"></i> </span>
+                            <span>July 19 <CircleIcon sx={{ fontSize: '0.2rem' }} /> <PublicIcon sx={{ fontSize: '1.2rem' }} /> </span>
                         </div>
-                        {/* necesar adaugare iconita  */}
+
 
                     </div>
 
                     <div className={styles.profileOptions}>
                         <a href="#" title="Options"><img src="https://cdn-icons-png.flaticon.com/128/2311/2311524.png"
                             alt="" /></a>
-                        <a href="#" title="Hide Post" id="hideBtn"><img
+                        <a onClick={handleHide} title="Hide Post" id="hideBtn"><img
                             src="https://cdn-icons-png.flaticon.com/128/1828/1828778.png" alt="" /></a>
                     </div>
 
@@ -113,7 +157,7 @@ const NewsFeed = ({ postData }) => {
                             <span id="likeText">Like</span>
                         </li>
 
-                        <li className={styles.reaction} id="commBtn">
+                        <li className={styles.reaction} id="commBtn" onClick={focusCommentField}>
                             <img src="https://cdn-icons-png.flaticon.com/128/4249/4249907.png" alt="" />
                             <span>Comment</span>
                         </li>
@@ -123,8 +167,8 @@ const NewsFeed = ({ postData }) => {
                             <span>Send</span>
                         </li>
 
-                        <li className={styles.reaction} id="saveBtn">
-                            <img src="https://cdn-icons-png.flaticon.com/128/14610/14610792.png" alt="" id="saveImg" />
+                        <li className={styles.reaction} id="saveBtn" onClick={handleSave}>
+                            <img src="https://cdn-icons-png.flaticon.com/128/14610/14610792.png" alt="" id="saveImg" className={`${isSaved ? styles.liked : ''}`} />
                             <span id="saveText">Save</span>
                         </li>
 
@@ -134,7 +178,7 @@ const NewsFeed = ({ postData }) => {
 
                 <hr />
 
-                <form action="" id="addNewComment">
+                <form onSubmit={handleCommentSubmit} id="addNewComment">
 
                     <div className={styles.commentSection}>
 
@@ -143,10 +187,11 @@ const NewsFeed = ({ postData }) => {
                                 alt="profile picture" className={styles.profileImage} />
                         </a>
 
-                        <input type="text" placeholder="Type a comment" className={styles.newCommentField} id="newCommentText" />
-                        <button type="submit" id="insertComm" className={styles.insertComm}><img
-                            src="https://cdn-icons-png.flaticon.com/128/60/60539.png" alt=""
-                            className={styles.insertCommentButton} title="Send Comment" /></button>
+                        <input type="text" placeholder="Type a comment" className={styles.newCommentField} value={newComment}
+                            onChange={(e) => setNewComment(e.target.value)} ref={commentInputRef} />
+                        <button type="submit" id="insertComm" className={styles.insertComm}>
+                            <img src="https://cdn-icons-png.flaticon.com/128/60/60539.png"
+                                className={styles.insertCommentButton} title="Send Comment" /></button>
 
 
 
@@ -154,8 +199,39 @@ const NewsFeed = ({ postData }) => {
 
                 </form>
 
+                {/* idx - identificator unic din React folosit pentru tracking in timpul randarilor (functioneaza pt cazuri simple) */}
+                <div id="myComment">
+                    {comments.map((comment, idx) => (
+                        <div key={idx} className={styles.userComments}>
 
-                <div id="myComment"></div>
+                            <div className={styles.userCommentsContent}>
+
+                                <div className={styles.profileUserComment}>
+                                    <a href="#">
+                                        <img src={comment.avatar} alt="profile picture" className={styles.profileImage} />
+                                    </a>
+                                </div>
+                                <div className={styles.userCommentText}>
+                                    <span className={styles.commentUserName}>{comment.username}</span>
+                                    <p>{comment.content}</p>
+                                    <div className={styles.emojiReaction}>
+                                        <span title="0 reactions">0</span>
+                                        <img src="https://cdn-icons-png.flaticon.com/128/11820/11820106.png" alt="reaction" title="Reaction" />
+                                        <img src="https://cdn-icons-png.flaticon.com/128/3128/3128313.png" alt="reaction" title="Reaction" />
+                                        <img src="https://cdn-icons-png.flaticon.com/128/6637/6637195.png" alt="reaction" className={styles.laughEmoji} title="Reaction" />
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div className={styles.commentReaction}>
+                                <strong title={comment.timestamp}>{comment.timestamp}</strong>
+                                <strong className={styles.commentReactionButton}>Like</strong>
+                                <strong className={styles.commentReactionButton}>Reply</strong>
+                            </div>
+                        </div>
+                    ))}
+                </div>
 
                 <div className={styles.userComments}>
 
@@ -258,7 +334,8 @@ const NewsFeed = ({ postData }) => {
 
                 </div>
 
-            </div>
+            </div>)}
+
 
 
 

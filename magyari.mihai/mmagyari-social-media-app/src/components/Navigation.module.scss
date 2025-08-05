@@ -11,7 +11,7 @@ header {
     position: fixed;
     width: 100%;
     top: 0;
-    left: 0;
+    // left: 0;
     z-index: 10;
     background-color: #5FA8D3;
 
@@ -23,10 +23,19 @@ header {
     a {
         text-decoration: none;
         color: black;
+
+        &:hover {
+            background-color: transparent;
+            border: none;
+        }
     }
 
     .navigation {
         display: flex;
+
+        :global(.active) {
+            background-color: #FFE74C;
+        }
 
         li>a {
             border-radius: 50%;
@@ -38,11 +47,12 @@ header {
             padding: 0.3rem;
 
 
-
             &:hover {
                 background-color: #FFE74C;
             }
         }
+
+
     }
 
     .mainSearch {
@@ -76,6 +86,8 @@ header {
 
             &::placeholder {
                 color: black;
+
+
             }
 
             &:focus {
@@ -93,6 +105,8 @@ header {
 
     .links {
         display: flex;
+        cursor: pointer;
+
 
         li>a {
             border-radius: 50%;
@@ -106,6 +120,7 @@ header {
             &:hover {
                 background-color: #FFE74C;
             }
+
         }
 
         .bellIcon {
@@ -142,11 +157,12 @@ header {
                 border-radius: 50%;
                 background-color: #CAE9FF;
                 margin: 0 0.5rem;
-                margin-right: 2rem;
+                margin-right: 1rem;
                 display: flex;
                 height: 3rem;
                 padding: 0.3rem;
                 border: transparent;
+                cursor: pointer;
 
                 &:hover {
                     background-color: #FFE74C;
@@ -156,28 +172,37 @@ header {
 
             .accountSettingsMenu {
 
-                display: none;
+                // display: none;
+                display: flex;
                 flex-direction: column;
                 position: absolute;
                 top: 4rem;
                 right: 0;
-                width: 12rem;
-                height: 12rem;
+                width: 20rem;
+                height: 18rem;
                 background-color: #5FA8D3;
                 padding: 0.5rem;
-                gap: 0.5rem;
-                border: 1px solid #1b4965;
-                border-radius: 0.5rem 0rem 0rem 0.5rem;
+                gap: 1rem;
+                // border: 1px solid #1b4965;
+                border-radius: 0rem 0rem 0rem 0.5rem;
+                box-shadow: -0.2rem 0.2rem 0.5rem black;
 
                 button {
-                    border: 1px solid #1b4965;
+                    // border: 1px solid #1b4965;
                     background-color: white;
                     border-radius: 0.5rem;
-                    height: 2rem;
+                    height: 2.5rem;
+                    width: 95%;
+                    font-size: 1rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-evenly;
 
                     &:hover {
                         background-color: #FFE74C;
                     }
+
+
                 }
 
             }
@@ -185,5 +210,114 @@ header {
     }
 
 
+    .fileInput {
+        display: none
+    }
 
+
+}
+
+
+// MEDIA QUERIES
+
+@media (max-width:1420px) {
+    header {
+        .links {
+            .accountSettings {
+                .accountSettingsMenu {
+                    width: 14rem;
+                    height: 18rem;
+                }
+            }
+        }
+    }
+
+}
+
+@media (max-width: 1100px) {
+    header {
+
+
+        .navigation {
+            display: none;
+        }
+
+        .mainSearch {
+            display: flex;
+            flex: 1;
+            justify-content: flex-start;
+            margin-left: 1rem;
+
+            .searchInput {
+                width: 14rem;
+            }
+        }
+
+        .links {
+            display: flex;
+            flex: 1;
+            justify-content: flex-end;
+
+            .accountSettings {
+                .accountSettingsMenu {
+                    width: 12rem;
+                    height: 18rem;
+                }
+
+
+            }
+        }
+
+
+    }
+}
+
+@media (max-width:640px) {
+    header {
+
+        .mainSearch {
+
+            .logo {
+                height: 2.5rem;
+                width: 2.5rem;
+
+            }
+
+            .searchInput {
+                display: none;
+            }
+
+            .smallScreenSearch {
+                display: flex;
+
+                img {
+                    height: 1.8rem;
+
+                }
+
+            }
+        }
+
+        .links {
+
+            .contentBtn {
+                width: 2.5rem;
+                height: 2.5rem;
+            }
+
+            .bellIcon {
+                width: 2.5rem;
+                height: 2.5rem;
+            }
+
+            .accountSettings {
+                .accountSettingsBtn {
+                    width: 2.5rem;
+                    height: 2.5rem;
+
+                }
+            }
+
+        }
+    }
 }

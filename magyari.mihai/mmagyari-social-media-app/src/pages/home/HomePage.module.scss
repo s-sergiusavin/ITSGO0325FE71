@@ -1,22 +1,26 @@
 .mainContainer {
     display: flex;
     justify-content: space-evenly;
-    align-items: center;
-    gap: 3rem;
+}
 
-    aside {
-        width: 20rem;
-        background-color: lightgray;
-        height: 50vh;
-        position: fixed;
-        top: 5rem;
+@media (max-width:1100px) {
+    .mainContainer {
+        display: block;
+        padding: 0 1rem;
+    }
+}
 
-        &.leftContent {
-            left: 0;
-        }
+@media (max-width:920px) {
+    .mainContainer {
+        display: flex;
+        padding: 0 1 rem;
+        margin: 0 auto;
+        box-sizing: border-box;
+    }
+}
 
-        &.rightContent {
-            right: 0;
-        }
+@media (max-width:700px) {
+    .mainContainer {
+       padding-left: 0;
     }
 }

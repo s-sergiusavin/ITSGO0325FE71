@@ -2,9 +2,15 @@
   "posts": [],
   "users": [
     {
-      "email": "mihai123@mihai.ro",
-      "password": "$2a$10$djzXh/IU3dU8qYpWUkix1OIr.mgb6yHS7XisIiymXYNNq8sZCMu2S",
+      "email": "mihai@mihai.com",
+      "password": "$2a$10$f/9eNgHfQQ8iBgnpOITNB.6JI3qP3jg7DtCyoJEZa217u..wkc56G",
       "id": 1
+    },
+    {
+      "email": "test@test.com",
+      "password": "$2a$10$WoTGaazjnlbFMBaqUeeKDeD4XxMp82cg8QnAMWFIK5RHKqm3xc2aS",
+      "id": 2
     }
+  
   ]
 }
