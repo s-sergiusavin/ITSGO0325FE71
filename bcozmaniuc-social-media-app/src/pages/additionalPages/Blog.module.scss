@@ -277,7 +277,7 @@ body {
     MEDIA QUERIES
 -----------------------*/
 
-/* Desktop mediu (max-width: 1200px) */
+
 @media (max-width: 1200px) {
   .sidebarLeft {
     width: 20rem;
@@ -309,7 +309,7 @@ body {
   }
 }
 
-/* Tablet (max-width: 900px) */
+
 @media (max-width: 900px) {
   .sidebarLeft {
     width: 18rem;
@@ -355,7 +355,7 @@ body {
   }
 }
 
-/* Mobil (max-width: 600px) */
+
 @media (max-width: 600px) {
   .sidebarLeft {
     position: relative;

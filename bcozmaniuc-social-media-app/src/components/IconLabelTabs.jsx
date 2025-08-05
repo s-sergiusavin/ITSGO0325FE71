@@ -1,4 +1,4 @@
-import * as React from 'react';
+import {useState} from 'react';
 import { useNavigate } from 'react-router-dom';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
@@ -11,7 +11,7 @@ export default function IconLabelTabs() {
 
     const navigate = useNavigate();
     
-    const [value, setValue] = React.useState(0);
+    const [value, setValue] = useState(0);
 
     const handleChange = (event, newValue) => {
         setValue(newValue);

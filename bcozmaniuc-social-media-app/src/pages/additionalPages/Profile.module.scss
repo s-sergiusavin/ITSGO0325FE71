@@ -349,12 +349,14 @@ main {
     padding-bottom: 1.5rem;
     margin-top: 2rem;
 
-    &Title {
+    .Title {
         font-size: 1.3rem;
         font-weight: bold;
         padding-top: 1rem;
         padding-left: 1rem;
     }
+
+
 }
 
 .theMarinaBar,
@@ -366,6 +368,20 @@ main {
     align-items: center;
     gap: 1rem;
     color: #888;
+}
+
+.blogTitleProfile {
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding-top: 1rem;
+    padding-left: 1rem;
+}
+
+.favouritePagesTitle {
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding-top: 1rem;
+    padding-left: 1rem;
 }
 
 .nameAndTypeAndImage {

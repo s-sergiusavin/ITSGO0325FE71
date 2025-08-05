@@ -33,7 +33,7 @@ CustomTabPanel.propTypes = {
   value: PropTypes.number.isRequired,
 };
 
-function a11yProps(index) {
+function Props(index) {
   return {
     id: `simple-tab-${index}`,
     'aria-controls': `simple-tabpanel-${index}`,
@@ -52,9 +52,9 @@ export default function BasicTabs() {
       <Box sx={{ width: '100%' }}>
         <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
           <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
-            <Tab label="Newest" {...a11yProps(0)} />
-            <Tab label="Active" {...a11yProps(1)} />
-            <Tab label="Popular" {...a11yProps(2)} />
+            <Tab label="Newest" {...Props(0)} />
+            <Tab label="Active" {...Props(1)} />
+            <Tab label="Popular" {...Props(2)} />
           </Tabs>
         </Box>
 

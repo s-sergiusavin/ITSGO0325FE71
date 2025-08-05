@@ -114,7 +114,6 @@ const RightSide = () => {
                             </li>
                         </ul>
                     </div>
-
                 </div>
             </div>
         </aside>
