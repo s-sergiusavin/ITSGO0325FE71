@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
 }
+
 .mainContainer {
   display: flex;
   flex-direction: column;
@@ -33,14 +34,14 @@
         align-items: center;
         width: 100%;
         font-size: large;
-        width: 100%;
         margin-left: 5rem;
       }
+
       .menu {
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-left:5rem;
+        margin-left: 5rem;
         &:hover {
           color: red;
           cursor: pointer;
@@ -61,7 +62,6 @@
           align-items: center;
           gap: 0.5rem;
           text-align: center;
-       
         }
 
         .friend {
@@ -73,5 +73,36 @@
         }
       }
     }
+  }
+}
+
+@media (max-width: 1024px) {
+  .mainContainer .frendsContainer .friends {
+    width: 70%;
+  }
+
+  .mainContainer .frendsContainer .friends .friendsWrapper .friendItem {
+    width: calc(50% - 1rem);
+  }
+
+  .mainContainer .frendsContainer .friends span,
+  .mainContainer .frendsContainer .friends .menu {
+    margin-left: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .mainContainer .frendsContainer .friends {
+    width: 90%;
+  }
+
+  .mainContainer .frendsContainer .friends .friendsWrapper .friendItem {
+    width: 100%;
+  }
+
+  .mainContainer .frendsContainer .friends span,
+  .mainContainer .frendsContainer .friends .menu {
+    margin-left: 0;
+    text-align: center;
   }
 }
