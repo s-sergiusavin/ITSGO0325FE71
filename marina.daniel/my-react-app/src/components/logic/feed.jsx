@@ -169,7 +169,6 @@ function Feed() {
       </section>
       <aside className="rightContent" id="rightContent">
         <Weather />
-        
       </aside>
     </div>
   );
