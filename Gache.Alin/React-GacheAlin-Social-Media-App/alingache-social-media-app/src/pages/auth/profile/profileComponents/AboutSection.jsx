@@ -7,6 +7,7 @@ import HomeIcon from "@mui/icons-material/Home";
 import { useState } from "react";
 import { useEffect } from "react";
 import feedService from "../../../../services/feedService";
+import { Link } from "react-router-dom";
 
 const AboutSection = () => {
   const aboutInfo = {
@@ -75,7 +76,10 @@ const AboutSection = () => {
         <div className={styles.friendsWrapper}>
           {friendsList.slice(0, 9).map((friend) => (
             <div className={styles.friendItem} key={friend.id}>
-              <img className={styles.friend} src={friend.profilePic} />
+              <Link to={`/profile/42${friend.id}42109`}>
+                <img className={styles.friend} src={friend.profilePic} />
+              </Link>
+
               <span>{friend.name}</span>
             </div>
           ))}

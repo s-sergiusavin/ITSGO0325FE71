@@ -1,0 +1,45 @@
+* {
+  box-sizing: border-box;
+}
+.positions {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgba(0, 97, 97, 0.8);
+  width: 60%;
+  height: 70%;
+  color: wheat;
+  z-index: 10;
+  .closeButton {
+    width: 50%;
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+  }
+  .textareaAutosize {
+    background-color: teal;
+    color: wheat;
+    margin-bottom: 5rem;
+    border: 1px solid lightgreen;
+    box-shadow: 0px -3px 20px 0px #aeeeee;
+    &::placeholder {
+      color: wheat;
+    }
+  }
+  Button {
+    border: 1px solid lightgreen;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0px -3px 20px 0px #aeeeee;
+    background-color: teal;
+    color: wheat;
+  }
+}

@@ -3,14 +3,14 @@
 }
 
 .mainContainer {
-  margin-left: 12.5%;
   width: calc(45% - 12.5%);
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   flex-direction: column;
   gap: 1rem;
   padding: 0.5rem;
+  margin-top: 0.5rem;
   .about {
     display: flex;
     justify-content: center;
@@ -90,7 +90,7 @@
   }
   .friends {
     position: sticky;
-    top: 0;
+    top: 4.5rem;
     display: flex;
     justify-content: center;
     align-items: center;

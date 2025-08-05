@@ -23,9 +23,9 @@ const ProfileHeader = () => {
               src={bgImage}
               alt="bgImg"
             />
-            <div className={styles.userImg}>
-              <img src={profileImg} alt="Profile Pic" />
-            </div>
+          </div>
+          <div className={styles.userImg}>
+            <img src={profileImg} alt="Profile Pic" />
           </div>
           <div className={styles.userMenu}>
             <div className={styles.userInfo}>
@@ -49,16 +49,16 @@ const ProfileHeader = () => {
             <NavLink className={styles.navLink} to={"/"}>
               Postari
             </NavLink>
-            <NavLink className={styles.navLink} to={"#1"}>
+            <NavLink className={styles.navLink} to={"/about"}>
               Despre
             </NavLink>
-            <NavLink className={styles.navLink} to={"#2"}>
+            <NavLink className={styles.navLink} to={"/friends"}>
               Prieteni
             </NavLink>
-            <NavLink className={styles.navLink} to={"#3"}>
+            <NavLink className={styles.navLink} to={"/photos"}>
               Fotografii
             </NavLink>
-            <NavLink className={styles.navLink} to={"#4"}>
+            <NavLink className={styles.navLink} to={"/videos"}>
               Video
             </NavLink>
             <div className={styles.navLink}>

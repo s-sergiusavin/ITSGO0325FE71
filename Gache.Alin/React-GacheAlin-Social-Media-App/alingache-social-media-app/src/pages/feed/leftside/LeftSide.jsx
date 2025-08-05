@@ -17,70 +17,70 @@ const LeftSide = () => {
 
   const activeHandler = () => {
     setIsActive((prevState) => !prevState);
-    console.log("test");
   };
-  console.log(isActive);
 
   return (
-    <div className={styles.mainContainer}>
-      <Link className={styles.buttons} to='/my-profile'>
-        <Button className={styles.button}>Profil</Button>
-      </Link>
+    <>
+      <div className={styles.mainContainer}>
+        <Link className={styles.buttons} to="/my-profile">
+          <Button className={styles.button}>Profil</Button>
+        </Link>
 
-      <Link className={styles.buttons} to='/friends'>
-        <Button className={styles.button}>
-          <PeopleIcon />
-          Prieteni
+        <Link className={styles.buttons} to="/friends">
+          <Button className={styles.button}>
+            <PeopleIcon />
+            Prieteni
+          </Button>
+        </Link>
+
+        <Link className={styles.buttons} to="/close-friends">
+          <Button className={styles.button}>
+            <Diversity1Icon />
+            Prieteni Apropiati
+          </Button>
+        </Link>
+
+        <Link className={styles.buttons} to="/friend-request">
+          <Button className={styles.button}>
+            <GroupAddIcon />
+            Cererei de prietenie
+          </Button>
+        </Link>
+
+        <Link className={styles.buttons} to="/groups">
+          <Button className={styles.button}>
+            <GroupsIcon />
+            Grupuri
+          </Button>
+        </Link>
+
+        <Link className={styles.buttons} to="/memories">
+          <Button className={styles.button}>
+            <CalendarMonthIcon />
+            Amintiri
+          </Button>
+        </Link>
+
+        <Link className={styles.buttons} to="birthdays">
+          <Button className={styles.button}>
+            <CakeIcon />
+            Zile de nastere
+          </Button>
+        </Link>
+
+        <Button
+          className={styles.button}
+          onClick={() => {
+            activeHandler();
+          }}
+        >
+          <ExpandMoreIcon />
+          Mai multe
         </Button>
-      </Link>
 
-      <Link className={styles.buttons} to='/close-friends'>
-        <Button className={styles.button}>
-          <Diversity1Icon />
-          Prieteni Apropiati
-        </Button>
-      </Link>
-
-      <Link className={styles.buttons} to='/friend-request'>
-        <Button className={styles.button}>
-          <GroupAddIcon />
-          Cererei de prietenie
-        </Button>
-      </Link>
-
-      <Link className={styles.buttons} to='/groups'>
-        <Button className={styles.button}>
-          <GroupsIcon />
-          Grupuri
-        </Button>
-      </Link>
-
-      <Link className={styles.buttons} to='/memories'>
-        <Button className={styles.button}>
-          <CalendarMonthIcon />
-          Amintiri
-        </Button>
-      </Link>
-
-      <Link className={styles.buttons} to='birthdays'>
-        <Button className={styles.button}>
-          <CakeIcon />
-          Zile de nastere
-        </Button>
-      </Link>
-
-      <Button
-        className={styles.button}
-        onClick={() => {
-          activeHandler();
-        }}
-      >
-        <ExpandMoreIcon />
-        Mai multe
-      </Button>
-
-      {isActive && <Dropdown elements={["Test", "Acasa", "Setari"]} />}
-    </div>
+        {isActive && <Dropdown elements={["Test", "Acasa", "Setari"]} />}
+      </div>
+    </>
   );
 };
 

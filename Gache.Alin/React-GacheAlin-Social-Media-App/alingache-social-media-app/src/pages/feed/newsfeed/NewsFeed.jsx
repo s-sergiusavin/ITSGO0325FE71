@@ -11,7 +11,7 @@ import profile from "../../../assets/images/profile.jpg";
 import CommentsSection from "./comments/CommentsSection";
 import { useState } from "react";
 
-const NewsFeed = ({ postData }) => {
+const NewsFeed = ({ postData, className }) => {
   const [isLiked, setIsLiked] = useState(false);
   const [likes, setLikes] = useState(Math.floor(Math.random() * 100)); //Math.round()
   const [isShared, setIsShared] = useState(false);
@@ -39,7 +39,7 @@ const NewsFeed = ({ postData }) => {
 
   return (
     <div className={styles.mainPost}>
-      <div className={styles.post}>
+      <div className={`${styles.post} ${className}`}>
         <div className={styles.postHeader}>
           <div className={styles.profileUserInfo}>
             <a href="#">
@@ -69,7 +69,6 @@ const NewsFeed = ({ postData }) => {
         <div className={styles.content}>
           <div className={styles.imgWrapper}>
             <img
-          
               src={postData?.image}
               alt="post content picture"
               className={styles.imgContent}
@@ -90,7 +89,8 @@ const NewsFeed = ({ postData }) => {
           </div>
 
           <strong className={styles.postTitle}>
-            {postData?.title.charAt(0).toUpperCase() + postData?.title?.slice(1)}
+            {postData?.title.charAt(0).toUpperCase() +
+              postData?.title?.slice(1)}
           </strong>
 
           <p className={styles.postDescription}>

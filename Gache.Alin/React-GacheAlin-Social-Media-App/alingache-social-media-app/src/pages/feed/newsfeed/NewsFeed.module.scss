@@ -1,5 +1,10 @@
+* {
+  box-sizing: border-box;
+}
 .mainPost {
-  width: 40rem;
+  width: 100%;
+  max-width: 40rem;
+  margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -173,13 +178,8 @@
   justify-content: space-evenly;
   padding-bottom: 1rem;
   align-items: center;
-  /* gap: 1rem; */
 }
 
-/* .mainPost .post .commentSection .profileImage {
-  width: 3rem;
-  border-radius: 50%;
-} */
 .mainPost .post .commentSection .postCommentSection {
   width: 88%;
 }
@@ -507,5 +507,74 @@ svg {
 .profileImage {
   width: 3rem;
   border-radius: 50%;
+  object-fit: cover;
   margin-right: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .mainPost {
+    padding: 1rem 0.5rem;
+  }
+
+  .mainPost .post {
+    padding: 0.5rem;
+  }
+
+  .mainPost .post .commentSection {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+  }
+
+  .mainPost .post .commentSection .postCommentSection {
+    width: 100%;
+  }
+
+  .insertCommentButton {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .rightContent,
+  .leftContent {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .mainPost {
+    padding: 0.5rem;
+  }
+
+  .postTitle,
+  .postDescription {
+    padding: 0.5rem;
+  }
+
+  .infoIcon {
+    width: 1.5rem;
+    height: 1.5rem;
+    font-size: 1.5rem;
+  }
+
+  .reactsIcons {
+    flex-wrap: wrap;
+  }
+
+  .reaction {
+    padding: 0.4rem;
+    font-size: 0.9rem;
+  }
+
+  .profileName {
+    font-size: 0.85rem;
+  }
+
+  .profileOptionsWrapper .profileOptionsDropdown {
+    width: 8rem;
+  }
+
+  .commentSection {
+    gap: 0.5rem;
+  }
 }
