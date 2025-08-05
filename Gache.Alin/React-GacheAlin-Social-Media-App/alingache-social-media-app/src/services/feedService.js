@@ -8,7 +8,7 @@ async function getPost(params) {
 
   return response.data;
 }
-async function getFriends(params) {
+async function getFriends() {
   const response = await axios.get("/friends");
 
   return response.data;
