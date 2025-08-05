@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import feedService from "../../../services/feedService";
 import pic from "/src/assets/images/profile.jpg";
 
-const Rightside = ({  setActive }) => {
+const Rightside = ({ setActive }) => {
   const GROUPS = [
     {
       name: "Grup Unu",
@@ -83,8 +83,22 @@ const Rightside = ({  setActive }) => {
                 <span className={styles.personName}>{request.name}</span>
               </Link>
               <div className={styles.buttonsWrapper}>
-                <Button className={styles.accept}>Accept</Button>
-                <Button className={styles.refuse}>Refuza</Button>
+                <Button
+                  onClick={() => {
+                    console.log("Accept");
+                  }}
+                  className={styles.accept}
+                >
+                  Accept
+                </Button>
+                <Button
+                  onClick={() => {
+                    console.log("Refuse");
+                  }}
+                  className={styles.refuse}
+                >
+                  Refuza
+                </Button>
               </div>
             </div>
           ))}
@@ -119,10 +133,7 @@ const Rightside = ({  setActive }) => {
                     alt="Profile Pic"
                   />
                 </Link>
-                <div
-                  className={styles.cursorStyle}
-                  onClick={activeHandler}
-                >
+                <div className={styles.cursorStyle} onClick={activeHandler}>
                   {friend.name}
                 </div>
               </div>
