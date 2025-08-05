@@ -12,7 +12,7 @@ import CloseIcon from "@mui/icons-material/Close";
 const ProfileHeader = () => {
   const userName = "Alin Gabriel";
   const friendsNumber = Math.floor(Math.random() * 1000);
-  const [isActive, setIsActive] = useState(true);
+  const [isActive, setIsActive] = useState(false);
 
   return (
     <div>
