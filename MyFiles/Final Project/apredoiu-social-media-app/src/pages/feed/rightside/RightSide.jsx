@@ -52,7 +52,7 @@ const RightSide = () => {
       </div>
 
       <div className={styles.section}>
-        <h3>Who to follow</h3>
+        <h3>Who viewed your profile</h3>
         <ul className={styles.followList}>
           <li>
             <img src="https://i.pravatar.cc/40?img=1" alt="Maria Popescu" />

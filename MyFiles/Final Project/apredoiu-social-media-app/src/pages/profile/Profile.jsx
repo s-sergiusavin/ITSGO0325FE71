@@ -72,7 +72,7 @@ const Profile = () => {
           <ul>
             <li>💡 Building cool things at EyeSEE</li>
             <li>🌱 Loves traveling, skincare, and my cat</li>
-            <li>✨ Building eyeSEE</li>
+            <li>✨ Stay positive</li>
           </ul>
           <hr />
           <h2>Photos</h2>

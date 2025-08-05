@@ -19,7 +19,7 @@ const AuthForm = () => {
     const dispatch = useDispatch();
 
     const toggleAuthState = (e) => {
-        e.preventDefault(); // prevent form submit on toggle
+        e.preventDefault(); 
         setIsLogin(prevState => !prevState);
     };
 

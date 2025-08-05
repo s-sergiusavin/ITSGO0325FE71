@@ -49,7 +49,7 @@ const LandingPage = () => {
             required
           />
           <button type="submit">
-            <i className="fa-solid fa-bolt"></i> Count me in!
+            Count me in!
           </button>
         </form>
 
@@ -74,7 +74,7 @@ const LandingPage = () => {
           </div>
           <div className={styles.point}>
             <span className={styles.icon}>📸</span>
-            <h4>Share Life’s Moments</h4>
+            <h4>Share Life's Moments</h4>
             <p>Post photos, stories, and updates in a snap.</p>
           </div>
           <div className={styles.point}>
