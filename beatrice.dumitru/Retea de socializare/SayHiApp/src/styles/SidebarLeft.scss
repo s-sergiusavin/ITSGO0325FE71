@@ -1,0 +1,87 @@
+.sidebar.left {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  background-color: #fdf8f3;
+  height: 100%;
+  flex: 1;
+  max-width: 20%;
+
+  .my-profile {
+    text-align: center;
+
+    img {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 5px;
+    }
+
+    h4 {
+      margin: 0;
+      font-size: 16px;
+      color: #333;
+    }
+  }
+
+  section {
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  h3 {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #333;
+  }
+
+  .suggestions ul,
+  .groups ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .suggestions li,
+  .groups li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    gap: 10px;
+
+    img {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    span {
+      flex: 1;
+    }
+
+    button {
+      background-color: #ff6600;
+      color: white;
+      border: none;
+      border-radius: 15px;
+      padding: 4px 10px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #e65c00;
+      }
+    }
+  }
+
+  .groups li button {
+    background-color: #0099cc;
+
+    &:hover {
+      background-color: #0077aa;
+    }
+  }
+}
