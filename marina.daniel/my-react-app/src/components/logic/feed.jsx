@@ -22,6 +22,7 @@ import BookmarksIcon from '@mui/icons-material/Bookmarks';
 import GroupsIcon from '@mui/icons-material/Groups';
 import VideocamIcon from '@mui/icons-material/Videocam';
 import StoreIcon from '@mui/icons-material/Store';
+import FriendsList from '../ui/friendsList';
 
 function Feed() {
   return (
@@ -169,6 +170,7 @@ function Feed() {
       </section>
       <aside className="rightContent" id="rightContent">
         <Weather />
+        <FriendsList />
       </aside>
     </div>
   );

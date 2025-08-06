@@ -1,0 +1,29 @@
+.friends-list-container {
+  max-width: 250px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+  
+}
+
+.friends-list {
+  list-style: none;
+  padding: 0;
+}
+
+.friend-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  padding: 8px;
+  border: 1px solid #636262;
+  border-radius: 8px;
+  background-color: #c8e0ff;
+  cursor: pointer;
+}
+
+.friend-avatar {
+  border-radius: 50%;
+  margin-right: 12px;
+  width: 30px;
+  height: 30px;
+}
