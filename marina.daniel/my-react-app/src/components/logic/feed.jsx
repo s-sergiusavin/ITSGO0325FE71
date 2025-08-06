@@ -149,7 +149,6 @@ function Feed() {
           </div>
           <div className="reacts">
             <div className="likesInfo">
-              {/* <span>😁</span> */}
               <i className="bi bi-hand-thumbs-up reactsIcons" />
               <span id="likesNumber" />
               <GetNumberOfLikes />
